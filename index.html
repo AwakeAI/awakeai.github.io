@@ -744,30 +744,72 @@
     </div>
     </div>
 </section>
-<!--<section class="contact-area-v1 pt-60  pb-60">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-6">-->
-<!--                <div class="section-title mb-45 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">-->
-<!--                    &lt;!&ndash;                    <span class="span">Get Pure Estimate</span>&ndash;&gt;-->
-<!--                    <h2>Get In Touch</h2>-->
-<!--                </div>-->
-<!--                <div class="contact-form-area wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">-->
-<!--                    <iframe width="640px" height="480px"-->
-<!--                            src="https://forms.office.com/Pages/ResponsePage.aspx?id=cZYxzedSaEqvqfz4-J8J6rihhbdXBkJFopIU2jt5OihUOTBMVkpNU1QxNkEyTUNPWFJPTEc2SUxUMSQlQCN0PWcu&embed=true"-->
-<!--                            style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen-->
-<!--                            mozallowfullscreen msallowfullscreen></iframe>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-6">-->
-<!--                <div class="contact-img mb-30 mt-30w wow fadeInRight"-->
-<!--                     style="visibility: visible; animation-name: fadeInRight;">-->
-<!--                    <img src="assets/images/about/about-5.jpg" alt="" style="width:80%">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<!--https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/viewform?usp=pp_url&entry.1208597498=asdfasdf&entry.1569009990=asdfasdfasdfffff&entry.537245108=Want+to+Invest&entry.1889589232=asdfasdfasdfasdf-->
+<section class="contact-area-v1 pt-80 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title mb-45 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <h2>Get In Touch With us</h2>
+                </div>
+                <div class="contact-form-area mb-60 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="text" class="form_control" placeholder="Enter full name" name="entry.1208597498" required="">
+                                    <i class="far fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form_group">
+                                    <input type="email" class="form_control" placeholder="Enter email address" name="entry.1569009990" required="">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form_group" data-input="L9xHkb">
+                                    <select style="display: none;" onChange="copyTextValue(this);">
+                                        <option value="Service Request/Get a Quote">Service Request/Get a Quote</option>
+                                        <option value="Seek for Partnership">Seek for Partnership</option>
+                                        <option value="Job Opportunity">Job Opportunity</option>
+                                    </select>
+                                    <div class="nice-select" tabindex="0">
+                                        <span class="current">Select Subject</span>
+                                            <ul class="list">
+                                                <li data-value="Service Request/Get a Quote" class="option">Service Request/Get a Quote</li>
+                                                <li data-value="Seek for Partnership" class="option">Seek for Partnership</li>
+                                                <li data-value="Job Opportunity" class="option">Job Opportunity</li>
+                                            </ul>
+                                    </div>
+                                    <input type="hidden" name="entry.537245108" id="L9xHkb" value="">
+                                    <i class="far fa-book"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form_group">
+                                    <textarea name="entry.1889589232" placeholder="Enter message" class="form_control"></textarea>
+                                    <i class="far fa-pen"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form_group">
+                                    <button class="main-btn" type="submit" value="Submit">Submit</button>
+                                </div>
+                            </div>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-img mt-40 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                    <img src="assets/images/about/about-5.jpg" width="400px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--====== End Team section ======-->
 <!--====== Start Footer ======-->
 <footer class="footer-area footer-area-v3" id="contact">
@@ -1303,5 +1345,23 @@
     gtag('config', 'G-JVXPVJ54JS');
 </script>
 
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Sent! Thanks for submitted...');
+    });
+</script>
+<script>
+    function copyTextValue(selectedOption) {
+        if(selectedOption.selectedIndex <= 0){
+            document.getElementById("L9xHkb").value = '';
+            return;
+        }
+
+        var selectedOptionValue = selectedOption.value;
+        document.getElementById("L9xHkb").value = selectedOptionValue;
+    }
+</script>
 </body>
 </html>
