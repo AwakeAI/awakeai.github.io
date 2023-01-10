@@ -4664,7 +4664,7 @@ header {
    09. Start Team  css
 ===========================---*/
 .team-area-v1 {
-  border-top: 1px solid #efefef;
+  margin-top: -10%;
 }
 .team-area-v1 .team-item .team-info {
   padding-top: 30px;

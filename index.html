@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="An AI solution for your senior family member">
-    <meta name="keywords" content="AwakeAI Healthcare TrustCare Edge Computing Artificial Intelligence IoT">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--====== Title ======-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AwakeAI</title>
-    <!--====== Favicon Icon ======-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./diagrams.css" />
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -27,581 +26,412 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <!--====== Animate css ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
-    <!--====== Default css ======-->
+    <!--====== Default css ======-->d
     <link rel="stylesheet" href="assets/css/default.css">
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <!--====== Font CSS ======-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
-<body>
-<!--====== Start Header ======-->
-<header class="header-area-two transparent-header">
-    <div class="header-navigation">
-        <div class="container-fluid" style="padding-left: 0">
-            <div class="row">
-                <div class="col-lg-2 col-5">
-                    <div class="site-branding">
-                        <div class="brand-logo" style="padding-left:20px; padding-right:20px">
-                            <a href="index.html">
-                                <img src="assets/images/logo/logo_awakeai.png" class="img-fluid" alt="TrustCare">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-3">
-                    <div class="nav-menu" style="border-right: 1px solid rgba(255, 255, 255, 0.1);">
-                        <!-- Navbar Close Icon -->
-                        <div class="navbar-close"><i class="fal fa-times"></i></div>
-                        <!-- Nav Menu -->
-                        <nav class="main-menu">
-                            <ul>
-                                <li class="menu-item"><a href="#">Home</a></li>
-                                <li class="menu-item"><a href="#about">About</a>
-                                <li class="menu-item"><a href="#product">Product</a></li>
-                                <li class="menu-item"><a href="#activity">Activity</a></li>
-                                <li class="menu-item"><a href="#team">Team</a>
-                                <li class="menu-item"><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-5">
-                    <div class="nav-menu">
-                        <div class="navbar-close"><i class="fal fa-times"></i></div>
-                        <nav class="main-menu">
-                            <ul>
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="#"><i class="fal fa-globe"></i>&nbsp; Languages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">English</a></li>
-                                        <!--<li><a href="html/indexfr.html">Français</a></li>-->
-                                        <!--<li><a href="html/indexcn.html">中文</a></li>-->
-                                    </ul>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!--====== End Header ======-->
-<!--====== Start Hero Section ======-->
-<section class="hero-area-v2 bg_cover" style="background-image: url(assets/images/bg/hero-bg-1.jpg);">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="hero-content">
-                    <h3 class="wow fadeInDown" data-wow-delay=".3s">Care Anytime, Anywhere</h3>
-                    <h1 class="wow fadeInUp" data-wow-delay=".4s">We Care about your Family Members</h1>
-                    <h3 class="wow fadeInDown" data-wow-delay=".5s" style="color: #fd6350">
-                        A way to respond in time to seniors' needs</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Hero Section ======-->
-<!--====== Start Service Section ======-->
-<section class="service-area-v2 pt-120 pb-90">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="service-content-box fadeInLeft wow">
-                    <h2 class="mb-25">Competitive Advantages</h2>
-                    <p class="mb-25">Our Professional Services</p>
-                </div>
-            </div>
-            <div class="col-lg-4"></div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="service-item mb-30 wow fadeInUp">
-                    <div class="icon">
-                        <img src="assets/images/our_blog/Picture1.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title"><a href="#">First to Market</a></h3>
-                        <p>First to provide family members with their beloved ones’ with real-time in care
-                            information.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="service-item mb-30 wow fadeInDown">
-                    <div class="icon">
-                        <img src="assets/images/our_blog/Picture2.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title"><a href="#">Fully Autonomous</a></h3>
-                        <p>No wearable devices and manual operations are needed, no extra burden on any user.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="service-item mb-30 wow fadeInUp">
-                    <div class="icon">
-                        <img src="assets/images/our_blog/Picture3.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title"><a href="#">Privacy Preserving</a></h3>
-                        <p>Video will be processed locally, without video transmission, leaving no concern of leak.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="service-item mb-30 wow fadeInDown">
-                    <div class="icon">
-                        <img src="assets/images/our_blog/Picture4.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 class="title"><a href="#">Broadly Applicable</a></h3>
-                        <p>The application can be extended to hospitals, long-term care facilities and homecare
-                            families.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!--====== End Service Section ======-->
-<!--====== Start About Section ======-->
-<!--====== Start About Section ======-->
-<section class="about-area-v1 pt-120 pb-70" id="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <!-- About Image -->
-                <div class="about-img-box mb-50">
-                    <!--<div class="experience-box wow fadeInUp">-->
-                    <!--    <h2>45<span class="sign">+</span><span class="text">Years Of Experience</span></h2>-->
-                    <!--</div>-->
-                    <div class="about-img-one wow fadeInDown">
-                        <img src="assets/images/about/about-1.jpg" alt="About Image">
-                    </div>
-                    <div class="about-img-two wow fadeInUp">
-                        <img src="assets/images/about/about-2.jpg" alt="About Image">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <!-- About Content Box -->
-                <div class="about-content-box mb-50">
-                    <div class="section-title mb-35 wow fadeInDown">
-                        <h2>About AwakeAI Inc.</h2>
-                    </div>
-                    <p style="text-align: justify"> AwakeAI Inc (previously known as <strong>TrustCare</strong>), a
-                        McGill-based start-up, has developed a solution to improve care quality and address staff
-                        shortages at seniors’ homes and CHSLDs. It’s an AI-based system that analyses real-time video
-                        streams, detects unexpected activity changes, emergency cases, and triggers safety alerts. The
-                        technology ensures data privacy by eliminating the need for human observation of the video
-                        streams and personal data transmission.
-                    </p>
-                    <div class="box d-flex wow fadeInUp">
-                        <div class="thumb">
-                            <img src="assets/images/about/about-3.jpg" alt="About Image">
-                        </div>
-                        <div class="content">
-                            <h4>An Automated Notification Service</h4>
-                            <p>AI-based monitoring system composed of a text-based information collecting module and a
-                                mobile phone app designed for receiving information
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="list wow fadeInDown">
-                        <li class="check">The information collecting module can locally process videos taken in the
-                            resident’s room and send concise textual information to family members and caregivers'
-                            mobile phones
-                        </li>
-                        <li class="check">Our system helps caregivers to respond in time to residents’ needs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End About Section ======-->
-<!--====== Start Video Section ======-->
-<section class="cta-area-v4 bg_cover parallax-bg pt-110 pb-70"
-         style="background-image: url(assets/images/bg/intro-video-1.jpg);">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <div class="section-title section-title-white mb-50">
-                    <span class="span">Introduction Video</span>
-                    <h2>Let’s Get To Know AwakeAI.</h2>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="button mb-10">
-                    <!--                    <a href="contact.html" class="main-btn active-btn">Get Free Quote</a>-->
-                    <a href="https://youtu.be/x7oorxPQhb0" class="main-btn"><i class="fas fa-play"></i>Tour
-                        Video</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Video Section ======-->
-<!--====== Start CTA Section ======-->
-<section class="faq-area-v1 pt-120 pb-70" id="product">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="faq-wrapper faq-wrapper-one mb-50">
-                    <div class="section-title mb-60">
-                        <span class="span">With Great Potential</span>
-                        <h2>Product Description</h2>
-                    </div>
-                    <div class="faq-wrapper faq-wrapper-two mb-20 wow fadeInLeft">
-                        <div class="accordion" id="accordionOne">
-                            <div class="accordion-item mb-20">
-                                <a href="#" class="accordion-title" data-bs-toggle="collapse"
-                                   data-bs-target="#collapseTwo" aria-expanded="false"><span class="toggle"></span>
-                                    How do we monitor the residents?
-                                </a>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                     data-bs-parent="#accordionOne">
-                                    <div class="accordion-body">
-                                        <p></p>
-                                        <div>
-                                            <img src="assets/images/about/about-6.png" alt="flowchart">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item mb-20">
-                                <a href="#" class="accordion-title" data-bs-toggle="collapse"
-                                   data-bs-target="#collapseThree" aria-expanded="false"><span class="toggle"></span>
-                                    What are our development stages?
-                                </a>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                     data-bs-parent="#accordionOne">
-                                    <div class="accordion-body">
-                                        <p></p>
-                                        <div>
-                                            <img src="./assets/images/about/about-4.png" alt="flowchart">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item mb-20">
-                                <a href="#" class="accordion-title" data-bs-toggle="collapse"
-                                   data-bs-target="#collapseFour"
-                                   aria-expanded="false"><span class="toggle"></span>
-                                    What kind of notifications will we send?
-                                </a>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                     data-bs-parent="#accordionOne">
-                                    <div class="accordion-body">
-                                        <p style="text-align: justify">Our AI model is composed of a poste estimator, a
-                                            17-class action classifier, and a fall detector.
-                                            The actions are sent in real time to the mobile applications. For instance
-                                            on the right, we see some example actions sent to the mobile apps.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="faq-img wow mt-200 fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
-                    <img src="assets/images/our_blog/Picture5.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End CTA Section ======-->
-<!--====== Start Portfolio Section ======-->
-<section class="team-area-v3 pt-110" id="activity">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <div class="section-title mb-60">
-                    <!--                    <span class="span">Activities</span>-->
-                    <h2>Competition and Activities</h2>
-                </div>
-            </div>
+<body style="font-family: 'Poppins',serif; overflow-x: hidden;">
+    <div class="sec-1">
+        <img class="hero-bg" alt="" src="public/herobg.png"/>
 
-        </div>
-        <div class="row media">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="expertiesico" style="padding: 17% 6% 4% 6%">
-                    <img src="./assets/images/logo/dobson_rgb_transparent.png" width="200" alt="">
-                </div>
-            </div>
-            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <h4>McGill Dobson Centre for Entrepreneurship, Montreal, Quebec</h4>
-                <b>Updates @Dobson Centre</b>
-                <ul>
-                    <li>Summer 2022
-                        <a style="color: #0E74B2" target="_blank"
-                           href="https://www.mcgill.ca/dobson/files/dobson/dobson_x-1_accelerator_2022_cohort_brochure-v1.pdf">
-                            McGill Dobson Entrepreneurship X1-Accelerator:
-                        </a>
-                        Participated
-                    </li>
-                    <li>Winter 2022
-                        <a style="color: #0E74B2" target="_blank"
-                           href="https://www.mcgill.ca/dobson/article/mcgill-dobson-cup-2022-winners#hset">
-                            McGill Dobson Entrepreneurship Programs Bootcamp and Cup:
-                        </a>
-                        Third Place in Health Science Enterprise Tracks
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row media">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="expertiesico" style="padding: 35% 6% 4% 6%">
-                    <img src="./assets/images/logo/thumbnail_McG_ENGINE-no-name_rgb_red_hor_en-930x210.jpeg" width="200"
-                         alt="">
-                </div>
-            </div>
-            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <h4>McGill University, Montreal, Quebec</h4>
-                <b>Updates @McGill Engine Center</b>
-                <ul>
-                    <li>Winter 2022, TechAccel <a style="color: #0E74B2" target="_blank">
-                        Showcase Winter & Summer 2022 Cohort Event</a></li>
-                    <li>Summer 2022, <a style="color: #0E74B2"
-                                        href="https://www.mcgill.ca/engine/funding/students/techaccel-grants/techaccel-grantees"
-                                        target="_blank">TechAccel Grant:</a> Summer 2022 TechAccel Grantees
-                    </li>
-                    <li>Fall 2021 & Winter 2022,
-                        <a style="color: #0E74B2" target="_blank"
-                           href="https://www.mcgill.ca/engine/funding-programs/students/invention-impact-training-program/invention-impact-cohorts">
-                            McGill Invention to Impact Training program: </a>
-                        Participated
-                    </li>
-                    <li>Summer 2021,
-                        <a style="color: #0E74B2" target="_blank"
-                           href="https://www.mcgill.ca/engine/funding-programs/students/startup-internship-program/2021">
-                            McGill-affiliated startup ventures: </a>
-                        one of the approved and eligible team and participated in a startup internship program
-                    </li>
-                    <li>Winter 2021, <a style="color: #0E74B2" target="_blank">TechAccel Showcase Winter & Summer 2021
-                        Cohort Event: </a>
-                        Audience Favourite
-                    </li>
-                    <li>Winter 2021,
-                        <a style="color: #0E74B2"
-                           href="https://www.mcgill.ca/engine/funding/students/techidea-pitch-competition/2021"
-                           target="_blank">TechIdea Pitch Competition:</a> 1st Place & Audience Favorite
-                    </li>
-                    <li>Winter 2021, <a style="color: #0E74B2"
-                                        href="https://www.mcgill.ca/engine/funding/students/techaccel-grants/techaccel-grantees"
-                                        target="_blank">TechAccel Grant:</a> Winter 2021 TechAccel Grantees
-                    </li>
-                    <!--                    <li>Fall 2020, <a style="color: #0E74B2" href="https://www.mcgill.ca/golead/our-people"-->
-                    <!--                                        target="_blank">goLead Move:</a> Grand Prize Winner-->
-                    <!--                    </li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="row media">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="expertiesico">
-                    <img src="./assets/images/logo/napcrg-logo-pms660-scale.jpg" width="200" alt="">
-                </div>
-            </div>
-            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <h4>NAPCRG, Montreal, Quebec</h4>
-                <b>Updates @NAPCRG</b>
-                <ul>
-                    <li>Winter 2021, <a style="color: #0E74B2" target="_blank"
-                                        href="https://napcrg.org/conferences/annual/na21-poster-hall/posteronresearchinprogress/2981/">
-                        49th North American Primary Care Research
-                        Group Annual Meeting: </a> Poster was accepted
-                        <br>
-                        <!--                        <a role="button"-->
-                        <!--                           href="https://github.com/TrustCare/TrustCare.github.io/raw/2.0/assets/files/2981_poster.pdf"-->
-                        <!--                           class="btn btn-primary btn-lg">Download our Poster.</a>-->
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--        <div class="row media">-->
-        <!--            <div class="col-lg-6">-->
-        <!--                <ul class="filter-btn mb-60 float-lg-end wow fadeInDown">-->
-        <!--                    <li data-filter="*" class="active">All</li>-->
-        <!--                    <li data-filter=".goLead">GoLead</li>-->
-        <!--                    &lt;!&ndash;                            <li data-filter=".cat-2">Design</li>&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                            <li data-filter=".cat-3">Photography</li>&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                            <li data-filter=".cat-4">Development</li>&ndash;&gt;-->
-        <!--                </ul>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <div class="row">-->
-        <!--            <div v-for="item in activityList" class='col-lg-4 col-md-6 col-sm-12'>-->
-        <!--                <div class="team-item mb-30 wow fadeInUp" data-wow-delay=".2s">-->
-        <!--                    <div class="team-img">-->
-        <!--                        <img :src="item.image" alt="">-->
-        <!--                        <div class="team-overlay">-->
-        <!--                            <div class="team-overly-content">-->
-        <!--                                <h4 class="title">-->
-        <!--                                    {{item.name}} - {{item.semester}}</h4>-->
-        <!--                            </div>-->
-        <!--                            <div class="team-info">-->
-        <!--                                <h4 class="title" style="font-size: 25px; line-height: 10px; margin-top: 15%;">-->
-        <!--                                    {{item.name}} - {{item.semester}}</h4>-->
-        <!--                                <span class="position" style="font-size: 20px; line-height: 35px; margin-top: 5%;">-->
-        <!--                            {{item.event}}</span>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-    </div>
-</section>
-<!--====== End Portfolio Section ======-->
-<!--====== Start Team section ======-->
-<section class="team-area-v1 pt-105 pb-110 light-bg" id="team">
-    <div class="container" id="team-home">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="section-title text-center mb-25">
-                    <h2>Our Team</h2>
-                    <!--                    <span class="span">Experts</span>-->
-                </div>
+        <div class="nav">
+            <div>
+               <img class="logo-nav" src="public/logonav.png" />
             </div>
             <div>
-                <div class="features-tab mb-25">
-                    <ul class="nav nav-tabs justify-content-center ">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#team-nav">
-                                Our Team
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#mentor">Our Mentors</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navUL">
+                    <li>ABOUT</li>
+                    <li>TRACTION</li>
+                    <li>TEAM</li>
+                    <li>CONTACT</li>
+                </ul>
             </div>
         </div>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="team-nav">
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-10">
-                        <div class="row">
-                            <div v-for="item in teamList" class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="team-item mb-50 wow fadeInUp">
-                                    <div class="team-img">
-                                        <img :src="item.image" alt="">
-                                        <div class="team-overlay">
-                                            <div class="team-social">
-                                                <span class="hover-btn"><i class="fal fa-plus"></i></span>
-                                                <ul class="team-social-link">
-                                                    <li v-if="item.links.linkedin!==''">
-                                                        <a :href="item.links.linkedin" class="social-icon"><i
-                                                            class="fab fa-linkedin"></i></a></li>
-                                                    <li v-if="item.links.github!==''">
-                                                        <a :href="item.links.github" class="social-icon">
-                                                            <i class="fab fa-github"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="modal" :data-target="'#' + item.id"
-                                                           style="cursor:pointer;"
-                                                           @click="showModal(item.id)"><i class="fa fa-info"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-info text-center">
-                                        <h4>{{item.firstName}} {{item.lastName}}</h4>
-                                        <span class="position">{{item.position}}</span>
-                                    </div>
-                                </div>
-                                <div class="modal fade" :id="item.id" tabindex="-1" role="dialog"
-                                     :aria-labelledby="item.id"
-                                     aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" :id="item.id">Details Of {{item.firstName}}
-                                                    {{item.lastName}}</h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        data-bs-dismiss="modal"
-                                                        aria-label="Close" style="background: white;">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="instrument">
-                                                    <div class="container">
-                                                        <div class="instrument-view">
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-sm-4 ins-image">
-                                                                    <img :src="item.image"
-                                                                         :alt="item.firstName"/>
-                                                                </div>
-                                                                <div class="col-sm-1"></div>
-                                                                <div class="col-sm-7">
-                                                                    <div class="ins-name">
-                                                                        <h3>{{item.firstName}} {{item.lastName}}
-                                                                        </h3>
-                                                                    </div>
-                                                                    <div class="span span1">
-                                                                        <p class="left" style="font-size: 17px;">
-                                                                            Title:</p>
-                                                                        <p class="right" style="font-size: 17px;">
-                                                                            {{item.position}}</p>
-                                                                        <div class="clearfix"></div>
-                                                                    </div>
-                                                                    <div class="span span1">
-                                                                        <p class="left" style="font-size: 17px;">
-                                                                            Year Joined:</p>
-                                                                        <p class="right" style="font-size: 17px;">
-                                                                            {{item.year}}</p>
-                                                                        <div class="clearfix"></div>
-                                                                    </div>
-<!--                                                                    <div class="span span1">-->
-<!--                                                                        <p class="left" style="font-size: 17px;">-->
-<!--                                                                            Email:</p>-->
-<!--                                                                        <p class="right" style="font-size: 17px;">-->
-<!--                                                                            <a :href="'mailto:'+ item.firstName+'.'+item.lastName+'@mail.mcgill.ca'">-->
-<!--                                                                                {{item.firstName}}.{{item.lastName}}@mail.mcgill.ca-->
-<!--                                                                            </a>-->
-<!--                                                                        </p>-->
-<!--                                                                        <div class="clearfix"></div>-->
-<!--                                                                    </div>-->
-                                                                    <div id="detail_team">
-                                                                        <div class="ins-name">
-                                                                            <h5>Biography </h5>
-                                                                        </div>
-                                                                        <div class="span span1">
-                                                                            <p style="text-align: justify">
-                                                                                {{item.bio}}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+        <div class="sec-1C">
+            <div class="hero-h1">CARE ANYTIME, ANYWHERE</div>
+            <div class="hero-h2">We care about your family members</div>
+            <div class="hero-h3">A way to respon in time to senior's needs</div>
+            <button class="video-overview"><i class="fa fa-play" aria-hidden="true"></i>Watch a 3min overview</button>
+        </div>
+    </div>
+
+    <div class="sec-2">
+        <div class="sec-2H1">OUR PROFESSIONAL SERVICES</div>
+        <div class="sec-2H2">Competitive Advantages</div>
+        <img class="sec-2I" src="public/older.png"/>
+
+        <div class="sec-2E">
+            <div class="sec-2C">
+                <img
+                class="spotcustomer"
+                alt=""
+                src="public/spotcustomer-support4.svg"
+              />
+              <div class="sec-2CH">Fully Autonomous</div>
+              <div class="sec-2CP">No wearable and manual operations are needed, no extra burder on any user.</div>
+            </div>
+
+            <div class="sec-2C">
+                <img
+                class="spotcustomer"
+                alt=""
+                src="public/spotcustomer-support4.svg"
+              />
+              <div class="sec-2CH">Privacy Preserving</div>
+              <div class="sec-2CP">Video will be processed locally, without video transmission, leaving no concern of leak.</div>
+            </div>
+
+            <div class="sec-2C">
+                <img
+                class="spotcustomer"
+                alt=""
+                src="public/spotcustomer-support4.svg"
+              />
+              <div class="sec-2CH">Broadly Applicable</div>
+              <div class="sec-2CP">The application can be extended to hospitals long-term care facilities and homecare facilities.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="overflow: hidden;">
+        <img
+        class="logotilted"
+        alt=""
+        src="public/logotilted.png"
+      />
+    </div>
+
+
+    <div class="sec-3">
+
+        <div class="sec-3H">About AwakeAI Inc.</div>
+        <div class="sec-3P">AwakeAI Inc (previously known as <span style="font-weight: bold;">TrustCare</span>), a McGill-based start-up, has developed a solution to improve
+             care quality and address staff shortages at seniors’ homes and CHSLDs. It’s an AI-based system that analyses
+            real-time video streams, detects unexpected activity changes, emergency cases, and triggers safety alerts.
+            The technology ensures data privacy by eliminating the need for human observation of the video streams and personal data transmission.</div>
+        <div class="sec-3H2">An Automated Notification Service</div>
+        <div class="sec-3P2">AI-based monitoring system composed of a text-based information collecting module and a mobile phone app designed for receiving information</div>
+        <ul class="sec-3L">
+            <li>The information collecting module can locally process videos taken in the resident’s room and send concise textual information to family members and caregivers' mobile phones
+            <li>Our system helps caregivers to respond in time to residents’ needs</li>
+        </ul>
+
+        <div class="bH">B2B</div>
+        <div class="frame-div6">
+            <div class="rectangle-div2"></div>
+            <div class="rectangle-div3"></div>
+            <div class="rectangle-div4"></div>
+            <img
+            class="falling-person-silhouette-19-1-icon"
+            alt=""
+            src="public/public/fallingpersonsilhouette19-1@2x.png"
+            />
+            <div class="resident-room-div">Resident Room</div>
+            <div class="access-point-div">Access Point</div>
+            <div class="router-div">Router</div>
+            <div class="real-time-monitoring-system">
+            Real Time Monitoring System
+            </div>
+            <div class="database-div">Database</div>
+            <div class="ai-components-div">AI Components</div>
+            <div class="application-components-div">Application Components</div>
+            <div class="ai-video-poseaction-inference">
+            AI Video Pose/Action Inference Engine
+            </div>
+            <div class="backend-system-for-application">
+            Backend System for Applications
+            </div>
+            <div class="report-generator-div">Report Generator</div>
+            <div class="ai-future-prediction-engine">
+            AI Future Prediction Engine
+            </div>
+            <img class="arrow-icon" alt="" src="public/public/arrow-12.svg" /><img
+            class="arrow-icon1"
+            alt=""
+            src="public/public/arrow-16.svg"
+            /><img class="arrow-icon2" alt="" src="public/public/arrow-17.svg" /><img
+            class="arrow-icon3"
+            alt=""
+            src="public/public/arrow-23.svg"
+            /><img class="arrow-icon4" alt="" src="public/public/arrow-24.svg" /><img
+            class="arrow-icon5"
+            alt=""
+            src="public/public/arrow-26.svg"
+            /><img class="arrow-icon6" alt="" src="public/public/arrow-25.svg" /><img
+            class="arrow-icon7"
+            alt=""
+            src="public/public/arrow-19.svg"
+            /><img class="arrow-icon8" alt="" src="public/public/arrow-21.svg" /><img
+            class="arrow-icon9"
+            alt=""
+            src="public/public/arrow-20.svg"
+            /><img class="arrow-icon10" alt="" src="public/public/arrow-22.svg" /><img
+            class="arrow-icon11"
+            alt=""
+            src="public/public/arrow-18.svg"
+            /><img
+            class="security-camera-svgrepo-com-1-icon"
+            alt=""
+            src="public/public/securitycamerasvgrepocom-1.svg"
+            /><img
+            class="access-point-svgrepo-com-1-icon"
+            alt=""
+            src="public/public/accesspointsvgrepocom-1.svg"
+            /><img
+            class="computer-svgrepo-com-1-icon"
+            alt=""
+            src="public/public/computersvgrepocom-1.svg"
+            /><img
+            class="computer-svgrepo-com-2-icon"
+            alt=""
+            src="public/public/computersvgrepocom-2.svg"
+            /><img
+            class="cube-svgrepo-com-1-icon"
+            alt=""
+            src="public/public/cubesvgrepocom-1.svg"
+            /><img
+            class="computer-svgrepo-com-3-icon"
+            alt=""
+            src="public/public/computersvgrepocom-3.svg"
+            /><img
+            class="cube-svgrepo-com-2-icon"
+            alt=""
+            src="public/public/cubesvgrepocom-2.svg"
+            /><img
+            class="computer-svgrepo-com-4-icon"
+            alt=""
+            src="public/public/computersvgrepocom-4.svg"
+            /><img
+            class="cube-svgrepo-com-3-icon"
+            alt=""
+            src="public/public/cubesvgrepocom-3.svg"
+            /><img
+            class="computer-svgrepo-com-5-icon"
+            alt=""
+            src="public/public/computersvgrepocom-5.svg"
+            /><img
+            class="computer-svgrepo-com-6-icon"
+            alt=""
+            src="public/public/computersvgrepocom-6.svg"
+            /><img
+            class="cube-svgrepo-com-4-icon"
+            alt=""
+            src="public/public/cubesvgrepocom-4.svg"
+            /><img
+            class="database-svgrepo-com-1-icon"
+            alt=""
+            src="public/public/databasesvgrepocom-1.svg"
+            /><img
+            class="online-doctor-consultation-ico-icon"
+            alt=""
+            src="public/public/onlinedoctorconsultationicon-4.svg"
+            />
+            <div class="line-div"></div>
+            <div class="line-div1"></div>
+            <div class="app-notifications-sms-messag">
+            App Notifications / SMS Messages
+            </div>
+            <div class="awake-ai-server">Awake AI Server</div>
+            <img
+            class="original-on-transparent-11"
+            alt=""
+            src="public/public/original-on-transparent-11@2x.png"
+            />
+            <img class="group-icon1" alt="" src="public/public/group-69127.svg" />
+        </div>
+
+        <div class="b2bS">
+            AwakeAI Inc (previously known as <span style="font-weight: bold;">TrustCare</span>), a McGill-based start-up, has developed a solution
+            to improve care quality and address staff shortages at seniors’ homes and CHSLDs.
+            It’s an AI-based system that analyses real-time video streams, detects unexpected activity changes,
+            emergency cases, and triggers safety alerts.
+        </div>
+    </div>
+
+
+    <div class="sec-4">
+      <div class="bC" style="padding-top: 4rem;">B2C</div>
+          <div class="frame-div7">
+
+            <img class="ellipse-icon" alt="" src="public/public/ellipse-138.svg" /><img
+              class="falling-person-silhouette-19-1-icon1"
+              alt=""
+              src="public/public/fallingpersonsilhouette19-11@2x.png"
+            />
+            <div class="fall-event-div">Fall event</div>
+            <div class="caregiver-div">Caregiver</div>
+            <div class="smartphone-with-sensors">Smartphone with sensors</div>
+            <div class="caregiver-div1">Caregiver</div>
+            <div class="local-ml-model">Local ML model</div>
+            <div class="internet-div">Internet</div>
+            <div class="send-notification-div">Send notification</div>
+            <div class="cloud-div">Cloud</div>
+            <div class="send-notification-div1">Send notification</div>
+            <div class="ml-model-web-service">ML model web service</div>
+            <div class="iot-hub-div">IoT Hub</div>
+            <div class="azure-functions-div">Azure Functions</div>
+            <div class="notification-hub-div">Notification Hub</div>
+            <div class="blob-storage-div">BLOB storage</div>
+            <div class="stream-analytics-div">Stream Analytics</div>
+            <img
+              class="online-doctor-consultation-ico-icon1"
+              alt=""
+              src="public/public/onlinedoctorconsultationicon-2.svg"
+            /><img
+              class="online-doctor-consultation-ico-icon2"
+              alt=""
+              src="public/public/onlinedoctorconsultationicon-41.svg"
+            /><img
+              class="online-doctor-consultation-ico-icon3"
+              alt=""
+              src="public/public/onlinedoctorconsultationicon-3.svg"
+            /><img
+              class="internet-internet-of-things-io-icon"
+              alt=""
+              src="public/public/internetinternetofthingsiotsvgrepocom-1.svg"
+            /><img
+              class="azure-svgrepo-com-1-icon"
+              alt=""
+              src="public/public/azuresvgrepocom-1.svg"
+            /><img
+              class="notification-hub-svgrepo-com-1-icon"
+              alt=""
+              src="public/public/notificationhubsvgrepocom-1.svg"
+            /><img
+              class="machine-learning-svgrepo-com-2-icon"
+              alt=""
+              src="public/public/machinelearningsvgrepocom-2.svg"
+            /><img
+              class="machine-learning-svgrepo-com-3-icon"
+              alt=""
+              src="public/public/machinelearningsvgrepocom-3.svg"
+            /><img
+              class="stream-analytics-svgrepo-com-1-icon"
+              alt=""
+              src="public/public/streamanalyticssvgrepocom-1.svg"
+            /><img
+              class="storage-blob-svgrepo-com-1-icon"
+              alt=""
+              src="public/public/storageblobsvgrepocom-1.svg"
+            /><img class="arrow-icon12" alt="" src="public/public/arrow-1.svg" /><img
+              class="arrow-icon13"
+              alt=""
+              src="public/public/arrow-10.svg"
+            /><img class="arrow-icon14" alt="" src="public/public/arrow-2.svg" /><img
+              class="arrow-icon15"
+              alt=""
+              src="public/public/arrow-121.svg"
+            /><img class="arrow-icon16" alt="" src="public/public/arrow-3.svg" /><img
+              class="arrow-icon17"
+              alt=""
+              src="public/public/arrow-11.svg"
+            /><img class="arrow-icon18" alt="" src="public/public/arrow-5.svg" /><img
+              class="arrow-icon19"
+              alt=""
+              src="public/public/arrow-15.svg"
+            /><img class="arrow-icon20" alt="" src="public/public/arrow-7.svg" /><img
+              class="arrow-icon21"
+              alt=""
+              src="public/public/arrow-8.svg"
+            /><img class="arrow-icon22" alt="" src="public/public/arrow-9.svg" /><img
+              class="arrow-icon23"
+              alt=""
+              src="public/public/arrow-13.svg"
+            /><img class="arrow-icon24" alt="" src="public/public/arrow-14.svg" /><img
+              class="arrow-icon25"
+              alt=""
+              src="public/public/arrow-6.svg"
+            /><img class="arrow-icon26" alt="" src="public/public/arrow-4.svg" />
+            <div class="line-div2"></div>
+            <div class="line-div3"></div>
+            <div class="line-div4"></div>
+
+
+          </div>
+          <div class="sec-4P">
+            AwakeAI Inc (previously known as <span style="font-weight: bold;">TrustCare</span>), a McGill-based
+            start-up, has developed a solution to improve care quality and address staff shortages at seniors’ homes and CHSLDs.
+            It’s an AI-based system that analyses real-time video streams, detects unexpected activity changes, emergency cases, and triggers safety alerts.
+
+        </div>
+    </div>
+
+    <div class="sec-5">
+        <div class="sec-5H">Competition and Activities</div>
+
+        <div class="sec-5F" style="margin-top: 5%;">
+          <img class="sec-5Logo" alt="" src="public/mgDobson.png" />
+          <div class="sec-5FList">
+            <ul style="list-style: none;">
+              <li>Summer 2022 McGill Dobson Entrepreneurship X1-Accelerator: Participated</li>
+              <li>Winter 2022 McGill Dobson Entrepreneurship Programs Bootcamp and Cup: Third Place in Health Science Enterprise Tracks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sec-5F">
+          <img class="sec-5Logo" alt="" src="public/mgEngine.png" />
+          <div class="sec-5FList">
+            <ul style="list-style: none;">
+              <li>Winter 2022 TechAccel Showcase Winter & Summer 2022 Cohort Event</li>
+              <li>Summer 2022  TechAccel Grant: Summer 2022 TechAccel Grantees</li>
+              <li>Fall 2021 & Winter 2022 McGill Invention to Impact Training program: Participated</li>
+              <li>Summer 2021  McGill-affiliated startup ventures: one of the approved and eligible team and participated in a startup internship program</li>
+              <li>Winter 2021 TechAccel Showcase Winter & Summer 2021 Cohort Event: Audience Favourite</li>
+              <li>Winter 2021  TechIdea Pitch Competition: 1st Place & Audience Favorite</li>
+              <li>Winter 2021  TechAccel Grant: Winter 2021 TechAccel Grantees</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sec-5F">
+          <img class="sec-5Logo" style="margin-left: -7.5%;" alt="" src="public/napcrg.png" />
+          <div class="sec-5FList">
+            <ul style="list-style: none;">
+              <li>Summer 2022 McGill Dobson Entrepreneurship X1-Accelerator: Participated</li>
+              <li>Winter 2022 McGill Dobson Entrepreneurship Programs Bootcamp and Cup: Third Place in Health Science Enterprise Tracks</li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+    <img class="bgleft" alt="" src="public/bgleft.png" />
+    <div class="sec-6">
+      <section class="team-area-v1 -pt-50 pb-110" id="team">
+        <div class="container" id="team-home">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center mb-25">
+                        <h2>Our Team</h2>
+                        <!--                    <span class="span">Experts</span>-->
                     </div>
-                    <div class="col-lg-1"></div>
+                </div>
+                <div>
+                    <div class="features-tab mb-25">
+                        <ul class="nav nav-tabs justify-content-center ">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#team-nav">
+                                    Our Team
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#mentor">Our Mentors</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="mentor" role="tabpanel">
-                <div class="content-box">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="team-nav">
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10">
                             <div class="row">
-                                <div v-for="item in mentorList" class="col-lg-3 col-md-6 col-sm-12">
+                                <div v-for="item in teamList" class="col-lg-3 col-md-6 col-sm-12">
                                     <div class="team-item mb-50 wow fadeInUp">
                                         <div class="team-img">
                                             <img :src="item.image" alt="">
@@ -609,27 +439,20 @@
                                                 <div class="team-social">
                                                     <span class="hover-btn"><i class="fal fa-plus"></i></span>
                                                     <ul class="team-social-link">
-                                                        <li v-if="item.links.linkedin!==''">
-                                                            <a :href="item.links.linkedin" class="social-icon">
-                                                                <i class="fab fa-linkedin"></i></a>
-                                                        </li>
-                                                        <li v-if="item.links.github!==''">
-                                                            <a :href="item.links.github" class="social-icon">
-                                                            <i class="fab fa-github"></i></a>
-                                                        </li>
-                                                        <li>
-                                                            <a data-toggle="modal" :data-target="'#' + item.id"
+                                                        <li><a :href="item.links.linkedin" class="social-icon"><i
+                                                                class="fab fa-linkedin"></i></a></li>
+                                                        <li><a :href="item.links.github" class="social-icon"><i
+                                                                class="fab fa-github"></i></a></li>
+                                                        <li><a data-toggle="modal" :data-target="'#' + item.id"
                                                                style="cursor:pointer;"
-                                                               @click="showModal(item.id)">
-                                                                <i class="fa fa-info"></i>
-                                                            </a>
+                                                               @click="showModal(item.id)"><i class="fa fa-info"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="team-info text-center">
-                                            <h4>{{item.firstName}} {{item.lastName}}</h4>
+                                            <h4>{{item.lastName}} {{item.firstName}}</h4>
                                             <span class="position">{{item.position}}</span>
                                         </div>
                                     </div>
@@ -639,8 +462,8 @@
                                         <div class="modal-dialog modal-xl" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4 class="modal-title" :id="item.id">Details Of {{item.firstName}}
-                                                        {{item.lastName}}</h4>
+                                                    <h4 class="modal-title" :id="item.id">Details Of {{item.lastName}} {{item.firstName}}
+                                                        </h4>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             data-bs-dismiss="modal"
                                                             aria-label="Close" style="background: white;">
@@ -659,8 +482,8 @@
                                                                     <div class="col-sm-1"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="ins-name">
-                                                                            <h4>{{item.firstName}} {{item.lastName}}
-                                                                            </h4>
+                                                                            <h3>{{item.firstName}} {{item.lastName}}
+                                                                            </h3>
                                                                         </div>
                                                                         <div class="span span1">
                                                                             <p class="left" style="font-size: 17px;">
@@ -676,20 +499,44 @@
                                                                                 {{item.year}}</p>
                                                                             <div class="clearfix"></div>
                                                                         </div>
-                                                                        <div id="detail">
+                                                                        <div class="span span1">
+                                                                            <p class="left" style="font-size: 17px;">
+                                                                                Email:</p>
+                                                                            <p class="right" style="font-size: 17px;">
+                                                                                <a :href="'mailto:'+ item.firstName+'.'+item.lastName+'@mail.mcgill.ca'">
+                                                                                    {{item.firstName}}.{{item.lastName}}@mail.mcgill.ca
+                                                                                </a>
+                                                                            </p>
+                                                                            <div class="clearfix"></div>
+                                                                        </div>
+                                                                        <div id="detail_team">
                                                                             <div class="ins-name">
                                                                                 <h5>Biography </h5>
                                                                             </div>
+
+                                                                            <!--                                                    <div v-for="i in item.moreInfo.Duties.length">-->
                                                                             <div class="span span1">
                                                                                 <p style="text-align: justify">
                                                                                     {{item.bio}}
                                                                                 </p>
+                                                                                <!--                                                                <strong> {{i}} </strong>-->
+                                                                                <!--                                                                {{item.moreInfo.Duties[i-1]}}</p>-->
+                                                                                <!--                                                            <div class="clearfix"></div>-->
                                                                             </div>
+                                                                            <!--                                                        <div>-->
+                                                                            <!--                                                        </div>-->
+                                                                            <!--                                                        <div class="clerfix"></div>-->
+                                                                            <!--                                                    </div>-->
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--                                                <div class="modal-footer">-->
+                                                        <!--                                                    <button type="button" class="btn btn-secondary"-->
+                                                        <!--                                                            data-dismiss="modal">Close-->
+                                                        <!--                                                    </button>-->
+                                                        <!--                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -699,206 +546,247 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!--https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/viewform?usp=pp_url&entry.1208597498=asdfasdf&entry.1569009990=asdfasdfasdfffff&entry.537245108=Want+to+Invest&entry.1889589232=asdfasdfasdfasdf-->
-<section class="contact-area-v1 pt-80 pb-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title mb-45 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <h2>Get In Touch With us</h2>
-                </div>
-                <div class="contact-form-area mb-60 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form_group">
-                                    <input type="text" class="form_control" placeholder="Enter full name" name="entry.1208597498" required="">
-                                    <i class="far fa-user"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form_group">
-                                    <input type="email" class="form_control" placeholder="Enter email address" name="entry.1569009990" required="">
-                                    <i class="far fa-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form_group" data-input="L9xHkb">
-                                    <select style="display: none;" onChange="copyTextValue(this);">
-                                        <option value="Service Request/Get a Quote">Service Request/Get a Quote</option>
-                                        <option value="Seek for Partnership">Seek for Partnership</option>
-                                        <option value="Job Opportunity">Job Opportunity</option>
-                                    </select>
-                                    <div class="nice-select" tabindex="0">
-                                        <span class="current">Select Subject</span>
-                                            <ul class="list">
-                                                <li data-value="Service Request/Get a Quote" class="option">Service Request/Get a Quote</li>
-                                                <li data-value="Seek for Partnership" class="option">Seek for Partnership</li>
-                                                <li data-value="Job Opportunity" class="option">Job Opportunity</li>
-                                            </ul>
-                                    </div>
-                                    <input type="hidden" name="entry.537245108" id="L9xHkb" value="">
-                                    <i class="far fa-book"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form_group">
-                                    <textarea name="entry.1889589232" placeholder="Enter message" class="form_control"></textarea>
-                                    <i class="far fa-pen"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form_group">
-                                    <button class="main-btn" type="submit" value="Submit">Submit</button>
-                                </div>
-                            </div>
-                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="contact-img mt-40 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
-                    <img src="assets/images/about/about-5.jpg" width="400px" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Team section ======-->
-<!--====== Start Footer ======-->
-<footer class="footer-area footer-area-v3" id="contact">
-    <div class="footer-widget pt-20 bg-cover" style="background-image: url(assets/images/bg/footer-bg.png);">
-        <div class="container">
-            <div class="footer-top pb-20 mb-20">
-                <div class="container">
-                    <div class="row align-items-center">
                         <div class="col-lg-1"></div>
-                        <div class="col-lg-2">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="assets/images/logo/logo2_footer.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#about">About</a>
-                                    <li><a href="#product">Product</a></li>
-                                    <li><a href="#activity">Activity</a></li>
-                                    <li><a href="#team">Team</a>
-                                    <li><a href="#contact">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-2 col-sm-1"></div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="widget contact-widget mb-30">
-                        <div class="contact-info-item">
-                            <div class="icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="info">
-                                <span>LinkedIn</span>
-                                <h5><a href="https://ca.linkedin.com/company/awakeai">AwakeAI Inc.</a></h5>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="widget contact-widget mb-30">
-                        <div class="contact-info-item">
-                            <div class="icon">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info">
-                                <span>Office Address</span>
-                                <h5><a style="pointer-events: none">Montreal, Quebec</a></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="widget contact-widget mb-30">
-                        <div class="contact-info-item">
-                            <div class="icon">
-                                <i class="fal fa-envelope"></i>
-                            </div>
-                            <div class="info">
-                                <span>Email Address</span>
-                                <h5><a href="mailto:info@awakeai.ca">info@awakeai.ca</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="tab-pane fade" id="mentor" role="tabpanel">
+                    <div class="content-box">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div v-for="item in mentorList" class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="team-item mb-50 wow fadeInUp">
+                                            <div class="team-img">
+                                                <img :src="item.image" alt="">
+                                                <div class="team-overlay">
+                                                    <div class="team-social">
+                                                        <span class="hover-btn"><i class="fal fa-plus"></i></span>
+                                                        <ul class="team-social-link">
+                                                            <li><a :href="item.links.linkedin" class="social-icon"><i
+                                                                    class="fab fa-linkedin"></i></a></li>
+                                                            <li><a :href="item.links.github" class="social-icon"><i
+                                                                    class="fab fa-github"></i></a></li>
+                                                            <li><a data-toggle="modal" :data-target="'#' + item.id"
+                                                                   style="cursor:pointer;"
+                                                                   @click="showModal(item.id)"><i class="fa fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="team-info text-center">
+                                                <h4>{{item.lastName}} {{item.firstName}}</h4>
+                                                <span class="position">{{item.position}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" :id="item.id" tabindex="-1" role="dialog"
+                                             :aria-labelledby="item.id"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog modal-xl" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" :id="item.id">Details Of{{item.lastName}} {{item.firstName}}
+                                                            </h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                data-bs-dismiss="modal"
+                                                                aria-label="Close" style="background: white;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="instrument">
+                                                            <div class="container">
+                                                                <div class="instrument-view">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-sm-4 ins-image">
+                                                                            <img :src="item.image"
+                                                                                 :alt="item.firstName"/>
+                                                                        </div>
+                                                                        <div class="col-sm-1"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="ins-name">
+                                                                                <h4>{{item.lastName}} {{item.firstName}}
+                                                                                </h4>
+                                                                            </div>
+                                                                            <div class="span span1">
+                                                                                <p class="left" style="font-size: 17px;">
+                                                                                    Title:</p>
+                                                                                <p class="right" style="font-size: 17px;">
+                                                                                    {{item.position}}</p>
+                                                                                <div class="clearfix"></div>
+                                                                            </div>
+                                                                            <div class="span span1">
+                                                                                <p class="left" style="font-size: 17px;">
+                                                                                    Year Joined:</p>
+                                                                                <p class="right" style="font-size: 17px;">
+                                                                                    {{item.year}}</p>
+                                                                                <div class="clearfix"></div>
+                                                                            </div>
+                                                                            <div class="span span1">
+                                                                                <p class="left" style="font-size: 17px;">
+                                                                                    Email:</p>
+                                                                                <p class="right" style="font-size: 17px;">
+                                                                                    <a :href="'mailto:'+item.email">{{item.firstName}}.{{item.lastName}}@mcgill.ca</a>
+                                                                                </p>
+                                                                                <div class="clearfix"></div>
+                                                                            </div>
+                                                                            <div id="detail">
+                                                                                <div class="ins-name">
+                                                                                    <h5>Biography </h5>
+                                                                                </div>
 
-            </div>
-        </div>
-    </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="copyright-text text-center">
-                        <p>Copyright &copy; 2022. AwakeAI Inc. All rights reserved.</p>
+                                                                                <!--                                                    <div v-for="i in item.moreInfo.Duties.length">-->
+                                                                                <div class="span span1">
+                                                                                    <p style="text-align: justify">
+                                                                                        {{item.bio}}
+                                                                                    </p>
+                                                                                    <!--                                                                <strong> {{i}} </strong>-->
+                                                                                    <!--                                                                {{item.moreInfo.Duties[i-1]}}</p>-->
+                                                                                    <!--                                                            <div class="clearfix"></div>-->
+                                                                                </div>
+                                                                                <!--                                                        <div>-->
+                                                                                <!--                                                        </div>-->
+                                                                                <!--                                                        <div class="clerfix"></div>-->
+                                                                                <!--                                                    </div>-->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--                                                <div class="modal-footer">-->
+                                                            <!--                                                    <button type="button" class="btn btn-secondary"-->
+                                                            <!--                                                            data-dismiss="modal">Close-->
+                                                            <!--                                                    </button>-->
+                                                            <!--                                                </div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Modal -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        <!--        <div class="row">-->
+        <!--            <div class="col-lg-12">-->
+        <!--                <div class="button text-center wow fadeInUp">-->
+        <!--                    <a href="team.html" class="main-btn">Join With Our Team</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        </div>
+    </section>
     </div>
-</footer>
-<!--====== End Footer ======-->
-<!--====== back-to-top ======-->
-<a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+    <div class="sec-7">
+        <img class="hero-bg2" alt="" src="public/public/pexelsitalomelo1786244-1@2x.png"/>
+        <section class="contact-area-v1 pt-80 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title mb-45 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <h2 class="text-white">Get In Touch With us</h2>
+                        </div>
+                        <div class="contact-form-area mb-60 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form_group">
+                                            <input type="text" class="form_control" placeholder="Enter full name" name="entry.1208597498" required="">
+                                            <i class="far fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_group">
+                                            <input type="email" class="form_control" placeholder="Enter email address" name="entry.1569009990" required="">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form_group" data-input="L9xHkb">
+                                            <select style="display: none;" onChange="copyTextValue(this);">
+                                                <option value="Service Request/Get a Quote">Service Request/Get a Quote</option>
+                                                <option value="Seek for Partnership">Seek for Partnership</option>
+                                                <option value="Job Opportunity">Job Opportunity</option>
+                                            </select>
+                                            <div class="nice-select" tabindex="0">
+                                                <span class="current">Select Subject</span>
+                                                    <ul class="list">
+                                                        <li data-value="Service Request/Get a Quote" class="option">Service Request/Get a Quote</li>
+                                                        <li data-value="Seek for Partnership" class="option">Seek for Partnership</li>
+                                                        <li data-value="Job Opportunity" class="option">Job Opportunity</li>
+                                                    </ul>
+                                            </div>
+                                            <input type="hidden" name="entry.537245108" id="L9xHkb" value="">
+                                            <i class="far fa-book"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form_group">
+                                            <textarea name="entry.1889589232" placeholder="Enter message" class="form_control"></textarea>
+                                            <i class="far fa-pen"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form_group">
+                                            <button class="main-btn" type="submit" value="Submit">Submit</button>
+                                        </div>
+                                    </div>
+                                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 
 <!--====== Jquery js ======-->
-<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
 <!--====== Bootstrap js ======-->
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
 <!--====== Slick js ======-->
-<script src="assets/js/slick.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
 <!--====== Magnific Popup js ======-->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/jquery.magnific-popup.min.js"></script>
 <!--====== Isotope js ======-->
-<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="../assets/js/isotope.pkgd.min.js"></script>
 <!--====== Imagesloaded js ======-->
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
 <!--====== counterup js ======-->
-<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="../assets/js/jquery.counterup.min.js"></script>
 <!--====== waypoints js ======-->
-<script src="assets/js/jquery.waypoints.js"></script>
+<script src="../assets/js/jquery.waypoints.js"></script>
 <!--====== Nice-select js ======-->
-<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="../assets/js/jquery.nice-select.min.js"></script>
 <!--====== Nice-number js ======-->
-<script src="assets/js/jquery.nice-number.min.js"></script>
+<script src="../assets/js/jquery.nice-number.min.js"></script>
 <!--====== jquery-ui js ======-->
-<script src="assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery-ui.min.js"></script>
 <!--====== easypiechart js ======-->
-<script src="assets/js/jquery.easypiechart.min.js"></script>
+<script src="../assets/js/jquery.easypiechart.min.js"></script>
 <!--====== Wow js ======-->
-<script src="assets/js/wow.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
 <!--====== Main js ======-->
-<script src="assets/js/main.js"></script>
+<script src="../assets/js/main.js"></script>
 <!--====== Vue js ======-->
-<script src="assets/js/vue.min.js"></script>
+<script src="../assets/js/vue.min.js"></script>
 <!--&lt;!&ndash;====== bootstrap js ======&ndash;&gt;-->
-<!--<script src="assets/js/bootstrap.min.js"></script>-->
+<!--<script src="../assets/js/bootstrap.min.js"></script>-->
 <!--====== Custom js ======-->
 <style>
     .features-tab .nav-tabs {
@@ -929,7 +817,7 @@
     }
 
     .expertiesico {
-        padding: 4% 6% 4% 6%;
+        padding: 22% 20% 20% 0;
         text-align: right;
         font-family: 'Crimson Text', serif;
         font-size: 21px;
@@ -1057,7 +945,7 @@
     h2
 </style>
 <script>
-    teamList = [
+  teamList = [
         {
             "id": "ls",
             "image": "assets/images/gallery/Lulan.png",
@@ -1244,32 +1132,38 @@
                 const modal = new bootstrap.Modal(myModal);
                 modal.show();
             }
+            // },
+            // closeModel(id){
+            //     const myModal = document.getElementById(id);
+            //     const modal = new bootstrap.Modal(myModal);
+            //     modal.close();
+            // }
         }
-    })
+      })
 </script>
 
 <script>
     activityList = [
         {
-            "image": "assets/images/gallery/gallery1.png",
+            "image": "../assets/images/gallery/gallery1.png",
             "name": "GOLEAD",
             "semester": "Fall, 2020",
             "event": "goLead Move Grand Prize Winner",
             "cat": "goLead"
         },
         {
-            "image": "assets/images/gallery/gallery2.png",
+            "image": "../assets/images/gallery/gallery2.png",
             "name": "GOLEAD",
             "semester": "Fall, 2020",
             "event": "TrustCare Application Design Idea",
             "cat": "goLead"
         },
         {
-            "image": "assets/images/gallery/gallery3.png",
-            "name": "Dobson Cup",
-            "semester": "Winter, 2022",
-            "event": "Dobson Bootcamp and Cup",
-            "cat": "Dobson"
+            "image": "../assets/images/gallery/gallery3.png",
+            "name": "GOLEAD",
+            "semester": "Winter, 2021",
+            "event": "goLEAD Activate Social Media Poster",
+            "cat": "goLead"
         }
     ]
     let app2 = new Vue({
@@ -1280,38 +1174,6 @@
             }
         }
     })
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVXPVJ54JS"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-JVXPVJ54JS');
-</script>
-
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-    $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Sent! Thanks for submitted...');
-    });
-</script>
-<script>
-    function copyTextValue(selectedOption) {
-        if(selectedOption.selectedIndex <= 0){
-            document.getElementById("L9xHkb").value = '';
-            return;
-        }
-
-        var selectedOptionValue = selectedOption.value;
-        document.getElementById("L9xHkb").value = selectedOptionValue;
-    }
 </script>
 </body>
 </html>

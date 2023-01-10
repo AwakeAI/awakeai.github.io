@@ -1,0 +1,1356 @@
+:root {
+    --font-sf-pro-display: "SF Pro Display";
+    --font-inherit: inherit;
+
+    /* font sizes */
+    --font-size-18xs: 7.21px;
+    --font-size-17xs: 8px;
+    --font-size-16xs: 9.61px;
+    --font-size-15xs: 9.11px;
+    --font-size-14xs: 10px;
+    --font-size-13xs: 12.13px;
+    --font-size-12xs: 12px;
+    --font-size-11xs: 14.42px;
+    --font-size-10xs: 14.94px;
+    --font-size-9xs: 15.17px;
+    --font-size-8xs: 18px;
+    --font-size-7xs: 18.67px;
+    --font-size-6xs: 18.2px;
+    --font-size-5xs: 19.22px;
+    --font-size-4xs: 19.71px;
+    --font-size-3xs: 22px;
+    --font-size-2xs: 22.78px;
+    --font-size-xs: 22.4px;
+    --font-size-sm: 24.03px;
+    --font-size-base: 24px;
+    --font-size-lg: 24.51px;
+    --font-size-xl: 26px;
+    --font-size-2xl: 29.61px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 32px;
+    --font-size-5xl: 36px;
+    --font-size-6xl: 40px;
+    --font-size-7xl: 60px;
+    --font-size-8xl: 80px;
+    --font-size-9xl: 100px;
+    --font-size-10xl: 120px;
+
+    /* Colors */
+    --shades-00: #fff;
+    --shades-100: #000;
+    --color-brown: rgba(255, 123, 123, 0.5);
+    --color-pink: #cc7676;
+    --color-gray-100: #f9f9f9;
+    --color-gray-200: #f3f3f3;
+    --gray-6: #f2f2f2;
+    --color-gray-400: #ededed;
+    --shades-30: #ccc;
+    --color-gray-600: #3d3d3d;
+    --color-gray-700: #1e1e1e;
+    --color-gray-800: rgba(255, 255, 255, 0.2);
+    --color-gray-900: rgba(255, 255, 255, 0.72);
+    --color-gray-1000: rgba(0, 0, 0, 0.8);
+    --color-gray-1100: rgba(0, 0, 0, 0.3);
+    --color-orange-100: #fbc751;
+    --color-orange-200: #ff9900;
+    --color-orange-300: rgba(255, 153, 0, 0.2);
+    --color-tan: rgba(255, 220, 139, 0.2);
+
+    /* Gaps */
+    --gap-5xs: 8.41px;
+    --gap-4xs: 9.61px;
+    --gap-3xs: 18.22px;
+    --gap-2xs: 19.22px;
+    --gap-xs: 21.79px;
+    --gap-sm: 22.78px;
+    --gap-md: 28.83px;
+    --gap-lg: 45.56px;
+    --gap-xl: 51.66px;
+    --gap-2xl: 54.46px;
+    --gap-3xl: 58.55px;
+    --gap-4xl: 76.89px;
+    --gap-5xl: 87.14px;
+
+    /* Paddings */
+    --padding-7xs: 18.22222137451172px;
+    --padding-6xs: 19.22222328186035px;
+    --padding-5xs: 21.78532600402832px;
+    --padding-4xs: 25.870075225830078px;
+    --padding-3xs: 38.12432098388672px;
+    --padding-2xs: 43px;
+    --padding-xs: 76.8888931274414px;
+    --padding-sm: 96.11111450195312px;
+    --padding-md: 96.10665893554688px;
+    --padding-lg: 108.12500762939453px;
+    --padding-xl: 108.1199951171875px;
+    --padding-2xl: 121px;
+    --padding-3xl: 124px;
+    --padding-4xl: 145.68936157226562px;
+    --padding-5xl: 172px;
+    --padding-6xl: 236.6736297607422px;
+    --padding-7xl: 728.4468383789062px;
+
+    /* border radiuses */
+    --br-3xs: 15.94px;
+    --br-2xs: 16.82px;
+    --br-xs: 19.22px;
+    --br-sm: 19.06px;
+    --br-md: 30px;
+    --br-lg: 36.04px;
+    --br-xl: 40.85px;
+    --br-2xl: 123.21px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden !important;
+
+}
+
+.sec-1 {
+    height: 100vh;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.logo-nav {
+    width: 138.44px;
+    height: 128px;
+    margin-left: 100%;
+    margin-top: 25%;
+}
+
+.nav {
+    display: flex;
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+.navUL {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 7.5%;
+}
+
+.sec-1C {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.hero-h1 {
+    animation: .5s ease-out 0s 1 slideInFromLeft;
+    font-size: 32px;
+    color: #FBC751;
+    font-weight: bolder;
+    margin: 1rem 0;
+}
+
+.hero-h2 {
+    animation: 1.5s ease-out 0s 1 fadeIn;
+    font-size: 100px;
+    color: #ffffff;
+    font-weight: bold;
+    width: 50%;
+}
+
+.hero-h3 {
+    animation: .5s ease-out 0s 1 slideInFromRight;
+    font-size: 40px;
+    color: #FF9900;
+    font-weight:700;
+    margin: 1rem 0;
+}
+
+.video-overview {
+    animation: .5s ease-out 0s 1 slideTop;
+    padding: 1.5em 4em;;
+    border-radius: 50px;
+    background: rgba(220, 220, 220, 0.3);
+    color: white;
+    border: none;
+    margin-top: 4em;
+    font-size: 16px;
+}
+
+.fa-play {
+    position: relative;
+    left: -20px;
+}
+
+.sec-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140vh;
+    z-index: -1;
+    background: #181818;
+    padding-top: 7.5%;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec-2H1 {
+    font-size: 22px;
+    color: #FBC751;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+.sec-2H2 {
+    font-size: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    margin-left: 10%;
+    width: 1%;
+
+}
+
+.sec-2I {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.spotcustomer {
+    background: white;
+    padding: 1em;
+    width: 60px !important;
+    border-radius: 20px;
+}
+
+
+.sec-2E {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 4em;
+    margin-top: 5%;
+
+}
+
+.sec-2C {
+    position: relative;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.sec-2CH {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sec-2CP {
+    color: #ffffff;
+    font-size: 20px;
+    width:100%;
+}
+
+.logotilted {
+    width: 800px;
+    position: absolute;
+    margin-top: -20%;
+    right: -10%;
+    overflow: hidden;
+    display: block;
+
+}
+
+.sec-3 {
+    height: 110vh;
+    background: #ffffff;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    color: black;
+}
+
+.sec-3H {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.sec-3P {
+    font-size: 26px;
+    margin-top: 1.5%;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec-3H2 {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5%;
+}
+
+.sec-3P2 {
+    font-size: 28px;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec-3L {
+    font-size: 28px;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bH {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    top: 10%;
+}
+
+.b2bS {
+    position: relative;
+    left: 60%;
+    width: 35%;
+    margin-top: -2em;
+    font-size: 30px;
+    line-height: normal;
+}
+
+.sec-4 {
+    background-color: var(--color-gray-200);
+    margin-top: 20%;
+    height: 120vh;
+}
+
+.bC {
+    font-size: 70px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    left: 10%
+}
+
+.sec-4P {
+    position: relative;
+    padding: 6rem;
+    font-size: 28px;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    width: 95%;
+}
+
+.sec-5 {
+    background-color: #181818;
+    height: 180vh;
+}
+
+.sec-5H {
+    margin-left: 10%;
+    font-size: 100px;
+    color: #ffffff;
+    line-height: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 50%;
+    padding-top: 7.5%;
+}
+
+.sec-5F {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.sec-5Logo {
+    width: 440px;
+    height: 88px;
+}
+
+.sec-5FList {
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.sec-5FList li {
+    width: 80%;
+    padding-bottom: 1em;
+}
+
+.sec-6 {
+    background-color: #ffffff;
+    height: 120vh;
+}
+
+.bgleft {
+    height: 800px;
+    margin-top: -25%;
+}
+
+@media screen and (min-width: 320px) {
+    .logo-nav {
+        width: 35px;
+        height: 35px;
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+
+    .sec-1 {
+        height: 105vh;
+    }
+
+    .sec-1C {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .hero-bg {
+        object-fit: none;
+        height: 105vh;
+    }
+
+    .nav {
+        display: flex;
+        animation: 2s ease-out 0s 1 fadeIn;
+    }
+
+    .navUL {
+        gap: 12.5px;
+        font-size: 8px;
+        top: 4%;
+    }
+
+    .hero-h1 {
+       font-size: 14px;
+        margin: 1rem 0;
+        margin-top: 10rem;
+    }
+
+    .hero-h2 {
+        font-size: 32px;
+        width: 100%;
+        margin-top: -2%;
+    }
+
+    .hero-h3 {
+        font-size: 12px;
+        margin: .5rem 0;
+    }
+
+    .video-overview {
+        margin-top: 5em;
+        font-size: 10px;
+    }
+
+    .sec-2 {
+        text-align: center;
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .sec-2H1 {
+        font-size: 15px;
+        color: #FBC751;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+
+    .sec-2H2 {
+        font-size: 30px;
+        color: #ffffff;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: .25rem;
+        margin-bottom: 5rem;
+    }
+
+    .sec-2I {
+        display: none;
+    }
+
+    .spotcustomer {
+        width: 60px !important;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+
+    .sec-2E {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec-2C {
+        text-align: center;
+    }
+
+    .sec-2CH {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .sec-2CP {
+        font-size: 14px;
+        margin-top: -.5rem;
+    }
+
+    .logotilted {
+        display: none;
+    }
+
+    .sec-3H {
+        padding: 0;
+        margin: 0;
+        font-size: 32px;
+    }
+
+    .sec-3 {
+        text-align: left;
+        line-height: 1.5em;
+        margin: 15% auto;
+        height: auto;
+    }
+
+    .sec-3P {
+        font-size: 12px;
+        margin-top: 1.5%;
+    }
+
+    .sec-3H2 {
+        font-size: 18px;
+        margin-top: 7.5%;
+    }
+
+    .sec-3P2 {
+        font-size: 12px;
+        margin-top: 1.5%;
+        text-align: left;
+    }
+
+    .sec-3L {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 2.5%;
+        list-style: square;
+        margin-left: 10%;
+        width: 88%;
+    }
+
+    .bH {
+        display: none;
+    }
+
+    .b2bS {
+        display: none;
+    }
+
+    .frame-div6 {
+        display: none;
+    }
+
+    .sec-4 {
+        display: none;
+
+    }
+
+    .sec-5 {
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+        padding: 15% 5%;
+    }
+
+    .sec-5H {
+        font-size: 26px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .sec-5F {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5%;
+
+    }
+
+    .sec-5Logo {
+        width: 200px !important;
+        height: auto;
+        position: relative;
+
+    }
+
+    .sec-5FList {
+        color: white;
+        font-size: 12px;
+        line-height: 1rem;
+        text-align: left;
+        margin-top: .5rem;
+    }
+
+    .sec-5FList li {
+        width: 80%;
+        padding-bottom: 1em;
+    }
+
+    .bgleft {
+        display: none;
+    }
+
+    .sec-6 {
+        padding-top: 30%;
+    }
+}
+
+@media screen and (min-width: 470px) {
+body {
+    zoom: 1.1;
+ }
+
+
+.logo-nav {
+    width: 55px;
+    height: 55px;
+    margin-left: 50%;
+    margin-top: 50%;
+}
+
+.navUL {
+    gap: 12.5px;
+    font-size: 8px;
+    top: 7%;
+}
+
+.sec-1C {
+    top: 1%;
+}
+}
+
+@media screen and (min-width: 768px) {
+
+    .logo-nav {
+        width: 65px;
+        height: 65px;
+        margin-left: 50%;
+        margin-top: 50%;
+    }
+
+    .sec-1 {
+        height: 90vh;
+    }
+
+    .sec-1C {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .hero-bg {
+        object-fit: none;
+        height: 90vh;
+    }
+
+    .navUL {
+        gap: 30px;
+        font-size: 12px;
+        top: 6%;
+    }
+
+    .hero-h1 {
+       font-size: 24px;
+        margin: 1rem 0;
+        margin-top: 20rem;
+    }
+
+    .hero-h2 {
+        font-size: 50px;
+        width: 80%;
+        margin-top: -2%;
+    }
+
+    .hero-h3 {
+        font-size: 20px;
+        margin: .5rem 0;
+    }
+
+    .video-overview {
+        margin-top: 5em;
+        font-size: 12px;
+    }
+
+
+    .sec-2H1 {
+        font-size: 16px;
+        margin-left: 10%;
+        text-align: left;
+    }
+
+    .sec-2H2 {
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 2.5%;
+        margin-left: 10%;
+        text-align: left;
+    }
+
+    .sec-2I {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .spotcustomer {
+        background: white;
+        padding: .5em;
+        width: 40px !important;
+        border-radius: 10px;
+        margin-left: 0;
+    }
+
+
+    .sec-2E {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 80%;
+        gap: 4em;
+        margin-top: 5%;
+    }
+
+    .sec-2C {
+        position: relative;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .sec-2CH {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .sec-2CP {
+        color: #ffffff;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .logotilted {
+        width: 250px;
+        position: absolute;
+        margin-top: -20%;
+        right: -10%;
+        overflow: hidden;
+        display: block;
+        overflow-x: hidden !important;
+
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+
+    .logo-nav {
+        width: 100px;
+        height: 80px;
+        margin-left: 50%;
+        margin-top: 25%;
+    }
+
+
+    .navUL {
+        gap: 30px;
+        font-size: 15px;
+        margin: auto;
+        top: 6.5%;
+    }
+
+    .sec-1C {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 5%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+
+    }
+
+
+    .hero-h1 {
+        animation: .5s ease-out 0s 1 slideInFromLeft;
+        font-size: 24px !important;
+        color: #FBC751;
+        font-weight: bolder;
+        margin: 1rem 0;
+    }
+
+    .hero-h2 {
+        animation: 1.5s ease-out 0s 1 fadeIn;
+        font-size: 40px;
+        color: #ffffff;
+        font-weight: bold;
+        width: 100%;
+        margin-top: -1%;
+    }
+
+    .hero-h3 {
+        animation: .5s ease-out 0s 1 slideInFromRight;
+        font-size: 24px;
+        color: #FF9900;
+        font-weight:700;
+        margin: 1rem 0;
+    }
+
+    .video-overview {
+        animation: .5s ease-out 0s 1 slideTop;
+        padding: 1.5em 4em;;
+        border-radius: 50px;
+        background: rgba(220, 220, 220, 0.3);
+        color: white;
+        border: none;
+        margin-top: 1em;
+        font-size: 14px;
+    }
+
+    .fa-play {
+        position: relative;
+        left: -20px;
+    }
+
+
+    .sec-2H1 {
+        font-size: 22px;
+        color: #FBC751;
+        font-weight: bold;
+        margin-left: 10%;
+    }
+
+    .sec-2H2 {
+        font-size: 40px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 2.5%;
+        margin-left: 10%;
+        width: 100%;
+
+    }
+
+    .sec-2I {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .spotcustomer {
+        background: white;
+        padding: 1em;
+        width: 60px !important;
+        border-radius: 20px;
+    }
+
+
+    .sec-2E {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        gap: 4em;
+        margin-top: 5%;
+
+    }
+
+    .sec-2C {
+        position: relative;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        text-align: left;
+
+    }
+
+    .sec-2CH {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .sec-2CP {
+        color: #ffffff;
+        font-size: 16px;
+        width:100%;
+    }
+
+    .logotilted {
+        width: 300px;
+        position: absolute;
+        margin-top: -17.5%;
+        right: -10%;
+        overflow: hidden;
+        display: block;
+
+    }
+
+    .sec-3 {
+        margin-top: 8rem;
+    }
+
+    .sec-3H {
+        font-size: 50px;
+
+        font-weight: bold;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+
+
+    }
+
+    .sec-3P {
+        font-size: 22px;
+        margin-top: 1.5%;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sec-3H2 {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 5%;
+    }
+
+    .sec-3P2 {
+        font-size: 22px;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sec-3L {
+        font-size: 22px;
+        line-height: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .frame-div6 {
+        display: block;
+        zoom: .65;
+        margin-top: 2.5%;
+    }
+
+    .sec-4 {
+        background-color: var(--color-gray-200);
+        height: auto;
+        display: block;
+        zoom: .75;
+        margin-top: -32.5rem;
+    }
+
+    .bH {
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 10%;
+        display: block;
+    }
+
+    .b2bS {
+        position: relative;
+        top: -20rem;
+        font-size: 22px;
+        display: block;
+        line-height: normal;
+    }
+
+
+
+    .sec-4P {
+        position: relative;
+        top: -10%;
+        display: block;
+
+
+    }
+
+    .sec-5 {
+        background-color: #181818;
+
+        padding-top: 5%;
+    }
+
+    .sec-5H {
+        margin-left: 10%;
+        font-size: 70px;
+        text-align: left;
+        width: 50%;
+
+    }
+
+    .sec-5F {
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        padding-top: -10%;
+    }
+
+    .sec-5Logo {
+        width: 340px !important;
+
+    }
+
+    .sec-5FList {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+
+
+    .sec-6 {
+        background-color: #ffffff;
+        padding-top: 15%;
+        height: 120vh;
+    }
+
+    .bgleft {
+        height: 800px;
+        margin-top: -25%;
+    }
+    .sec-7 {
+        margin-top: 300px;
+        height: auto;
+
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .logo-nav {
+        width: 125px;
+        height: 90px;
+        margin-left: 50%;
+        margin-top: 25%;
+    }
+
+    .hero-h1 {
+        animation: .5s ease-out 0s 1 slideInFromLeft;
+        font-size: 40px !important;
+        color: #FBC751;
+        font-weight: bolder;
+        margin: 1rem 0;
+    }
+
+    .hero-h2 {
+        animation: 1.5s ease-out 0s 1 fadeIn;
+        font-size: 80px;
+        color: #ffffff;
+        font-weight: bold;
+        width: 100%;
+        margin-top: -1%;
+    }
+
+    .hero-h3 {
+        animation: .5s ease-out 0s 1 slideInFromRight;
+        font-size: 35px;
+        color: #FF9900;
+        font-weight:700;
+        margin: 1rem 0;
+    }
+
+    .video-overview {
+        animation: .5s ease-out 0s 1 slideTop;
+        padding: 1.5em 4em;;
+        border-radius: 50px;
+        background: rgba(220, 220, 220, 0.3);
+        color: white;
+        border: none;
+        margin-top: 2em;
+        font-size: 16px;
+    }
+
+
+    .sec-2H1 {
+        font-size: 22px;
+        color: #FBC751;
+        font-weight: bold;
+        margin-left: 10%;
+    }
+
+    .sec-2H2 {
+        font-size: 40px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 2.5%;
+        margin-left: 10%;
+        width: 100%;
+
+    }
+
+    .sec-2I {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .spotcustomer {
+        background: white;
+        padding: 1em;
+        width: 60px !important;
+        border-radius: 20px;
+    }
+
+
+    .sec-2E {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        gap: 4em;
+        margin-top: 5%;
+
+    }
+
+    .sec-2C {
+        position: relative;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        text-align: left;
+
+    }
+
+    .sec-2CH {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .sec-2CP {
+        color: #ffffff;
+        font-size: 16px;
+        width:100%;
+    }
+
+    .logotilted {
+        width: 600px;
+        position: absolute;
+        margin-top: -20%;
+        right: -15%;
+        overflow: hidden;
+        display: block;
+
+    }
+
+
+
+
+    .frame-div6 {
+        display: block;
+        zoom: 1;
+        margin-top: 2.5%;
+    }
+
+    .sec-4 {
+        background-color: var(--color-gray-200);
+        height: auto;
+        display: block;
+        zoom: 1;
+        margin-top: -20rem;
+    }
+
+    .bH {
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 10%;
+        display: block;
+    }
+
+    .b2bS {
+        position: relative;
+        top: -20rem;
+        font-size: 22px;
+        display: block;
+        line-height: normal;
+    }
+
+
+
+    .sec-4P {
+        position: relative;
+        top: -10%;
+        display: block;
+
+
+    }
+
+    .sec-5 {
+        background-color: #181818;
+
+        padding-top: 5%;
+    }
+
+    .sec-5H {
+        margin-left: 10%;
+        font-size: 70px;
+        text-align: left;
+        width: 50%;
+
+    }
+
+    .sec-5F {
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+        padding-top: -10%;
+    }
+
+    .sec-5Logo {
+        width: 340px !important;
+
+    }
+
+    .sec-5FList {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+
+
+    .sec-6 {
+        background-color: #ffffff;
+        padding-top: 15%;
+        height: 120vh;
+    }
+
+    .bgleft {
+        height: 800px;
+        margin-top: -25%;
+    }
+}
+
+.sec-7 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    bottom: 0;
+
+}
+
+.hero-bg2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 50%;
+
+    backdrop-filter: brightness(25%);
+    filter: brightness(75%);
+}
