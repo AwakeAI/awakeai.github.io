@@ -1,0 +1,39 @@
+import { jsx, jsxs } from "/@id/__x00__react/jsx-runtime";
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=fd0516e9"; const lazy = __vite__cjsImport1_react["lazy"]; const Suspense = __vite__cjsImport1_react["Suspense"];
+import __vite__cjsImport2_reactDom_client from "/node_modules/.vite/deps/react-dom_client.js?v=fd0516e9"; const createRoot = __vite__cjsImport2_reactDom_client["createRoot"];
+import { BrowserRouter } from "/node_modules/.vite/deps/react-router-dom.js?v=fd0516e9";
+import { store } from "/src/redux/store.js";
+import { Provider } from "/node_modules/.vite/deps/react-redux.js?v=fd0516e9";
+import { ThemeContext } from "/src/utility/context/ThemeColors.js";
+import themeConfig from "/src/configs/themeConfig.js";
+import { Toaster } from "/node_modules/.vite/deps/react-hot-toast.js?v=fd0516e9";
+import Spinner from "/src/@core/components/spinner/Fallback-spinner.js";
+import "/src/@core/components/ripple-button/index.js";
+import "/node_modules/.vite/deps/prismjs.js?v=fd0516e9";
+import "/node_modules/prismjs/themes/prism-tomorrow.css";
+import "/node_modules/.vite/deps/prismjs_components_prism-jsx__min.js?v=fd0516e9";
+import "/node_modules/react-perfect-scrollbar/dist/css/styles.css";
+import "/src/@core/scss/react/libs/react-hot-toasts/react-hot-toasts.scss";
+import "/src/@core/assets/fonts/feather/iconfont.css";
+import "/src/@core/scss/core.scss";
+import "/src/assets/scss/style.scss";
+import "/src/configs/i18n/index.js";
+import * as serviceWorker from "/src/serviceWorker.js";
+const LazyApp = lazy(() => import("/src/App.js?t=1679547286696"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
+  /* @__PURE__ */ jsx(BrowserRouter, { children: /* @__PURE__ */ jsx(Provider, { store, children: /* @__PURE__ */ jsx(Suspense, { fallback: /* @__PURE__ */ jsx(Spinner, {}), children: /* @__PURE__ */ jsxs(ThemeContext, { children: [
+    /* @__PURE__ */ jsx(LazyApp, {}),
+    /* @__PURE__ */ jsx(
+      Toaster,
+      {
+        position: themeConfig.layout.toastPosition,
+        toastOptions: { className: "react-hot-toast" }
+      }
+    )
+  ] }) }) }) })
+);
+serviceWorker.unregister();
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6L1VzZXJzL3N1bW1lL0lkZWFQcm9qZWN0cy9Bd2FrZUFJTVMvc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vICoqIFJlYWN0IEltcG9ydHNcbmltcG9ydCB7bGF6eSwgU3VzcGVuc2V9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHtjcmVhdGVSb290fSBmcm9tIFwicmVhY3QtZG9tL2NsaWVudFwiO1xuaW1wb3J0IHtCcm93c2VyUm91dGVyfSBmcm9tIFwicmVhY3Qtcm91dGVyLWRvbVwiO1xuXG4vLyAqKiBSZWR1eCBJbXBvcnRzXG5pbXBvcnQge3N0b3JlfSBmcm9tIFwiLi9yZWR1eC9zdG9yZVwiO1xuaW1wb3J0IHtQcm92aWRlcn0gZnJvbSBcInJlYWN0LXJlZHV4XCI7XG5cbi8vICoqIFRoZW1lQ29sb3JzIENvbnRleHRcbmltcG9ydCB7VGhlbWVDb250ZXh0fSBmcm9tIFwiLi91dGlsaXR5L2NvbnRleHQvVGhlbWVDb2xvcnNcIjtcblxuLy8gKiogVGhlbWVDb25maWdcbmltcG9ydCB0aGVtZUNvbmZpZyBmcm9tIFwiLi9jb25maWdzL3RoZW1lQ29uZmlnXCI7XG5cbi8vICoqIFRvYXN0XG5pbXBvcnQge1RvYXN0ZXJ9IGZyb20gXCJyZWFjdC1ob3QtdG9hc3RcIjtcblxuLy8gKiogU3Bpbm5lciAoU3BsYXNoIFNjcmVlbilcbmltcG9ydCBTcGlubmVyIGZyb20gXCIuL0Bjb3JlL2NvbXBvbmVudHMvc3Bpbm5lci9GYWxsYmFjay1zcGlubmVyXCI7XG5cbi8vICoqIFJpcHBsZSBCdXR0b25cbmltcG9ydCBcIi4vQGNvcmUvY29tcG9uZW50cy9yaXBwbGUtYnV0dG9uXCI7XG5cbi8vICoqIFByaXNtSlNcbmltcG9ydCBcInByaXNtanNcIjtcbmltcG9ydCBcInByaXNtanMvdGhlbWVzL3ByaXNtLXRvbW9ycm93LmNzc1wiO1xuaW1wb3J0IFwicHJpc21qcy9jb21wb25lbnRzL3ByaXNtLWpzeC5taW5cIjtcblxuLy8gKiogUmVhY3QgUGVyZmVjdCBTY3JvbGxiYXJcbmltcG9ydCBcInJlYWN0LXBlcmZlY3Qtc2Nyb2xsYmFyL2Rpc3QvY3NzL3N0eWxlcy5jc3NcIjtcblxuLy8gKiogUmVhY3QgSG90IFRvYXN0IFN0eWxlc1xuaW1wb3J0IFwiQHN0eWxlcy9yZWFjdC9saWJzL3JlYWN0LWhvdC10b2FzdHMvcmVhY3QtaG90LXRvYXN0cy5zY3NzXCI7XG5cbi8vICoqIENvcmUgc3R5bGVzXG5pbXBvcnQgXCIuL0Bjb3JlL2Fzc2V0cy9mb250cy9mZWF0aGVyL2ljb25mb250LmNzc1wiO1xuaW1wb3J0IFwiLi9AY29yZS9zY3NzL2NvcmUuc2Nzc1wiO1xuaW1wb3J0IFwiLi9hc3NldHMvc2Nzcy9zdHlsZS5zY3NzXCI7XG5cbi8vICoqIGkxOG5cbmltcG9ydCAnLi9jb25maWdzL2kxOG4nXG5cbi8vICoqIFNlcnZpY2UgV29ya2VyXG5pbXBvcnQgKiBhcyBzZXJ2aWNlV29ya2VyIGZyb20gXCIuL3NlcnZpY2VXb3JrZXJcIjtcblxuLy8gKiogTGF6eSBsb2FkIGFwcFxuY29uc3QgTGF6eUFwcCA9IGxhenkoKCkgPT4gaW1wb3J0KFwiLi9BcHBcIikpO1xuXG5jb25zdCBjb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInJvb3RcIik7XG5jb25zdCByb290ID0gY3JlYXRlUm9vdChjb250YWluZXIpO1xuXG5yb290LnJlbmRlcihcbiAgICA8QnJvd3NlclJvdXRlcj5cbiAgICAgICAgPFByb3ZpZGVyIHN0b3JlPXtzdG9yZX0+XG4gICAgICAgICAgICA8U3VzcGVuc2UgZmFsbGJhY2s9ezxTcGlubmVyLz59PlxuICAgICAgICAgICAgICAgIDxUaGVtZUNvbnRleHQ+XG4gICAgICAgICAgICAgICAgICAgIDxMYXp5QXBwLz5cbiAgICAgICAgICAgICAgICAgICAgPFRvYXN0ZXJcbiAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uPXt0aGVtZUNvbmZpZy5sYXlvdXQudG9hc3RQb3NpdGlvbn1cbiAgICAgICAgICAgICAgICAgICAgICAgIHRvYXN0T3B0aW9ucz17e2NsYXNzTmFtZTogXCJyZWFjdC1ob3QtdG9hc3RcIn19XG4gICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgPC9UaGVtZUNvbnRleHQ+XG4gICAgICAgICAgICA8L1N1c3BlbnNlPlxuICAgICAgICA8L1Byb3ZpZGVyPlxuICAgIDwvQnJvd3NlclJvdXRlcj5cbik7XG5cbi8vIElmIHlvdSB3YW50IHlvdXIgYXBwIHRvIHdvcmsgb2ZmbGluZSBhbmQgbG9hZCBmYXN0ZXIsIHlvdSBjYW4gY2hhbmdlXG4vLyB1bnJlZ2lzdGVyKCkgdG8gcmVnaXN0ZXIoKSBiZWxvdy4gTm90ZSB0aGlzIGNvbWVzIHdpdGggc29tZSBwaXRmYWxscy5cbi8vIExlYXJuIG1vcmUgYWJvdXQgc2VydmljZSB3b3JrZXJzOiBodHRwczovL2JpdC5seS9DUkEtUFdBXG5zZXJ2aWNlV29ya2VyLnVucmVnaXN0ZXIoKTtcblxuIl0sIm1hcHBpbmdzIjoiQUF1RGdDLGNBQ2hCLFlBRGdCO0FBdERoQyxTQUFRLE1BQU0sZ0JBQWU7QUFDN0IsU0FBUSxrQkFBaUI7QUFDekIsU0FBUSxxQkFBb0I7QUFHNUIsU0FBUSxhQUFZO0FBQ3BCLFNBQVEsZ0JBQWU7QUFHdkIsU0FBUSxvQkFBbUI7QUFHM0IsT0FBTyxpQkFBaUI7QUFHeEIsU0FBUSxlQUFjO0FBR3RCLE9BQU8sYUFBYTtBQUdwQixPQUFPO0FBR1AsT0FBTztBQUNQLE9BQU87QUFDUCxPQUFPO0FBR1AsT0FBTztBQUdQLE9BQU87QUFHUCxPQUFPO0FBQ1AsT0FBTztBQUNQLE9BQU87QUFHUCxPQUFPO0FBR1AsWUFBWSxtQkFBbUI7QUFHL0IsTUFBTSxVQUFVLEtBQUssTUFBTSxPQUFPLFFBQVE7QUFFMUMsTUFBTSxZQUFZLFNBQVMsZUFBZSxNQUFNO0FBQ2hELE1BQU0sT0FBTyxXQUFXLFNBQVM7QUFFakMsS0FBSztBQUFBLEVBQ0Qsb0JBQUMsaUJBQ0csOEJBQUMsWUFBUyxPQUNOLDhCQUFDLFlBQVMsVUFBVSxvQkFBQyxXQUFPLEdBQ3hCLCtCQUFDLGdCQUNHO0FBQUEsd0JBQUMsV0FBTztBQUFBLElBQ1I7QUFBQSxNQUFDO0FBQUE7QUFBQSxRQUNHLFVBQVUsWUFBWSxPQUFPO0FBQUEsUUFDN0IsY0FBYyxFQUFDLFdBQVcsa0JBQWlCO0FBQUE7QUFBQSxJQUMvQztBQUFBLEtBQ0osR0FDSixHQUNKLEdBQ0o7QUFDSjtBQUtBLGNBQWMsV0FBVzsiLCJuYW1lcyI6W119
