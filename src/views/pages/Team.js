@@ -2,7 +2,10 @@
 import Avatar from '@components/avatar'
 
 // ** Images
-
+import lulan from "@src/assets/images/portrait/Lulan.png"
+import Hugh from "@src/assets/images/portrait/Hugh.png"
+import Yitian from "@src/assets/images/portrait/Yitian.png"
+import Egor from "@src/assets/images/portrait/Egor.png"
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
 import {Row} from "reactstrap";
@@ -11,7 +14,7 @@ import {Row} from "reactstrap";
 const teamList = [
     {
         id: "ls",
-        image: "assets/images/portrait/Lulan.png",
+        image: lulan,
         firstName: "Lulan",
         lastName: "Shen",
         position: "Chief Executive Officer / Founder",
@@ -22,10 +25,9 @@ const teamList = [
         },
         bio: "Lulan, currently a Ph.D. candidate in the Department of Electrical and Computer Engineering, specializes in machine learning, at McGill University, and possesses an M.Sc. degree in Mathematical Modelling and Scientific Computing at the University of Oxford. Three-year work experience as a system engineer in Bosch Automotive for designing vehicle software platforms and vehicle functions."
     },
-
     {
         id: "hc",
-        image: "assets/images/portrait/Hugh.png",
+        image: Hugh,
         firstName: "Hugh",
         lastName: "Cameron",
         position: "Director",
@@ -38,7 +40,7 @@ const teamList = [
     },
     {
         id: "yz",
-        image: "assets/images/portrait/Yitian.png",
+        image: Yitian,
         firstName: "Yitian",
         lastName: "Zhang",
         position: "AI Engineer",
@@ -51,7 +53,7 @@ const teamList = [
     },
     {
         id: "el",
-        image: "assets/images/portrait/Egor.png",
+        image: Egor,
         firstName: "Egor",
         lastName: "Luhauskikh",
         position: "Chief Commercial Officer",

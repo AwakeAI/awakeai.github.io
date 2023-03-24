@@ -10,13 +10,11 @@ const TeamPage = (props) => {
     return (
         <Row className="justify-content-center">
             {data.map((item, i) => {
-                const imageUrl = `../../../src/${item.image}`
-
                 return (
                     <Col lg="3" md="6" sm="6" key={i}>
                         <div className="team-item mb-50 wow fadeInUp">
                             <div className="team-img">
-                                <img src={imageUrl} alt={item.firstName}/>
+                                <img src={item.image} alt={item.firstName}/>
                                 <div className="team-overlay">
                                     <div className="team-social">
                                         <span className="hover-btn">
@@ -76,7 +74,7 @@ const TeamPage = (props) => {
                                                 <div className="instrument-view">
                                                     <div className="row justify-content-center">
                                                         <div className="col-sm-4 ins-image">
-                                                            <img src={imageUrl} alt={item.firstName}/>
+                                                            <img src={item.image} alt={item.firstName}/>
                                                         </div>
                                                         <div className="col-sm-1"></div>
                                                         <div className="col-sm-7">

@@ -2,7 +2,9 @@
 import Avatar from '@components/avatar'
 
 // ** Images
-
+import Michael from "@src/assets/images/portrait/Michael.jpg"
+import Palma from "@src/assets/images/portrait/Palma.jpg"
+import Richard from "@src/assets/images/portrait/RemiRichard.png"
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
 import {Row} from "reactstrap";
@@ -11,7 +13,7 @@ import {Row} from "reactstrap";
 const mentorList = [
     {
         id: "ma",
-        image: "assets/images/portrait/Michael.jpg",
+        image: Michael,
         firstName: "Michael",
         lastName: "Avedesian",
         position: "Business Mentor",
@@ -24,7 +26,7 @@ const mentorList = [
     },
     {
         id: "dp",
-        image: "assets/images/portrait/Palma.jpg",
+        image: Palma,
         firstName: "Dino Di",
         lastName: "Palma",
         position: "Business Mentor",
@@ -34,6 +36,19 @@ const mentorList = [
             linkedin: "https://www.linkedin.com/in/ddipalma/"
         },
         bio: "Dino Di Palma most recently served as President, Strategic Partners & Global Accounts at Avaya. In this role, Dino was responsible for direct, channel, and partner sales in the U.S., Canada, and Latin America. He also had responsibility for the company’s gomarket strategy across the entire portfolio of cloud and premise-- to based software and hardware solutions serving enterprises, government agencies, channel partners, SIs, SPs, and small and medium businesses."
+    },
+    {
+        id: "rr",
+        image: Richard,
+        firstName: "Rémi",
+        lastName: "Richard",
+        position: "Business Mentor",
+        year: "2023",
+        links: {
+            github: "",
+            linkedin: "https://centech.co/en/eer/remi-richard/"
+        },
+        bio: "Remi co-founded Pomelo Health (Acquired by TELUS Health) which is a leading patient engagement in North America with 12,000 healthcare practitioners using it to reach about 1M patients per year. He was named one of the top 25 innovators in Quebec by C2 Montreal, recently made the top 30 under 30 list."
     }
 ]
 
