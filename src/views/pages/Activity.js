@@ -7,13 +7,19 @@ import {Row, Col, Card, CardBody, CardImg, ListGroup, ListGroupItem} from 'react
 // ** Styles
 import '@styles/base/pages/page-knowledge-base.scss'
 import Avatar from "@components/avatar";
+
+// ** Images
+import centech from "@src/assets/images/pages/centech.webp"
+import NEXT from "@src/assets/images/pages/next.png"
+import db from "@src/assets/images/pages/img.png"
+import engine from "@src/assets/images/pages/engine.jpg"
 import lulan from "@src/assets/images/portrait/Lulan.png";
 import cup from "@src/assets/images/pages/cup.png";
 
 const data = [
     {
         id: 'centech',
-        img: '/src/assets/images/pages/dmzcri5nd33raxk4nke8.avif',
+        img: centech,
         title: 'CenTech',
         desc: '',
         customContent: (
@@ -24,8 +30,8 @@ const data = [
         )
     },
     {
-        id: 'NEXT CANADA',
-        img: '/src/assets/images/pages/next.png',
+        id: 'NEXT',
+        img: NEXT,
         title: 'NEXT 36',
         desc: '',
         customContent: (
@@ -47,7 +53,7 @@ const data = [
     },
     {
         id: 'Dobson',
-        img: '/src/assets/images/pages/img.png',
+        img: db,
         title: 'Dobson Centre for Entrepreneurship',
         desc: '',
         customContent: (
@@ -55,9 +61,9 @@ const data = [
                 <h4 className='mt-1 mb-0'>2022</h4>
                 <ListGroupItem>Summer Dobson Entrepreneurship X1-Accelerator: Participated</ListGroupItem>
                 <ListGroupItem>Dobson Entrepreneurship Programs Bootcamp and Cup <br/>
-                    <strong> Third Place in Health Science Enterprise Tracks </strong>
+                    <strong> Third Place in Health Science Enterprise Tracks </strong><br/>
                     <a href="https://www.mcgill.ca/dobson/article/mcgill-dobson-cup-2022-winners#hset">
-                        <img id='dobson' src={cup} alt='Dobson Cup'/>
+                        <img id='dobson' src={cup} alt='Dobson Cup' width="100%"/>
                     </a>
 
                 </ListGroupItem>
@@ -66,7 +72,7 @@ const data = [
     },
     {
         id: 'Engine',
-        img: '/src/assets/images/pages/engine.jpg',
+        img: engine,
         title: 'McGill Engine Center',
         desc: '',
         customContent: (
@@ -91,11 +97,13 @@ const Activity = () => {
         <Col className='kb-search-content' key={item.id} md='6' sm='12'>
             <Card>
                 <div className="kb-search-content-card-head m-auto align-items-center justify-content-center"
-                     style={{minHeight: "200px", maxHeight: "230px"}}>
-                    {item.id === 'centech' ? (
-                        <img src={item.img} alt='knowledge-base-image'
-                             style={{width: "60%"}}/>
-                    ) : (<img src={item.img} alt='knowledge-base-image'
+                     style={{maxHeight: "230px"}}>
+                    {item.id === 'centech' || 'Engine' ? (
+                        <img src={item.img} alt={item.id}
+                             id={item.id}
+                             style={{width: "40%", margin: "15%"}}/>
+                    ) : (<img src={item.img} alt={item.id}
+                              id={item.id}
                               style={{width: "60%", margin: "15%"}}/>)
                     }
                 </div>

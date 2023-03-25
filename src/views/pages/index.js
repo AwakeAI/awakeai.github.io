@@ -25,9 +25,7 @@ const Tabs = () => {
             <div className="container" style={{maxWidth: "1130px"}}>
                 <Row className="justify-content-center">
                     <Col xl='12' lg='12'>
-                        <Card title="">
-                            <TabsIcons/>
-                        </Card>
+                        <TabsIcons/>
                     </Col>
                 </Row>
             </div>

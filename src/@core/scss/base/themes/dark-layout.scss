@@ -21,6 +21,11 @@
     background-color: $theme-dark-body-bg;
   }
 
+  #centech, #NEXT, #Dobson, #dobson{
+    filter: brightness(0) invert(1);
+    mix-blend-mode: screen;
+  }
+
   // universal elements
   //heading tags
   h1,
@@ -813,7 +818,7 @@
         color: $theme-dark-headings-color;
 
         &.active {
-          background-color: $theme-dark-card-bg;
+          //background-color: $theme-dark-card-bg;
           color: $primary;
         }
 
@@ -823,6 +828,7 @@
       }
     }
   }
+
 
   // bordered nav
   .nav.wrap-border {

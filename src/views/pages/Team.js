@@ -17,7 +17,7 @@ const teamList = [
         image: lulan,
         firstName: "Lulan",
         lastName: "Shen",
-        position: "Chief Executive Officer / Founder",
+        position: "Chief Executive Officer",
         year: "2020",
         links: {
             github: "",

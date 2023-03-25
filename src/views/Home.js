@@ -1,52 +1,51 @@
 // ** React Imports
-// import {useSkin} from "@hooks/useSkin";
 import {Icon} from '@iconify/react'
-
+import Reaptcha from 'reaptcha'
 // ** Icons Imports
-import {
-    ArrowRightCircle,
-    Book,
-    Facebook,
-    GitHub,
-    Linkedin,
-    Mail,
-    MapPin,
-    Moon, PlusCircle,
-    Pocket,
-    Settings,
-    Shield,
-    Sun,
-    Target,
-    Video,
-    Info
-} from "react-feather";
+import {Book, Linkedin, Mail, MapPin, Settings, Shield, Sun, Target, Moon} from "react-feather";
 
 // ** Reactstrap Imports
-import {Button, Card, CardText, CardTitle, Col, Form, Input, Label, NavItem, NavLink, Row} from "reactstrap";
+import {Button, Col, NavItem, NavLink, Row} from "reactstrap";
 
 // ** Illustrations Imports
-import illustrationsLight from "@src/assets/images/pages/herobg.png";
-import illustrationsLight2 from "@src/assets/images/pages/older.png";
-import formImg from "@src/assets/images/pages/pexelsitalomelo.png";
+import illustrationsLight from "@src/assets/images/pages/herobg.jpg";
+import illustrationsLight2 from "@src/assets/images/pages/older.jpg";
+import formImg from "@src/assets/images/pages/pexelsitalomelo.jpg";
 import footerImg from "@src/assets/images/pages/footer-bg.png";
 
 // ** Styles
 import "@styles/react/pages/page-authentication.scss";
+import './style.css';
+import './_footer.scss';
 import NavbarHome from "@layouts/components/navbar/NavbarHome";
 import {useTranslation} from "react-i18next";
 import IntlDropdown from "@layouts/components/navbar/IntlDropdown";
 import {useSkin} from "@hooks/useSkin";
-import './style.css';
-import './_footer.scss';
-import HomeTimeLine from "@src/views/pages/HomeTimeline";
 import themeConfig from "@configs/themeConfig";
-import Team from "@src/views/pages/Team";
 import Activity from "@src/views/pages/Activity";
 import Tabs from "@src/views/pages";
+import {useRef, useState} from "react";
+import {toast, Toaster} from "react-hot-toast";
 
 
 const Home = () => {
     const {skin, setSkin} = useSkin()
+    const [submitted, setSubmitted] = useState(false)
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const captchaRef = useRef(null);
+
+    const verify = () => {
+        captchaRef.current.getResponse().then(res => {
+            setCaptchaToken(res)
+        })
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const token = captchaRef.current.getValue();
+        captchaRef.current.reset();
+    }
 
     // ** Function to toggle Theme (Light/Dark)
     const ThemeToggler = () => {
@@ -76,21 +75,21 @@ const Home = () => {
                 <Row>
                     <Col className="mx-auto p-5" sm="10" md="10" lg="10">
                         <NavbarHome/>
-                        {/*<div className="mx-auto float-xl-end">*/}
-                        {/*    <div className='align-items-center floating-nav navbar-expand-lg'*/}
-                        {/*         style={{background: "none", top: "6rem", position: "fixed", zIndex: 1000}}>*/}
-                        {/*        <ul className='nav navbar-nav align-items-center ms-auto'*/}
-                        {/*            style={{flexDirection: "row"}}>*/}
-                        {/*            <NavItem>*/}
-                        {/*                <NavLink className='nav-link-style'>*/}
-                        {/*                    <ThemeToggler/>*/}
-                        {/*                </NavLink>*/}
-                        {/*            </NavItem>*/}
-                        {/*            &nbsp;|&nbsp;*/}
-                        {/*            <IntlDropdown/>*/}
-                        {/*        </ul>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
+                        <div className="mx-auto float-xl-end">
+                            <div className='align-items-center floating-nav navbar-expand-lg'
+                                 style={{background: "none", top: "1rem", position: "fixed", zIndex: 1000}}>
+                                <ul className='nav navbar-nav align-items-center ms-auto'
+                                    style={{flexDirection: "row"}}>
+                                    <NavItem>
+                                        <NavLink className='nav-link-style'>
+                                            <ThemeToggler/>
+                                        </NavLink>
+                                    </NavItem>
+                                    &nbsp;|&nbsp;
+                                    <IntlDropdown/>
+                                </ul>
+                            </div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className="justify-content-center">
@@ -169,10 +168,7 @@ const Home = () => {
                             </Button>
                             <div className="sec-2CH">Broadly Applicable</div>
                             <div className="sec-2CP">The application can be extended to hospitals long-term care
-                                facilities
-                                and
-                                homecare
-                                facilities.
+                                facilities and homecare facilities.
                             </div>
                         </div>
                     </div>
@@ -182,7 +178,13 @@ const Home = () => {
 
                 <div className="container mx-auto">
                     <div className="sec-2H1">OUR TRACTION</div>
-                    <div className="sec-2H2" style={{color: "var(--color-blue)"}}>Competitions and Activities</div>
+                    {skin !== 'dark' ?
+                        (<div className="sec-2H2" style={{color: "var(--color-blue)"}}>
+                            Competitions and Activities</div>)
+                        :
+                        (<div className="sec-2H2" style={{color: "var(--color-gray-200)"}}>
+                                Competitions andActivities</div>
+                        )}
                     <Activity/>
                 </div>
             </div>
@@ -190,11 +192,10 @@ const Home = () => {
             <div id="team" className="sec-2" style={{zIndex: "1"}}>
 
                 <div className="container mx-auto">
-                    <div className="sec-2H1">OUR CORE TEAM</div>
-                    <div className="sec-2H2">Members and Consultants</div>
+                    <div className="sec-2H1">OUR TEAM</div>
+                    <div className="sec-2H2">Founders and Key Leaders</div>
                 </div>
-
-                <Tabs />
+                <Tabs/>
 
             </div>
             <div id="contact" className="sec-7" style={{minHeight: "600px"}}>
@@ -207,9 +208,21 @@ const Home = () => {
                                      visibility: "visible",
                                      animationName: "fadeInUp"
                                  }}>
-                                <h2 style={{fontSize: "40px", fontWeight: "bold", color: "var(--color-blue)"}}>
-                                    Get In Touch With us
-                                </h2>
+                                {skin !== 'dark' ?
+                                    (<h2 style={{fontSize: "40px", fontWeight: "bold", color: "var(--color-blue)"}}>
+                                        Get In Touch With us
+                                    </h2>)
+                                    :
+                                    (
+                                        <h2 style={{
+                                            fontSize: "40px",
+                                            fontWeight: "bold",
+                                            color: "var(--color-gray-200)"
+                                        }}>
+                                            Get In Touch With us
+                                        </h2>
+                                    )}
+
                             </div>
                             <Col className="contact-area-v1 contact-form-area mb-60 wow fadeInUp" style={{
                                 visibility: "visible",
@@ -218,14 +231,29 @@ const Home = () => {
                                 <form name="gform" id="gform" encType="text/plain"
                                       action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?"
                                       target="hidden_iframe"
+                                      onSubmit={(e) => {
+                                          setSubmitted(true)
+                                          toast.success( (t) => (
+                                              <span>
+                                                Form submitted! &nbsp; &nbsp;
+                                                <Button.Ripple color='secondary' outline
+                                                               onClick={() => {
+                                                    toast.dismiss(t.id);
+                                                    e.target.reset();
+                                                }}>
+                                                  Dismiss
+                                                </Button.Ripple>
+                                              </span>
+                                          ));
+                                      }}
                                 >
-                                    {/*onSubmit={{submitted: true}}*/}
+
                                     <Row>
                                         <Col lg="6">
                                             <div className="form_group">
                                                 <input type="text" className="form_control"
                                                        placeholder="Enter full name"
-                                                       name="entry.1208597498" required=""/>
+                                                       name="entry.1208597498" required/>
                                                 <Icon icon="bi:person-fill" style={{fontSize: '24px'}}/>
                                             </div>
                                         </Col>
@@ -233,7 +261,7 @@ const Home = () => {
                                             <div className="form_group">
                                                 <input type="email" className="form_control"
                                                        placeholder="Enter email address"
-                                                       name="entry.1569009990" required=""/>
+                                                       name="entry.1569009990" required/>
                                                 <Icon icon="bi:envelope" style={{fontSize: '24px'}}/>
                                             </div>
                                         </Col>
@@ -241,7 +269,7 @@ const Home = () => {
                                             <div className="form_group">
                                                 <input type="text" className="form_control" name="entry.537245108"
                                                        placeholder="Subject"
-                                                       required=""/>
+                                                       required/>
                                                 <Book size={24}/>
                                             </div>
                                         </Col>
@@ -257,14 +285,17 @@ const Home = () => {
                                                 <Button color='primary' type="submit" value="Submit">
                                                     Submit
                                                 </Button>
+                                                <Reaptcha
+                                                    sitekey={themeConfig.app.sitekey}
+                                                    ref={captchaRef}
+                                                    onVerify={verify}
+                                                />
                                             </div>
                                         </Col>
                                         <iframe name="hidden_iframe" id="hidden_iframe" style={{display: "none"}}
-                                        ></iframe>
-                                        {/*    onLoad={{
-                                                    if(submitted) {
-                                                    }
-                                                }}*/}
+                                                onLoad={() => !submitted}>
+                                        </iframe>
+
                                     </Row>
                                 </form>
                             </Col>

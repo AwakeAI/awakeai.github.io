@@ -7,7 +7,9 @@ import logo from '@src/assets/images/logo/logo.png'
 const themeConfig = {
     app: {
         appName: 'BMS',
-        appLogoImage: logo
+        appLogoImage: logo,
+        sitekey: '6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7',
+
     },
     layout: {
         isRTL: false,

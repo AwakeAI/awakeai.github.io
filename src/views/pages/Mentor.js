@@ -4,7 +4,7 @@ import Avatar from '@components/avatar'
 // ** Images
 import Michael from "@src/assets/images/portrait/Michael.jpg"
 import Palma from "@src/assets/images/portrait/Palma.jpg"
-import Richard from "@src/assets/images/portrait/RemiRichard.png"
+import Richard from "@src/assets/images/portrait/Remi.png"
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
 import {Row} from "reactstrap";
@@ -16,7 +16,7 @@ const mentorList = [
         image: Michael,
         firstName: "Michael",
         lastName: "Avedesian",
-        position: "Business Mentor",
+        position: "Associated with McGill Engine",
         year: "2021",
         links: {
             github: "",
@@ -29,7 +29,7 @@ const mentorList = [
         image: Palma,
         firstName: "Dino Di",
         lastName: "Palma",
-        position: "Business Mentor",
+        position: "Associated with Dobson Center",
         year: "2022",
         links: {
             github: "",
@@ -42,7 +42,7 @@ const mentorList = [
         image: Richard,
         firstName: "Rémi",
         lastName: "Richard",
-        position: "Business Mentor",
+        position: "Associated with Centech",
         year: "2023",
         links: {
             github: "",
