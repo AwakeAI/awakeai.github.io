@@ -65,7 +65,7 @@ const data = [
         customContent: (
             <ListGroup className="list-group-flush">
                 <h4 className='mt-1 mb-0'>2022</h4>
-                <ListGroupItem>Summer Dobson Entrepreneurship X1-Accelerator: Participated</ListGroupItem>
+                <ListGroupItem>Summer Dobson Entrepreneurship X1-Accelerator.</ListGroupItem>
                 <ListGroupItem>Dobson Entrepreneurship Programs Bootcamp and Cup <br/>
                     <strong> Third Place in Health Science Enterprise Tracks </strong><br/>
                     <a href="https://www.mcgill.ca/dobson/article/mcgill-dobson-cup-2022-winners#hset">
@@ -88,7 +88,7 @@ const data = [
                 <ListGroupItem>TechAccel Showcase Winter</ListGroupItem>
                 <ListGroupItem>TechAccel Grant Grantees</ListGroupItem>
                 <h4 className='mt-1 mb-0'>2021</h4>
-                <ListGroupItem>Invention to Impact Training program: Participated</ListGroupItem>
+                <ListGroupItem>Invention to Impact Training program.</ListGroupItem>
                 <ListGroupItem>McGill-affiliated startup ventures: one of the approved and
                     eligible team and participated in a startup internship program</ListGroupItem>
                 <ListGroupItem>TechIdea Pitch Competition: 1st Place & Audience Favorite</ListGroupItem>
@@ -131,13 +131,26 @@ const Activity = () => {
     }
 
     return (
-        <Fragment>
-            {data !== null ? (
-                <div id='knowledge-base-content'>
-                    <Row className='justify-content-center kb-search-content-info match-height'>{renderContent()}</Row>
-                </div>
-            ) : null}
-        </Fragment>
+        <div id="activity" className="sec-2" style={{backgroundColor: "var(--color-grey-200)"}}>
+            <div className="container mx-auto">
+                <div className="sec-2H1">OUR TRACTION</div>
+                {skin !== 'dark' ?
+                    (<div className="sec-2H2" style={{color: "var(--color-blue)"}}>
+                        Competitions and Activities</div>)
+                    :
+                    (<div className="sec-2H2" style={{color: "var(--color-gray-200)"}}>
+                            Competitions andActivities</div>
+                    )}
+                <Fragment>
+                    {data !== null ? (
+                        <div id='knowledge-base-content'>
+                            <Row
+                                className='justify-content-center kb-search-content-info match-height'>{renderContent()}</Row>
+                        </div>
+                    ) : null}
+                </Fragment>
+            </div>
+        </div>
     )
 }
 
