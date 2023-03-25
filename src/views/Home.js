@@ -2,68 +2,55 @@
 import {Icon} from '@iconify/react'
 import Reaptcha from 'reaptcha'
 // ** Icons Imports
-import {Book, Linkedin, Mail, MapPin, Settings, Shield, Sun, Target, Moon} from "react-feather";
+import {Book, Linkedin, Mail, MapPin, Moon, Settings, Shield, Sun, Target} from "react-feather";
 
 // ** Reactstrap Imports
 import {Button, Col, NavItem, NavLink, Row} from "reactstrap";
 
 // ** Illustrations Imports
-import illustrationsLight from "@src/assets/images/pages/herobg.jpg";
-import illustrationsLight2 from "@src/assets/images/pages/older.jpg";
+import herobg from "@src/assets/images/pages/herobg.jpg";
+import older from "@src/assets/images/pages/older.jpg";
 import formImg from "@src/assets/images/pages/pexelsitalomelo.jpg";
+import formImgD from "@src/assets/images/pages/pexelsitalomeloD.jpg";
 import footerImg from "@src/assets/images/pages/footer-bg.png";
 
 // ** Styles
 import "@styles/react/pages/page-authentication.scss";
-import './style.css';
-import './_footer.scss';
 import NavbarHome from "@layouts/components/navbar/NavbarHome";
 import {useTranslation} from "react-i18next";
 import IntlDropdown from "@layouts/components/navbar/IntlDropdown";
 import {useSkin} from "@hooks/useSkin";
 import themeConfig from "@configs/themeConfig";
 import Activity from "@src/views/pages/Activity";
-import Tabs from "@src/views/pages";
-import {useRef, useState} from "react";
-import {toast, Toaster} from "react-hot-toast";
+import Tabs from "@src/views/pages/Member";
+import {useState} from "react";
+import {toast} from "react-hot-toast";
 
 
 const Home = () => {
     const {skin, setSkin} = useSkin()
     const [submitted, setSubmitted] = useState(false)
-    const [captchaToken, setCaptchaToken] = useState(null);
-    const captchaRef = useRef(null);
+    const [verified, setVerified] = useState(false);
 
-    const verify = () => {
-        captchaRef.current.getResponse().then(res => {
-            setCaptchaToken(res)
-        })
-
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const token = captchaRef.current.getValue();
-        captchaRef.current.reset();
-    }
+    const handleVerify = (recaptchaResponse) => {
+        setVerified(true);
+    };
 
     // ** Function to toggle Theme (Light/Dark)
     const ThemeToggler = () => {
         if (skin === 'dark') {
-            return <Sun className='ficon' onClick={() => setSkin('light')}/>
+            return <Moon className='ficon' onClick={() => setSkin('light')}/>
         } else {
-            return <Moon className='ficon' onClick={() => setSkin('dark')}/>
+            return <Sun className='ficon' onClick={() => setSkin('dark')}/>
         }
     }
 
     const {t} = useTranslation();
-    const source2 = illustrationsLight2
-    const source3 = formImg
 
     return (
         <div className="shrink">
             <div id="home" className="auth-wrapper" style={{
-                backgroundImage: `url(${illustrationsLight})`,
+                backgroundImage: `url(${herobg})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 width: '100%',
@@ -82,11 +69,11 @@ const Home = () => {
                                     style={{flexDirection: "row"}}>
                                     <NavItem>
                                         <NavLink className='nav-link-style'>
-                                            <ThemeToggler/>
+                                            <ThemeToggler/> &nbsp;|&nbsp; {skin}
                                         </NavLink>
                                     </NavItem>
-                                    &nbsp;|&nbsp;
-                                    <IntlDropdown/>
+                                    {/*&nbsp;|&nbsp;*/}
+                                    {/*<IntlDropdown/>*/}
                                 </ul>
                             </div>
                         </div>
@@ -112,7 +99,7 @@ const Home = () => {
                 <div className="container mx-auto">
                     <div className="sec-2H1">OUR PROFESSIONAL SERVICES</div>
                     <div className="sec-2H2">Competitive Advantages</div>
-                    <img className="sec-3L mx-auto" src={source2} id="reading"/>
+                    <img className="sec-3L mx-auto" src={older} id="reading"/>
                     <div className="sec-2CT mx-auto pt-3">
                         <strong>AwakeAI</strong> system will process anonymized video taken in the resident's room,
                         detect
@@ -198,8 +185,16 @@ const Home = () => {
                 <Tabs/>
 
             </div>
-            <div id="contact" className="sec-7" style={{minHeight: "600px"}}>
-                <img className="hero-bg2" alt="" src={source3}/>
+            <div id="contact" className="sec-7" style={{
+                    minHeight: "700px",
+                    backgroundImage: skin==='dark'?`url(${formImgD})` :`url(${formImg})` ,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    width: '100%',
+                    height: '100%',
+                    backgroundPositionX: "center",
+                    backgroundPositionY: "center",
+            }}>
                 <div className="container" style={{maxWidth: "992px"}}>
                     <Row>
                         <Col lg="6" sm="12" md="6">
@@ -208,20 +203,9 @@ const Home = () => {
                                      visibility: "visible",
                                      animationName: "fadeInUp"
                                  }}>
-                                {skin !== 'dark' ?
-                                    (<h2 style={{fontSize: "40px", fontWeight: "bold", color: "var(--color-blue)"}}>
-                                        Get In Touch With us
-                                    </h2>)
-                                    :
-                                    (
-                                        <h2 style={{
-                                            fontSize: "40px",
-                                            fontWeight: "bold",
-                                            color: "var(--color-gray-200)"
-                                        }}>
-                                            Get In Touch With us
-                                        </h2>
-                                    )}
+                                <h2 style={{fontSize: "40px", fontWeight: "bold", color: "var(--color-gray-200)"}}>
+                                    Get In Touch With us
+                                </h2>
 
                             </div>
                             <Col className="contact-area-v1 contact-form-area mb-60 wow fadeInUp" style={{
@@ -233,14 +217,14 @@ const Home = () => {
                                       target="hidden_iframe"
                                       onSubmit={(e) => {
                                           setSubmitted(true)
-                                          toast.success( (t) => (
+                                          toast.success((t) => (
                                               <span>
                                                 Form submitted! &nbsp; &nbsp;
-                                                <Button.Ripple color='secondary' outline
-                                                               onClick={() => {
-                                                    toast.dismiss(t.id);
-                                                    e.target.reset();
-                                                }}>
+                                                  <Button.Ripple color='secondary' outline
+                                                                 onClick={() => {
+                                                                     toast.dismiss(t.id);
+                                                                     e.target.reset();
+                                                                 }}>
                                                   Dismiss
                                                 </Button.Ripple>
                                               </span>
@@ -282,13 +266,13 @@ const Home = () => {
                                         </Col>
                                         <Col lg="12">
                                             <div className="form_group">
-                                                <Button color='primary' type="submit" value="Submit">
+                                                <Button color='primary' type="submit" value="Submit"
+                                                        disabled={!verified}>
                                                     Submit
                                                 </Button>
                                                 <Reaptcha
                                                     sitekey={themeConfig.app.sitekey}
-                                                    ref={captchaRef}
-                                                    onVerify={verify}
+                                                    onVerify={handleVerify}
                                                 />
                                             </div>
                                         </Col>

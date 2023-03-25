@@ -1,5 +1,5 @@
 // ** Router imports
-import {useRoutes} from "react-router-dom";
+import {Navigate, useRoutes} from "react-router-dom";
 
 // ** GetRoutes
 import {getRoutes} from "./routes";
@@ -11,9 +11,11 @@ const Router = () => {
 
     const allRoutes = getRoutes();
 
-    const routes = useRoutes([...allRoutes]);
-
-    return routes;
+    return useRoutes([...allRoutes],
+        {
+            path: "*",
+            element: <Navigate to="/"/>
+        });
 };
 
 export default Router;

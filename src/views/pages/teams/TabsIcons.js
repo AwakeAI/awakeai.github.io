@@ -1,13 +1,13 @@
 // ** React Imports
-import { Fragment } from 'react'
+import {Fragment} from 'react'
 
 // ** Icons Imports
-import {ChevronDown, ChevronLeft, Settings, Shield, Target} from 'react-feather'
+import {ChevronDown} from 'react-feather'
 
 // ** Reactstrap Imports
-import {TabContent, TabPane, Nav, NavItem, NavLink, Button} from 'reactstrap'
-import Team from "@src/views/pages/Team";
-import Mentor from "@src/views/pages/Mentor";
+import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap'
+import Team from "@src/views/pages/teams/Team";
+import Mentor from "@src/views/pages/teams/Mentor";
 
 const TabsIcons = () => {
   // ** State

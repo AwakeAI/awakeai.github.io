@@ -1,14 +1,10 @@
 // ** Dropdowns Imports
-import IntlDropdown from './IntlDropdown'
-
 // ** Third Party Components
-import {Moon, Sun} from 'react-feather'
 
 // ** Reactstrap Imports
 import {NavItem, NavLink} from 'reactstrap'
 import themeConfig from "@configs/themeConfig";
 import {Link} from "react-router-dom";
-import * as Icon from "react-feather";
 
 const NavbarLogin = () => {
     // ** Props

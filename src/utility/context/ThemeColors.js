@@ -2,7 +2,7 @@
 import {createContext, useEffect, useState} from "react";
 
 // ** Create Context
-const ThemeColors = createContext();
+const ThemeColors = createContext(undefined);
 
 const ThemeContext = ({children}) => {
     // ** State

@@ -23,9 +23,6 @@ import Spinner from "./@core/components/spinner/Fallback-spinner";
 import "./@core/components/ripple-button";
 
 // ** PrismJS
-import "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs/components/prism-jsx.min";
 
 // ** React Perfect Scrollbar
 import "react-perfect-scrollbar/dist/css/styles.css";

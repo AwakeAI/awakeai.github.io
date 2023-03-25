@@ -1,25 +1,17 @@
 // ** React Imports
 import {Fragment, useEffect} from 'react'
 
-// ** Third Party Components
-import Prism from 'prismjs'
-
 // ** Reactstrap Imports
-import {Row, Col} from 'reactstrap'
+import {Col, Row} from 'reactstrap'
 
 // ** Custom Components
-import Card from '@components/card-snippet'
-// import {tabsBasic} from "@src/views/pages/TabSourceCode";
 // ** Demo Components
-import TabsIcons from './TabsIcons'
+import TabsIcons from './teams/TabsIcons'
 
 
 // ** Source Code
 
 const Tabs = () => {
-    useEffect(() => {
-        Prism.highlightAll()
-    }, [])
     return (
         <Fragment>
             <div className="container" style={{maxWidth: "1130px"}}>

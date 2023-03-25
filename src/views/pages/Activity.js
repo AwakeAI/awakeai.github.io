@@ -2,7 +2,7 @@
 import {Fragment} from 'react'
 
 // ** Reactstrap Imports
-import {Row, Col, Card, CardBody, CardImg, ListGroup, ListGroupItem} from 'reactstrap'
+import {Card, CardBody, Col, ListGroup, ListGroupItem, Row} from 'reactstrap'
 
 // ** Styles
 import '@styles/base/pages/page-knowledge-base.scss'
@@ -15,11 +15,15 @@ import db from "@src/assets/images/pages/img.png"
 import engine from "@src/assets/images/pages/engine.jpg"
 import lulan from "@src/assets/images/portrait/Lulan.png";
 import cup from "@src/assets/images/pages/cup.png";
+import NEXTD from "@src/assets/images/pages/N36.png";
+import {useSkin} from "@hooks/useSkin";
+
 
 const data = [
     {
         id: 'centech',
         img: centech,
+        imgD: centech,
         title: 'CenTech',
         desc: '',
         customContent: (
@@ -32,6 +36,7 @@ const data = [
     {
         id: 'NEXT',
         img: NEXT,
+        imgD: NEXTD,
         title: 'NEXT 36',
         desc: '',
         customContent: (
@@ -39,10 +44,10 @@ const data = [
                 <h4 className='mt-1 mb-0'>2023</h4>
                 <ListGroupItem>
                     <Row>
-                        <Col md="3" sm="6">
+                        <Col lg="3" md="12" sm="12">
                             <Avatar img={lulan} imgHeight={90} imgWidth={85}/>
                         </Col>
-                        <Col md="9" sm="6" style={{textAlign: "left"}}>
+                        <Col lg="9" md="12" sm="12" style={{textAlign: "left"}}>
                             Lulan Shen, founder and CEO of AwakeAI Inc, has been admitted to participate in the 2023
                             NEXT36 program and will be attending during the summer season.
                         </Col>
@@ -54,6 +59,7 @@ const data = [
     {
         id: 'Dobson',
         img: db,
+        imgD: db,
         title: 'Dobson Centre for Entrepreneurship',
         desc: '',
         customContent: (
@@ -73,6 +79,7 @@ const data = [
     {
         id: 'Engine',
         img: engine,
+        imgD: engine,
         title: 'McGill Engine Center',
         desc: '',
         customContent: (
@@ -91,18 +98,19 @@ const data = [
 ]
 const Activity = () => {
     // ** States
-
+    const {skin, setSkin} = useSkin()
     const Content = ({item}) => (
 
         <Col className='kb-search-content' key={item.id} md='6' sm='12'>
             <Card>
+
                 <div className="kb-search-content-card-head m-auto align-items-center justify-content-center"
-                     style={{maxHeight: "230px"}}>
+                     style={{textAlign: "center", maxHeight: "230px"}}>
                     {item.id === 'centech' || 'Engine' ? (
-                        <img src={item.img} alt={item.id}
+                        <img src={skin === 'dark' ? item.imgD : item.img} alt={item.id}
                              id={item.id}
                              style={{width: "40%", margin: "15%"}}/>
-                    ) : (<img src={item.img} alt={item.id}
+                    ) : (<img src={skin === 'dark' ? item.imgD : item.img} alt={item.id}
                               id={item.id}
                               style={{width: "60%", margin: "15%"}}/>)
                     }

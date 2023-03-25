@@ -1,6 +1,4 @@
 // ** Custom Components
-import Avatar from '@components/avatar'
-
 // ** Images
 import Michael from "@src/assets/images/portrait/Michael.jpg"
 import Palma from "@src/assets/images/portrait/Palma.jpg"
