@@ -4,6 +4,7 @@ import Michael from "@src/assets/images/portrait/Michael.jpg";
 import Palma from "@src/assets/images/portrait/Palma.jpg";
 import Peter from "@src/assets/images/portrait/Peter.png";
 import David from "@src/assets/images/portrait/David.png";
+import Gandhi from "@src/assets/images/portrait/Gandhi.png";
 
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
@@ -30,7 +31,7 @@ const mentorList = [
     image: Palma,
     firstName: "Dino Di",
     lastName: "Palma",
-    position: "Managing Partner at True North Advisory",
+    position: "Managing Partner @True North Advisory",
     year: "2022",
     links: {
       github: "",
@@ -52,6 +53,18 @@ const mentorList = [
     bio: "Peter is an Associate with Maverix Private Equity. In this role, he is focused on deal execution including financial modelling and due diligence. Peter also works closely with portfolio companies in strategic and financial management as well as the evaluation of add-on acquisitions opportunities. "
   },
   {
+    id: "dg",
+    image: Gandhi,
+    firstName: "Dharmesh",
+    lastName: "Gandhi",
+    position: "Partner @EY",
+    year: "2023",
+    links: {
+      github: "",
+      linkedin: "https://www.linkedin.com/in/dharmeshgandhi1/"
+    },
+    bio: "Dharmesh leads the Central Quantitative Services Practice and has 17 years of experience working with technology companies across Canada. He works closely with his clients as a trusted business advisor, providing results-oriented advice and delivering the connections and insight required to access government grants and incentives. "  },
+  {
     id: "dm",
     image: David,
     firstName: "David",
@@ -62,7 +75,8 @@ const mentorList = [
       github: "",
       linkedin: "https://www.linkedin.com/in/david-masotti-b3920/"
     },
-    bio: "David is an experienced Business Leader, Corporate Director and Entrepreneur with a track record of success in building and leading highly effective senior management teams in numerous situations – from early stage, to mature businesses with thousands of employees. Successful record of growth, diversification, product development, business development, financing, restructuring, turnarounds and performance improvement through leadership, team-building, clear strategic focus and operational excellence."  }
+    bio: "David is an experienced Business Leader, Corporate Director and Entrepreneur with a track record of success in building and leading highly effective senior management teams in numerous situations – from early stage, to mature businesses with thousands of employees. Successful record of growth, diversification, product development, business development, financing, restructuring, turnarounds and performance improvement through leadership, team-building, clear strategic focus and operational excellence."
+  }
 
 ];
 

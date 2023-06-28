@@ -139,7 +139,7 @@ const Contact = ({subject}) => {
                         className="form_control"
                         name="entry.537245108"
                         placeholder={subject ? subject : 'Subject'}
-                        value={subject ? subject : null}
+                        value={subject ? subject : undefined}
                         required
                       />
                       <Book size={24}/>
