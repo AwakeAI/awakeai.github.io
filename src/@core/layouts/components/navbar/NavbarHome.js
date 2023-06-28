@@ -1,7 +1,7 @@
 // ** Reactstrap Imports
-import {NavItem, NavLink} from "reactstrap";
+import { NavItem, NavLink } from "reactstrap";
 import themeConfig from "@configs/themeConfig";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavbarLogin = () => {
   // ** Props

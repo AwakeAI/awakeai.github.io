@@ -7,7 +7,7 @@ import Egor from "@src/assets/images/portrait/Egor.png";
 import Ben from "@src/assets/images/portrait/Ben.png";
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
-import {Row} from "reactstrap";
+import { Row } from "reactstrap";
 
 // ** Timeline Data
 const teamList = [
@@ -59,7 +59,8 @@ const teamList = [
     year: "2020",
     links: {
       github: "",
-      linkedin: "https://www.linkedin.com/in/akera-benjamin-2488188a/?originalSubdomain=ug"
+      linkedin:
+        "https://www.linkedin.com/in/akera-benjamin-2488188a/?originalSubdomain=ug"
     },
     bio: ""
   },

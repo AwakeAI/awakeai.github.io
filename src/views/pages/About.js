@@ -1,8 +1,8 @@
 // ** Reactstrap Imports
-import {Button} from "reactstrap";
+import { Button } from "reactstrap";
 
 // ** Custom Components
-import {Settings, Shield, Target} from "react-feather";
+import { Settings, Shield, Target } from "react-feather";
 import older from "@src/assets/images/pages/older.jpg";
 
 // ** Source Code

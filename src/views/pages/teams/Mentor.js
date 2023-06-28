@@ -8,7 +8,7 @@ import Gandhi from "@src/assets/images/portrait/Gandhi.png";
 
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
-import {Row} from "reactstrap";
+import { Row } from "reactstrap";
 
 // ** Timeline Data
 const mentorList = [
@@ -63,7 +63,8 @@ const mentorList = [
       github: "",
       linkedin: "https://www.linkedin.com/in/dharmeshgandhi1/"
     },
-    bio: "Dharmesh leads the Central Quantitative Services Practice and has 17 years of experience working with technology companies across Canada. He works closely with his clients as a trusted business advisor, providing results-oriented advice and delivering the connections and insight required to access government grants and incentives. "  },
+    bio: "Dharmesh leads the Central Quantitative Services Practice and has 17 years of experience working with technology companies across Canada. He works closely with his clients as a trusted business advisor, providing results-oriented advice and delivering the connections and insight required to access government grants and incentives. "
+  },
   {
     id: "dm",
     image: David,
@@ -77,7 +78,6 @@ const mentorList = [
     },
     bio: "David is an experienced Business Leader, Corporate Director and Entrepreneur with a track record of success in building and leading highly effective senior management teams in numerous situations – from early stage, to mature businesses with thousands of employees. Successful record of growth, diversification, product development, business development, financing, restructuring, turnarounds and performance improvement through leadership, team-building, clear strategic focus and operational excellence."
   }
-
 ];
 
 const Mentor = () => {

@@ -1,8 +1,8 @@
 // ** Third Party Components
 import Proptypes from "prop-types";
-import {Info, Linkedin, PlusCircle} from "react-feather";
-import {Col, Modal, ModalBody, ModalHeader, Row} from "reactstrap";
-import {useState} from "react";
+import { Info, Linkedin, PlusCircle } from "react-feather";
+import { Col, Modal, ModalBody, ModalHeader, Row } from "reactstrap";
+import { useState } from "react";
 
 const TeamPage = (props) => {
   // ** Props
@@ -80,10 +80,13 @@ const TeamPage = (props) => {
               <ModalBody>
                 <div className="container">
                   <Row className=" justify-content-center">
-                    <Col sm="6" className="ins-image align-items-center mt-auto mb-auto">
+                    <Col
+                      sm="6"
+                      className="ins-image align-items-center mt-auto mb-auto"
+                    >
                       <img src={item.image} alt={item.firstName} />
                     </Col>
-                    <Col sm="6" >
+                    <Col sm="6">
                       <div className="ins-name">
                         <h3>
                           {item.firstName} {item.lastName}

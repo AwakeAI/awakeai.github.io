@@ -1,5 +1,5 @@
 // ** React Imports
-import {createContext, useEffect, useState} from "react";
+import { createContext, useEffect, useState } from "react";
 
 // ** Create Context
 const ThemeColors = createContext(undefined);

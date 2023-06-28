@@ -1,11 +1,11 @@
 // ** React Imports
-import {Fragment} from "react";
+import { Fragment } from "react";
 
 // ** Icons Imports
-import {ChevronDown} from "react-feather";
+import { ChevronDown } from "react-feather";
 
 // ** Reactstrap Imports
-import {Nav, NavItem, NavLink, TabContent, TabPane} from "reactstrap";
+import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import Team from "@src/views/pages/teams/Team";
 import Mentor from "@src/views/pages/teams/Mentor";
 

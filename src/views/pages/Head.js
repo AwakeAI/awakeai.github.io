@@ -1,30 +1,39 @@
 // ** React Imports
-import {useState} from "react";
+import { useState } from "react";
 
 // ** Reactstrap Imports
-import {Button, Col, Modal, ModalBody, ModalHeader, NavItem, NavLink, Row} from "reactstrap";
+import {
+  Button,
+  Col,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  NavItem,
+  NavLink,
+  Row
+} from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components
 // import herobg from "@src/assets/images/pages/herobg.jpg";
 import herobg from "@src/assets/images/pages/CollisionMap.png";
 import NavbarHome from "@layouts/components/navbar/NavbarHome";
-import {useSkin} from "@hooks/useSkin";
-import {Moon, Sun} from "react-feather";
-import {useTranslation} from "react-i18next";
+import { useSkin } from "@hooks/useSkin";
+import { Moon, Sun } from "react-feather";
+import { useTranslation } from "react-i18next";
 import Contact from "@src/views/pages/Contact";
 // ** Source Code
 
 const Head = () => {
-  const {skin, setSkin} = useSkin();
-  const {t} = useTranslation();
+  const { skin, setSkin } = useSkin();
+  const { t } = useTranslation();
   const [basicModal, setBasicModal] = useState(false);
   const [subject, setSubject] = useState(null);
   const ThemeToggler = () => {
     if (skin === "dark") {
-      return <Moon className="ficon" onClick={() => setSkin("light")}/>;
+      return <Moon className="ficon" onClick={() => setSkin("light")} />;
     } else {
-      return <Sun className="ficon" onClick={() => setSkin("dark")}/>;
+      return <Sun className="ficon" onClick={() => setSkin("dark")} />;
     }
   };
 
@@ -45,7 +54,7 @@ const Head = () => {
     >
       <Row>
         <Col className="mx-auto pb-1" sm="10" md="10" lg="10">
-          <NavbarHome/>
+          <NavbarHome />
           <div className="mx-auto float-xl-end">
             <div
               className="align-items-center floating-nav navbar-expand-lg"
@@ -58,11 +67,11 @@ const Head = () => {
             >
               <ul
                 className="nav navbar-nav align-items-center ms-auto"
-                style={{flexDirection: "row"}}
+                style={{ flexDirection: "row" }}
               >
                 <NavItem>
                   <NavLink className="nav-link-style">
-                    <ThemeToggler/> &nbsp;|&nbsp; {skin}
+                    <ThemeToggler /> &nbsp;|&nbsp; {skin}
                   </NavLink>
                 </NavItem>
                 {/*&nbsp;|&nbsp;*/}
@@ -75,34 +84,45 @@ const Head = () => {
       <Row className="justify-content-center">
         <Col
           className="align-items-center text-center mx-auto"
-          sm="12" md="9" lg="6">
+          sm="12"
+          md="9"
+          lg="6"
+        >
           <div id="head-div">
-            <h1 id="head" className="text-primary">{t("We Care about your family members")}</h1>
+            <h1 id="head" className="text-primary">
+              {t("We Care about your family members")}
+            </h1>
             <h3
               className="text-primary"
-              style={{fontWeight: "400", fontSize: "20px"}}
+              style={{ fontWeight: "400", fontSize: "20px" }}
             >
-              {t("A way to response in time to senior's needs")} <br/>
+              {t("A way to response in time to senior's needs")} <br />
             </h3>
             <Button.Ripple
               color="secondary"
               outline
-              style={{color: "#FFFFFF", fontSize: "30px"}}
-              onClick={() => {setSubject('I want to be An Early Adopter!');setBasicModal(!basicModal)}}
+              style={{ color: "#FFFFFF", fontSize: "30px" }}
+              onClick={() => {
+                setSubject("I want to be An Early Adopter!");
+                setBasicModal(!basicModal);
+              }}
             >
               Sign Me Up As An Early Adopter!
             </Button.Ripple>
             <h1
               className="text-primary"
-              style={{fontWeight: "300", fontSize: "50px"}}
+              style={{ fontWeight: "300", fontSize: "50px" }}
             >
-             See us @Collision on Wednesday June 28th, @Booth A619!
+              See us @Collision on Wednesday June 28th, @Booth A619!
             </h1>
             <Button.Ripple
               color="secondary"
               outline
-              style={{color: "#FFFFFF", fontSize: "30px"}}
-              onClick={() => {setSubject('I want to see A Demo!');setBasicModal(!basicModal)}}
+              style={{ color: "#FFFFFF", fontSize: "30px" }}
+              onClick={() => {
+                setSubject("I want to see A Demo!");
+                setBasicModal(!basicModal);
+              }}
             >
               Submit A Demo Request!
             </Button.Ripple>
@@ -114,9 +134,9 @@ const Head = () => {
         toggle={() => setBasicModal(!basicModal)}
         className="modal-dialog-centered modal-lg"
       >
-        <ModalHeader toggle={() => setBasicModal(!basicModal)}/>
+        <ModalHeader toggle={() => setBasicModal(!basicModal)} />
         <ModalBody>
-          <Contact subject={subject}/>
+          <Contact subject={subject} />
         </ModalBody>
       </Modal>
     </div>

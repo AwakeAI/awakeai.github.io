@@ -1,8 +1,8 @@
 // ** Router imports
-import {Navigate, useRoutes} from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 
 // ** GetRoutes
-import {getRoutes} from "./routes";
+import { getRoutes } from "./routes";
 
 // ** Hooks Imports
 

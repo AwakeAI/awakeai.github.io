@@ -1,11 +1,11 @@
 // ** React Imports
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 // ** Third Party Components
 import classnames from "classnames";
 
 // ** Reactstrap Imports
-import {Button} from "reactstrap";
+import { Button } from "reactstrap";
 
 // ** Styles
 import "./ripple-button.scss";

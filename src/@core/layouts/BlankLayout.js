@@ -1,9 +1,9 @@
 // ** React Imports
-import {Outlet} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 // ** Custom Hooks
-import {useSkin} from "@hooks/useSkin";
+import { useSkin } from "@hooks/useSkin";
 
 // ** Third Party Components
 import classnames from "classnames";

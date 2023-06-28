@@ -1,7 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 // ** React Imports
-import {useContext} from "react";
-import {AbilityContext} from "@src/utility/context/Can";
+import { useContext } from "react";
+import { AbilityContext } from "@src/utility/context/Can";
 
 /**
  * Check if the given item has the given url

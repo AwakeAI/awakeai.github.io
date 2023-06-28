@@ -1,24 +1,24 @@
 // ** React Imports
-import {useState} from "react";
+import { useState } from "react";
 // ** Reactstrap Imports
-import {Button, Col, Row} from "reactstrap";
+import { Button, Col, Row } from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components
-import {useSkin} from "@hooks/useSkin";
-import {Book} from "react-feather";
+import { useSkin } from "@hooks/useSkin";
+import { Book } from "react-feather";
 // import {useTranslation} from "react-i18next";
 import formImgD from "@src/assets/images/pages/pexelsitalomeloD.jpg";
 import formImg from "@src/assets/images/pages/pexelsitalomelo.jpg";
-import {toast} from "react-hot-toast";
-import {Icon} from "@iconify/react";
+import { toast } from "react-hot-toast";
+import { Icon } from "@iconify/react";
 import Reaptcha from "reaptcha";
 import themeConfig from "@configs/themeConfig";
 
 // ** Source Code
 
-const Contact = ({subject}) => {
-  const {skin, setSkin} = useSkin();
+const Contact = ({ subject }) => {
+  const { skin, setSkin } = useSkin();
   // const {t} = useTranslation();
 
   const [submitted, setSubmitted] = useState(false);
@@ -43,7 +43,7 @@ const Contact = ({subject}) => {
         backgroundPositionY: "center"
       }}
     >
-      <div className="container" style={{maxWidth: "992px"}}>
+      <div className="container" style={{ maxWidth: "992px" }}>
         <Row>
           <Col lg="9" sm="12" md="9">
             <div
@@ -53,7 +53,8 @@ const Contact = ({subject}) => {
                 animationName: "fadeInUp"
               }}
             >
-              {subject ? <h2
+              {subject ? (
+                <h2
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
@@ -61,7 +62,9 @@ const Contact = ({subject}) => {
                   }}
                 >
                   {subject}
-                </h2> : <h2
+                </h2>
+              ) : (
+                <h2
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
@@ -70,7 +73,7 @@ const Contact = ({subject}) => {
                 >
                   Get In Touch With us
                 </h2>
-              }
+              )}
             </div>
             <Col
               className="contact-area-v1 contact-form-area mb-60 wow fadeInUp"
@@ -116,7 +119,7 @@ const Contact = ({subject}) => {
                       />
                       <Icon
                         icon="bi:person-fill"
-                        style={{fontSize: "24px"}}
+                        style={{ fontSize: "24px" }}
                       />
                     </div>
                   </Col>
@@ -129,7 +132,7 @@ const Contact = ({subject}) => {
                         name="entry.1569009990"
                         required
                       />
-                      <Icon icon="bi:envelope" style={{fontSize: "24px"}}/>
+                      <Icon icon="bi:envelope" style={{ fontSize: "24px" }} />
                     </div>
                   </Col>
                   <Col lg="12">
@@ -138,11 +141,11 @@ const Contact = ({subject}) => {
                         type="text"
                         className="form_control"
                         name="entry.537245108"
-                        placeholder={subject ? subject : 'Subject'}
+                        placeholder={subject ? subject : "Subject"}
                         value={subject ? subject : undefined}
                         required
                       />
-                      <Book size={24}/>
+                      <Book size={24} />
                     </div>
                   </Col>
                   <Col lg="12">
@@ -152,7 +155,7 @@ const Contact = ({subject}) => {
                         placeholder="Enter message"
                         className="form_control"
                       />
-                      <Icon icon="bi:vector-pen" style={{fontSize: "24px"}}/>
+                      <Icon icon="bi:vector-pen" style={{ fontSize: "24px" }} />
                     </div>
                   </Col>
                   <Col lg="12">
@@ -174,7 +177,7 @@ const Contact = ({subject}) => {
                   <iframe
                     name="hidden_iframe"
                     id="hidden_iframe"
-                    style={{display: "none"}}
+                    style={{ display: "none" }}
                     onLoad={() => !submitted}
                   ></iframe>
                 </Row>

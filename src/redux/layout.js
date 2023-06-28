@@ -1,5 +1,5 @@
 // ** Redux Imports
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 // ** ThemeConfig Import
 import themeConfig from "@configs/themeConfig";
