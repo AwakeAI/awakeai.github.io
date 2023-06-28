@@ -1,17 +1,8 @@
 // ** Reactstrap Imports
-import { Button, Col, Row } from "reactstrap";
+import {Button} from "reactstrap";
 
 // ** Custom Components
-import footerImg from "@src/assets/images/pages/footer-bg.png";
-import themeConfig from "@configs/themeConfig";
-import {
-  Linkedin,
-  Mail,
-  MapPin,
-  Settings,
-  Shield,
-  Target,
-} from "react-feather";
+import {Settings, Shield, Target} from "react-feather";
 import older from "@src/assets/images/pages/older.jpg";
 
 // ** Source Code
@@ -48,7 +39,7 @@ const About = () => {
               color="github"
               className="spotcustomer"
               style={{
-                width: "10%",
+                width: "10%"
               }}
             >
               <Settings size={20} color="#000000" />
@@ -65,7 +56,7 @@ const About = () => {
               color="github"
               className="spotcustomer"
               style={{
-                width: "10%",
+                width: "10%"
               }}
             >
               <Shield size={20} color="#000000" />
@@ -82,7 +73,7 @@ const About = () => {
               color="github"
               className="spotcustomer"
               style={{
-                width: "10%",
+                width: "10%"
               }}
             >
               <Target size={20} color="#000000" />

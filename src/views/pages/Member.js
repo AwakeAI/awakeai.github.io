@@ -1,8 +1,8 @@
 // ** React Imports
-import { Fragment, useEffect } from "react";
+import {Fragment} from "react";
 
 // ** Reactstrap Imports
-import { Col, Row } from "reactstrap";
+import {Col, Row} from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components

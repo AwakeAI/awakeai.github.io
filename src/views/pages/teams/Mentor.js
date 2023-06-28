@@ -7,7 +7,7 @@ import David from "@src/assets/images/portrait/David.png";
 
 // ** Reactstrap Imports
 import TeamPage from "@components/team";
-import { Row } from "reactstrap";
+import {Row} from "reactstrap";
 
 // ** Timeline Data
 const mentorList = [
@@ -21,9 +21,9 @@ const mentorList = [
     links: {
       github: "",
       linkedin:
-        "https://www.mcgill.ca/engine/resources/mcgill-engine-centre-support/team",
+        "https://www.mcgill.ca/engine/resources/mcgill-engine-centre-support/team"
     },
-    bio: "Dr. Avedesian has over 33 years of operations, technology and business management experience in the corporate sector. He holds a bachelor’s degree with honors in Chemical Engineering from McGill University, and a Ph.D. in Engineering from Cambridge University.Dr. Avedesian then had three start-up companies for which two he was the founding CEO. Two of them were successful and one went IPO on the Toronto Stock Exchange. Currently, he serves on the Board of Directors of TM4, a company which designs and manufactures electromechanical drive train systems for hybrid and electric vehicles. Michael is a member of Ordre des ingenieurs du Quebec, Professional Engineers of Ontario, and the C.S.Ch.E. (for which he was President in 1992–1993). He was elected Fellow of the CIC in 1993. In 1998 he was inducted as a Fellow in the Canadian Academy of Engineering.",
+    bio: "Dr. Avedesian has over 33 years of operations, technology and business management experience in the corporate sector. He holds a bachelor’s degree with honors in Chemical Engineering from McGill University, and a Ph.D. in Engineering from Cambridge University.Dr. Avedesian then had three start-up companies for which two he was the founding CEO. Two of them were successful and one went IPO on the Toronto Stock Exchange. Currently, he serves on the Board of Directors of TM4, a company which designs and manufactures electromechanical drive train systems for hybrid and electric vehicles. Michael is a member of Ordre des ingenieurs du Quebec, Professional Engineers of Ontario, and the C.S.Ch.E. (for which he was President in 1992–1993). He was elected Fellow of the CIC in 1993. In 1998 he was inducted as a Fellow in the Canadian Academy of Engineering."
   },
   {
     id: "dp",
@@ -34,9 +34,9 @@ const mentorList = [
     year: "2022",
     links: {
       github: "",
-      linkedin: "https://www.linkedin.com/in/ddipalma/",
+      linkedin: "https://www.linkedin.com/in/ddipalma/"
     },
-    bio: "Dino Di Palma most recently served as President, Strategic Partners & Global Accounts at Avaya. In this role, Dino was responsible for direct, channel, and partner sales in the U.S., Canada, and Latin America. He also had responsibility for the company’s gomarket strategy across the entire portfolio of cloud and premise-- to based software and hardware solutions serving enterprises, government agencies, channel partners, SIs, SPs, and small and medium businesses.",
+    bio: "Dino Di Palma most recently served as President, Strategic Partners & Global Accounts at Avaya. In this role, Dino was responsible for direct, channel, and partner sales in the U.S., Canada, and Latin America. He also had responsibility for the company’s gomarket strategy across the entire portfolio of cloud and premise-- to based software and hardware solutions serving enterprises, government agencies, channel partners, SIs, SPs, and small and medium businesses."
   },
   {
     id: "ps",
@@ -47,7 +47,7 @@ const mentorList = [
     year: "2023",
     links: {
       github: "",
-      linkedin: "https://www.linkedin.com/in/petershi101/",
+      linkedin: "https://www.linkedin.com/in/petershi101/"
     },
     bio: "Peter is an Associate with Maverix Private Equity. In this role, he is focused on deal execution including financial modelling and due diligence. Peter also works closely with portfolio companies in strategic and financial management as well as the evaluation of add-on acquisitions opportunities. "
   },
@@ -60,9 +60,9 @@ const mentorList = [
     year: "2023",
     links: {
       github: "",
-      linkedin: "https://www.linkedin.com/in/david-masotti-b3920/",
+      linkedin: "https://www.linkedin.com/in/david-masotti-b3920/"
     },
-    bio: "David is an experienced Business Leader, Corporate Director and Entrepreneur with a track record of success in building and leading highly effective senior management teams in numerous situations – from early stage, to mature businesses with thousands of employees. Successful record of growth, diversification, product development, business development, financing, restructuring, turnarounds and performance improvement through leadership, team-building, clear strategic focus and operational excellence."  },
+    bio: "David is an experienced Business Leader, Corporate Director and Entrepreneur with a track record of success in building and leading highly effective senior management teams in numerous situations – from early stage, to mature businesses with thousands of employees. Successful record of growth, diversification, product development, business development, financing, restructuring, turnarounds and performance improvement through leadership, team-building, clear strategic focus and operational excellence."  }
 
 ];
 

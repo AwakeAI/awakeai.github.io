@@ -5,11 +5,9 @@ import {Button, Col, Row} from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components
-import herobg from "@src/assets/images/pages/herobg.jpg";
-import NavbarHome from "@layouts/components/navbar/NavbarHome";
 import {useSkin} from "@hooks/useSkin";
-import {Book, Moon, Sun} from "react-feather";
-import {useTranslation} from "react-i18next";
+import {Book} from "react-feather";
+// import {useTranslation} from "react-i18next";
 import formImgD from "@src/assets/images/pages/pexelsitalomeloD.jpg";
 import formImg from "@src/assets/images/pages/pexelsitalomelo.jpg";
 import {toast} from "react-hot-toast";
@@ -21,7 +19,7 @@ import themeConfig from "@configs/themeConfig";
 
 const Contact = ({subject}) => {
   const {skin, setSkin} = useSkin();
-  const {t} = useTranslation();
+  // const {t} = useTranslation();
 
   const [submitted, setSubmitted] = useState(false);
   const [verified, setVerified] = useState(false);
@@ -36,14 +34,13 @@ const Contact = ({subject}) => {
       className="sec-7"
       style={{
         minHeight: "700px",
-        backgroundImage: subject ? `url(${formImgD})` :
-          skin === "dark" ? `url(${formImgD})` : `url(${formImg})`,
+        backgroundImage: subject ? `url(${formImgD})` : skin === "dark" ? `url(${formImgD})` : `url(${formImg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%",
         height: "100%",
         backgroundPositionX: "center",
-        backgroundPositionY: "center",
+        backgroundPositionY: "center"
       }}
     >
       <div className="container" style={{maxWidth: "992px"}}>
@@ -53,24 +50,22 @@ const Contact = ({subject}) => {
               className="section-title mb-45 wow fadeInUp"
               style={{
                 visibility: "visible",
-                animationName: "fadeInUp",
+                animationName: "fadeInUp"
               }}
             >
-              {subject ?
-                <h2
+              {subject ? <h2
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
-                    color: "var(--color-gray-200)",
+                    color: "var(--color-gray-200)"
                   }}
                 >
                   {subject}
-                </h2> :
-                <h2
+                </h2> : <h2
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
-                    color: "var(--color-gray-200)",
+                    color: "var(--color-gray-200)"
                   }}
                 >
                   Get In Touch With us
@@ -81,7 +76,7 @@ const Contact = ({subject}) => {
               className="contact-area-v1 contact-form-area mb-60 wow fadeInUp"
               style={{
                 visibility: "visible",
-                animationName: "fadeInUp",
+                animationName: "fadeInUp"
               }}
             >
               <form
@@ -143,8 +138,8 @@ const Contact = ({subject}) => {
                         type="text"
                         className="form_control"
                         name="entry.537245108"
-                        placeholder={subject?subject:'Subject'}
-                        value={subject?subject:null}
+                        placeholder={subject ? subject : 'Subject'}
+                        value={subject ? subject : null}
                         required
                       />
                       <Book size={24}/>

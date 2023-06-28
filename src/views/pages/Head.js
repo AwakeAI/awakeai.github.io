@@ -2,16 +2,7 @@
 import {useState} from "react";
 
 // ** Reactstrap Imports
-import {
-  Button,
-  Col,
-  Modal,
-  ModalBody,
-  ModalHeader,
-  NavItem,
-  NavLink,
-  Row,
-} from "reactstrap";
+import {Button, Col, Modal, ModalBody, ModalHeader, NavItem, NavLink, Row} from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components
@@ -63,7 +54,7 @@ const Head = () => {
                 background: "none",
                 top: "1rem",
                 position: "fixed",
-                zIndex: 1000,
+                zIndex: 1000
               }}
             >
               <ul

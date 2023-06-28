@@ -1,7 +1,7 @@
 // ** I18n Imports
 import i18n from "i18next";
 import Backend from "i18next-http-backend";
-import { initReactI18next } from "react-i18next";
+import {initReactI18next} from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // ** Languages Imports
@@ -12,7 +12,7 @@ const cn = new URL("../../assets/data/locales/cn.json", import.meta.url).href;
 const languages = {
   en,
   fr,
-  cn,
+  cn
 };
 
 i18n
@@ -29,18 +29,18 @@ i18n
     lng: "en",
     backend: {
       /* translation file path */
-      loadPath: (lng) => languages[lng],
+      loadPath: (lng) => languages[lng]
     },
     fallbackLng: "en",
     debug: false,
     keySeparator: false,
     react: {
-      useSuspense: false,
+      useSuspense: false
     },
     interpolation: {
       escapeValue: false,
-      formatSeparator: ",",
-    },
+      formatSeparator: ","
+    }
   })
   .then(() => {});
 

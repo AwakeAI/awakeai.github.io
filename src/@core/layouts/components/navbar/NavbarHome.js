@@ -1,7 +1,7 @@
 // ** Reactstrap Imports
-import { NavItem, NavLink } from "reactstrap";
+import {NavItem, NavLink} from "reactstrap";
 import themeConfig from "@configs/themeConfig";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const NavbarLogin = () => {
   // ** Props
@@ -19,7 +19,7 @@ const NavbarLogin = () => {
               style={{
                 display: "flex",
                 marginTop: "0.5rem",
-                marginRight: "5rem",
+                marginRight: "5rem"
               }}
             >
               <img

@@ -4,7 +4,7 @@ const ComponentSpinner = ({ className }) => {
   return (
     <div
       className={classnames("fallback-spinner", {
-        [className]: className,
+        [className]: className
       })}
     >
       <div className="loading">

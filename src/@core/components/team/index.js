@@ -1,8 +1,8 @@
 // ** Third Party Components
 import Proptypes from "prop-types";
-import { Info, Linkedin, PlusCircle } from "react-feather";
-import { Col, Modal, ModalBody, ModalHeader, Row } from "reactstrap";
-import { useState } from "react";
+import {Info, Linkedin, PlusCircle} from "react-feather";
+import {Col, Modal, ModalBody, ModalHeader, Row} from "reactstrap";
+import {useState} from "react";
 
 const TeamPage = (props) => {
   // ** Props
@@ -123,5 +123,5 @@ export default TeamPage;
 
 // ** PropTypes
 TeamPage.propTypes = {
-  data: Proptypes.array.isRequired,
+  data: Proptypes.array.isRequired
 };

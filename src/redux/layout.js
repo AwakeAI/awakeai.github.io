@@ -1,5 +1,5 @@
 // ** Redux Imports
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 // ** ThemeConfig Import
 import themeConfig from "@configs/themeConfig";
@@ -34,14 +34,14 @@ export const layoutSlice = createSlice({
     navbarType: themeConfig.layout.navbar.type,
     menuHidden: themeConfig.layout.menu.isHidden,
     contentWidth: themeConfig.layout.contentWidth,
-    navbarColor: themeConfig.layout.navbar.backgroundColor,
+    navbarColor: themeConfig.layout.navbar.backgroundColor
   },
   reducers: {
     handleSkin: (state, action) => {
       state.skin = action.payload;
       window.localStorage.setItem("skin", JSON.stringify(action.payload));
-    },
-  },
+    }
+  }
 });
 
 export const { handleSkin } = layoutSlice.actions;

@@ -1,10 +1,10 @@
 // ** Reactstrap Imports
-import { Col, Row } from "reactstrap";
+import {Col, Row} from "reactstrap";
 
 // ** Custom Components
 import footerImg from "@src/assets/images/pages/footer-bg.png";
 import themeConfig from "@configs/themeConfig";
-import { Linkedin, Mail, MapPin } from "react-feather";
+import {Linkedin, Mail, MapPin} from "react-feather";
 
 // ** Source Code
 const Footer = () => {
@@ -52,7 +52,7 @@ const Footer = () => {
           <div
             style={{
               left: "60px",
-              position: "relative",
+              position: "relative"
             }}
           >
             <Row className="justify-content-center align-items-center mx-auto">

@@ -1,12 +1,12 @@
 // ** React Imports
-import { forwardRef } from "react";
+import {forwardRef} from "react";
 
 // ** Third Party Components
 import Proptypes from "prop-types";
 import classnames from "classnames";
 
 // ** Reactstrap Imports
-import { Badge } from "reactstrap";
+import {Badge} from "reactstrap";
 
 const Avatar = forwardRef((props, ref) => {
   // ** Props
@@ -45,7 +45,7 @@ const Avatar = forwardRef((props, ref) => {
       className={classnames("avatar", {
         [className]: className,
         [`bg-${color}`]: color,
-        [`avatar-${size}`]: size,
+        [`avatar-${size}`]: size
       })}
       ref={ref}
       {...rest}
@@ -53,7 +53,7 @@ const Avatar = forwardRef((props, ref) => {
       {img === false || img === undefined ? (
         <span
           className={classnames("avatar-content", {
-            "position-relative": badgeUp,
+            "position-relative": badgeUp
           })}
           style={contentStyles}
         >
@@ -73,7 +73,7 @@ const Avatar = forwardRef((props, ref) => {
       ) : (
         <img
           className={classnames({
-            [imgClassName]: imgClassName,
+            [imgClassName]: imgClassName
           })}
           src={img}
           alt="avatarImg"
@@ -85,7 +85,7 @@ const Avatar = forwardRef((props, ref) => {
         <span
           className={classnames({
             [`avatar-status-${status}`]: status,
-            [`avatar-status-${size}`]: size,
+            [`avatar-status-${size}`]: size
           })}
         ></span>
       ) : null}
@@ -124,7 +124,7 @@ Avatar.propTypes = {
     "light-danger",
     "light-info",
     "light-warning",
-    "light-dark",
+    "light-dark"
   ]),
   color: Proptypes.oneOf([
     "primary",
@@ -140,7 +140,7 @@ Avatar.propTypes = {
     "light-danger",
     "light-info",
     "light-warning",
-    "light-dark",
+    "light-dark"
   ]),
   initials(props) {
     if (props["initials"] && props["content"] === undefined) {
@@ -155,10 +155,10 @@ Avatar.propTypes = {
     ) {
       return new Error("initials must be a boolean!");
     }
-  },
+  }
 };
 
 // ** Default Props
 Avatar.defaultProps = {
-  tag: "div",
+  tag: "div"
 };

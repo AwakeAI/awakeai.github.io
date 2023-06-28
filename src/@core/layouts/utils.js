@@ -1,7 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 // ** React Imports
-import { useContext } from "react";
-import { AbilityContext } from "@src/utility/context/Can";
+import {useContext} from "react";
+import {AbilityContext} from "@src/utility/context/Can";
 
 /**
  * Check if the given item has the given url
@@ -51,8 +51,7 @@ export const removeChildren = (children, openGroup, currentActiveGroup) => {
     if (!currentActiveGroup.includes(child.id)) {
       const index = openGroup.indexOf(child.id);
       if (index > -1) openGroup.splice(index, 1);
-      if (child.children)
-        removeChildren(child.children, openGroup, currentActiveGroup);
+      if (child.children) removeChildren(child.children, openGroup, currentActiveGroup);
     }
   });
 };

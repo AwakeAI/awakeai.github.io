@@ -1,8 +1,8 @@
 // ** React Imports
-import { Fragment } from "react";
+import {Fragment} from "react";
 
 // ** Reactstrap Imports
-import { Card, CardBody, Col, ListGroup, ListGroupItem, Row } from "reactstrap";
+import {Card, CardBody, Col, ListGroup, ListGroupItem, Row} from "reactstrap";
 
 // ** Styles
 import "@styles/base/pages/page-knowledge-base.scss";
@@ -16,7 +16,7 @@ import engine from "@src/assets/images/pages/engine.jpg";
 import lulan from "@src/assets/images/portrait/Lulan.png";
 import cup from "@src/assets/images/pages/cup.png";
 import NEXTD from "@src/assets/images/pages/N36.png";
-import { useSkin } from "@hooks/useSkin";
+import {useSkin} from "@hooks/useSkin";
 
 const data = [
   {
@@ -30,7 +30,7 @@ const data = [
         <h4 className="mt-1 mb-0">2023</h4>
         <ListGroupItem>Winter 2023 Accelerator Cohort</ListGroupItem>
       </ListGroup>
-    ),
+    )
   },
   {
     id: "NEXT",
@@ -54,7 +54,7 @@ const data = [
           </Row>
         </ListGroupItem>
       </ListGroup>
-    ),
+    )
   },
   {
     id: "Dobson",
@@ -77,7 +77,7 @@ const data = [
           </a>
         </ListGroupItem>
       </ListGroup>
-    ),
+    )
   },
   {
     id: "Engine",
@@ -100,8 +100,8 @@ const data = [
           TechIdea Pitch Competition: 1st Place & Audience Favorite
         </ListGroupItem>
       </ListGroup>
-    ),
-  },
+    )
+  }
 ];
 const Activity = () => {
   // ** States

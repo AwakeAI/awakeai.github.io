@@ -1,20 +1,20 @@
 // ** React Imports
-import { lazy, Suspense } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import {lazy, Suspense} from "react";
+import {createRoot} from "react-dom/client";
+import {BrowserRouter} from "react-router-dom";
 
 // ** Redux Imports
-import { store } from "./redux/store";
-import { Provider } from "react-redux";
+import {store} from "./redux/store";
+import {Provider} from "react-redux";
 
 // ** ThemeColors Context
-import { ThemeContext } from "./utility/context/ThemeColors";
+import {ThemeContext} from "./utility/context/ThemeColors";
 
 // ** ThemeConfig
 import themeConfig from "./configs/themeConfig";
 
 // ** Toast
-import { Toaster } from "react-hot-toast";
+import {Toaster} from "react-hot-toast";
 
 // ** Spinner (Splash Screen)
 import Spinner from "./@core/components/spinner/Fallback-spinner";
@@ -23,7 +23,6 @@ import Spinner from "./@core/components/spinner/Fallback-spinner";
 import "./@core/components/ripple-button";
 
 // ** PrismJS
-
 // ** React Perfect Scrollbar
 import "react-perfect-scrollbar/dist/css/styles.css";
 
