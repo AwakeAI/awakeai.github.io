@@ -1,21 +1,20 @@
 // ** Router imports
-import {Navigate, useRoutes} from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 
 // ** GetRoutes
-import {getRoutes} from "./routes";
+import { getRoutes } from "./routes";
 
 // ** Hooks Imports
 
 const Router = () => {
-    // ** Hooks
+  // ** Hooks
 
-    const allRoutes = getRoutes();
+  const allRoutes = getRoutes();
 
-    return useRoutes([...allRoutes],
-        {
-            path: "*",
-            element: <Navigate to="/"/>
-        });
+  return useRoutes([...allRoutes], {
+    path: "*",
+    element: <Navigate to="/" />,
+  });
 };
 
 export default Router;
