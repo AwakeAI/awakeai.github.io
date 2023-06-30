@@ -14,8 +14,8 @@ const Home = lazy(() => import("../../views/Home"));
 const Routes = [
   {
     path: "/",
-    element: <Home />
-  }
+    element: <Home />,
+  },
 ];
 
 const getRoutes = () => {
@@ -37,7 +37,7 @@ const getRoutes = () => {
   AllRoutes.push({
     path: "/",
     element: <BlankLayout />,
-    children: LayoutRoutes
+    children: LayoutRoutes,
   });
   return AllRoutes;
 };

@@ -42,7 +42,9 @@
     "screenfull": "^6.0.2",
     "gh-pages": "5.0.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
-    "reaptcha":"^1.12.1"
+    "reaptcha":"^1.12.1",
+    "swiper": "^8.1.5",
+    "axios": "^1.4.0"
   },
   "scripts": {
     "start": "vite",

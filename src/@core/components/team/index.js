@@ -22,7 +22,7 @@ const TeamPage = (props) => {
     <Row className="justify-content-center">
       {data.map((item, i) => {
         return (
-          <Col lg="3" md="6" sm="6" key={i}>
+          <Col lg="4" md="6" sm="6" key={i}>
             <div className="team-item mb-50 wow fadeInUp">
               <div className="team-img">
                 <img src={item.image} alt={item.firstName} />
@@ -126,5 +126,5 @@ export default TeamPage;
 
 // ** PropTypes
 TeamPage.propTypes = {
-  data: Proptypes.array.isRequired
+  data: Proptypes.array.isRequired,
 };

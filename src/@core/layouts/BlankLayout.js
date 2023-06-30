@@ -27,7 +27,7 @@ const BlankLayout = () => {
   return (
     <div
       className={classnames("blank-page", {
-        "dark-layout": skin === "dark"
+        "dark-layout": skin === "dark",
       })}
     >
       <div className="app-content content">

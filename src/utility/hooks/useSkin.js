@@ -22,7 +22,7 @@ export const useSkin = () => {
     const classNames = {
       dark: "dark-layout",
       bordered: "bordered-layout",
-      "semi-dark": "semi-dark-layout"
+      "semi-dark": "semi-dark-layout",
     };
 
     // ** Remove all classes from Body on mount

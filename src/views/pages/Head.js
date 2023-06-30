@@ -10,18 +10,18 @@ import {
   ModalHeader,
   NavItem,
   NavLink,
-  Row
+  Row,
 } from "reactstrap";
 
 // ** Custom Components
 // ** Demo Components
-// import herobg from "@src/assets/images/pages/herobg.jpg";
-import herobg from "@src/assets/images/pages/CollisionMap.png";
+import herobg from "@src/assets/images/pages/herobg.jpg";
 import NavbarHome from "@layouts/components/navbar/NavbarHome";
 import { useSkin } from "@hooks/useSkin";
 import { Moon, Sun } from "react-feather";
 import { useTranslation } from "react-i18next";
 import Contact from "@src/views/pages/Contact";
+import IntlDropdown from "@layouts/components/navbar/IntlDropdown";
 // ** Source Code
 
 const Head = () => {
@@ -49,7 +49,7 @@ const Head = () => {
         height: "100%",
         backgroundPositionX: "center",
         display: "block",
-        opacity: "0.8"
+        opacity: "0.8",
       }}
     >
       <Row>
@@ -62,7 +62,7 @@ const Head = () => {
                 background: "none",
                 top: "1rem",
                 position: "fixed",
-                zIndex: 1000
+                zIndex: 1000,
               }}
             >
               <ul
@@ -74,8 +74,8 @@ const Head = () => {
                     <ThemeToggler /> &nbsp;|&nbsp; {skin}
                   </NavLink>
                 </NavItem>
-                {/*&nbsp;|&nbsp;*/}
-                {/*<IntlDropdown/>*/}
+                &nbsp;|&nbsp;
+                <IntlDropdown/>
               </ul>
             </div>
           </div>
@@ -90,7 +90,7 @@ const Head = () => {
         >
           <div id="head-div">
             <h1 id="head" className="text-primary">
-              {t("We Care about your family members")}
+              {t("WC")}
             </h1>
             <h3
               className="text-primary"
@@ -112,9 +112,7 @@ const Head = () => {
             <h1
               className="text-primary"
               style={{ fontWeight: "300", fontSize: "50px" }}
-            >
-              See us @Collision on Wednesday June 28th, @Booth A619!
-            </h1>
+            ></h1>
             <Button.Ripple
               color="secondary"
               outline

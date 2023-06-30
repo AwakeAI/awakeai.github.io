@@ -13,7 +13,7 @@ const Router = () => {
 
   return useRoutes([...allRoutes], {
     path: "*",
-    element: <Navigate to="/" />
+    element: <Navigate to="/" />,
   });
 };
 

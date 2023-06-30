@@ -34,13 +34,17 @@ const Contact = ({ subject }) => {
       className="sec-7"
       style={{
         minHeight: "700px",
-        backgroundImage: subject ? `url(${formImgD})` : skin === "dark" ? `url(${formImgD})` : `url(${formImg})`,
+        backgroundImage: subject
+          ? `url(${formImgD})`
+          : skin === "dark"
+          ? `url(${formImgD})`
+          : `url(${formImg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%",
         height: "100%",
         backgroundPositionX: "center",
-        backgroundPositionY: "center"
+        backgroundPositionY: "center",
       }}
     >
       <div className="container" style={{ maxWidth: "992px" }}>
@@ -50,7 +54,7 @@ const Contact = ({ subject }) => {
               className="section-title mb-45 wow fadeInUp"
               style={{
                 visibility: "visible",
-                animationName: "fadeInUp"
+                animationName: "fadeInUp",
               }}
             >
               {subject ? (
@@ -58,7 +62,7 @@ const Contact = ({ subject }) => {
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
-                    color: "var(--color-gray-200)"
+                    color: "var(--color-gray-200)",
                   }}
                 >
                   {subject}
@@ -68,7 +72,7 @@ const Contact = ({ subject }) => {
                   style={{
                     fontSize: "40px",
                     fontWeight: "bold",
-                    color: "var(--color-gray-200)"
+                    color: "var(--color-gray-200)",
                   }}
                 >
                   Get In Touch With us
@@ -79,7 +83,7 @@ const Contact = ({ subject }) => {
               className="contact-area-v1 contact-form-area mb-60 wow fadeInUp"
               style={{
                 visibility: "visible",
-                animationName: "fadeInUp"
+                animationName: "fadeInUp",
               }}
             >
               <form

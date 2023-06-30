@@ -34,16 +34,20 @@ export const layoutSlice = createSlice({
     navbarType: themeConfig.layout.navbar.type,
     menuHidden: themeConfig.layout.menu.isHidden,
     contentWidth: themeConfig.layout.contentWidth,
-    navbarColor: themeConfig.layout.navbar.backgroundColor
+    navbarColor: themeConfig.layout.navbar.backgroundColor,
   },
   reducers: {
     handleSkin: (state, action) => {
       state.skin = action.payload;
       window.localStorage.setItem("skin", JSON.stringify(action.payload));
-    }
-  }
+    },
+    handleRTL: (state, action) => {
+      state.isRTL = action.payload;
+      window.localStorage.setItem("direction", JSON.stringify(action.payload));
+    },
+  },
 });
 
-export const { handleSkin } = layoutSlice.actions;
+export const { handleSkin, handleRTL } = layoutSlice.actions;
 
 export default layoutSlice.reducer;

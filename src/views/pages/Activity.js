@@ -17,6 +17,19 @@ import lulan from "@src/assets/images/portrait/Lulan.png";
 import cup from "@src/assets/images/pages/cup.png";
 import NEXTD from "@src/assets/images/pages/N36.png";
 import { useSkin } from "@hooks/useSkin";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {useRTL} from "@hooks/useRTL";
+import "@styles/react/libs/swiper/swiper.scss";
+import SwiperCore, {Navigation} from "swiper";
+
+const params = {
+  slidesPerView: '3',
+  spaceBetween: 10,
+  navigation: true,
+  slideToClickedSlide: true
+}
+
+SwiperCore.use([Navigation]);
 
 const data = [
   {
@@ -106,43 +119,7 @@ const data = [
 const Activity = () => {
   // ** States
   const { skin, setSkin } = useSkin();
-  const Content = ({ item }) => (
-    <Col className="kb-search-content" key={item.id} md="6" sm="12">
-      <Card>
-        <div
-          className="kb-search-content-card-head m-auto align-items-center justify-content-center"
-          style={{ textAlign: "center", maxHeight: "230px" }}
-        >
-          {item.id === "centech" || "Engine" ? (
-            <img
-              src={skin === "dark" ? item.imgD : item.img}
-              alt={item.id}
-              id={item.id}
-              style={{ width: "40%", margin: "15%" }}
-            />
-          ) : (
-            <img
-              src={skin === "dark" ? item.imgD : item.img}
-              alt={item.id}
-              id={item.id}
-              style={{ width: "60%", margin: "15%" }}
-            />
-          )}
-        </div>
-        <CardBody className="text-center">
-          <h1 style={{ fontWeight: "bold" }}>{item.title}</h1>
-          <h4 className="mt-1 mb-0">{item.desc}</h4>
-          {item.customContent ? item.customContent : null}
-        </CardBody>
-      </Card>
-    </Col>
-  );
-
-  const renderContent = () => {
-    return data.map((item) => {
-      return <Content key={item.id} item={item} />;
-    });
-  };
+  const [isRtl] = useRTL();
 
   return (
     <div
@@ -165,7 +142,41 @@ const Activity = () => {
           {data !== null ? (
             <div id="knowledge-base-content">
               <Row className="justify-content-center kb-search-content-info match-height">
-                {renderContent()}
+                <Swiper dir={isRtl ? 'rtl' : 'ltr'} {...params}>
+                  {data.map((item) =>
+                  {return (
+                    <SwiperSlide key={item.id} className='rounded swiper-shadow'>
+                      <Card>
+                        <div
+                          className="kb-search-content-card-head m-auto align-items-center justify-content-center"
+                          style={{ textAlign: "center", maxHeight: "230px" }}
+                        >
+                          {item.id === "centech" || "Engine" ? (
+                            <img
+                              src={skin === "dark" ? item.imgD : item.img}
+                              alt={item.id}
+                              id={item.id}
+                              style={{ width: "40%", margin: "15%" }}
+                            />
+                          ) : (
+                            <img
+                              src={skin === "dark" ? item.imgD : item.img}
+                              alt={item.id}
+                              id={item.id}
+                              style={{ width: "60%", margin: "15%" }}
+                            />
+                          )}
+                        </div>
+                        <CardBody className="text-center">
+                          <h1 style={{ fontWeight: "bold" }}>{item.title}</h1>
+                          <h4 className="mt-1 mb-0">{item.desc}</h4>
+                          {item.customContent ? item.customContent : null}
+                        </CardBody>
+                      </Card>
+                    </SwiperSlide>
+                  )
+                  })}
+                </Swiper>
               </Row>
             </div>
           ) : null}

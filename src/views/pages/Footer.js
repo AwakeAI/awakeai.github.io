@@ -52,7 +52,7 @@ const Footer = () => {
           <div
             style={{
               left: "60px",
-              position: "relative"
+              position: "relative",
             }}
           >
             <Row className="justify-content-center align-items-center mx-auto">

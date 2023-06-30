@@ -7,7 +7,7 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
-  UncontrolledDropdown
+  UncontrolledDropdown,
 } from "reactstrap";
 
 const IntlDropdown = () => {
@@ -18,7 +18,7 @@ const IntlDropdown = () => {
   const langObj = {
     en: "English",
     fr: "Française",
-    cn: "中文"
+    cn: "中文",
   };
 
   // ** Function to switch Language
