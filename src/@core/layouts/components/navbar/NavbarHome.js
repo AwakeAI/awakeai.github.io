@@ -2,7 +2,7 @@
 import { NavItem, NavLink } from "reactstrap";
 import themeConfig from "@configs/themeConfig";
 import { Link } from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const NavbarLogin = () => {
   const { t } = useTranslation();
@@ -31,7 +31,7 @@ const NavbarLogin = () => {
               />
               <h4 className="brand-text text-primary ms-1">
                 {t("CAT")}
-                <br/>
+                <br />
                 {t("A")}
               </h4>
             </Link>

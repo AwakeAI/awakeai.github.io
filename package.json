@@ -1,6 +1,6 @@
 {
-  "name": "awakeai-index",
-  "version": "9.0.0",
+  "name": "awakeai-home",
+  "version": "3.1.0",
   "private": true,
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",

@@ -82,7 +82,7 @@ const teamList = [
 const Team = () => {
   return (
     <section className="team-area-v1 justify-content-center mx-auto">
-      <div className="tab-pane fade show active">
+      <div className="tab-pane fade show active" style={{ zIndex: "-1" }}>
         <TeamPage data={teamList} />
       </div>
     </section>

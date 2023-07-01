@@ -45,6 +45,7 @@ const Contact = ({ subject }) => {
         height: "100%",
         backgroundPositionX: "center",
         backgroundPositionY: "center",
+        zIndex: "-1",
       }}
     >
       <div className="container" style={{ maxWidth: "992px" }}>

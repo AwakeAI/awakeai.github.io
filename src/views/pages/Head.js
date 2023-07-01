@@ -71,11 +71,11 @@ const Head = () => {
               >
                 <NavItem>
                   <NavLink className="nav-link-style">
-                    <ThemeToggler /> &nbsp;|&nbsp; {skin}
+                    <ThemeToggler />
                   </NavLink>
                 </NavItem>
                 &nbsp;|&nbsp;
-                <IntlDropdown/>
+                <IntlDropdown />
               </ul>
             </div>
           </div>
