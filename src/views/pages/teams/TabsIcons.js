@@ -92,6 +92,7 @@ const TabsIcons = () => {
                 {t("Business")} <ChevronDown size={15} color="#ffffff" />
                 <br />
                 <strong> {t("Ruofeng Li")} </strong> <br />
+                <strong> Remi Richard </strong> <br />
                 <strong> Guneet Kour </strong> <br /> <br />
                 {t("Cloud and IoT")}<ChevronDown size={15} color="#ffffff" /> <br />
                 <strong> {t("Erqun Dong")} </strong> <br />

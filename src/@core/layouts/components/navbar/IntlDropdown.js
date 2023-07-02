@@ -17,7 +17,7 @@ const IntlDropdown = () => {
   // ** Vars
   const langObj = {
     en: "English",
-    fr: "Française",
+    // fr: "Française",
     cn: "中文",
   };
 
@@ -42,7 +42,7 @@ const IntlDropdown = () => {
         <ReactCountryFlag
           svg
           className="country-flag flag-icon"
-          countryCode={i18n.language === "en" ? "us" : i18n.language}
+          countryCode={i18n.language === "en" ? "ca" : i18n.language}
         />
         &nbsp;
         <span className="selected-language">{langObj[i18n.language]}</span>
@@ -53,18 +53,18 @@ const IntlDropdown = () => {
           tag="a"
           onClick={(e) => handleLangUpdate(e, "en")}
         >
-          <ReactCountryFlag className="country-flag" countryCode="us" svg />
+          <ReactCountryFlag className="country-flag" countryCode="ca" svg />
           <span className="ms-1">English</span>
         </DropdownItem>
-        <DropdownItem
-          href="/"
-          tag="a"
-          onClick={(e) => handleLangUpdate(e, "fr")}
-        >
-          <ReactCountryFlag className="country-flag" countryCode="fr" svg />
-          &nbsp;
-          <span className="ms-1">Française</span>
-        </DropdownItem>
+        {/*<DropdownItem*/}
+        {/*  href="/"*/}
+        {/*  tag="a"*/}
+        {/*  onClick={(e) => handleLangUpdate(e, "fr")}*/}
+        {/*>*/}
+        {/*  <ReactCountryFlag className="country-flag" countryCode="fr" svg />*/}
+        {/*  &nbsp;*/}
+        {/*  <span className="ms-1">Française</span>*/}
+        {/*</DropdownItem>*/}
         <DropdownItem
           href="/"
           tag="a"
