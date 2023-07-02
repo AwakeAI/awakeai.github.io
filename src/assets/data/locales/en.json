@@ -14,6 +14,8 @@
   "CA": "Competitive Advantages",
   "Intro": "AwakeAI system will install optical sensors in the resident's room, detect the senior’s activities, and send detected actions in concise textual information to the caregivers’ and their family members’ tablets or mobile phones (see diagram). Our system preserves client privacy by keeping all personal client information in secure servers and not needing to send identifiable information over the internet.",
   "Intro2": "Our AI system can monitor activities that can be divided into 5 categories: emergencies, activity/physical status, diet/medicine intake, health, and human-human interactions. Our system can detect other activities based on a customization request. Furthermore, we are aiming to predict fall situations and help to prevent those.",
+  "PPQD": "Participant and part of the Quebec delegation",
+  "NS2C": "NEXT36 Summer 2023 Cohort",
   "FA": "Fully Autonomous",
   "FAText": "No wearable and manual operations are needed, no extra burden on any user.",
   "PP": "Privacy Preserving",

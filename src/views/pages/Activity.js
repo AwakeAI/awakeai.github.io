@@ -56,7 +56,8 @@ const Activity = () => {
       img: collision,
       imgD: collision,
       title: "Collision 2023",
-      desc: "Participant and part of Quebec delegation",
+      desc: `${t("PPQD")}`,
+      to: "https://startupmontreal.com/startups-montrealaises-collision-2023/",
       customContent: null,
     },
     {
@@ -65,17 +66,19 @@ const Activity = () => {
       imgD: centech,
       title: "CenTech 2023",
       desc: `${t("W2AC")}`,
+      to: "https://www.linkedin.com/feed/update/urn:li:activity:7063912444229734400/",
       customContent: null,
     },
     {
       id: "NEXT",
       img: NEXT,
       imgD: NEXTD,
-      title: "NEXT36 Summer 2023",
+      title: `${t("NS2C")}`,
+      to: "",
       desc: "",
       customContent: (
         <div>
-          <PopoverHeader>NEXT36 Summer 2023 Cohort</PopoverHeader>
+          <PopoverHeader>{t("NS2C")}</PopoverHeader>
           <PopoverBody>
             <Avatar
               img={lulan}
@@ -96,6 +99,7 @@ const Activity = () => {
       img: db,
       imgD: db,
       title: "McGill Dobson Centre for Entrepreneurship",
+      to: "",
       desc: "",
       customContent: (
         <div>
@@ -120,6 +124,7 @@ const Activity = () => {
       imgD: engine,
       title: "McGill Engine Center",
       desc: "",
+      to: "",
       customContent: (
         <div>
           <PopoverHeader>McGill Engine Center</PopoverHeader>
@@ -188,29 +193,27 @@ const Activity = () => {
                           maxHeight: "180px",
                         }}
                       >
-                        <Link to="https://startupmontreal.com/startups-montrealaises-collision-2023/">
-                          <img
-                            src={skin === "dark" ? item.imgD : item.img}
-                            alt={item.id}
-                            id={item.id}
-                            style={{
-                              width: `${
-                                item.id === "centech" || item.id === "Engine"
-                                  ? "40%"
-                                  : "65%"
-                              }`,
-                              margin: `${
-                                item.id === "Engine"
-                                  ? "5%"
-                                  : item.id === "Dobson"
-                                  ? "20%"
-                                  : item.id === "NEXT"
-                                  ? "15%"
-                                  : "10%"
-                              }`,
-                            }}
-                          />
-                        </Link>
+                        <img
+                          src={skin === "dark" ? item.imgD : item.img}
+                          alt={item.id}
+                          id={item.id}
+                          style={{
+                            width: `${
+                              item.id === "centech" || item.id === "Engine"
+                                ? "40%"
+                                : "65%"
+                            }`,
+                            margin: `${
+                              item.id === "Engine"
+                                ? "5%"
+                                : item.id === "Dobson"
+                                ? "20%"
+                                : item.id === "NEXT"
+                                ? "15%"
+                                : "10%"
+                            }`,
+                          }}
+                        />
                       </div>
                       <CardBody className="text-center">
                         {item.customContent ? (
@@ -229,7 +232,9 @@ const Activity = () => {
                         ) : (
                           <div>
                             <h4 style={{ fontWeight: "bold" }}>{item.title}</h4>
-                            <p className="mt-1 mb-0">{item.desc}</p>
+                            <Link to={item.to}>
+                              <p className="mt-1 mb-0">{item.desc}</p>
+                            </Link>
                           </div>
                         )}
                       </CardBody>
