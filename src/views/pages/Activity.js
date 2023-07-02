@@ -1,14 +1,11 @@
 // ** React Imports
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 // ** Reactstrap Imports
 import {
   Button,
   Card,
   CardBody,
-  Col,
-  ListGroup,
-  ListGroupItem,
   Popover,
   PopoverBody,
   PopoverHeader,
@@ -34,6 +31,7 @@ import { useRTL } from "@hooks/useRTL";
 import "@styles/react/libs/swiper/swiper.scss";
 import SwiperCore, { Navigation } from "swiper";
 import { Link } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const params = {
   navigation: true,
@@ -45,6 +43,7 @@ SwiperCore.use([Navigation]);
 const Activity = () => {
   // ** States
   const { skin, setSkin } = useSkin();
+  const { t } = useTranslation();
   const [popoverOpen, setPopoverOpen] = useState("");
   const [isRtl] = useRTL();
   const handleToggle = (id) => {
@@ -65,7 +64,7 @@ const Activity = () => {
       img: centech,
       imgD: centech,
       title: "CenTech 2023",
-      desc: "Winter 2023 Accelerator Cohort",
+      desc: `${t("W2AC")}`,
       customContent: null,
     },
     {
@@ -86,9 +85,7 @@ const Activity = () => {
             />
             <p>
               <br />
-              Lulan Shen, founder and CEO of AwakeAI Inc, has been admitted to
-              participate in the 2023 NEXT36 program and will be attending
-              during the summer season.
+              {t("NEXT36Lulan")}
             </p>
           </PopoverBody>
         </div>
@@ -105,9 +102,9 @@ const Activity = () => {
           <PopoverHeader>Dobson 2022 Cohort</PopoverHeader>
           <PopoverBody>
             <p>
-              Summer Dobson Entrepreneurship X1-Accelerator. <br />
-              Dobson Entrepreneurship Programs Bootcamp and Cup <br />
-              <strong> Third Place in Health Science Enterprise Tracks </strong>
+              {t("SDEX1A")} <br />
+              {t("DEPBC")} <br />
+              <strong> {t("DEPBCT")} </strong>
               <br />
               <a href="https://www.mcgill.ca/dobson/article/mcgill-dobson-cup-2022-winners#hset">
                 <img id="dobson" src={cup} alt="Dobson Cup" width="100%" />
@@ -147,10 +144,10 @@ const Activity = () => {
     <div
       id="activity"
       className="sec-2"
-      style={{ backgroundColor: "var(--color-grey-200)", zIndex: "-1" }}
+      style={{ backgroundColor: "var(--color-grey-200)"}}
     >
       <div className="container mx-auto">
-        <div className="sec-2H1">OUR TRACTION</div>
+        <div className="sec-2H1">{t("OT")}</div>
         <div
           className="sec-2H2"
           style={{
@@ -159,7 +156,7 @@ const Activity = () => {
             }`,
           }}
         >
-          Competitions and Activities
+          {t("CAA")}
         </div>
         <div id="knowledge-base-content">
           <Row className="justify-content-center kb-search-content-info match-height">

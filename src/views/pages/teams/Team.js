@@ -16,7 +16,7 @@ const teamList = [
     image: lulan,
     firstName: "Lulan",
     lastName: "Shen",
-    position: "Chief Executive Officer",
+    position: "CEO",
     year: "2020",
     links: {
       github: "",
@@ -42,7 +42,7 @@ const teamList = [
     image: Yitian,
     firstName: "Yitian",
     lastName: "Zhang",
-    position: "AI Researcher",
+    position: "AR",
     year: "2020",
     links: {
       github: "",
@@ -55,7 +55,7 @@ const teamList = [
     image: Ben,
     firstName: "Benjamin ",
     lastName: "Akera",
-    position: "AI Researcher",
+    position: "AR",
     year: "2020",
     links: {
       github: "",
@@ -69,7 +69,7 @@ const teamList = [
     image: Egor,
     firstName: "Egor",
     lastName: "Luhauskikh",
-    position: "Chief Commercial Officer",
+    position: "CCO",
     year: "2022",
     links: {
       github: "",
@@ -81,9 +81,15 @@ const teamList = [
 
 const Team = () => {
   return (
-    <section className="team-area-v1 justify-content-center mx-auto">
-      <div className="tab-pane fade show active" style={{ zIndex: "-1" }}>
-        <TeamPage data={teamList} />
+    <section className="team-area-v1">
+      <div className="container mx-auto">
+        <Row className="justify-content-center">
+          <div className="tab-content">
+            <div className="tab-pane fade show active">
+              <TeamPage data={teamList} className="ms-50" />
+            </div>
+          </div>
+        </Row>
       </div>
     </section>
   );

@@ -7,19 +7,19 @@ import { Button, Col, Row } from "reactstrap";
 // ** Demo Components
 import { useSkin } from "@hooks/useSkin";
 import { Book } from "react-feather";
-// import {useTranslation} from "react-i18next";
 import formImgD from "@src/assets/images/pages/pexelsitalomeloD.jpg";
 import formImg from "@src/assets/images/pages/pexelsitalomelo.jpg";
 import { toast } from "react-hot-toast";
 import { Icon } from "@iconify/react";
 import Reaptcha from "reaptcha";
 import themeConfig from "@configs/themeConfig";
+import {useTranslation} from "react-i18next";
 
 // ** Source Code
 
 const Contact = ({ subject }) => {
   const { skin, setSkin } = useSkin();
-  // const {t} = useTranslation();
+  const {t} = useTranslation();
 
   const [submitted, setSubmitted] = useState(false);
   const [verified, setVerified] = useState(false);
@@ -44,8 +44,7 @@ const Contact = ({ subject }) => {
         width: "100%",
         height: "100%",
         backgroundPositionX: "center",
-        backgroundPositionY: "center",
-        zIndex: "-1",
+        backgroundPositionY: "center"
       }}
     >
       <div className="container" style={{ maxWidth: "992px" }}>
@@ -66,7 +65,7 @@ const Contact = ({ subject }) => {
                     color: "var(--color-gray-200)",
                   }}
                 >
-                  {subject}
+                  {t(subject)}
                 </h2>
               ) : (
                 <h2
@@ -76,7 +75,7 @@ const Contact = ({ subject }) => {
                     color: "var(--color-gray-200)",
                   }}
                 >
-                  Get In Touch With us
+                  {t("GITWU")}
                 </h2>
               )}
             </div>
@@ -106,7 +105,7 @@ const Contact = ({ subject }) => {
                           e.target.reset();
                         }}
                       >
-                        Dismiss
+                        {t("Dismiss")}
                       </Button.Ripple>
                     </span>
                   ));
@@ -118,7 +117,7 @@ const Contact = ({ subject }) => {
                       <input
                         type="text"
                         className="form_control"
-                        placeholder="Name/Nom"
+                        placeholder={t("Name")}
                         name="entry.1208597498"
                         required
                       />
@@ -133,7 +132,7 @@ const Contact = ({ subject }) => {
                       <input
                         type="email"
                         className="form_control"
-                        placeholder="Email"
+                        placeholder={t("EAddress")}
                         name="entry.1569009990"
                         required
                       />
@@ -146,8 +145,8 @@ const Contact = ({ subject }) => {
                         type="text"
                         className="form_control"
                         name="entry.537245108"
-                        placeholder={subject ? subject : "Subject"}
-                        value={subject ? subject : undefined}
+                        placeholder={subject ? `${t(subject)}` : `${t("Subject")}`}
+                        value={subject ? `${t(subject)}` : undefined}
                         required
                       />
                       <Book size={24} />
@@ -157,7 +156,7 @@ const Contact = ({ subject }) => {
                     <div className="form_group">
                       <textarea
                         name="entry.1889589232"
-                        placeholder="Enter message"
+                        placeholder={t("YMessage")}
                         className="form_control"
                       />
                       <Icon icon="bi:vector-pen" style={{ fontSize: "24px" }} />
@@ -171,7 +170,7 @@ const Contact = ({ subject }) => {
                         value="Submit"
                         disabled={!verified}
                       >
-                        Submit
+                        {t("Submit")}
                       </Button>
                       <Reaptcha
                         sitekey={themeConfig.app.sitekey}

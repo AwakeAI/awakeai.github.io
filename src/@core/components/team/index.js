@@ -3,9 +3,10 @@ import Proptypes from "prop-types";
 import { Info, Linkedin, PlusCircle } from "react-feather";
 import { Col, Modal, ModalBody, ModalHeader, Row } from "reactstrap";
 import { useState } from "react";
+import {useTranslation} from "react-i18next";
 
 const TeamPage = (props) => {
-  // ** Props
+  const {t} = useTranslation();
   const { data } = props;
 
   const [modalId, setModalId] = useState("");
@@ -22,7 +23,7 @@ const TeamPage = (props) => {
     <Row className="justify-content-center">
       {data.map((item, i) => {
         return (
-          <Col lg="4" md="6" sm="6" key={i}>
+          <Col lg="2" md="6" sm="6" key={i}>
             <div className="team-item mb-50 wow fadeInUp">
               <div className="team-img">
                 <img src={item.image} alt={item.firstName} />
@@ -64,9 +65,9 @@ const TeamPage = (props) => {
               </div>
               <div className="team-info text-center">
                 <h4 style={{ color: "#ebe9f1" }}>
-                  {item.firstName} {item.lastName}
+                  {t(`${item.firstName} ${item.lastName}`)}
                 </h4>
-                <span className="position">{item.position}</span>
+                <span className="position">{t(item.position)}</span>
               </div>
             </div>
             <Modal
@@ -75,7 +76,7 @@ const TeamPage = (props) => {
               className="modal-dialog-centered modal-lg"
             >
               <ModalHeader toggle={handleCloseModal}>
-                {item.firstName} {item.lastName}
+                {t(`${item.firstName} ${item.lastName}`)}
               </ModalHeader>
               <ModalBody>
                 <div className="container">
@@ -89,22 +90,22 @@ const TeamPage = (props) => {
                     <Col sm="6">
                       <div className="ins-name">
                         <h3>
-                          {item.firstName} {item.lastName}
+                          {t(`${item.firstName} ${item.lastName}`)}
                         </h3>
                       </div>
                       <div className="span span1">
-                        <p className="left">Title:</p>
-                        <p className="right">{item.position}</p>
+                        <p className="left">{t("Title")}:</p>
+                        <p className="right">{t(item.position)}</p>
                         <div className="clearfix"></div>
                       </div>
                       <div className="span span1">
-                        <p className="left">Joined:</p>
+                        <p className="left">{t("Joined")}:</p>
                         <p className="right">{item.year}</p>
                         <div className="clearfix"></div>
                       </div>
                       <div className="span span1">
                         <p className="left" style={{ width: "100%" }}>
-                          Biography
+                          {t("Biography")}
                           <br />
                         </p>
                         <p className="right" style={{ textAlign: "justify" }}>

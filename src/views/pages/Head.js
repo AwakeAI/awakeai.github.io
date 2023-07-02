@@ -96,18 +96,18 @@ const Head = () => {
               className="text-primary"
               style={{ fontWeight: "400", fontSize: "20px" }}
             >
-              {t("A way to response in time to senior's needs")} <br />
+              {t("AWT")} <br />
             </h3>
             <Button.Ripple
               color="secondary"
               outline
               style={{ color: "#FFFFFF", fontSize: "30px" }}
               onClick={() => {
-                setSubject("I want to be An Early Adopter!");
+                setSubject("SEA");
                 setBasicModal(!basicModal);
               }}
             >
-              Sign Me Up As An Early Adopter!
+              {t("SEA")}
             </Button.Ripple>
             <h1
               className="text-primary"
@@ -118,11 +118,11 @@ const Head = () => {
               outline
               style={{ color: "#FFFFFF", fontSize: "30px" }}
               onClick={() => {
-                setSubject("I want to see A Demo!");
+                setSubject("SDR");
                 setBasicModal(!basicModal);
               }}
             >
-              Submit A Demo Request!
+              {t("SDR")}
             </Button.Ripple>
           </div>
         </Col>

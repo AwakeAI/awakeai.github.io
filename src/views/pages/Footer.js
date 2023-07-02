@@ -5,9 +5,11 @@ import { Col, Row } from "reactstrap";
 import footerImg from "@src/assets/images/pages/footer-bg.png";
 import themeConfig from "@configs/themeConfig";
 import { Linkedin, Mail, MapPin } from "react-feather";
+import {useTranslation} from "react-i18next";
 
 // ** Source Code
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer-area footer-area-v3">
       <div
@@ -30,19 +32,19 @@ const Footer = () => {
                 <div className="footer-nav">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="#">{t("Home")}</a>
                     </li>
                     <li>
-                      <a href="#about">About</a>
+                      <a href="#about">{t("About")}</a>
                     </li>
                     <li>
-                      <a href="#activity">Activity</a>
+                      <a href="#activity">{t("Activity")}</a>
                     </li>
                     <li>
-                      <a href="#team">Team</a>
+                      <a href="#team">{t("Team")}</a>
                     </li>
                     <li>
-                      <a href="#contact">Contact</a>
+                      <a href="#contact">{t("Contact")}</a>
                     </li>
                   </ul>
                 </div>
@@ -63,7 +65,7 @@ const Footer = () => {
                       <Linkedin size={27} />
                     </div>
                     <div className="info">
-                      <span>LinkedIn</span>
+                      <span>{t("LinkedIn")}</span>
                       <h5>
                         <a href="https://ca.linkedin.com/company/awakeai">
                           AwakeAI Inc.
@@ -80,10 +82,10 @@ const Footer = () => {
                       <MapPin size={27} />
                     </div>
                     <div className="info">
-                      <span>Office Address</span>
+                      <span>{t("OAddress")}</span>
                       <h5>
                         <a style={{ pointerEvents: "none" }}>
-                          Montreal, Quebec
+                          {t("MQ")}
                         </a>
                       </h5>
                     </div>
@@ -97,7 +99,7 @@ const Footer = () => {
                       <Mail size={27} />
                     </div>
                     <div className="info">
-                      <span>Email Address</span>
+                      <span>{t("EAddress")}</span>
                       <h5>
                         <a href="mailto:info@awakeai.ca">info@awakeai.ca</a>
                       </h5>
