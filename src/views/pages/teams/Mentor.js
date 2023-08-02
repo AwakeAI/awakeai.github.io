@@ -53,19 +53,6 @@ const mentorList = [
     bio: "Peter is an Associate with Maverix Private Equity. In this role, he is focused on deal execution including financial modelling and due diligence. Peter also works closely with portfolio companies in strategic and financial management as well as the evaluation of add-on acquisitions opportunities. ",
   },
   {
-    id: "dg",
-    image: Gandhi,
-    firstName: "Dharmesh",
-    lastName: "Gandhi",
-    position: "Partner @EY",
-    year: "2023",
-    links: {
-      github: "",
-      linkedin: "https://www.linkedin.com/in/dharmeshgandhi1/",
-    },
-    bio: "Dharmesh leads the Central Quantitative Services Practice and has 17 years of experience working with technology companies across Canada. He works closely with his clients as a trusted business advisor, providing results-oriented advice and delivering the connections and insight required to access government grants and incentives. ",
-  },
-  {
     id: "dm",
     image: David,
     firstName: "David",
