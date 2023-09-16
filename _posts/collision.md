@@ -1,13 +1,13 @@
 ---
 title: 'Collision Conference 2023 @Toronto'
 excerpt: ''
-coverImage: '/assets/blog/hello-world/Collision-2023.png'
+coverImage: '/assets/blog/collision/Collision-2023.png'
 date: '2023-06-26T00:00:00.000Z'
 author:
   name: Abdulrahman Takiddeen
-  picture: '/assets/blog/authors/Abdulrahman.jpg'
+  picture: '/assets/images/portrait/Abdulrahman.jpg'
 ogImage:
-  url: '/assets/blog/hello-world/Collision-2023.png'
+  url: '/assets/blog/collision/Collision-2023.png'
 ---
 
 📣 Exciting news! We're thrilled to announce that our AwakeAI team will be part of the Montreal delegation at the Collision Conf this week in Toronto (June 26th-29th). We're honored to be part of the Montreal delegation representing our vibrant startup ecosystem. Visit our booth (booth number A619) on Tueday, June 28th, to learn how our AI-powered solutions are transforming resident care in scare facilities for seniors. See you there! #CollisionConf #AI #Healthcare #Innovation

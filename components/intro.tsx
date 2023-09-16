@@ -7,7 +7,7 @@ const Intro = () => {
     <section className="items-left md:justify-between mt-16 mb-16 md:mb-12">
       <div className="flex flex-col md:flex-row items-center">
         <img style={{width: "15%", objectFit: "contain"}}
-             src="/assets/blog/authors/Original.png"
+             src="/assets/images/logo/Original.png"
              alt="logo"
              className="flex-col "
         />

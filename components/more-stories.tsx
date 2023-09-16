@@ -20,7 +20,7 @@ const MoreStories = ({ posts }: Props) => {
             Our collaborators and affiliates.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 lg:gap-x-8 gap-y-20 md:gap-y-32 mb-32">
+        <div className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 content-center">
           {posts.map((post) => (
             <PostPreview
               key={post.slug}

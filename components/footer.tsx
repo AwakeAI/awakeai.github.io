@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
         <div className="grid grid-flow-col-dense mt-16 mb-16">
-          <img src="/assets/blog/authors/Grayscale.png"
+          <img src="/assets/images/logo/Grayscale.png"
                alt="logo"
                style={{objectFit: "contain"}}
                className="col-span-1 h-24 w-fit"
