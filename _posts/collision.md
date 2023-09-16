@@ -1,6 +1,6 @@
 ---
-title: 'AwakeAI is attending Collision Conference 2023 in Toronto'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+title: 'Collision Conference 2023 @Toronto'
+excerpt: ''
 coverImage: '/assets/blog/hello-world/Collision-2023.png'
 date: '2023-06-26T00:00:00.000Z'
 author:
