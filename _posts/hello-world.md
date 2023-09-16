@@ -1,19 +1,25 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
+title: 'AwakeAI is attending Collision Conference 2023 in Toronto'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+coverImage: '/assets/blog/hello-world/Collision-2023.png'
+date: '2023-06-26T00:00:00.000Z'
 author:
-  name: Tim Neutkens
-  picture: '/assets/blog/authors/tim.jpeg'
+  name: Abdulrahman Takiddeen
+  picture: '/assets/blog/authors/Abdulrahman.jpg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/hello-world/Collision-2023.png'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+📣 Exciting news! We're thrilled to announce that our AwakeAI team will be part of the Montreal delegation at the Collision Conf this week in Toronto (June 26th-29th). We're honored to be part of the Montreal delegation representing our vibrant startup ecosystem. Visit our booth (booth number A619) on Tueday, June 28th, to learn how our AI-powered solutions are transforming resident care in scare facilities for seniors. See you there! #CollisionConf #AI #Healthcare #Innovation
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
 
-## Lorem Ipsum
+###
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Greetings from the heart of the Collision Conference! Our team, consisting of Lulan Shen, Egor Luhauskikh, Yitian Zhang, Hugh Cameron, is thrilled to be participating in #collision2023 alongside brilliant minds, industry leaders, and forward-thinking professionals.
+We had the pleasure of having Christopher Skeete, MBA, Adm.A at our booth, and engaging in a discussion about how technology can enhance the quality of care and help address staff shortages at senior care facilities.
+
+______________________________________________________________________
+
+Salutations depuis le cœur de la conférence Collision ! Notre équipe, composée de Lulan Shen, Egor Luhauskikh, Yitian Zhang, Hugh Cameron, est ravie de participer à #collision2023 aux côtés d'esprits brillants, de leaders du secteur et de professionnels avant-gardistes.
+
+Nous avons eu le plaisir de recevoir Christopher Skeete, MBA, Adm.A à notre stand, et d'engager une discussion sur la façon dont la technologie peut améliorer la qualité des soins et aider à remédier à la pénurie de personnel dans les établissements de soins pour personnes âgées.

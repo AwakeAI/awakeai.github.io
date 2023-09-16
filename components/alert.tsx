@@ -1,12 +1,20 @@
 import Container from './container'
 import cn from 'classnames'
 import { EXAMPLE_PATH } from '../lib/constants'
+import {t} from "i18next";
+import {useEffect, useState} from "react";
 
 type Props = {
   preview?: boolean
 }
 
 const Alert = ({ preview }: Props) => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <div
       className={cn('border-b', {
@@ -29,14 +37,7 @@ const Alert = ({ preview }: Props) => {
             </>
           ) : (
             <>
-              The source code for this blog is{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-blue-600 duration-200 transition-colors"
-              >
-                available on GitHub
-              </a>
-              .
+              {isClient ? t('SEA') : 'SEA'}
             </>
           )}
         </div>

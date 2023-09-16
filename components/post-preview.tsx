@@ -11,6 +11,7 @@ type Props = {
   excerpt: string
   author: Author
   slug: string
+  team: boolean
 }
 
 const PostPreview = ({
@@ -20,6 +21,7 @@ const PostPreview = ({
   excerpt,
   author,
   slug,
+  team
 }: Props) => {
   return (
     <div>
@@ -28,18 +30,18 @@ const PostPreview = ({
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link
-          as={`/posts/${slug}`}
-          href="/posts/[slug]"
+          as={team?`/teams/${slug}`:`/posts/${slug}`}
+          href={team?`/teams/[slug]`:`/posts/[slug]`}
           className="hover:underline"
         >
-          {title}
+          {title.replace(/\\/g, '<br/>')}
         </Link>
       </h3>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
   )
 }

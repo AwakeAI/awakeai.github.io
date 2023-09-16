@@ -34,9 +34,11 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`AwakeAI Inc. is a Canadian company that provides AI-powered solutions to help seniors live independently and safely at home.`}
       />
+      <meta charSet="UTF-8"/>
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     </Head>
   )
 }
