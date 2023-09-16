@@ -43,16 +43,10 @@ const TeamPreview = ({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage title={title} src={coverImage} />
       </div>
       <h3 className="text-3xl leading-snug">
-        <Link
-          as={team?`/teams/${slug}`:`/posts/${slug}`}
-          href={team?`/teams/[slug]`:`/posts/[slug]`}
-          className="hover:underline"
-        >
           <TitleComponent title={title} />
-        </Link>
       </h3>
       <Separator2.Root className="bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-[15px]"/>
 
