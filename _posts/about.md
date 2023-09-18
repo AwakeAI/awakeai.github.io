@@ -5,15 +5,21 @@ coverImage: '/assets/blog/about/cover.png'
 date: '2023-09-13T05:35:07.322Z'
 author:
   name: AwakeAI Team
-  picture: '/assets/blog/authors/Grayscale.png'
+  picture: '/assets/images/logo/Grayscale.png'
 ogImage:
   url: '/assets/blog/about/cover.png'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## Product
+# OUR PROFESSIONAL SERVICES
+AwakeAI system will install optical sensors in the resident's room, detect the senior’s activities, and send detected actions in concise textual information to the caregivers’ and their family members’ tablets or mobile phones (see diagram). Our system preserves client privacy by keeping all personal client information in secure servers and not needing to send identifiable information over the internet.
+\\
+Our AI system can monitor activities that can be divided into 5 categories: emergencies, activity/physical status, diet/medicine intake, health, and human-human interactions. Our system can detect other activities based on a customization request. Furthermore, we are aiming to predict fall situations and help to prevent those.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
-
-## Lorem Ipsum
-
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+## Competitive Advantages
+# Fully Autonomous
+No wearable and manual operations are needed, no extra burden on any user.
+# Privacy Preserving
+Video will be processed locally, without video transmission, leaving no concern of leak.
+# Broadly Applicable
+The application can be extended to hospitals long-term care facilities and homecare facilities.

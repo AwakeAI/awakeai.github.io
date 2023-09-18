@@ -13,9 +13,10 @@ type Props = {
   author: Author
   slug: string
   team: boolean
+  i: number
 }
 
-const PostPreview = ({title, coverImage, date, excerpt, author, slug, team}: Props) => {
+const PostPreview = ({title, coverImage, date, excerpt, author, slug, team, i}: Props) => {
   return (
     <>
       <div>
@@ -38,7 +39,7 @@ const PostPreview = ({title, coverImage, date, excerpt, author, slug, team}: Pro
         {author && <Avatar name={author.name} picture={author.picture}/>}
       </div>
       <div>
-        <Separator orientation="vertical"/>
+        {i % 2 == 0 && <Separator orientation="vertical"/>}
       </div>
     </>
   )
