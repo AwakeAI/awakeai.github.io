@@ -47,7 +47,7 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 
 :root {
   --color-gray-200: #f3f3f3;
-  --color-orange-200: #FF9900;
+  --color-orange-200: #ff9900;
   --color-blue: #142140;
 }
 
@@ -59,7 +59,7 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
   }
 }
 
-[dir=ltr] {
+[dir="ltr"] {
   .modal {
     .modal-header {
       .btn-close {
@@ -301,7 +301,13 @@ p.left {
               -ms-flex-pack: center;
               justify-content: center;
               color: #fff;
-              background: -webkit-gradient(linear, left top, right top, from(#fd6151), to(#ff774a));
+              background: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from(#fd6151),
+                to(#ff774a)
+              );
               background: linear-gradient(90deg, #fd6151 0%, #ff774a 100%);
             }
           }
@@ -312,7 +318,13 @@ p.left {
 
   .copyright-area {
     padding: 20px 0 25px;
-    background: -webkit-gradient(linear, left top, right top, from(#fd6151), to(#ff774a));
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#fd6151),
+      to(#ff774a)
+    );
     background: linear-gradient(90deg, #fd6151 0%, #ff774a 100%);
 
     .copyright-text {
@@ -564,9 +576,9 @@ body {
 }
 
 .hero-h1 {
-  animation: .5s ease-out 0s 1 slideInFromLeft;
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
   font-size: 32px;
-  color: #FF9900;
+  color: #ff9900;
   font-weight: bolder;
   margin: 1rem 0;
 }
@@ -580,15 +592,15 @@ body {
 }
 
 .hero-h3 {
-  animation: .5s ease-out 0s 1 slideInFromRight;
+  animation: 0.5s ease-out 0s 1 slideInFromRight;
   font-size: 40px;
-  color: #FF9900;
+  color: #ff9900;
   font-weight: 700;
   margin: 1rem 0;
 }
 
 .video-overview {
-  animation: .5s ease-out 0s 1 slideTop;
+  animation: 0.5s ease-out 0s 1 slideTop;
   padding: 1.5em 4em;
   border-radius: 50px;
   background: rgba(220, 220, 220, 0.3);
@@ -615,7 +627,7 @@ body {
 
 .sec-2H1 {
   font-size: 22px;
-  color: #FF9900;
+  color: #ff9900;
   font-weight: bold;
   margin-left: 10%;
 }
@@ -661,7 +673,7 @@ body {
 }
 
 .sec-2CH {
-  color: #FF9900;
+  color: #ff9900;
   font-size: 24px;
   font-weight: bold;
 }
@@ -1176,7 +1188,7 @@ body {
   }
   .hero-h3 {
     font-size: 12px;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
   .video-overview {
     margin-top: 5em;
@@ -1189,7 +1201,7 @@ body {
   }
   .sec-2H1 {
     font-size: 15px;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: bold;
     margin: 0 auto;
   }
@@ -1197,7 +1209,7 @@ body {
     font-size: 30px;
     color: #f6f6f6;
     width: 100%;
-    margin: .25rem auto 5rem;
+    margin: 0.25rem auto 5rem;
   }
   .sec-2I {
     display: none;
@@ -1221,7 +1233,7 @@ body {
   }
   .sec-2CP {
     font-size: 14px;
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
   }
   .logotilted {
     display: none;
@@ -1297,7 +1309,7 @@ body {
     font-size: 12px;
     line-height: 1rem;
     text-align: left;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 
     li {
       width: 80%;
@@ -1370,7 +1382,7 @@ body {
   }
   .hero-h3 {
     font-size: 20px;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
   .video-overview {
     margin-top: 5em;
@@ -1396,7 +1408,7 @@ body {
   }
   .spotcustomer {
     background: #f6f6f6;
-    padding: .5em;
+    padding: 0.5em;
     width: 40px !important;
     border-radius: 10px;
     margin-left: 0;
@@ -1469,9 +1481,9 @@ body {
     z-index: -1;
   }
   .hero-h1 {
-    animation: .5s ease-out 0s 1 slideInFromLeft;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
     font-size: 24px !important;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: bolder;
     margin: 1rem 0;
   }
@@ -1484,14 +1496,14 @@ body {
     margin-top: -1%;
   }
   .hero-h3 {
-    animation: .5s ease-out 0s 1 slideInFromRight;
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
     font-size: 24px;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: 700;
     margin: 1rem 0;
   }
   .video-overview {
-    animation: .5s ease-out 0s 1 slideTop;
+    animation: 0.5s ease-out 0s 1 slideTop;
     padding: 1.5em 4em;
     border-radius: 50px;
     background: rgba(220, 220, 220, 0.3);
@@ -1541,14 +1553,14 @@ body {
   }
   .frame-div6 {
     display: block;
-    zoom: .65;
+    zoom: 0.65;
     margin-top: 2.5%;
   }
   .sec-4 {
     background-color: var(--color-gray-200);
     height: auto;
     display: block;
-    zoom: .75;
+    zoom: 0.75;
     margin-top: -32.5rem;
   }
 }
@@ -1561,9 +1573,9 @@ body {
     margin-top: 25%;
   }
   .hero-h1 {
-    animation: .5s ease-out 0s 1 slideInFromLeft;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
     font-size: 40px !important;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: bolder;
     margin: 1rem 0;
   }
@@ -1576,14 +1588,14 @@ body {
     margin-top: -1%;
   }
   .hero-h3 {
-    animation: .5s ease-out 0s 1 slideInFromRight;
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
     font-size: 35px;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: 700;
     margin: 1rem 0;
   }
   .video-overview {
-    animation: .5s ease-out 0s 1 slideTop;
+    animation: 0.5s ease-out 0s 1 slideTop;
     padding: 1.5em 4em;
     border-radius: 50px;
     background: rgba(220, 220, 220, 0.3);
@@ -1594,7 +1606,7 @@ body {
   }
   .sec-2H1 {
     font-size: 22px;
-    color: #FF9900;
+    color: #ff9900;
     font-weight: bold;
     margin-left: 10%;
   }
@@ -1742,7 +1754,7 @@ body {
   #head {
     font-weight: 800;
     font-size: 32px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .m-lg-1 {
     display: none;
@@ -1790,7 +1802,7 @@ body {
   #head {
     font-weight: 800;
     font-size: 64px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   #knowledge-base-content {
     margin-left: 10%;
@@ -1798,12 +1810,11 @@ body {
   }
 }
 
-
-$laptop: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
-$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
-$md: 'only screen and (min-width: 768px) and (max-width: 991px)';
-$xs: '(max-width: 575px)';
-$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$laptop: "only screen and (min-width: 1200px) and (max-width: 1600px)";
+$lg: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$xs: "(max-width: 575px)";
+$sm: "only screen and (min-width: 576px) and (max-width: 767px)";
 $theme-color: #ff2121;
 
 .footer-area {
@@ -1834,10 +1845,10 @@ $theme-color: #ff2121;
     & p {
       color: #868c98;
       padding-right: 52px;
-      @media #{$md}{
+      @media #{$md} {
         padding-right: 0;
       }
-      @media #{$sm}{
+      @media #{$sm} {
         // padding-right: 0;
       }
       font-size: 16px;
@@ -1870,7 +1881,6 @@ $theme-color: #ff2121;
             color: $theme-color;
             padding-left: 5px;
           }
-
         }
       }
     }
@@ -1935,7 +1945,6 @@ $theme-color: #ff2121;
         &:hover {
           // color: #fff;
         }
-
       }
     }
   }
@@ -1952,7 +1961,6 @@ $theme-color: #ff2121;
       &:hover {
         color: $theme-color;
       }
-
     }
   }
 }

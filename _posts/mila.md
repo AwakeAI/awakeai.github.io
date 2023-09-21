@@ -1,13 +1,13 @@
 ---
-title: 'Mila AI Institute'
-excerpt: ''
-coverImage: '/assets/images/pages/Mila.png'
-date: '2023-09-11T00:00:00.000Z'
+title: "Mila AI Institute"
+excerpt: ""
+coverImage: "/assets/images/pages/Mila.png"
+date: "2023-09-11T00:00:00.000Z"
 author:
-  name: 'Benjamin Akera'
-  picture: '/assets/images/portrait/Ben.png'
+  name: "Benjamin Akera"
+  picture: "/assets/images/portrait/Ben.png"
 ogImage:
-  url: '/assets/images/pages/Mila.png'
+  url: "/assets/images/pages/mila-purple-v2.svg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

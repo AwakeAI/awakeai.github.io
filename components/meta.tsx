@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
+import Head from "next/head";
+import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 const Meta = () => {
   return (
@@ -22,25 +22,22 @@ const Meta = () => {
         href="/favicon/favicon-16x16.png"
       />
       <link rel="manifest" href="/favicon/site.webmanifest" />
-      <link
-        rel="mask-icon"
-        href="/favicon/safari-pinned-tab.svg"
-        color="#000000"
-      />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`AwakeAI Inc. is a Canadian company that provides AI-powered solutions to help seniors live independently and safely at home.`}
+        content={`AwakeAI Inc. is a Canadian company that provides AI-powered solutions.`}
       />
-      <meta charSet="UTF-8"/>
+      <meta charSet="UTF-8" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
     </Head>
-  )
-}
+  );
+};
 
-export default Meta
+export default Meta;

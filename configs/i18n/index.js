@@ -1,13 +1,16 @@
 // ** I18n Imports
 import i18n from "i18next";
 import Backend from "i18next-http-backend";
-import {initReactI18next} from "next-i18next";
+import { initReactI18next } from "next-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // ** Languages Imports
-const en = new URL("../../public/assets/data/locales/en.json", import.meta.url).href;
-const fr = new URL("../../public/assets/data/locales/fr.json", import.meta.url).href;
-const cn = new URL("../../public/assets/data/locales/cn.json", import.meta.url).href;
+const en = new URL("../../public/assets/data/locales/en.json", import.meta.url)
+  .href;
+const fr = new URL("../../public/assets/data/locales/fr.json", import.meta.url)
+  .href;
+const cn = new URL("../../public/assets/data/locales/cn.json", import.meta.url)
+  .href;
 
 const languages = {
   en,
@@ -42,7 +45,6 @@ i18n
       formatSeparator: ",",
     },
   })
-  .then(() => {
-  });
+  .then(() => {});
 
 export default i18n;

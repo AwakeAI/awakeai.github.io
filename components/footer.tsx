@@ -1,7 +1,7 @@
-import Container from './container'
-import {EXAMPLE_PATH} from '../lib/constants'
-import {Linkedin, Mail, MapPin} from "react-feather";
-import {t} from "i18next";
+import Container from "./container";
+import { EXAMPLE_PATH } from "../lib/constants";
+import { Linkedin, Mail, MapPin } from "react-feather";
+import { t } from "i18next";
 import * as Separator from "@radix-ui/react-separator";
 
 const Footer = () => {
@@ -9,10 +9,11 @@ const Footer = () => {
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
         <div className="grid grid-flow-col-dense mt-16 mb-16">
-          <img src="/assets/images/logo/Grayscale.png"
-               alt="logo"
-               style={{objectFit: "contain"}}
-               className="col-span-1 h-24 w-fit"
+          <img
+            src="/assets/images/logo/Grayscale.png"
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            className="col-span-1 h-24 w-fit"
           />
           <Separator.Root
             className="col-span-1 bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px mx-[15px]"
@@ -62,7 +63,7 @@ const Footer = () => {
         </div>
       </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
