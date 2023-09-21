@@ -5,17 +5,15 @@ import HeroPost from "../components/hero-post";
 import CollPost from "../components/collaborator";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
-import { getAllPosts, getAllTeams } from "../lib/api";
+import {getAllPosts, getAllTeams} from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
+import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
 import Team from "../interfaces/team";
-// import Coll from '../interfaces/collaborator'
 
 type Props = {
   allPosts: Post[];
   allTeams: Team[];
-  // allColls: Coll[]
 };
 
 export default function Index({ allPosts, allTeams }: Props) {

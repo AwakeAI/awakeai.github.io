@@ -1,16 +1,19 @@
-import { CMS_NAME } from "../lib/constants";
+import {CMS_NAME} from "../lib/constants";
 import Link from "next/link";
 import * as Separator from "@radix-ui/react-separator";
+import Image from "next/image";
 
 const Intro = () => {
   return (
     <section className="items-left md:justify-between mt-16 mb-16 md:mb-12">
       <div className="flex flex-col md:flex-row items-center">
-        <img
+        <Image
           style={{ width: "15%", objectFit: "contain" }}
           src="/assets/images/logo/Original.png"
           alt="logo"
-          className="flex-col "
+          className="flex-col"
+          width={100}
+          height={100}
         />
         <h1 className="text-5xl md:text-8xl font-bold tracking-tighter md:pr-8">
           {CMS_NAME}

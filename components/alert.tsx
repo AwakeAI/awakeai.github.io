@@ -1,8 +1,7 @@
 import Container from "./container";
 import cn from "classnames";
-import { EXAMPLE_PATH } from "../lib/constants";
-import { t } from "i18next";
-import { useEffect, useState } from "react";
+import {t} from "i18next";
+import {useEffect, useState} from "react";
 
 type Props = {
   preview?: boolean;

@@ -1,6 +1,6 @@
 import TeamPreview from "./team-preview";
 import type Post from "../interfaces/team";
-import { Separator } from "./ui/separator";
+import {Separator} from "./ui/separator";
 
 type Props = {
   posts: Post[];

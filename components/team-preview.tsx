@@ -1,15 +1,8 @@
-import CoverImage from "./cover-image";
 import type Author from "../interfaces/author";
 import * as Separator2 from "@radix-ui/react-separator";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
-import { Linkedin, Mail } from "react-feather";
-import { Separator } from "./ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "./ui/accordion";
+import {Linkedin, Mail} from "react-feather";
+import {Separator} from "./ui/separator";
 import Image from "next/image";
 
 type Props = {

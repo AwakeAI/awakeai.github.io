@@ -1,21 +1,9 @@
-import { Separator } from "./ui/separator";
-import type Post from "../interfaces/post";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
-import { Linkedin, Mail } from "react-feather";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
-import { CalendarIcon } from "@radix-ui/react-icons";
+import {Separator} from "./ui/separator";
+import Image from "next/image";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "./ui/accordion";
+import {Avatar, AvatarFallback, AvatarImage} from "./ui/avatar";
+import {CalendarIcon} from "@radix-ui/react-icons";
 import Link from "next/link";
-
-type Props = {
-  posts: Post[];
-};
 
 const Collaborator = () => {
   return (
@@ -33,11 +21,13 @@ const Collaborator = () => {
         <Separator className="my-4 mb-10" />
         <div className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 content-center">
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/Mila.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-fit mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96">
               <AccordionItem value="item-2">
@@ -51,7 +41,7 @@ const Collaborator = () => {
                     <div className="space-y-1">
                       <h4 className="text-lg font-semibold">@Mila</h4>
                       <p className="text-base">
-                        AwakeAI Inc. has been awarded the "Startup Mila" status
+                        AwakeAI Inc. has been awarded the &quot; Startup Mila &quot; status
                         by the Mila Startup Committee.
                       </p>
                       <div className="flex items-center pt-2">
@@ -70,11 +60,13 @@ const Collaborator = () => {
             <Separator orientation="vertical" />
           </div>
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/M1.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-fit mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96">
               <AccordionItem value="item-2">
@@ -148,11 +140,13 @@ const Collaborator = () => {
             <Separator orientation="vertical" />
           </div>
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/next.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-fit mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96">
               <AccordionItem value="item-2">
@@ -185,11 +179,13 @@ const Collaborator = () => {
         </div>
         <div className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 content-center">
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/centech.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-fit mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96">
               <AccordionItem value="item-2">
@@ -227,11 +223,13 @@ const Collaborator = () => {
             <Separator orientation="vertical" />
           </div>
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/08_MEDTEQ.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-96 mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96"></Accordion>
           </div>
@@ -239,11 +237,13 @@ const Collaborator = () => {
             <Separator orientation="vertical" />
           </div>
           <div className="md:grow">
-            <img
+            <Image
               src="/assets/images/pages/eeconomie.png"
               alt="logo"
               style={{ objectFit: "contain" }}
               className="h-44 w-fit mx-auto"
+              width={250}
+              height={250}
             />
             <Accordion type="single" collapsible className="w-96">
               <AccordionItem value="item-2">
