@@ -4,6 +4,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "./u
 import {Avatar, AvatarFallback, AvatarImage} from "./ui/avatar";
 import {CalendarIcon} from "@radix-ui/react-icons";
 import Link from "next/link";
+import {Fragment} from "react";
 
 export const Collaborators = [
   {
@@ -148,7 +149,7 @@ export const Collaborators = [
         "acc": [
           {
             "aid": "@Microsoft Founder Program",
-            "asrc": "/assets/images/pages/MS2.png",
+            "asrc": "/assets/images/pages/Microsoft_logo.svg.png",
             "message":
                 <p className="text-base">
                   AwakeAI Inc. has participated in Microsoft Founders program.
@@ -174,12 +175,12 @@ const Collaborator = () => {
           </p>
         </div>
         <Separator className="my-4 mb-10"/>
-        {Collaborators.map((col, index) => (
+        {Collaborators.map((col, j) => (
           <div
-            className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 content-center justify-items-center">
+            className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start" key={j}>
             {col.group.map((collaborator, index) => (
-              <>
-                <div className="md:grow" key={index}>
+              <Fragment key={index}>
+                <div className="md:grow" >
                   <Image
                     src={`${collaborator.src}`}
                     alt="logo"
@@ -218,10 +219,10 @@ const Collaborator = () => {
                     </AccordionItem>
                   </Accordion>
                 </div>
-                <div key={`${index}-sep`}>
+                <div>
                   <Separator orientation="vertical"/>
                 </div>
-              </>
+              </Fragment>
             ))}
           </div>
         ))}

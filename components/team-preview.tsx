@@ -36,12 +36,12 @@ const TeamPreview = ({
   team,
 }: Props) => {
   return (
-    <div>
+    <div className="content-center justify-center">
       <div className="mb-5">
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="shadow-sm w-52 rounded-full"
+          className="shadow-sm w-96 rounded-full"
           width={1300}
           height={300}
         />
