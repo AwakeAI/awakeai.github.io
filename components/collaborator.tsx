@@ -11,7 +11,7 @@ export const Collaborators = [
     "group": [
       {
         "id": "mila",
-        "src": "/assets/images/pages/mila.png",
+        "src": "/assets/images/pages/Mila.png",
         "acc": [
           {
             "aid": "@Mila",
