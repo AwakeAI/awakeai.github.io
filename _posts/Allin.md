@@ -5,7 +5,7 @@ coverImage: "/assets/images/pages/allin.png"
 date: "2023-09-27T00:00:00.000Z"
 author:
   name: "Egor Luhauskikh"
-  picture: "/assets/images/portrait/Egor.png"
+  picture: "/assets/images/portrait/egor.png"
 ogImage:
   url: "/assets/images/pages/allin.png"
 ---

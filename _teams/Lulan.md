@@ -2,7 +2,7 @@
 id: 0
 title: 'Lulan Shen\ 沈露兰'
 excerpt: "Founder and CEO"
-coverImage: "/assets/images/portrait/Lulan.png"
+coverImage: "/assets/images/portrait/lulan.png"
 date: "Since Jun. 2022"
 linkedin: "https://www.linkedin.com/in/lulan-shen/"
 email: "lulan.shen@awakeai.ca"

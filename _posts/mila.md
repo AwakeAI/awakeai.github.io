@@ -1,13 +1,13 @@
 ---
 title: "Mila AI Institute"
 excerpt: ""
-coverImage: "/assets/images/pages/Mila.png"
+coverImage: "/assets/images/pages/mila.png"
 date: "2023-09-11T00:00:00.000Z"
 author:
   name: "Benjamin Akera"
-  picture: "/assets/images/portrait/Ben.png"
+  picture: "/assets/images/portrait/ben.png"
 ogImage:
-  url: "/assets/images/pages/mila-purple-v2.svg"
+  url: "/assets/images/pages/mila2.svg"
 ---
 
 📣 AwakeAI Partners with MILA to Foster Advanced AI Development

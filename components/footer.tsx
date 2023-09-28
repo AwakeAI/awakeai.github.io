@@ -10,10 +10,9 @@ const Footer = () => {
         <div className="mt-16 mb-16 grid md:grid-flow-col md:gap-x-8 lg:gap-x-8 sm:content-center justify-center">
         <div className="md:col-span-1 md:h-24 md:w-fit w-full col-span-4 mb-10 md:mb-0">
           <Image
-            src="/assets/images/logo/Grayscale.png"
-            alt="logo"
-            style={{ objectFit: "contain" }}
-            className="col-span-1 w-fit mx-auto"
+            src="/assets/images/logo/grayscale.png"
+            alt="logo-grey"
+            className="mx-auto flex-col"
             width={100}
             height={100}
           />

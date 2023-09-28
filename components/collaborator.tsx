@@ -11,11 +11,11 @@ export const Collaborators = [
     "group": [
       {
         "id": "mila",
-        "src": "/assets/images/pages/Mila.png",
+        "src": "/assets/images/pages/mila.png",
         "acc": [
           {
             "aid": "@Mila",
-            "asrc": "/assets/images/pages/mila-purple-v2.svg",
+            "asrc": "/assets/images/pages/mila2.svg",
             "message":
               <p className="text-base">
                 AwakeAI Inc. has been awarded the &quot; Startup Mila &quot; status by the Mila Startup Committee.
@@ -41,7 +41,7 @@ export const Collaborators = [
       },
       {
         "id": "McGill",
-        "src": "/assets/images/pages/M1.png",
+        "src": "/assets/images/pages/m1.png",
         "acc": [
           {
             "aid": "@Dobson Centre for Entrepreneurship",
@@ -112,11 +112,11 @@ export const Collaborators = [
       },
       {
         "id": "MEDTEQ",
-        "src": "/assets/images/pages/08_MEDTEQ.png",
+        "src": "/assets/images/pages/medteq.png",
         "acc": [
           {
             "aid": "@MEDTEQ+",
-            "asrc": "/assets/images/pages/08_MEDTEQ.png",
+            "asrc": "/assets/images/pages/medteq2.jpeg",
             "message":
               <p className="text-base">
                 AwakeAI Inc. is a member of MEDTEQ+ community.
@@ -145,11 +145,11 @@ export const Collaborators = [
     "group": [
       {
         "id": "microsoft",
-        "src": "/assets/images/pages/MS2.png",
+        "src": "/assets/images/pages/ms2.png",
         "acc": [
           {
             "aid": "@Microsoft Founder Program",
-            "asrc": "/assets/images/pages/Microsoft_logo.svg.png",
+            "asrc": "/assets/images/pages/m3.png",
             "message":
                 <p className="text-base">
                   AwakeAI Inc. has participated in Microsoft Founders program.

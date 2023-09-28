@@ -9,7 +9,7 @@ const Intro = () => {
       <div className="flex flex-col md:flex-row items-center">
         <Image
           style={{ width: "15%", objectFit: "contain" }}
-          src="/assets/images/logo/Original.png"
+          src="/assets/images/logo/original.png"
           alt="logo"
           className="flex-col"
           width={100}

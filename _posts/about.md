@@ -5,7 +5,7 @@ coverImage: "/assets/blog/about/cover.png"
 date: "2023-09-27T05:35:07.322Z"
 author:
   name: AwakeAI Inc.
-  picture: "/assets/images/logo/Grayscale.png"
+  picture: "/assets/images/logo/grayscale.png"
 ogImage:
   url: "/assets/blog/about/cover.png"
 ---

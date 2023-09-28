@@ -2,7 +2,7 @@
 id: 3
 title: 'Egor\ Luhauskikh'
 excerpt: "Co-Founder and BP"
-coverImage: "/assets/images/portrait/Egor.png"
+coverImage: "/assets/images/portrait/egor.png"
 date: "Since Dec. 2022"
 linkedin: "https://www.linkedin.com/in/luhauskikh/"
 email: "egor.luhauskikh@awakeai.ca"
