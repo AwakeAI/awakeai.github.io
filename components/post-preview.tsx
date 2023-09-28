@@ -35,7 +35,7 @@ const PostPreview = ({
             <Image
               src={coverImage}
               alt={`Cover Image for ${title}`}
-              className={cn("shadow-sm h-32 w-fit", {
+              className={cn("shadow-sm lg:h-32 md:h-20 w-fit", {
                 "hover:shadow-lg transition-shadow duration-200": slug,
               })}
               width={1300}

@@ -36,8 +36,8 @@ const TeamPreview = ({
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="shadow-sm rounded-full"
-          width={1300}
+          className="shadow-sm"
+          width={1000}
           height={300}
         />
       </div>

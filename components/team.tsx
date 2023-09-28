@@ -18,7 +18,7 @@ const Teams = ({ posts }: Props) => {
           <p className="text-lg text-muted-foreground">Core Executive Team.</p>
         </div>
         <Separator className="my-4 mb-10" />
-        <div className="mx-auto grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start">
+        <div className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-12 sm:content-center justify-center md:justify-start">
           {posts.map((post) => (
             <TeamPreview
               key={post.slug}
