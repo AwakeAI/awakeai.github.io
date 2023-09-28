@@ -6,7 +6,7 @@ type Props = {
   posts: Post[];
 };
 
-const MoreStories = ({ posts }: Props) => {
+const MoreStories = ({posts}: Props) => {
   return (
     <section id="activity">
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -20,7 +20,7 @@ const MoreStories = ({ posts }: Props) => {
           </p>
         </div>
         <Separator className="my-4 mb-10" />
-        <div className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 content-center">
+        <div className="mx-auto grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start">
           {posts.map((post, i) => (
             <PostPreview
               key={post.slug}

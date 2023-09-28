@@ -1,5 +1,5 @@
 ---
-title: "Collision Conference 2023 @Toronto"
+title: "Collision 2023"
 excerpt: ""
 coverImage: "/assets/blog/collision/Collision-2023.png"
 date: "2023-06-26T00:00:00.000Z"

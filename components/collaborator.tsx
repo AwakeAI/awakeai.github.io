@@ -177,19 +177,19 @@ const Collaborator = () => {
         <Separator className="my-4 mb-10"/>
         {Collaborators.map((col, j) => (
           <div
-            className="grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start" key={j}>
+            className="mx-auto grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start" key={j}>
             {col.group.map((collaborator, index) => (
               <Fragment key={index}>
-                <div className="md:grow" >
+                <div className="md:grow">
                   <Image
                     src={`${collaborator.src}`}
                     alt="logo"
                     style={{objectFit: "contain"}}
-                    className="h-44 w-fit mx-auto"
+                    className="h-44 md:w-fit mx-auto w-72"
                     width={250}
                     height={250}
                   />
-                  <Accordion type="single" collapsible className="w-96">
+                  <Accordion type="single" collapsible className="w-96 md:w-52 lg:w-96">
                     <AccordionItem value="item-2">
                       <AccordionTrigger></AccordionTrigger>
                       <AccordionContent>
@@ -220,7 +220,7 @@ const Collaborator = () => {
                   </Accordion>
                 </div>
                 <div>
-                  <Separator orientation="vertical"/>
+                  {(index + 1) % 3 !== 0 && <Separator orientation="vertical"/>}
                 </div>
               </Fragment>
             ))}

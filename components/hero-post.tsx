@@ -1,4 +1,3 @@
-import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
 import type Author from "../interfaces/author";
@@ -13,21 +12,20 @@ type Props = {
 };
 
 const HeroPost = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+                    title,
+                    coverImage,
+                    excerpt,
+                    author,
+                    slug,
+                  }: Props) => {
   return (
     <section id="about">
       <div className="mb-8 md:mb-16">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="md:grid md:grid-cols-2 md:gap-x-8 lg:gap-x-4 mb-20 md:mb-15">
         <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
+          <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
             <Link
               as={`/posts/${slug}`}
               href="/posts/[slug]"
@@ -35,9 +33,12 @@ const HeroPost = ({
             >
               {title}
             </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+          </h2>
+          <div className="space-y-1">
+            <h4 className="text-lg font-medium leading-none">By {author.name}</h4>
+            <p className="text-lg text-muted-foreground">
+              September 2023
+            </p>
           </div>
         </div>
         <div>

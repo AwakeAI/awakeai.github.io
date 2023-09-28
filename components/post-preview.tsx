@@ -18,24 +18,24 @@ type Props = {
 };
 
 const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-  team,
-  i,
-}: Props) => {
+                       title,
+                       coverImage,
+                       date,
+                       excerpt,
+                       author,
+                       slug,
+                       team,
+                       i,
+                     }: Props) => {
   return (
     <>
-      <div>
-        <div className="mb-5 md:w-[39rem] w-96">
+      <div className="w-72 md:w-full mb-10 mt-10 md:mb-0 md:mt-0">
+        <div className="mb-5 md:grow md:w-52 lg:w-max">
           <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
             <Image
               src={coverImage}
               alt={`Cover Image for ${title}`}
-              className={cn("shadow-sm h-32 w-fit rounded-full", {
+              className={cn("shadow-sm h-32 w-fit", {
                 "hover:shadow-lg transition-shadow duration-200": slug,
               })}
               width={1300}
@@ -53,12 +53,14 @@ const PostPreview = ({
           </Link>
         </h3>
         <div className="text-lg mb-4">
-          <DateFormatter dateString={date} />
+          <DateFormatter dateString={date}/>
         </div>
         <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        {author && <Avatar name={author.name} picture={author.picture} />}
+        {author && <Avatar name={author.name} picture={author.picture}/>}
       </div>
-      <div>{i % 2 == 0 && <Separator orientation="vertical" />}</div>
+      <div>
+        {(i + 1) % 3 !== 0 && <Separator orientation="vertical"/>}
+      </div>
     </>
   );
 };

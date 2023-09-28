@@ -1,8 +1,7 @@
 import type Author from "../interfaces/author";
 import * as Separator2 from "@radix-ui/react-separator";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "./ui/accordion";
-import {Linkedin, Mail} from "react-feather";
-import {Separator} from "./ui/separator";
+import {Linkedin} from "react-feather";
 import Image from "next/image";
 
 type Props = {
@@ -28,20 +27,16 @@ const TeamPreview = ({
   coverImage,
   date,
   excerpt,
-  author,
   bio,
-  slug,
   linkedin,
-  email,
-  team,
 }: Props) => {
   return (
-    <div className="content-center justify-center">
+    <div className="content-center justify-center md:grow lg:w-72 w-72 md:w-40 mb-10 md:mb-0">
       <div className="mb-5">
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="shadow-sm w-96 rounded-full"
+          className="shadow-sm rounded-full"
           width={1300}
           height={300}
         />
@@ -60,15 +55,6 @@ const TeamPreview = ({
             <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-6">
               <a className="col-span-1" href={`${linkedin}`}>
                 <Linkedin size={24} />
-                Linkedin
-              </a>
-              <Separator
-                className="col-span-1 mx-auto"
-                orientation="vertical"
-              />
-              <a className="col-span-4" href={"mailto:" + `${email}`}>
-                <Mail size={24} />
-                {email}
               </a>
             </div>
           </AccordionContent>

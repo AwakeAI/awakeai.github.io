@@ -25,7 +25,7 @@ const Footer = () => {
         />
         <div className="md:col-span-3 w-full h-full mx-auto justify-center">
             <div className="text-2xl leading-5 font-bold">AwakeAI Inc.</div>
-            <div className="leading-5">A Montreal and Mila Startup.</div>
+            <div className="leading-5">Care All the Time, Anywhere.</div>
             <Separator.Root className="bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-[15px]" />
             <div className="flex h-5 items-center mt-7">
               <div className="leading-5">
