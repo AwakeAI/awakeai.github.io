@@ -83,7 +83,6 @@ export function getAllPosts(fields: string[] = []) {
 
 export function getAllTeams(fields: string[] = []) {
   const slugs = getTeamslugs();
-  console.log(fields);
   return (
     slugs
       .map((slug) => getTeamBySlug(slug, fields))

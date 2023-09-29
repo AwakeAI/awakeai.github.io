@@ -180,16 +180,16 @@ const Collaborator = () => {
             className="mx-auto grid md:grid-flow-col auto-cols-min md:gap-x-8 lg:gap-x-8 sm:content-center justify-center md:justify-start" key={j}>
             {col.group.map((collaborator, index) => (
               <Fragment key={index}>
-                <div className="md:grow">
+                <div className="md:grow mx-auto">
                   <Image
                     src={`${collaborator.src}`}
                     alt="logo"
                     style={{objectFit: "contain"}}
-                    className="h-44 md:w-fit mx-auto w-72"
+                    className="h-44 md:w-fit mx-auto w-64"
                     width={250}
                     height={250}
                   />
-                  <Accordion type="single" collapsible className="w-96 md:w-52 lg:w-96">
+                  <Accordion type="single" collapsible className="w-64 md:w-52 lg:w-96">
                     <AccordionItem value="item-2">
                       <AccordionTrigger></AccordionTrigger>
                       <AccordionContent>

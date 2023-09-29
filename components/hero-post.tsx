@@ -42,7 +42,7 @@ const HeroPost = ({
           </div>
         </div>
         <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <p className="text-justify text-sm md:text-lg leading-relaxed mb-4">{excerpt}</p>
         </div>
       </div>
     </section>

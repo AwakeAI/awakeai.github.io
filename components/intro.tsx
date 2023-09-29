@@ -5,15 +5,14 @@ import Image from "next/image";
 
 const Intro = () => {
   return (
-    <section className="items-left md:justify-between mt-16 mb-4 md:mb-12">
+    <section className="items-left md:justify-between md:mt-16 mt-6 mb-4 md:mb-12">
       <div className="flex flex-col md:flex-row items-center">
         <Image
-          style={{ width: "15%", objectFit: "contain" }}
           src="/assets/images/logo/original.png"
           alt="logo"
-          className="flex-col"
-          width={100}
-          height={100}
+          className="flex-col md:mb-0 mb-5 md:w-2/12 w-5/12"
+          width={200}
+          height={200}
         />
         <h1 className="text-5xl md:text-8xl font-bold tracking-tighter md:pr-8">
           {CMS_NAME}
@@ -23,7 +22,7 @@ const Intro = () => {
         The Next Generation of Computer Vision Platform
       </h4>
       <Separator.Root className="bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-[15px]" />
-      <div className="flex h-5 items-center justify-center invisible md:visible">
+      <div className="flex h-5 items-center justify-center invisible md:visible w-0 md:w-full">
         <Separator.Root
           className="bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px mx-[15px]"
           decorative

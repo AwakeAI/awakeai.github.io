@@ -29,7 +29,7 @@ const PostPreview = ({
                      }: Props) => {
   return (
     <>
-      <div className="w-72 md:w-full mb-10 mt-10 md:mb-0 md:mt-0">
+      <div className="w-64 md:w-full mb-10 mt-10 md:mb-0 md:mt-0">
         <div className="mb-5 md:grow md:w-52 lg:w-max">
           <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
             <Image

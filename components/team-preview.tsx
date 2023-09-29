@@ -31,7 +31,7 @@ const TeamPreview = ({
   linkedin,
 }: Props) => {
   return (
-    <div className="content-center justify-center md:grow lg:w-72 w-72 md:w-40 mb-10 md:mb-0">
+    <div className="md:ml-0 md:grow lg:w-72 w-60 md:w-40 mb-5 md:mb-0">
       <div className="mb-5">
         <Image
           src={coverImage}
