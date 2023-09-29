@@ -13,7 +13,7 @@ const Footer = () => {
             src="/assets/images/logo/grayscale.png"
             style={{ objectFit: "contain" }}
             alt="logo-grey"
-            className="mx-auto md:w-11/12 w-5/12"
+            className="mx-auto flex-col"
             width={100}
             height={100}
           />

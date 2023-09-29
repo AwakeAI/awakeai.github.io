@@ -35,7 +35,7 @@ const Alert = ({ preview }: Props) => {
               to exit preview mode.
             </>
           ) : (
-            <>{isClient ? t("SEA") : "SEA"}</>
+            <></>
           )}
         </div>
       </Container>
