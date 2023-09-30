@@ -36,7 +36,7 @@ const TeamPreview = ({
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="shadow-sm"
+          className="shadow-sm dark:grayscale-[50%]"
           width={1000}
           height={300}
         />

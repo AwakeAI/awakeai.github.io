@@ -10,7 +10,7 @@ const Avatar = ({ name, picture }: Props) => {
     <div className="flex items-center">
       <Image
         src={picture}
-        className="w-12 h-12 mr-4"
+        className="w-12 h-12 mr-4 grayscale-[50%]"
         alt={name}
         style={{ objectFit: "contain" }}
         width={100}

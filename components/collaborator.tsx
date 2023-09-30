@@ -185,7 +185,7 @@ const Collaborator = () => {
                     src={`${collaborator.src}`}
                     alt="logo"
                     style={{objectFit: "contain"}}
-                    className="h-44 md:w-fit mx-auto w-64"
+                    className="h-44 md:w-fit mx-auto w-64 dark:grayscale dark:invert"
                     width={250}
                     height={250}
                   />
@@ -197,7 +197,7 @@ const Collaborator = () => {
                           <div key={i}>
                             <div className="flex justify-between space-x-4">
                               <Avatar>
-                                <AvatarImage src={`${acc.asrc}`}/>
+                                <AvatarImage className="dark:grayscale-[50%]" src={`${acc.asrc}`}/>
                                 <AvatarFallback>{acc.aid}</AvatarFallback>
                               </Avatar>
                               <div className="space-y-1">

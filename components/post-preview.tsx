@@ -17,16 +17,7 @@ type Props = {
   i: number;
 };
 
-const PostPreview = ({
-                       title,
-                       coverImage,
-                       date,
-                       excerpt,
-                       author,
-                       slug,
-                       team,
-                       i,
-                     }: Props) => {
+const PostPreview = ({title, coverImage, date, excerpt, author, slug, team, i}: Props) => {
   return (
     <>
       <div className="w-64 md:w-full mb-10 mt-10 md:mb-0 md:mt-0">
@@ -35,7 +26,7 @@ const PostPreview = ({
             <Image
               src={coverImage}
               alt={`Cover Image for ${title}`}
-              className={cn("shadow-sm lg:h-32 md:h-20 w-fit", {
+              className={cn("shadow-sm lg:h-32 md:h-20 w-fit dark:invert dark:grayscale", {
                 "hover:shadow-lg transition-shadow duration-200": slug,
               })}
               width={1300}

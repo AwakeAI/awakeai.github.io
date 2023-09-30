@@ -11,6 +11,7 @@ import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
 import Team from "../interfaces/team";
 
+
 type Props = {
   allPosts: Post[];
   allTeams: Team[];
@@ -20,12 +21,15 @@ export default function Index({ allPosts, allTeams }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const teamPosts = allTeams;
+
+
   return (
     <Layout>
       <Head>
         <title>{`${CMS_NAME}`}</title>
       </Head>
       <Container>
+
         <Intro />
         {heroPost && (
           <HeroPost
