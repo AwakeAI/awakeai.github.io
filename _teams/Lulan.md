@@ -1,6 +1,6 @@
 ---
 id: 0
-title: 'Lulan Shen\ 沈露兰'
+title: 'Lulan\ Shen'
 excerpt: "Founder and CEO"
 coverImage: "/assets/images/portrait/lulan.png"
 date: "Since Jun. 2022"

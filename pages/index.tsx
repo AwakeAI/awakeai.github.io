@@ -10,7 +10,10 @@ import Head from "next/head";
 import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
 import Team from "../interfaces/team";
-
+import {GetStaticPropsContext} from "next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
 
 type Props = {
   allPosts: Post[];
@@ -21,7 +24,19 @@ export default function Index({ allPosts, allTeams }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const teamPosts = allTeams;
+  const router = useRouter();
+  const { t, i18n } = useTranslation('common')
+  const onToggleLanguageClick = (newLocale: string) => {
+    const { pathname, asPath, query } = router
+    router.push({ pathname, query }, asPath, { locale: newLocale })
+  }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const clientSideLanguageChange = (newLocale: string) => {
+    i18n.changeLanguage(newLocale);
+  }
+
+  const changeTo = router.locale === 'en' ? 'fr' : 'en'
 
   return (
     <Layout>
@@ -49,7 +64,7 @@ export default function Index({ allPosts, allTeams }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({locale}: GetStaticPropsContext) => {
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -73,6 +88,12 @@ export const getStaticProps = async () => {
   ]);
 
   return {
-    props: { allPosts, allTeams },
+    props: {
+      allPosts,
+      allTeams,
+      ...(await serverSideTranslations(locale, [
+        'common',
+      ])),
+    }
   };
-};
+}

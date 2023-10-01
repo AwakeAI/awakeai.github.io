@@ -45,7 +45,7 @@ const TeamPreview = ({
         <TitleComponent title={title} />
       </h3>
       <Separator2.Root className="bg-gray-400 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-[15px]" />
-      <div className="text">{date}</div>
+      {/*<div className="text">{date}</div>*/}
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
 
       <Accordion type="single" collapsible className="w-full">

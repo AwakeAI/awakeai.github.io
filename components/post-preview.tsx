@@ -47,7 +47,7 @@ const PostPreview = ({title, coverImage, date, excerpt, author, slug, team, i}: 
           <DateFormatter dateString={date}/>
         </div>
         <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        {author && <Avatar name={author.name} picture={author.picture}/>}
+        {/*{author && <Avatar name={author.name} picture={author.picture}/>}*/}
       </div>
       <div>
         {(i + 1) % 3 !== 0 && <Separator orientation="vertical"/>}
