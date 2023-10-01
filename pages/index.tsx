@@ -31,7 +31,6 @@ export default function Index({ allPosts, allTeams }: Props) {
     router.push({ pathname, query }, asPath, { locale: newLocale })
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const clientSideLanguageChange = (newLocale: string) => {
     i18n.changeLanguage(newLocale);
   }
