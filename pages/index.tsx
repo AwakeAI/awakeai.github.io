@@ -11,9 +11,9 @@ import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
 import Team from "../interfaces/team";
 import {GetStaticPropsContext} from "next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import {useTranslation} from "next-i18next";
-import {useRouter} from "next/router";
+// import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+// import {useTranslation} from "next-i18next";
+// import {useRouter} from "next/router";
 
 type Props = {
   allPosts: Post[];
@@ -24,18 +24,17 @@ export default function Index({ allPosts, allTeams }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const teamPosts = allTeams;
-  const router = useRouter();
-  const { t, i18n } = useTranslation('common')
-  const onToggleLanguageClick = (newLocale: string) => {
-    const { pathname, asPath, query } = router
-    router.push({ pathname, query }, asPath, { locale: newLocale })
-  }
-
-  const clientSideLanguageChange = (newLocale: string) => {
-    i18n.changeLanguage(newLocale);
-  }
-
-  const changeTo = router.locale === 'en' ? 'fr' : 'en'
+  // const router = useRouter();
+  // const { t, i18n } = useTranslation('common')
+  // const onToggleLanguageClick = (newLocale: string) => {
+  //   const { pathname, asPath, query } = router
+  //   router.push({ pathname, query }, asPath, { locale: newLocale })
+  // }
+  //
+  // const clientSideLanguageChange = (newLocale: string) => {
+  //   i18n.changeLanguage(newLocale);
+  // }
+  // const changeTo = router.locale === 'en' ? 'fr' : 'en'
 
   return (
     <Layout>
@@ -90,9 +89,9 @@ export const getStaticProps = async ({locale}: GetStaticPropsContext) => {
     props: {
       allPosts,
       allTeams,
-      ...(await serverSideTranslations(locale, [
-        'common',
-      ])),
+      // ...(await serverSideTranslations(locale, [
+      //   'common',
+      // ])),
     }
   };
 }
