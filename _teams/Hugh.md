@@ -1,7 +1,7 @@
 ---
 id: 1
 title: 'Dr. Hugh\ Cameron'
-excerpt: "Co-Founder and CFO"
+excerpt: "Director and CFO"
 coverImage: "/assets/images/portrait/hugh.png"
 date: "Since Jun. 2022"
 linkedin: "https://www.linkedin.com/in/hugh-cameron-164219/"
