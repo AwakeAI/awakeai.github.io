@@ -1,5 +1,5 @@
 ---
-title: "ALL IN"
+title: "Participated in ALL IN - AI Conference\ @Montreal, 2023"
 excerpt: ""
 coverImage: "/assets/images/pages/allin.png"
 date: "2023-09-27T00:00:00.000Z"
@@ -13,7 +13,7 @@ ogImage:
 📣 Exciting news!
 ---
 
-We're thrilled to announce that our AwakeAI team will be presenting in ALL IN -ai conf @Montreal in September 27th. 
+We're thrilled to announce that our AwakeAI team will be presenting in ALL IN - AI conference @Montreal in September 27th. 
 We're honored to be part of The most important event dedicated to Canadian AI. Visit our booth, to learn how our AI-powered solutions are transforming resident care in scare facilities for seniors. 
 See you there! #ALLIN #AI #Healthcare #Innovation
 

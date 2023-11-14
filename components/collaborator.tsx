@@ -134,7 +134,7 @@ export const Collaborators = [
           "message":
             <p className="text-base">
               The committee has approved our application. A CA$46k
-              grant will be awarded to us in 2023.
+              grant has been awarded to us in 2023.
             </p>,
           "comment": "Last Update in 2023"
         }]
@@ -169,7 +169,7 @@ const Collaborator = () => {
       </h2>
       <div className="ml-1 mx-auto md:gap-x-8 gap-y-20 md:gap-y-32 mb-32">
         <div className="space-y-1">
-          <h4 className="text-lg font-medium leading-none">AwakeAI Inc.</h4>
+          <h4 className="text-lg font-medium leading-none">Of AwakeAI Inc.</h4>
           <p className="text-lg text-muted-foreground">
             Our collaborators and affiliates.
           </p>

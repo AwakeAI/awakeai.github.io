@@ -12,9 +12,9 @@ const MoreStories = ({posts}: Props) => {
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
         Latest
       </h2>
-      <div className="ml-1 mx-auto md:gap-x-8 lg:gap-x-8 gap-y-20 md:gap-y-32 mb-32">
+      <div className="ml-1 mx-auto gap-y-20 md:gap-y-32 mb-32">
         <div className="space-y-1">
-          <h4 className="text-lg font-medium leading-none">AwakeAI Inc.</h4>
+          <h4 className="text-lg font-medium leading-none">Of AwakeAI Inc.</h4>
           <p className="text-lg text-muted-foreground">
             Our Latest News and Activities.
           </p>

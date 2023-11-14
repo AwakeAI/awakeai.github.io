@@ -2,7 +2,7 @@
 title: "About AwakeAI"
 excerpt: "Based on cutting-edge artificial intelligence vision technology, which enables more in-depth and detailed analysis of vast video surveillance feeds in real-time, yielding more comprehensive and accurate results. This technology will first cater to elderly residents in homes or rehabilitation facilities. Through visual technology, there’s deep analysis of seniors’ daily living habits, diet, movements, interactions with caregivers, and other emergencies. The aim is to ensure the safety and health of the elderly from all perspectives. Leveraging distributed computing technology, the system can swiftly provide customized alerts for risks, conveying real-time information about the elderly, thus assisting caregivers and rehabilitation institutions in delivering top-notch care services."
 coverImage: "/assets/blog/about/cover.png"
-date: "2023-09-27T05:35:07.322Z"
+date: "2030-01-01T05:35:07.322Z"
 author:
   name: AwakeAI Inc.
   picture: "/assets/images/logo/grayscale.png"

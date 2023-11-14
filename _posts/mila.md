@@ -1,5 +1,5 @@
 ---
-title: "Mila AI Institute"
+title: "Partnership with Mila AI Institute\ @Montreal, 2023"
 excerpt: ""
 coverImage: "/assets/images/pages/mila.png"
 date: "2023-09-11T00:00:00.000Z"
