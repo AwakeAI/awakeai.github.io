@@ -11,6 +11,7 @@ import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
 import Team from "../interfaces/team";
 import {GetStaticPropsContext} from "next";
+import Contact from "../components/contact";
 // import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 // import {useTranslation} from "next-i18next";
 // import {useRouter} from "next/router";
@@ -57,6 +58,7 @@ export default function Index({ allPosts, allTeams }: Props) {
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         {teamPosts.length > 0 && <TeamPost posts={teamPosts} />}
         <CollPost />
+        <Contact />
       </Container>
     </Layout>
   );
