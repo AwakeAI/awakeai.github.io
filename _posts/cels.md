@@ -13,12 +13,12 @@ ogImage:
 📣 Exciting news!
 ---
 
-We're thrilled to announce that our AwakeAI team will be presenting in CELS showcase in San Francisco Bay from Nov 15-16. 
-We're honored to be part of The most important event dedicated to Canadian AI. Visit our booth, to learn how our AI-powered solutions are transforming resident care in scare facilities for seniors. 
-See you there! #ALLIN #AI #Healthcare #Innovation
+Exciting news! Our AwakeAI team is delighted to share that we will be featured in the Canadian Entrepreneurs in Life Science (CELS) showcase taking place in the San Francisco Bay Area from November 15 to 16. It's a privilege to participate in this significant event dedicated to fostering Canadian entrepreneurs in the life sciences industry through dynamic programming and engaging forums.
+
+CELS, a non-profit association, is committed to advancing innovative Canadian life science businesses in the San Francisco Bay Area and Silicon Valley by fostering a sense of community and establishing valuable connections. We are eagerly looking forward to connecting with investors and fellow ventures during this event!
 
 Who is presenting?
 ---
 
-Consisting of Lulan Shen (CEO) and Benjamin Akera (CTO), is thrilled to be participating in Canada in the Valley Showcase.
+Consisting of Lulan (CEO) and Benjamin (CTO), is thrilled to be participating in the Canada in the Valley Showcase.
 
