@@ -1,10 +1,10 @@
 "use client";
-import { toast } from "react-hot-toast";
 import {Separator} from "./ui/separator";
 import {useState} from "react";
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
-import Reaptcha from "reaptcha";
+import { useToast } from "./ui/use-toast";
+import { ToastAction  } from "./ui/toast";
 import {Label} from "./ui/label";
 import {Textarea} from "./ui/textarea";
 import {
@@ -15,13 +15,18 @@ import {
   SelectValue,
 } from "./ui/select";
 import Image from "next/image";
-import {useTheme} from 'next-themes'
+import Reaptcha from "reaptcha";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [verified, setVerified] = useState(false);
   const [subject, setSubject] = useState("");
-  const {theme, setTheme} = useTheme()
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [file, setFile] = useState("");
+  const { toast } = useToast()
+
   const handleVerify = (recaptchaResponse) => {
       setVerified(true);
   };
@@ -45,36 +50,37 @@ const Contact = () => {
               target="hidden_iframe"
               onSubmit={(e) => {
                   setSubmitted(true);
-                  toast.success((t) => (
-                      <span>
-                    Form submitted! &nbsp; &nbsp;
-                      <Button
-                          onClick={() => {
-                              toast.dismiss(t.id);
-                              // e.target.reset();
-                          }}
-                      >
-                      Dismiss
-                    </Button>
-                  </span>
-                  ));
+                  toast({
+                    title: "Form submitted!",
+                    description: "This form has been sent successfully.",
+                    action: <ToastAction onClick={()=>{
+                        setSubmitted(false);
+                        setName("");
+                        setEmail("");
+                        setMessage("");
+                        setSubject("");
+                        setFile("");
+                    }} altText="close">Dismiss</ToastAction>,
+                  });
               }}
           >
             <div className="grid md:grid-flow-col max-w-lg md:gap-x-8 lg:gap-x-8 mb-10">
               <div>
                 <Label htmlFor="picture">Name</Label>
-                <Input id="name" type="text" name="entry.1208597498" required  placeholder="Name"/>
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="Name" value={name}
+                       onChange={(e) => setName(e.target.value)}/>
               </div>
               <div>
                 <Label htmlFor="picture">Email</Label>
-                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address"/>
+                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address" value={email}
+                       onChange={(e) => setEmail(e.target.value)}/>
               </div>
             </div>
             <div className="grid w-full max-w-lg items-center gap-1.5 mb-10">
               <div>
                 <Label htmlFor="picture">Subject</Label>
                 <Input id="subject" type="text" name="entry.537245108" required style={{display: "none"}} disabled value={subject}/>
-                <Select onValueChange={(value) => setSubject(value)}>
+                <Select onValueChange={(value) => setSubject(value)} value={subject}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a Subject" />
                   </SelectTrigger>
@@ -90,7 +96,8 @@ const Contact = () => {
                  style={{display: `${subject==='job'? "block":"none"}`}}>
               <div>
                 <Label htmlFor="picture">Please provide a link to your resume/CV.</Label>
-                <Input id="file" type="text" name="entry.1679365074" placeholder="link" />
+                <Input id="file" type="text" name="entry.1679365074" placeholder="link" value={file}
+                       onChange={(e) => setFile(e.target.value)}/>
                 <p className=" text-sm text-muted-foreground">
                   You can create a shared pdf file in either Google Drive/Dropbox/OneDrive, then share that link here.
                 </p>
@@ -98,7 +105,9 @@ const Contact = () => {
             </div>
             <div className="grid w-full max-w-lg items-center gap-1.5 mb-10">
               <Label htmlFor="message">Your message</Label>
-              <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"/>
+              <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}/>
             </div>
 
             <div className="grid md:grid-flow-col auto-cols-max md:gap-x-8 lg:gap-x-8 max-w-lg mb-10">

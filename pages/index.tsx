@@ -6,6 +6,8 @@ import CollPost from "../components/collaborator";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import {getAllPosts, getAllTeams} from "../lib/api";
+
+import { Toaster } from "../components/ui/toaster"
 import Head from "next/head";
 import {CMS_NAME} from "../lib/constants";
 import Post from "../interfaces/post";
@@ -43,7 +45,7 @@ export default function Index({ allPosts, allTeams }: Props) {
         <title>{`${CMS_NAME}`}</title>
       </Head>
       <Container>
-
+        <Toaster />
         <Intro />
         {heroPost && (
           <HeroPost
