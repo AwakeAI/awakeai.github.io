@@ -1,6 +1,6 @@
 ---
-title: "Participated in Collision 2023\ @Toronto, 2023"
-excerpt: ""
+title: "Participated in Collision Conference 2023"
+excerpt: "@Toronto, June 26-29, 2023"
 coverImage: "/assets/blog/collision/collision.png"
 date: "2023-06-26T00:00:00.000Z"
 author:

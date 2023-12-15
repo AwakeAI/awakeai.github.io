@@ -1,6 +1,6 @@
 ---
-title: "Participated in ALL IN - AI Conference\ @Montreal, 2023"
-excerpt: ""
+title: "Participated in ALL IN - AI Conference"
+excerpt: "@Montreal, Sep 27th, 2023"
 coverImage: "/assets/images/pages/allin.png"
 date: "2023-09-27T00:00:00.000Z"
 author:

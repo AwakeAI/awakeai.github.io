@@ -1964,3 +1964,17 @@ $theme-color: #ff2121;
     }
   }
 }
+
+.carousel .thumb .selected, .carousel .thumb:hover {
+  border: 1px solid #333 !important;
+}
+
+.carousel .thumb {
+  transition: border .15s ease-in;
+  display: inline-block;
+  margin-right: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #fff !important;
+  padding: 2px;
+}

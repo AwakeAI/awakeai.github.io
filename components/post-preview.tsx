@@ -20,43 +20,22 @@ type Props = {
 
 const PostPreview = ({title, coverImage, date, excerpt, author, slug, team, i}: Props) => {
   return (
-    <>
-      <div className="col-span-3">
-      <div className="w-64 md:w-full mb-10 mt-10 md:mb-0 md:mt-0">
-        <div className="mb-5 md:w-96 lg:w-max">
-          <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
-            <Image
-              src={coverImage}
-              alt={`Cover Image for ${title}`}
-              className={cn("h-44 md:w-fit mx-auto w-max dark:invert dark:grayscale", {
-                "hover:shadow-lg transition-shadow duration-200": slug,
-              })}
-              width={250}
-              height={250}
-              style={{objectFit: "contain"}}
-            />
+      <div className="mb-5" key={i}>
+        <div className="p-6">
+          <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
+            <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
+              {title}
+            </Link>
+          </h2>
+          <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
+            {excerpt}
+          </p>
+          <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}
+                className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+            Learn more &rarr;
           </Link>
         </div>
-        <h3 className="text-3xl mb-3 leading-snug">
-          <Link
-            as={team ? `/teams/${slug}` : `/posts/${slug}`}
-            href={team ? `/teams/[slug]` : `/posts/[slug]`}
-            className="hover:underline"
-          >
-            {title.replace(/\\/g, "<br/>")}
-          </Link>
-        </h3>
-        <div className="text-lg mb-4">
-          <DateFormatter dateString={date}/>
-        </div>
-        {/*<p className="text-lg leading-relaxed mb-4">{excerpt}</p>*/}
-        {/*{author && <Avatar name={excerpt} picture={author.picture}/>}*/}
-        <Separator2.Root className="bg-gray-200 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-[15px]" />
-
       </div>
-      </div>
-      {(i + 1) % 4 !== 0 && <div> <Separator orientation="vertical"/> </div>}
-    </>
   );
 };
 

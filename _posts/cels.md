@@ -1,6 +1,6 @@
 ---
-title: "Showcase in Canadian Entrepreneurs in Life Science @SF Bay, 2023"
-excerpt: "CELS"
+title: "Showcase in Canadian Entrepreneurs in Life Science (CELS)"
+excerpt: "@San Francisco, Nov. 15-16, 2023"
 coverImage: "/assets/images/pages/cels_banner.png"
 date: "2023-11-13T00:00:00.000Z"
 author:
