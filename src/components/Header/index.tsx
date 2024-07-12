@@ -20,7 +20,7 @@ import {MoonIcon, SunIcon} from '@chakra-ui/icons'
 
 import {Link} from '@chakra-ui/react';
 import Image from "next/image";
-import {useTranslations} from 'next-intl';
+// import {useTranslations} from 'next-intl';
 
 const list = [
 
@@ -40,7 +40,7 @@ export const Header: FC = () => {
   const {colorMode, toggleColorMode} = useColorMode()
 
   const btnRef = React.useRef();
-  const t = useTranslations('Index');
+  // const t = useTranslations('Index');
   return (
     <Center
       w="100%"
@@ -122,7 +122,7 @@ export const Header: FC = () => {
                        textDecoration: "none",
                        color: "#FF9900",
                      }}>
-                  {t(value.label)}
+                  value.label
                 </Box>
               );
             })}
