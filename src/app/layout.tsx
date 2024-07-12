@@ -6,8 +6,8 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer"
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
-import { ColorModeScript } from '@chakra-ui/react'
-import { theme } from '@/app/theme';
+import {ColorModeScript} from '@chakra-ui/react'
+import {theme} from '@/app/theme';
 
 export default async function RootLayout({
                                            children,
@@ -23,7 +23,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={fonts.inter.variable}>
     <body>
-    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
     <NextIntlClientProvider messages={messages}>
       <Providers>
         <Header></Header>
@@ -32,6 +32,15 @@ export default async function RootLayout({
       </Providers>
     </NextIntlClientProvider>
     </body>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-JVXPVJ54JS"/>
+    <script id="google-analytics">
+      {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JVXPVJ54JS');
+          `}
+    </script>
     </html>
   );
 }
