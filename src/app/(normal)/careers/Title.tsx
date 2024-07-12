@@ -20,7 +20,7 @@ export const Title = () => {
         <Text
           fontSize={{ base: "24px", lg: "64px" }}
           lineHeight={{ base: "28px", ls: "77px" }}
-          fontWeight={400}
+          fontWeight={700}
           textAlign="center"
         >
           Careers

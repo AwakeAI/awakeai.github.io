@@ -16,7 +16,7 @@ export const Section1 = () => {
     >
       <Image
         className="img"
-        src="/images/partners_1.jpg"
+        src="/images/0_1.png"
         alt="about_1_bg"
         draggable={false}
         width={1440}

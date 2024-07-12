@@ -1,9 +1,13 @@
-import { Box, Center, Flex, Text } from "@chakra-ui/react";
+"use client";
+
+import {Box, Center, Flex, Text, useColorModeValue} from "@chakra-ui/react";
 import Image from "next/image";
+import React from "react";
 
 export const Section3 = () => {
+  const color = useColorModeValue("Black", "gray.200");
   return (
-    <Center w="100%" pos="relative" bg="#ff9900" color="#fff" flexDirection="column">
+    <Center w="100%" pos="relative" color="#fff" flexDirection="column">
       <Flex
         pos="relative"
         direction="column"
@@ -36,6 +40,7 @@ export const Section3 = () => {
         >
           Seamless Care, Zero Hassle
         </Text>
+        <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
 
         <Flex
           direction="column"

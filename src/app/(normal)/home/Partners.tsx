@@ -107,8 +107,7 @@ export const Partners: FC = () => {
             </Box>
           );
         })}
-        {/*<Image src="/images/partners.png" alt="partners" className="img" width={1390} height={103} draggable={false} />*/}
-      </Flex>
+       </Flex>
     </Center>
   );
 };

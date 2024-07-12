@@ -1,51 +1,164 @@
-import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
+"use client";
 
-export const Section3 = () => {
+import React, {FC, PropsWithChildren, useState} from "react";
+import {
+  Box,
+  Center,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  VStack,
+  useColorModeValue,
+  useToast, Select, Textarea
+} from "@chakra-ui/react";
+
+import Reaptcha from "reaptcha";
+const Field: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Center w="100%" bg="#FBC751">
+    <FormLabel fontSize="20px" lineHeight="16.5px" letterSpacing="-0.05em" fontWeight={400}>
+      {children}
+    </FormLabel>
+  );
+};
+export const Section3 = () => {
+  const fnColor = useColorModeValue("Black", "White");
+  const [submitted, setSubmitted] = useState(false);
+  const [verified, setVerified] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [file, setFile] = useState("");
+  const toast = useToast()
+  return (
+    <Center w="100%">
       <Flex
         pos="relative"
+        direction="column"
         zIndex={2}
-        color="#000"
         w="100%"
         h="100%"
         maxW="1440px"
-        px={{ base: "20px", lg: "130px" }}
-        pt={{ base: "54px", lg: "72px" }}
-        pb={{ base: "54px", lg: "76px" }}
-        gap={{ base: "32px", lg: "137px" }}
-        direction={{ base: "column", lg: "row" }}
+        px={{base: "20px", lg: "130px"}}
+        pt={{base: "40px", lg: "24px"}}
+        pb={{base: "30px", lg: "50px"}}
+        justifyContent="center"
+        gap={{base: "26px", lg: "72px"}}
       >
-        <Flex direction="column" alignItems={{ base: "flex-start", lg: "center" }} gap="28px">
-          <Heading fontSize="24px" lineHeight="29px" fontWeight={400}>
-            Brilliant Minds
-          </Heading>
-          <Text fontSize="20px" lineHeight="29px" fontWeight={400} textAlign={{ base: "left", lg: "center" }}>
-            Work with some of the most brilliant minds in the industry. We’re creative, and we have the ingredients to
-            be innovative.
-          </Text>
-        </Flex>
+        <Flex direction="column">
+        <Heading fontSize={{base: "24px", lg: "45px"}} lineHeight={{base: "29px", lg: "54px"}} fontWeight={400}>
+          Impress Us
+        </Heading>
+        <Box w="100%" h="1px" bg="#121212" my={{base: "20px", lg: "30px"}}></Box>
 
-        <Box w="100%" h="1px" bg="#717171" display={{ base: "block", lg: "none" }}></Box>
+        <form
+          name="gform"
+          id="gform"
+          encType="text/plain"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?"
+          target="hidden_iframe"
+          onSubmit={(e) => {
+            setSubmitted(true);
+            const sendPromise = new Promise((resolve, reject) => {
+              setTimeout(() => resolve(200), 200)
+              setSubmitted(false);
+              setName("");
+              setEmail("");
+              setMessage("");
+              setFile("");
+            })
 
-        <Flex direction="column" alignItems={{ base: "flex-start", lg: "center" }} gap="28px">
-          <Heading fontSize="24px" lineHeight="29px" fontWeight={400}>
-            Flexible Hours
-          </Heading>
-          <Text fontSize="20px" lineHeight="29px" fontWeight={400} textAlign={{ base: "left", lg: "center" }}>
-            Studies show that work hours that fit in with our lives make us happier and more energetic. We agree.
-          </Text>
-        </Flex>
+            toast.promise(sendPromise, {
+              success: { title: 'Form submitted!', description: 'Looks great' },
+              error: { title: 'Form submission failed', description: 'Something wrong' },
+              loading: { title: 'Submitting!', description: 'Please wait' },
+            })
+          }}
+        >
 
-        <Box w="100%" h="1px" bg="#717171" display={{ base: "block", lg: "none" }}></Box>
+          <VStack spacing="60px" mt="60px" alignItems="left">
+            <Flex
+              direction={{base: "column", lg: "row"}}
+              justifyContent="space-between"
+              gap={{base: "60px", lg: "none"}}
+            >
+              <FormControl>
+                <FormLabel color={fnColor} fontSize="20px">
+                  <Field>Your Name</Field>
+                </FormLabel>
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="Type your name here" value={name}
+                       onChange={(e) => setName(e.target.value)}
+                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5"/>
+              </FormControl>
+              <FormControl>
+                <FormLabel color={fnColor}>
+                  <Field>Your Email</Field>
+                </FormLabel>
+                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address" value={email}
+                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5"
+                       onChange={(e) => setEmail(e.target.value)}/>
+              </FormControl>
+              <FormControl>
+                <FormLabel color={fnColor}>
+                  <Field>Subject</Field>
+                </FormLabel>
+                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!"
+                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5" disabled/>
+              </FormControl>
+            </Flex>
+            <FormControl>
+              <FormLabel color={fnColor}>
+                <Field>Please provide a link to your resume/CV.</Field>
+              </FormLabel>
+              <Input id="file" type="text" name="entry.1679365074" placeholder="link" value={file}
+                     onChange={(e) => setFile(e.target.value)}
+                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5" disabled/>
+              <Text fontSize="10px" fontWeight={400} color="#121212" textAlign="justify">
+                You can create a shared PDF file using Google Drive, Dropbox, or OneDrive. Once the file is uploaded, generate a shareable link and post that link here.
+              </Text>
+            </FormControl>
 
-        <Flex direction="column" alignItems={{ base: "flex-start", lg: "center" }} gap="28px">
-          <Heading fontSize="24px" lineHeight="29px" fontWeight={400}>
-            Exciting Projects
-          </Heading>
-          <Text fontSize="20px" lineHeight="29px" fontWeight={400} textAlign={{ base: "left", lg: "center" }}>
-            We get to apply bleeding-edge technology to solve problems for our customers.
-          </Text>
+            <FormControl>
+              <FormLabel color={fnColor}>
+                <Field>Your Message</Field>
+              </FormLabel>
+              <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
+                        value={message} variant="unstyled" borderBottom="1px solid #fff" borderRadius="0"
+                        onChange={(e) => setMessage(e.target.value)}/>
+            </FormControl>
+            <Box
+              as="button"
+              bg="#FF9900"
+              height="50px"
+              lineHeight="20px"
+              rounded="30px"
+              w="164px"
+              textAlign="center"
+              color="#fff"
+              fontSize="20px"
+              cursor="pointer"
+              mr="auto"
+              _hover={{
+                textDecoration: "none",
+              }}
+              // disabled={!verified}
+            >
+              Submit
+            </Box>
+            {/*<Reaptcha*/}
+            {/*  sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"*/}
+            {/*  onVerify={handleVerify}*/}
+            {/*/>*/}
+          </VStack>
+          <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style={{display: "none"}}
+            onLoad={() => !submitted}
+          ></iframe>
+        </form>
         </Flex>
       </Flex>
     </Center>

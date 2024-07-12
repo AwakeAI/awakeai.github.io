@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC } from "react";
+import React, {FC} from "react";
 import {
   Box,
   Button,
@@ -16,27 +16,28 @@ import {
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import {MoonIcon, SunIcon} from '@chakra-ui/icons'
 
-import { Link } from '@chakra-ui/react';
+import {Link} from '@chakra-ui/react';
 import Image from "next/image";
 import {useTranslations} from 'next-intl';
 
 const list = [
-  { label: "Partners", href: "/partners" },
-  { label: "About Us", href: "/about" },
-  { label: "Activity", href: "/activity" },
+
+  {label: "About Us", href: "/about"},
+  {label: "Partners", href: "/partners"},
+  {label: "Activity", href: "/activity"},
   // { label: "Partners", href: "/team" },
   // { label: "Team", href: "/story" },
-  { label: "News", href: "/story" },
-  { label: "Contact", href: "/contact" },
-  { label: "Careers", href: "/careers" },
+  // { label: "News", href: "/story" },
+  // { label: "Contact", href: "/contact" },
+  {label: "Careers", href: "/careers"},
 ];
 
 
 export const Header: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode()
+  const {isOpen, onOpen, onClose} = useDisclosure();
+  const {colorMode, toggleColorMode} = useColorMode()
 
   const btnRef = React.useRef();
   const t = useTranslations('Index');
@@ -77,7 +78,16 @@ export const Header: FC = () => {
             },
           }}
         >
-        {colorMode === 'light' ? <><Image className="img m" src="/images/logo-black.png" alt="logo" width={420} height={88} /><Image className="img d" src="/images/logo-black.png" alt="logo" width={420} height={88} /></> : <><Image className="img m" src="/images/logo.png" alt="logo" width={420} height={88} /><Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} /></>}
+          {colorMode === 'light' ?
+            <>
+              <Image className="img m" src="/images/logo-black.png" alt="logo" width={420} height={88}/>
+              <Image className="img d" src="/images/logo-black.png" alt="logo" width={420} height={88}/>
+            </> :
+            <>
+              <Image className="img m" src="/images/logo.png" alt="logo" width={420} height={88}/>
+              <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88}/>
+            </>
+          }
         </Box>
 
         <Flex
@@ -138,7 +148,7 @@ export const Header: FC = () => {
             </Button> */}
           </HStack>
           <Button onClick={toggleColorMode}>
-             {colorMode === 'light' ? <MoonIcon /> : <SunIcon/>}
+            {colorMode === 'light' ? <MoonIcon/> : <SunIcon/>}
           </Button>
           <Flex
             ref={btnRef}
@@ -148,14 +158,15 @@ export const Header: FC = () => {
             h="12"
             align="center"
             as={Button}
-            style={{ background: "none" }}
+            style={{background: "none"}}
           >
-            
-            {colorMode === 'light' ? <Image className="img" src="/images/menu.svg" alt="menu" width={39} height={12} />  :  <Image className="img" src="/images/menu-white.svg" alt="menu" width={39} height={12} />}
+
+            {colorMode === 'light' ? <Image className="img" src="/images/menu.svg" alt="menu" width={39} height={12}/> :
+              <Image className="img" src="/images/menu-white.svg" alt="menu" width={39} height={12}/>}
             <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
-              <DrawerOverlay />
+              <DrawerOverlay/>
               <DrawerContent gap="78px">
-                <DrawerCloseButton />
+                <DrawerCloseButton/>
                 <DrawerHeader>
 
                   <Box
@@ -182,9 +193,15 @@ export const Header: FC = () => {
                       },
                     }}
                   >
-                    {colorMode === 'light' ? <><Image className="img m" src="/images/logo-black.png" alt="logo" width={420} height={88} /><Image className="img d" src="/images/logo-black.png" alt="logo" width={420} height={88} /></> : <><Image className="img m" src="/images/logo.png" alt="logo" width={420} height={88} /><Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} /></>}
-                    
-                    
+                    {colorMode === 'light' ? <><Image className="img m" src="/images/logo-black.png" alt="logo"
+                                                      width={420} height={88}/><Image className="img d"
+                                                                                      src="/images/logo-black.png"
+                                                                                      alt="logo" width={420}
+                                                                                      height={88}/></> : <><Image
+                      className="img m" src="/images/logo.png" alt="logo" width={420} height={88}/><Image
+                      className="img d" src="/images/logo.png" alt="logo" width={420} height={88}/></>}
+
+
                   </Box>
                 </DrawerHeader>
 

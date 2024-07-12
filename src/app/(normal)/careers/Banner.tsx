@@ -5,24 +5,16 @@ export const Banner = () => {
   return (
     <Center
       w="100%"
-      h="auto"
       pos="relative"
       sx={{
         ".img": {
+          width: "100%",
+          height: ["400px", "800px"],
           objectFit: "cover",
         },
       }}
     >
-      <Center maxW="1440px" mt="122px" pt="48px" pb="46px">
-        <Image
-          className="img"
-          src="/images/careers/banner.jpeg"
-          alt="careers_banner"
-          draggable={false}
-          width={2802}
-          height={1152}
-        />
-      </Center>
+      <Image className="img" src="/images/0_1.png" alt="about_1_bg" draggable={false} width={1440} height={601} />
     </Center>
   );
 };

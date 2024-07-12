@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import {FC, useEffect, useState} from "react";
 import {
   Accordion,
   AccordionItem,
@@ -28,7 +28,7 @@ import medteqPng from "../../../../public/images/partners/medteq.png";
 import milaPng from "../../../../public/images/partners/mila.png";
 import ms2Png from "../../../../public/images/partners/m3.png";
 import nextPng from "../../../../public/images/partners/next_3.png";
-import { accordionAnatomy } from "@chakra-ui/anatomy";
+import {accordionAnatomy} from "@chakra-ui/anatomy";
 
 const partners = [
   {
@@ -62,11 +62,11 @@ const partners = [
     description: (
       <span>
         2023, Dobson Life Sciences Pitch Bootcamp
-        <br />
+        <br/>
         2022, Summer Dobson Entrepreneurship X1-Accelerator.
-        <br />
+        <br/>
         2022, Dobson Entrepreneurship Programs Bootcamp and Cup
-        <br />
+        <br/>
         2022, Third Place in Health Science Enterprise Tracks
       </span>
     ),
@@ -112,7 +112,7 @@ const partners = [
   },
 ];
 
-const { defineMultiStyleConfig } = createMultiStyleConfigHelpers(
+const {defineMultiStyleConfig} = createMultiStyleConfigHelpers(
   accordionAnatomy.keys
 );
 
@@ -123,67 +123,68 @@ export const accordionTheme = defineMultiStyleConfig({
   },
 });
 const SectionItem: FC<any> = ({p}) => {
-  const { isOpen, onToggle } = useDisclosure()
-  const width = p.type === 'line' ? 1:  p.src.width / 1.4;
+  const {isOpen, onToggle} = useDisclosure()
+  const width = p.type === 'line' ? 1 : p.src.width / 1.5;
   const color = useColorModeValue('gray.200', 'gray.600')
-  const { colorMode, toggleColorMode } = useColorMode()
+  const {colorMode, toggleColorMode} = useColorMode()
 
   return (
     <Box px={{base: '32px'}}>
       <Box w={`${width}px`} display="flex" alignItems="center">
-                <Image
-                  {...p.src}
-                  alt={p.src.src}
-                  objectFit="contain"
-                  style={{
-                    width: `${width}px`,
-                    minWidth: `${width}px`,
-                    height: `auto`,
-                    filter: `${colorMode === 'light' ? 'none' : 'grayscale(1) invert(1)'}`
-                  }}
-                />
-              </Box>
-              <Box py="20px" px="20px" w={{base: "256px",md: "384px"}}>
+        <Image
+          {...p.src}
+          alt={p.src.src}
+          objectFit="contain"
+          style={{
+            width: `${width}px`,
+            minWidth: `${width}px`,
+            height: `auto`,
+            filter: `${colorMode === 'light' ? 'none' : 'grayscale(1) invert(1)'}`
+          }}
+        />
+      </Box>
+      <Box py="20px" px="20px" w={{base: "256px", md: "384px"}}>
+        <Image
+          src={isOpen ? "/images/close.svg" : "/images/open.svg"}
+          alt={isOpen ? "close" : "open"}
+          width={14}
+          height={8}
+          onClick={() => onToggle()}
+          style={{cursor: "pointer"}}
+          mt={{base: "20px", md: "20px"}}
+          mb={{base: "20px", md: "20px"}}
+        />
+      </Box>
+      <Collapse in={isOpen} animateOpacity>
+        <Box w={{base: "256px", md: "384px"}} zIndex={1}>
+          <Flex direction="column" gap="20px" mt="10px" mx="20px">
+            <Heading fontSize="20px" lineHeight="24px" fontWeight={400}>
+              {p.title}
+            </Heading>
+            <Text fontSize="16px" lineHeight="20px" fontWeight={300}>
+              {p.description}
+            </Text>
+            <Flex gap="7px">
               <Image
-                src={isOpen ? "/images/close.svg" : "/images/open.svg"}
-                alt={isOpen ? "close" : "open"}
-                width={14}
-                height={8}
-                onClick={() => onToggle()}
-                style={{ cursor: "pointer" }}
-              />
-              </Box>
-              <Collapse in={isOpen} animateOpacity>
-              <Box w={{base: "256px",md: "384px"}} zIndex={1}>
-                <Flex direction="column" gap="20px" mt="10px" mx="20px">
-                  <Heading fontSize="24px" lineHeight="28px" fontWeight={400}>
-                    {p.title}
-                  </Heading>
-                  <Text fontSize="20px" lineHeight="29px" fontWeight={400}>
-                    {p.description}
-                  </Text>
-                  <Flex gap="7px">
-                    <Image
-                      src="/images/date.svg"
-                      alt="date"
-                      width={17}
-                      height={18}
-                    ></Image>
-                    <Text
-                      fontSize="18px"
-                      lineHeight="22px"
-                      py="10px"
-                      fontWeight={400}
-                      color="#717171"
-                    >
-                      {p.date}
-                    </Text>
-                  </Flex>
-                </Flex>
-              </Box>
-              </Collapse>
+                src="/images/date.svg"
+                alt="date"
+                width={17}
+                height={18}
+              ></Image>
+              <Text
+                fontSize="14px"
+                py="10px"
+                fontWeight={400}
+                color="#717171"
+              >
+                {p.date}
+              </Text>
+            </Flex>
+          </Flex>
+        </Box>
+      </Collapse>
 
-              <Box w="100%" h="1px" bg={color}></Box>
+      <Box w="100%" h="1px" bg={color} mb={{base: "30px", md: "40px"}}></Box>
     </Box>
   )
 }
@@ -192,13 +193,13 @@ export const Section3: FC = () => {
   const color = useColorModeValue('gray.200', 'gray.600')
 
   return (
-    <Center w="100%"  flexDirection="column">
+    <Center w="100%" flexDirection="column">
       <Flex
         w="100%"
         maxW="1440px"
-        pl={{ base: "21px", lg: "130px" }}
+        pl={{base: "21px", lg: "130px"}}
         pt="56px"
-        pb={{ base: "45px", lg: "80px" }}
+        pb={{base: "45px", lg: "80px"}}
         direction="column"
         gap="32px"
       >
@@ -212,26 +213,26 @@ export const Section3: FC = () => {
           AwakeAI Inc.
         </Text>
         <Text
-          fontSize={{ base: "24px", lg: "45px" }}
-          lineHeight={{ base: "29px", lg: "55px" }}
+          fontSize={{base: "24px", lg: "45px"}}
+          lineHeight={{base: "29px", lg: "55px"}}
           fontWeight={700}
         >
           Collaborators & Affiliations
         </Text>
       </Flex>
-      <Grid w="100%" maxW="1356px" columnGap='32px' templateColumns={{
+      <Grid w="100%" maxW="1440px" columnGap='32px' templateColumns={{
         base: '1fr',
         md: '1fr 1px 1fr 1px 1fr'
       }}>
         {partners.map((p, index) => {
           return (
             p.type === 'line' ? <GridItem>
-            <Box height="full" width="1px" bg={color} />
-          </GridItem> :
-            <GridItem key={p.id}>
-              <SectionItem p ={p} />
-            </GridItem>
-            
+                <Box height="full" width="1px" bg={color}/>
+              </GridItem> :
+              <GridItem key={p.id}>
+                <SectionItem p={p}/>
+              </GridItem>
+
           );
         })}
       </Grid>
