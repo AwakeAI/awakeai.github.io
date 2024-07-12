@@ -1,12 +1,13 @@
 {
-  "name": "awake-ai-home",
-  "version": "0.1.0",
+  "name": "awakeai-home",
+  "version": "5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/anatomy": "^2.2.2",
@@ -24,7 +25,8 @@
     "stylis": "^4.3.2",
     "stylis-plugin-rtl": "^2.1.1",
     "swiper": "^11.1.1",
-    "reaptcha": "^1.12.1"
+    "reaptcha": "^1.12.1",
+    "gh-pages": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
