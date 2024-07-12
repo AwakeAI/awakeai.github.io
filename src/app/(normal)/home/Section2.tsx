@@ -82,7 +82,7 @@ export const Section2: FC = () => {
             ABOUT US
           </Text>
           <Heading
-            w={{ base: "100%", lg: "654px" }}
+            w={{ base: "100%", lg: "1440px" }}
             fontSize={{ base: "28px", lg: "45px" }}
             fontWeight={700}
             lineHeight={{ base: "30px", lg: "50px" }}
@@ -94,12 +94,15 @@ export const Section2: FC = () => {
             <Box as="span" color="#FFF">
               in-depth
             </Box>{" "}
-            and{" "} <br/>
+            and{" "}
             <Box as="span" color="#FFF">
               detailed
             </Box>{" "}
             analysis of senior activities in real-time, yielding more comprehensive and accurate results.
           </Heading>
+
+
+          <Product/>
           <Link
             href="/about"
             bg="#FF9900"
@@ -119,21 +122,6 @@ export const Section2: FC = () => {
           >
             Read More
           </Link>
-        </Flex>
-
-        <Flex
-          pos="relative"
-          direction="column"
-          zIndex={2}
-          color="#000"
-          w="100%"
-          h="100%"
-          maxW="700px"
-          px="30px"
-          pb="70px"
-          justify="center"
-        >
-          <Product/>
         </Flex>
 
       </Grid>

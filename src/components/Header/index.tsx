@@ -122,7 +122,7 @@ export const Header: FC = () => {
                        textDecoration: "none",
                        color: "#FF9900",
                      }}>
-                  value.label
+                  {value.label}
                 </Box>
               );
             })}
@@ -141,11 +141,8 @@ export const Header: FC = () => {
               }}
               ml="20px"
             >
-              Request Demo
+
             </Box>
-            {/* <Button onClick={toggleColorMode}>
-             {colorMode === 'light' ? <MoonIcon /> : <SunIcon/>}
-            </Button> */}
           </HStack>
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <MoonIcon/> : <SunIcon/>}
@@ -223,22 +220,22 @@ export const Header: FC = () => {
                         </Box>
                       );
                     })}
-                    <Box
-                      as={"button"}
-                      bg="#FF9900"
-                      w="178px"
-                      h="50px"
-                      my="60px"
-                      lineHeight="50px"
-                      rounded="30px"
-                      textAlign="center"
-                      _hover={{
-                        textDecoration: "none",
-                      }}
-                      ml="16px"
-                    >
-                      Request Demo
-                    </Box>
+                    {/*<Box*/}
+                    {/*  as={"button"}*/}
+                    {/*  bg="#FF9900"*/}
+                    {/*  w="178px"*/}
+                    {/*  h="50px"*/}
+                    {/*  my="60px"*/}
+                    {/*  lineHeight="50px"*/}
+                    {/*  rounded="30px"*/}
+                    {/*  textAlign="center"*/}
+                    {/*  _hover={{*/}
+                    {/*    textDecoration: "none",*/}
+                    {/*  }}*/}
+                    {/*  ml="16px"*/}
+                    {/*>*/}
+                    {/*  Request Demo*/}
+                    {/*</Box>*/}
                   </Flex>
                 </DrawerBody>
               </DrawerContent>

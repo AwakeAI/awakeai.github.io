@@ -7,19 +7,18 @@ import React from "react";
 export const Section3 = () => {
   const color = useColorModeValue("Black", "gray.200");
   return (
-    <Center w="100%" pos="relative" color="#fff" flexDirection="column">
+    <Center w="100%" pos="relative" flexDirection="column">
       <Flex
         pos="relative"
         direction="column"
         zIndex={2}
-        color="#000"
         w="100%"
         h="100%"
         maxW="1440px"
         justify="center"
         px={{ base: "18px", lg: "125px" }}
         pt={{ base: "30px", lg: "50px" }}
-        pb={{ base: "47px", lg: "100px" }}
+        pb={{ base: "20px", lg: "80px" }}
       >
         <Text
           fontSize={{ base: "12px", lg: "14px" }}
@@ -33,7 +32,7 @@ export const Section3 = () => {
 
         <Text
           pt={{ base: "54px", lg: "32px" }}
-          pb={{ base: "20px", lg: "30px" }}
+          pb={{ base: "10px", lg: "20px" }}
           fontSize={{ base: "26px", lg: "45px" }}
           lineHeight={{ base: "31px", lg: "54px" }}
           fontWeight={400}
@@ -41,12 +40,10 @@ export const Section3 = () => {
           Seamless Care, Zero Hassle
         </Text>
         <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
-
         <Flex
           direction="column"
           gap={{ base: "24px", lg: "60px" }}
-          pt={{ base: "34px", lg: "54px" }}
-          borderTop="1px solid #fff"
+          pt={{ base: "20px", lg: "34px" }}
         >
           <Flex flexDirection="row" gap={{ base: "33px", lg: "50px" }} alignItems="center" justifyContent="left">
             <Box

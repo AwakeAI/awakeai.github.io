@@ -63,7 +63,6 @@ export const Section2 = () => {
         <Flex
           pos="relative"
           zIndex={2}
-          color="#000"
           w="100%"
           h="100%"
           maxW="1440px"
@@ -72,7 +71,7 @@ export const Section2 = () => {
           gap={{base: "32px", lg: "137px"}}
           direction={{base: "column", lg: "row"}}
         >
-          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px">
+          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px" width={{base: "100%", lg:"33%"}}>
             <Heading fontSize="24px" lineHeight="29px" fontWeight={700}>
               Brilliant Minds
             </Heading>
@@ -80,14 +79,14 @@ export const Section2 = () => {
               Work with some of the most brilliant minds in the industry at AwakeAI,
               a
               <a href="https://mila.quebec/en/mila-entrepreneurship-lab"
-                 style={{color: "#662E7D", fontWeight: "700"}}> MILA startup </a>.
+                 style={{color: "#662E7D", fontWeight: "700"}}> MILA startup. </a>
               We are creative and have the essential ingredients for innovation.
             </Text>
           </Flex>
 
-          <Box w="100%" h="1px" bg="#717171" display={{base: "block", lg: "none"}}></Box>
+          <Box w="100%" h="1px" bg={color} display={{base: "block", lg: "none"}}></Box>
 
-          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px">
+          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px" width={{base: "100%", lg:"33%"}}>
             <Heading fontSize="24px" lineHeight="29px" fontWeight={700}>
               Flexible Hours
             </Heading>
@@ -96,9 +95,9 @@ export const Section2 = () => {
             </Text>
           </Flex>
 
-          <Box w="100%" h="1px" bg="#717171" display={{base: "block", lg: "none"}}></Box>
+          <Box w="100%" h="1px" bg={color} display={{base: "block", lg: "none"}}></Box>
 
-          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px">
+          <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="28px" width={{base: "100%", lg:"33%"}}>
             <Heading fontSize="24px" lineHeight="29px" fontWeight={700}>
               Exciting Projects
             </Heading>

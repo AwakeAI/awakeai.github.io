@@ -25,6 +25,7 @@ const Field: FC<PropsWithChildren> = ({ children }) => {
 };
 export const Section3 = () => {
   const fnColor = useColorModeValue("Black", "White");
+  const color = useColorModeValue("Black", "gray.200");
   const [submitted, setSubmitted] = useState(false);
   const [verified, setVerified] = useState(false);
   const [name, setName] = useState("");
@@ -56,7 +57,7 @@ export const Section3 = () => {
         <Heading fontSize={{base: "24px", lg: "45px"}} lineHeight={{base: "29px", lg: "54px"}} fontWeight={400}>
           Impress Us
         </Heading>
-        <Box w="100%" h="1px" bg="#121212" my={{base: "20px", lg: "30px"}}></Box>
+        <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
 
         <form
           name="gform"
@@ -82,8 +83,7 @@ export const Section3 = () => {
             })
           }}
         >
-
-          <VStack spacing="60px" mt="60px" alignItems="left">
+          <VStack spacing="60px" mt="30px" alignItems="left">
             <Flex
               direction={{base: "column", lg: "row"}}
               justifyContent="space-between"
@@ -94,33 +94,30 @@ export const Section3 = () => {
                   <Field>Your Name</Field>
                 </FormLabel>
                 <Input id="name" type="text" name="entry.1208597498" required placeholder="Type your name here" value={name}
-                       onChange={(e) => setName(e.target.value)}
-                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5"/>
+                       onChange={(e) => setName(e.target.value)} marginTop="5"/>
               </FormControl>
               <FormControl>
                 <FormLabel color={fnColor}>
                   <Field>Your Email</Field>
                 </FormLabel>
-                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address" value={email}
-                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5"
+                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address" value={email} marginTop="5"
                        onChange={(e) => setEmail(e.target.value)}/>
               </FormControl>
-              <FormControl>
+              <FormControl style={{display: "none"}}>
                 <FormLabel color={fnColor}>
                   <Field>Subject</Field>
                 </FormLabel>
-                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!"
-                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5" disabled/>
+                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!" marginTop="5" disabled/>
               </FormControl>
             </Flex>
             <FormControl>
               <FormLabel color={fnColor}>
-                <Field>Please provide a link to your resume/CV.</Field>
+                <Field>Provide a link to your Resume or CV</Field>
               </FormLabel>
               <Input id="file" type="text" name="entry.1679365074" placeholder="link" value={file}
                      onChange={(e) => setFile(e.target.value)}
-                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" marginTop="5" disabled/>
-              <Text fontSize="10px" fontWeight={400} color="#121212" textAlign="justify">
+                     marginTop="5"/>
+              <Text fontSize="10px" fontWeight={400} textAlign="justify">
                 You can create a shared PDF file using Google Drive, Dropbox, or OneDrive. Once the file is uploaded, generate a shareable link and post that link here.
               </Text>
             </FormControl>
@@ -130,8 +127,7 @@ export const Section3 = () => {
                 <Field>Your Message</Field>
               </FormLabel>
               <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
-                        value={message} variant="unstyled" borderBottom="1px solid #fff" borderRadius="0"
-                        onChange={(e) => setMessage(e.target.value)}/>
+                        value={message} onChange={(e) => setMessage(e.target.value)}/>
             </FormControl>
             <Box
               as="button"

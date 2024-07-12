@@ -126,16 +126,17 @@ export const Section4 = () => {
       <Flex w="100%" direction="column">
         <Swiper
           slidesPerView={"auto"}
-          spaceBetween={0}
+          spaceBetween={70}
           centeredSlides
           initialSlide={2}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
+
         >
           {newsList.map((item, index) => (
-            <SwiperSlide key={index} style={{ width: `${item.width + 30}px`, paddingRight: "30px" }}>
+            <SwiperSlide key={index} style={{ width: `${item.width}px`, paddingRight: "30px" }}>
               <Flex direction="column" alignItems="start" justifyContent="start" h="100%">
                 <Box
                   alignSelf="center"
@@ -159,10 +160,10 @@ export const Section4 = () => {
                 <Heading fontSize="24px" lineHeight="28px" fontWeight={400} textAlign="left" mb="32px">
                   {item.title}
                 </Heading>
-                <Text fontSize="16px" lineHeight="19px" fontWeight={400} mb="40px">
+                <Text fontSize="16px" lineHeight="19px" fontWeight={300} mb="40px">
                   {item.date}
                 </Text>
-                <Link href={`/activity?id=${item.id}`} fontSize="20px" lineHeight="24px" fontWeight={400} color="#FF9900" mt="auto">
+                <Link href={`/activity?id=${item.id}`} fontSize="20px" lineHeight="24px" fontWeight={500} color="#FF9900" mt="auto">
                   Read more
                 </Link>
               </Flex>

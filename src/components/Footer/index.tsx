@@ -19,7 +19,7 @@ export const Footer = () => {
                 as={Link}
                 href="/"
                 w="auto"
-                h="32px"
+                h="64px"
                 sx={{
                   ".img": {
                     width: "auto",
@@ -33,28 +33,11 @@ export const Footer = () => {
                   },
                 }}
               >
-                <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} />
+                <Text color="#fff"> A MILA Startup. </Text>
+                <Image className="img d" src="/images/partners/mila.png" alt="logo" width={420} height={88} />
               </Box>
-              <Text
-                fontSize={{ base: "9px", lg: "14px" }}
-                fontWeight={700}
-                lineHeight={{ base: "10px", lg: "15px" }}
-                w="437px"
-                pl="10px"
-              >
-                <Box as="span" color="#FF9900">
-                C
-                </Box>
-                are{" "}
-                <Box as="span" color="#FF9900">
-                  A
-                </Box>
-                ll the time, {" "}
-                <Box as="span" color="#FF9900">
-                  A
-                </Box>
-                nywhere.
-              </Text>
+
+              <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} />
             </Flex>
 
             <Flex direction="column" gap={{ base: "68px", lg: "56px" }} color="#ffffff">
@@ -62,9 +45,9 @@ export const Footer = () => {
                 <Flex direction={{ base: "column", lg: "row" }} gap={{ base: "7px", lg: "83px" }}>
                   <Flex direction="row" gap="8px">
                     <MapPin size={20}/>
-                    <Text fontSize={{ base: "15", lg: "18px" }} fontWeight={400} lineHeight="20px">
-                      Montreal, Canada
-                    </Text>
+                    <a href="https://mila.quebec/en/industry/entrepreneurship-lab/">
+                      Montreal, QC, Canada
+                    </a>
                   </Flex>
                   <Flex direction="row" gap="8px">
                     <Mail size={20}/>
