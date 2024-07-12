@@ -1,6 +1,7 @@
 "use client";
+import {Box, Button, Center, Container, Flex, Grid, GridItem, Text} from "@chakra-ui/react";
 
-import { Box, Center, Flex, Text, useColorMode } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import {Linkedin, Mail, MapPin} from "react-feather";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,13 +34,10 @@ export const Footer = () => {
                   },
                 }}
               >
-                <Text color="#fff"> A MILA Startup. </Text>
-                <Image className="img d" src="/images/partners/mila.png" alt="logo" width={420} height={88} />
+                <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} />
+                <Text color="#fff" mt="2" mb="8" px="3"> A MILA Startup. </Text>
               </Box>
-
-              <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} />
             </Flex>
-
             <Flex direction="column" gap={{ base: "68px", lg: "56px" }} color="#ffffff">
               <Flex gap={{ base: "none", lg: "83px" }} justifyContent="space-between">
                 <Flex direction={{ base: "column", lg: "row" }} gap={{ base: "7px", lg: "83px" }}>

@@ -124,12 +124,12 @@ export const accordionTheme = defineMultiStyleConfig({
 });
 const SectionItem: FC<any> = ({p}) => {
   const {isOpen, onToggle} = useDisclosure()
-  const width = p.type === 'line' ? 1 : p.src.width / 1.5;
+  const width = p.type === 'line' ? 1 : p.src.width / 1.3;
   const color = useColorModeValue('gray.200', 'gray.600')
   const {colorMode, toggleColorMode} = useColorMode()
 
   return (
-    <Box px={{base: '32px'}}>
+    <Box px={{base: '30px'}}>
       <Box w={`${width}px`} display="flex" alignItems="center">
         <Image
           {...p.src}
@@ -208,7 +208,7 @@ export const Section3: FC = () => {
           fontWeight={500}
           letterSpacing="0.5em"
         >
-          AwakeAI Inc.
+          of AwakeAI Inc.
         </Text>
         <Text
           fontSize={{base: "24px", lg: "45px"}}
@@ -218,7 +218,7 @@ export const Section3: FC = () => {
           Collaborators & Affiliations
         </Text>
       </Flex>
-      <Grid w="100%" maxW="1440px" columnGap='32px' templateColumns={{
+      <Grid w="100%" maxW="1440px" columnGap='28px' templateColumns={{
         base: '1fr',
         md: '1fr 1px 1fr 1px 1fr'
       }}>
