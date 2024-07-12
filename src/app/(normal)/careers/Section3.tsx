@@ -32,6 +32,11 @@ export const Section3 = () => {
   const [message, setMessage] = useState("");
   const [file, setFile] = useState("");
   const toast = useToast()
+
+  const handleVerify = () => {
+    setVerified(true);
+  };
+
   return (
     <Center w="100%">
       <Flex
@@ -143,14 +148,14 @@ export const Section3 = () => {
               _hover={{
                 textDecoration: "none",
               }}
-              // disabled={!verified}
+              disabled={!verified}
             >
               Submit
             </Box>
-            {/*<Reaptcha*/}
-            {/*  sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"*/}
-            {/*  onVerify={handleVerify}*/}
-            {/*/>*/}
+            <Reaptcha
+              sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"
+              onVerify={handleVerify}
+            />
           </VStack>
           <iframe
             name="hidden_iframe"

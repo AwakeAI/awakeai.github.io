@@ -35,7 +35,7 @@ export const ContactUs: FC = () => {
   const [file, setFile] = useState("");
   const toast = useToast()
 
-  const handleVerify = (recaptchaResponse) => {
+  const handleVerify = () => {
     setVerified(true);
   };
 
