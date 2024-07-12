@@ -151,8 +151,6 @@ const SectionItem: FC<any> = ({p}) => {
           height={8}
           onClick={() => onToggle()}
           style={{cursor: "pointer"}}
-          mt={{base: "20px", md: "20px"}}
-          mb={{base: "20px", md: "20px"}}
         />
       </Box>
       <Collapse in={isOpen} animateOpacity>
