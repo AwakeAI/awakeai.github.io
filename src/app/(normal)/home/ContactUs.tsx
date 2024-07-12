@@ -154,14 +154,14 @@ export const ContactUs: FC = () => {
               _hover={{
                 textDecoration: "none",
               }}
-              // disabled={!verified}
+              disabled={!verified}
             >
               Submit
             </Box>
-            {/*<Reaptcha*/}
-            {/*  sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"*/}
-            {/*  onVerify={handleVerify}*/}
-            {/*/>*/}
+            <Reaptcha
+              sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"
+              onVerify={handleVerify}
+            />
           </VStack>
           <iframe
             name="hidden_iframe"

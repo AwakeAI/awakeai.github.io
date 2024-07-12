@@ -1,4 +1,3 @@
-import type {Metadata} from "next";
 import "./globals.css";
 import {Providers} from "@/app/provider";
 import {fonts} from "@/app/font";
@@ -10,9 +9,7 @@ import {ColorModeScript} from '@chakra-ui/react'
 import {theme} from '@/app/theme';
 import Script from 'next/script'
 
-export default async function RootLayout({
-                                           children,
-                                         }: Readonly<{
+export default async function RootLayout({children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
@@ -36,11 +33,11 @@ export default async function RootLayout({
     <Script src="https://www.googletagmanager.com/gtag/js?id=G-JVXPVJ54JS"/>
     <Script id="google-analytics">
       {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JVXPVJ54JS');
-          `}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JVXPVJ54JS');
+      `}
     </Script>
     </html>
   );
