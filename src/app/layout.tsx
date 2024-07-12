@@ -8,6 +8,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import {ColorModeScript} from '@chakra-ui/react'
 import {theme} from '@/app/theme';
+import Script from 'next/script'
 
 export default async function RootLayout({
                                            children,
@@ -32,15 +33,15 @@ export default async function RootLayout({
       </Providers>
     </NextIntlClientProvider>
     </body>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-JVXPVJ54JS"/>
-    <script id="google-analytics">
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-JVXPVJ54JS"/>
+    <Script id="google-analytics">
       {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-JVXPVJ54JS');
           `}
-    </script>
+    </Script>
     </html>
   );
 }

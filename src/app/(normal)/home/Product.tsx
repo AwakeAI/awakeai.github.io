@@ -20,7 +20,7 @@ const TechnologySection = () =>{
                   transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
                 }
               }} justify="space-between">
-              <img src="/images/raw.gif" alt="video" width="300px"/>
+              <Image src="/images/raw.gif" alt="video" width="300px"/>
             </Flex>
           </Box>
         </Flex>
@@ -34,7 +34,7 @@ const TechnologySection = () =>{
                   transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
                 }
               }} justify="space-between">
-              <img src="/images/video.gif" alt="video" width="300px"/>
+              <Image src="/images/video.gif" alt="video" width="300px"/>
             </Flex>
           </Box>
         </Flex>
@@ -49,7 +49,7 @@ const TechnologySection = () =>{
                   transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
                 }
               }} justify="space-between">
-              <img src="/images/segment29062.gif" alt="video" width="300px"/>
+              <Image src="/images/segment29062.gif" alt="video" width="300px"/>
             </Flex>
           </Box>
         </Flex>
@@ -63,7 +63,7 @@ const TechnologySection = () =>{
                   transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
                 }
               }} justify="space-between">
-              <img src="/images/segment29062.gif" alt="video" width="300px"/>
+              <Image src="/images/segment29062.gif" alt="video" width="300px"/>
             </Flex>
           </Box>
         </Flex>

@@ -81,7 +81,7 @@ export const Section2 = () => {
               a
               <a href="https://mila.quebec/en/mila-entrepreneurship-lab"
                  style={{color: "#662E7D", fontWeight: "700"}}> MILA startup </a>.
-              We're creative and have the essential ingredients for innovation.
+              We are creative and have the essential ingredients for innovation.
             </Text>
           </Flex>
 
