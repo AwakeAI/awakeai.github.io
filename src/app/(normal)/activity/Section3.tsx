@@ -1,14 +1,10 @@
 import React, {FC, useState} from "react";
 import {
-  Checkbox,
   Box,
   Center,
   Flex,
   FormControl,
-  FormLabel,
-  Heading,
   Input,
-  VStack,
   Text,
   useColorModeValue, useToast,
 } from "@chakra-ui/react";
@@ -21,14 +17,10 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
   currentActivity,
 }) => {
   const color = useColorModeValue("#ff9900", "gray.200");
-  const fnColor = useColorModeValue("Black", "White");
   const [submitted, setSubmitted] = useState(false);
   const [verified, setVerified] = useState(false);
-  const [subject, setSubject] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [file, setFile] = useState("");
   const toast = useToast()
 
   const handleVerify = () => {
@@ -90,14 +82,11 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
             target="hidden_iframe"
             onSubmit={(e) => {
               setSubmitted(true);
-              const sendPromise = new Promise((resolve, reject) => {
+              const sendPromise = new Promise((resolve) => {
                 setTimeout(() => resolve(200), 200)
                 setSubmitted(false);
                 setName("");
                 setEmail("");
-                setMessage("");
-                setSubject("");
-                setFile("");
               })
 
               toast.promise(sendPromise, {
@@ -112,7 +101,7 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
                 Subscribe for latest updates
               </Text>
               <FormControl style={{marginTop: 15, borderColor: "#fff"}}>
-                <Input id="name" type="text" name="entry.1208597498" required placeholder="Name" value={name}
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="Your Contact Name" value={name}
                        onChange={(e) => setName(e.target.value)} marginTop="5"
                        _placeholder={{ opacity: 1, color: '#fff' }}
                        focusBorderColor='white'/>
@@ -124,6 +113,9 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
                        _placeholder={{ opacity: 1, color: '#fff' }}
                        focusBorderColor='white'/>
               </FormControl>
+              <Input id="subject" type="text" name="entry.537245108" required value="News Letter Subscribe"
+                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" disabled
+                     style={{display: "none"}}/>
               {/*<FormControl style={{margin: "25px 0 30px"}}>*/}
               {/*  <Checkbox borderColor="#000">*/}
               {/*    <Text lineHeight="1.05" fontSize="15px" letterSpacing="-0.03em" color="#000000" fontWeight={400}>*/}
