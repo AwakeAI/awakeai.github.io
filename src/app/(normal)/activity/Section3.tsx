@@ -107,26 +107,30 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
               })
             }}
           >
-            <Flex style={{width: "340px", height: "453px"}} direction="column" bg={color} borderRadius="8px" p="24px">
+            <Flex style={{width: "340px", height: "453px"}} direction="column" bg="#ff9900" borderRadius="8px" p="24px">
               <Text fontSize="30px" lineHeight="31px" fontWeight={700} letterSpacing="-0.02em" textAlign="left" color="#121212">
                 Subscribe for latest updates
               </Text>
-              <FormControl style={{marginTop: 15}}>
+              <FormControl style={{marginTop: 15, borderColor: "#fff"}}>
                 <Input id="name" type="text" name="entry.1208597498" required placeholder="Name" value={name}
-                       onChange={(e) => setName(e.target.value)} marginTop="5"/>
+                       onChange={(e) => setName(e.target.value)} marginTop="5"
+                       _placeholder={{ opacity: 1, color: '#fff' }}
+                       focusBorderColor='white'/>
 
               </FormControl>
-              <FormControl style={{marginTop: 15}}>
+              <FormControl style={{marginTop: 15, borderColor: "#fff"}}>
                 <Input id="email" type="email" name="entry.1569009990" required placeholder="Email Address"
-                       value={email} marginTop="5" onChange={(e) => setEmail(e.target.value)}/>
+                       value={email} marginTop="5" onChange={(e) => setEmail(e.target.value)}
+                       _placeholder={{ opacity: 1, color: '#fff' }}
+                       focusBorderColor='white'/>
               </FormControl>
-              <FormControl style={{margin: "25px 0 30px"}}>
-                <Checkbox borderColor="#000">
-                  <Text lineHeight="1.05" fontWeight="regular" fontSize="15px" letterSpacing="-0.03em" color="#000000" fontWeight={400}>
-                    I agree with the Terms, Conditions and the Privacy Policy
-                  </Text>
-                </Checkbox>
-              </FormControl>
+              {/*<FormControl style={{margin: "25px 0 30px"}}>*/}
+              {/*  <Checkbox borderColor="#000">*/}
+              {/*    <Text lineHeight="1.05" fontSize="15px" letterSpacing="-0.03em" color="#000000" fontWeight={400}>*/}
+              {/*      I agree with the Terms, Conditions and the Privacy Policy.*/}
+              {/*    </Text>*/}
+              {/*  </Checkbox>*/}
+              {/*</FormControl>*/}
               <Box
                 as="button"
                 bg="#121212"
@@ -139,6 +143,7 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
                 fontSize="20px"
                 cursor="pointer"
                 mr="auto"
+                style={{margin: "25px 0 30px"}}
                 _hover={{
                   textDecoration: "none",
                 }}

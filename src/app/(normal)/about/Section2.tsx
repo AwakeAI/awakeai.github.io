@@ -50,11 +50,11 @@ export const Section2 = () => {
             We are committed to integrating cutting-edge technology into the daily lives of the elderly, providing
             seamless protection for their health and well-being.
             <br/> <br/>
-            AwakeAI's intelligent caregiving system not only eases the burden on caregivers but also enhances the
+            AwakeAI{"'"}s intelligent caregiving system not only eases the burden on caregivers but also enhances the
             quality of life for the elderly by ensuring their safety and well-being.
             <br/> <br/>
             Our products feature cameras equipped with self-developed, large-scale multimodal algorithms.
-            Utilizing advanced video understanding technology, we conduct real-time analyses of the elderly's
+            Utilizing advanced video understanding technology, we conduct real-time analyses of the elderly{"'"}s
             activities, assessing their behavior in conjunction with their environment to make informed judgments,
             setting a new standard in elder care.
             <br/> <br/>
