@@ -115,7 +115,7 @@ export const ContactUs: FC = () => {
                        onChange={(e) => setEmail(e.target.value)}/>
               </FormControl>
 
-              <FormControl>
+              <FormControl style={{ bottom: "-7px" }}>
                 <FormLabel color={fnColor}>
                   <Field>Subject</Field>
                 </FormLabel>

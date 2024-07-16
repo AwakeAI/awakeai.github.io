@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, {FC, useState} from "react";
 import {
   Checkbox,
   Box,
@@ -7,23 +7,34 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  Input as RawInput,
+  Input,
   VStack,
   Text,
-  useColorModeValue,
+  useColorModeValue, useToast,
 } from "@chakra-ui/react";
 import Image from "next/image";
-
-const Input: FC = (props) => {
-  return <RawInput variant="unstyled" borderBottom="1px solid" borderRadius="0" {...props} />;
-};
+import Reaptcha from "reaptcha";
 
 export const Section3: FC<{ onChangeActivity: (key: string) => void; activities: any[]; currentActivity: any }> = ({
   onChangeActivity,
   activities,
   currentActivity,
 }) => {
-  const color = useColorModeValue("Black", "gray.200");
+  const color = useColorModeValue("#ff9900", "gray.200");
+  const fnColor = useColorModeValue("Black", "White");
+  const [submitted, setSubmitted] = useState(false);
+  const [verified, setVerified] = useState(false);
+  const [subject, setSubject] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [file, setFile] = useState("");
+  const toast = useToast()
+
+  const handleVerify = () => {
+    setVerified(true);
+  };
+
   return (
     <Center w="100%" pos="relative">
       <Flex
@@ -71,91 +82,125 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
           ) : null}
         </Flex>
         <Flex direction="column" gap="48px">
-          <Flex style={{ width: "340px", height: "453px" }} direction="column" bg="#FF9900" borderRadius="8px" p="24px">
-            <Text fontSize="30px" lineHeight="31px" fontWeight={500} letterSpacing="-0.02em" textAlign="left">
-              Subscribe for news and latest updates
-            </Text>
-            <FormControl style={{ marginTop: 15 }}>
-              <span style={{ position: "relative", left: 5, top: 15, fontWeight: 200 }}>Name</span>
-              <Input />
-            </FormControl>
-            <FormControl style={{ marginTop: 15 }}>
-              <span style={{ position: "relative", left: 5, top: 15, fontWeight: 200 }}>Email</span>
-              <Input />
-            </FormControl>
-            <FormControl style={{ margin: "25px 0 30px" }}>
-              <Checkbox borderColor="#000">
-                <Text lineHeight="1.05" fontWeight="regular" fontSize="16px" letterSpacing="-0.02em" color="#000000">
-                  <span> I agree with the </span>
-                  <Box as="span" color="#FFFFFF">
-                    Terms And Conditions
-                  </Box>
-                  <Box as="span"> and the </Box>
-                  <Box as="span" color="#FFFFFF">
-                    Privacy Policy
-                  </Box>
-                </Text>
-              </Checkbox>
-            </FormControl>
-            <Box
-              borderRadius="30px"
-              width="140px"
-              height="45px"
-              borderColor="#000000"
-              borderStartWidth="2px"
-              borderEndWidth="2px"
-              borderTopWidth="2px"
-              borderBottomWidth="2px"
-              cursor="pointer"
-            >
-              <Text lineHeight="43px" fontWeight="medium" fontSize="20px" color="#000000" textAlign="center">
-                Subscribe
+          <form
+            name="gform"
+            id="gform"
+            encType="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?"
+            target="hidden_iframe"
+            onSubmit={(e) => {
+              setSubmitted(true);
+              const sendPromise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve(200), 200)
+                setSubmitted(false);
+                setName("");
+                setEmail("");
+                setMessage("");
+                setSubject("");
+                setFile("");
+              })
+
+              toast.promise(sendPromise, {
+                success: {title: 'Form submitted!', description: 'Looks great'},
+                error: {title: 'Form submission failed', description: 'Something wrong'},
+                loading: {title: 'Submitting!', description: 'Please wait'},
+              })
+            }}
+          >
+            <Flex style={{width: "340px", height: "453px"}} direction="column" bg={color} borderRadius="8px" p="24px">
+              <Text fontSize="30px" lineHeight="31px" fontWeight={700} letterSpacing="-0.02em" textAlign="left" color="#121212">
+                Subscribe for latest updates
               </Text>
-            </Box>
-          </Flex>
+              <FormControl style={{marginTop: 15}}>
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="Name" value={name}
+                       onChange={(e) => setName(e.target.value)} marginTop="5"/>
+
+              </FormControl>
+              <FormControl style={{marginTop: 15}}>
+                <Input id="email" type="email" name="entry.1569009990" required placeholder="Email Address"
+                       value={email} marginTop="5" onChange={(e) => setEmail(e.target.value)}/>
+              </FormControl>
+              <FormControl style={{margin: "25px 0 30px"}}>
+                <Checkbox borderColor="#000">
+                  <Text lineHeight="1.05" fontWeight="regular" fontSize="15px" letterSpacing="-0.03em" color="#000000" fontWeight={400}>
+                    I agree with the Terms, Conditions and the Privacy Policy
+                  </Text>
+                </Checkbox>
+              </FormControl>
+              <Box
+                as="button"
+                bg="#121212"
+                height="50px"
+                lineHeight="50px"
+                rounded="30px"
+                w="164px"
+                textAlign="center"
+                color="#fff"
+                fontSize="20px"
+                cursor="pointer"
+                mr="auto"
+                _hover={{
+                  textDecoration: "none",
+                }}
+                disabled={!verified}
+              >
+                Submit
+              </Box>
+              <Reaptcha
+                sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"
+                onVerify={handleVerify}
+              />
+            </Flex>
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style={{display: "none"}}
+              onLoad={() => !submitted}
+            ></iframe>
+          </form>
           <Flex direction="column" gap="22px">
-            <Center bg="#000" h="55px">
-              <Text color="#fff" fontSize="22px" lineHeight="23px" fontWeight={500} letterSpacing="-0.02em">
-                Other Content you may enjoy
-              </Text>
-            </Center>
-            <Flex direction="column" gap="32px">
-              {activities.map((item) => (
-                <div
-                  onClick={() => onChangeActivity(item.key)}
-                  key={item.key}
-                  style={{
-                    width: "340px",
-                    height: "226px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <Image
-                    className="img"
-                    src={item.imgSrc}
-                    width={340}
-                    height={190}
-                    alt="activity_bg"
-                    draggable={false}
-                  />
-                  <Text
-                    fontSize="20px"
-                    width="340px"
-                    maxWidth="100%"
+            <Center h="55px">
+              <Text fontSize="22px" lineHeight="23px" fontWeight={700} letterSpacing="-0.02em">
+                  Other Stories
+                </Text>
+              </Center>
+              <Flex direction="column" gap="32px">
+                {activities.map((item) => (
+                  <div
+                    onClick={() => onChangeActivity(item.key)}
+                    key={item.key}
                     style={{
-                      overflow: "hidden",
-                      whiteSpace: "nowrap",
-                      textOverflow: "ellipsis",
+                      width: "340px",
+                      height: "226px",
+                      cursor: "pointer",
                     }}
                   >
-                    {item.title}
-                  </Text>
-                </div>
-              ))}
+                    <Image
+                      className="img"
+                      src={item.imgSrc}
+                      width={340}
+                      height={190}
+                      alt="activity_bg"
+                      draggable={false}
+                    />
+                    <Text
+                      fontSize="20px"
+                      width="340px"
+                      maxWidth="100%"
+                      style={{
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {item.title}
+                    </Text>
+                  </div>
+                ))}
+              </Flex>
             </Flex>
-          </Flex>
         </Flex>
       </Flex>
     </Center>
-  );
+);
 };

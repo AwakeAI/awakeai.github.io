@@ -8,8 +8,11 @@ const TechnologySection = () =>{
   const fnColor = useColorModeValue("Black", "White");
   return (
 
-  <Box className="main-wrapper techn" maxW="1340px" maxH="900px" backdropFilter='auto' color="black" p={4}>
-      <Flex justify="space-around" w="100%" gap="3" mb={4}>
+  <Box className="main-wrapper techn"  backdropFilter='auto' color="black" py={12}>
+      <Grid 
+        templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
+         w="100%" gap="3" mb={4}>
+        <GridItem>
         <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
           <Text color={fnColor} mb={2}>Raw video</Text>
           <Box bg={color2} p={2} borderRadius="md">
@@ -23,6 +26,8 @@ const TechnologySection = () =>{
             </Flex>
           </Box>
         </Flex>
+        </GridItem>
+        <GridItem>
 
         <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
           <Text color={fnColor} mb={2} noOfLines={1}>Human Activities</Text>
@@ -37,7 +42,9 @@ const TechnologySection = () =>{
             </Flex>
           </Box>
         </Flex>
+        </GridItem>
 
+        <GridItem>
         <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
           <Text color={fnColor} mb={2} noOfLines={1}>Segmentation</Text>
           <Box bg={color2} p={2} borderRadius="md">
@@ -51,7 +58,9 @@ const TechnologySection = () =>{
             </Flex>
           </Box>
         </Flex>
-      </Flex>
+        </GridItem>
+
+      </Grid>
   </Box>
 )}
 

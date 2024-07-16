@@ -44,13 +44,26 @@ export const Section2 = () => {
           </Text>
           <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
           <Text fontSize="20px" lineHeight="30px" fontWeight={400} textAlign="justify">
-            Started in Montreal, Canada, and partnered with Mila, AwakeAI is dedicated to tackling two major pain points in elder care.
+            Founded in Montreal, Canada, and in partnership with Mila. At AwakeAI, we are inspired by the potential of
+            technology
+            to provide not just care but also comfort and peace of mind to both the elderly and their loved ones.
+            We are committed to integrating cutting-edge technology into the daily lives of the elderly, providing
+            seamless protection for their health and well-being.
             <br/> <br/>
-            Firstly, they aim to solve the challenge of not being able to detect unexpected situations that can affect the well-being of seniors during the crucial golden hours.
-            Timely identification and response to such incidents are essential for ensuring the health and safety of elderly individuals.
+            AwakeAI's intelligent caregiving system not only eases the burden on caregivers but also enhances the
+            quality of life for the elderly by ensuring their safety and well-being.
             <br/> <br/>
-            Secondly, AwakeAI focuses on the difficulty of objectively assessing and managing the quality of caregiving services. Maintaining high standards in caregiving is vital for providing seniors with the support and care they deserve.
-            By addressing these pain points, AwakeAI aims to enhance the overall effectiveness and reliability of elder care services.
+            Our products feature cameras equipped with self-developed, large-scale multimodal algorithms.
+            Utilizing advanced video understanding technology, we conduct real-time analyses of the elderly's
+            activities, assessing their behavior in conjunction with their environment to make informed judgments,
+            setting a new standard in elder care.
+            <br/> <br/>
+            To ensure privacy, our large model algorithm goes beyond skeleton technology by anonymizing the identity
+            information of older people, maximizing their privacy protection. Additionally, our system requires no
+            wearable devices, buttons, or charging.
+            <br/> <br/>
+            Join us in revolutionizing elder care. Discover how AwakeAI can make a difference in the lives of your loved
+            ones today.
           </Text>
         </Box>
       </Flex>

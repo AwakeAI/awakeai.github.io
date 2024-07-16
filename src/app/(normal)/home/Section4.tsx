@@ -12,7 +12,7 @@ import allin from "../../../../public/images/partners/allin.png";
 import milaPng from "../../../../public/images/partners/mila.png";
 import celsBanner from "../../../../public/images/partners/cels_banner.png";
 import collision from "../../../../public/images/partners/collision.png";
-
+import { useBreakpointValue } from '@chakra-ui/react'
 
 const newsList = [
   {
@@ -60,7 +60,13 @@ const newsList = [
 export const Section4 = () => {
   const color = useColorModeValue("White", "Black");
   const fnColor = useColorModeValue("Black", "White");
-
+  const variant = useBreakpointValue(
+    {
+      base: 1,
+      md: 2,
+      lg: 3
+    }
+  )
   return (
     <Center
       flexDirection="column"
@@ -123,12 +129,12 @@ export const Section4 = () => {
           </Box>
         </Heading>
       </Flex>
-      <Flex w="100%" direction="column">
-        <Swiper
+      <Flex w="100%" maxW="1440px" direction="column">
+        {/* <Swiper
           slidesPerView={"auto"}
           spaceBetween={70}
           centeredSlides
-          initialSlide={2}
+          initialSlide={0}
           pagination={{
             clickable: true,
           }}
@@ -136,7 +142,7 @@ export const Section4 = () => {
 
         >
           {newsList.map((item, index) => (
-            <SwiperSlide key={index} style={{ width: `${item.width}px`, paddingRight: "30px" }}>
+            <SwiperSlide key={index}>
               <Flex direction="column" alignItems="start" justifyContent="start" h="100%">
                 <Box
                   alignSelf="center"
@@ -169,7 +175,50 @@ export const Section4 = () => {
               </Flex>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+      <Swiper
+        slidesPerView={variant}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+          {newsList.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Flex direction="column" alignItems="start" justifyContent="start" px="30px" h="100%">
+                <Box
+                  alignSelf="center"
+                  borderRadius="30px"
+                  h="250px"
+                  bg={color}
+                  rounded="30px"
+                  overflow="hidden"
+                  mb="22px"
+                  sx={{
+                    img: {
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                    },
+                  }}
+                >
+                  <Image alt="" src={item.img} width={256} height={249} draggable={false} />
+                </Box>
+                <Heading fontSize="24px" lineHeight="28px" fontWeight={400} textAlign="left" mb="32px">
+                  {item.title}
+                </Heading>
+                <Text fontSize="16px" lineHeight="19px" fontWeight={300} mb="40px">
+                  {item.date}
+                </Text>
+                <Link href={`/activity?id=${item.id}`} fontSize="20px" lineHeight="24px" fontWeight={500} color="#FF9900" mt="auto">
+                  Read more
+                </Link>
+              </Flex>
+            </SwiperSlide>
+          ))}
+      </Swiper>
       </Flex>
     </Center>
   );

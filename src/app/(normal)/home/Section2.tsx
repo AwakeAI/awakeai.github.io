@@ -7,7 +7,7 @@ export const Section2: FC = () => {
   return (
     <Center
       w="100%"
-      h="calc(100svh - 122px)"
+      minH="calc(100svh - 122px)"
       pos="relative"
       sx={{
         ".img-bg": {
@@ -44,11 +44,9 @@ export const Section2: FC = () => {
         fill
         draggable={false}
       />
-      <Grid
-        templateColumns={{ base: "repeat(1, fr)", lg: "repeat(2, 1fr)" }}
+      <Box
+        w={{ base: "80%", lg: "60%" }}
         mt="62px"
-        columnGap="30px"
-        rowGap="30px"
         sx={{
           ".img": {
             // h: "423px",
@@ -60,15 +58,14 @@ export const Section2: FC = () => {
         backdropFilter='auto' backdropBlur='8px'
       >
         <Flex
-          pos="relative"
           direction="column"
           zIndex={2}
           color="#000"
           w="100%"
           h="100%"
-          maxW="700px"
           px="30px"
           pb="70px"
+          mt="10px"
           justify="center"
         >
           <Text
@@ -82,7 +79,7 @@ export const Section2: FC = () => {
             ABOUT US
           </Text>
           <Heading
-            w={{ base: "100%", lg: "1440px" }}
+            w="100%"
             fontSize={{ base: "28px", lg: "45px" }}
             fontWeight={700}
             lineHeight={{ base: "30px", lg: "50px" }}
@@ -115,7 +112,6 @@ export const Section2: FC = () => {
             color="#FFF"
             fontSize="20px"
             cursor="pointer"
-            mt="36px"
             _hover={{
               textDecoration: "none",
             }}
@@ -124,7 +120,7 @@ export const Section2: FC = () => {
           </Link>
         </Flex>
 
-      </Grid>
+      </Box>
 
     </Center>
   );

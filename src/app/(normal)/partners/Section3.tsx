@@ -195,7 +195,7 @@ export const Section3: FC = () => {
       <Flex
         w="100%"
         maxW="1440px"
-        pl={{base: "21px", lg: "130px"}}
+        pl={{base: "21px", lg: "30px"}}
         pt="56px"
         pb={{base: "45px", lg: "80px"}}
         direction="column"
