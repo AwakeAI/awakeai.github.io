@@ -1,5 +1,5 @@
 {
-  "name": "awakeai-home",
+  "name": "seysoai-home",
   "version": "5.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "rxjs": "^7.8.1",
     "stylis": "^4.3.2",
     "stylis-plugin-rtl": "^2.1.1",
+    "next-intl": "^3.15.0",
     "swiper": "^11.1.1",
     "reaptcha": "^1.12.1",
     "gh-pages": "^6.0.0"

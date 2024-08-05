@@ -20,17 +20,13 @@ import {MoonIcon, SunIcon} from '@chakra-ui/icons'
 
 import {Link} from '@chakra-ui/react';
 import Image from "next/image";
-// import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from "next-intl";
 
 const list = [
 
   {label: "About Us", href: "/about"},
   {label: "Partners", href: "/partners"},
   {label: "Activity", href: "/activity"},
-  // { label: "Partners", href: "/team" },
-  // { label: "Team", href: "/story" },
-  // { label: "News", href: "/story" },
-  // { label: "Contact", href: "/contact" },
   {label: "Careers", href: "/careers"},
 ];
 
@@ -38,9 +34,8 @@ const list = [
 export const Header: FC = () => {
   const {isOpen, onOpen, onClose} = useDisclosure();
   const {colorMode, toggleColorMode} = useColorMode()
-
+  const t = useTranslations("Index");
   const btnRef = React.useRef();
-  // const t = useTranslations('Index');
   return (
     <Center
       w="100%"
@@ -80,12 +75,12 @@ export const Header: FC = () => {
         >
           {colorMode === 'light' ?
             <>
-              <Image className="img m" src="/images/logo-black.png" alt="logo" width={420} height={88}/>
-              <Image className="img d" src="/images/logo-black.png" alt="logo" width={420} height={88}/>
+              <Image className="img m" src="/images/logo-black.png" alt="logo" width={640} height={200}/>
+              <Image className="img d" src="/images/logo-black.png" alt="logo" width={640} height={200}/>
             </> :
             <>
-              <Image className="img m" src="/images/logo.png" alt="logo" width={420} height={88}/>
-              <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88}/>
+              <Image src="/images/logo.png" alt="logo" width={640} height={200}/>
+              <Image src="/images/logo.png" alt="logo" width={640} height={200}/>
             </>
           }
         </Box>
@@ -122,7 +117,7 @@ export const Header: FC = () => {
                        textDecoration: "none",
                        color: "#FF9900",
                      }}>
-                  {value.label}
+                  {t(value.label)}
                 </Box>
               );
             })}
@@ -191,12 +186,12 @@ export const Header: FC = () => {
                     }}
                   >
                     {colorMode === 'light' ? <><Image className="img m" src="/images/logo-black.png" alt="logo"
-                                                      width={420} height={88}/><Image className="img d"
+                                                      width={640} height={88}/><Image className="img d"
                                                                                       src="/images/logo-black.png"
-                                                                                      alt="logo" width={420}
+                                                                                      alt="logo" width={640}
                                                                                       height={88}/></> : <><Image
-                      className="img m" src="/images/logo.png" alt="logo" width={420} height={88}/><Image
-                      className="img d" src="/images/logo.png" alt="logo" width={420} height={88}/></>}
+                      className="img m" src="/images/logo.png" alt="logo" width={640} height={200}/><Image
+                      className="img d" src="/images/logo.png" alt="logo" width={640} height={200}/></>}
 
 
                   </Box>
@@ -216,26 +211,10 @@ export const Header: FC = () => {
                           textAlign="center"
                           onClick={onClose}
                         >
-                          {value.label}
+                          {t(value.label)}
                         </Box>
                       );
                     })}
-                    {/*<Box*/}
-                    {/*  as={"button"}*/}
-                    {/*  bg="#FF9900"*/}
-                    {/*  w="178px"*/}
-                    {/*  h="50px"*/}
-                    {/*  my="60px"*/}
-                    {/*  lineHeight="50px"*/}
-                    {/*  rounded="30px"*/}
-                    {/*  textAlign="center"*/}
-                    {/*  _hover={{*/}
-                    {/*    textDecoration: "none",*/}
-                    {/*  }}*/}
-                    {/*  ml="16px"*/}
-                    {/*>*/}
-                    {/*  Request Demo*/}
-                    {/*</Box>*/}
                   </Flex>
                 </DrawerBody>
               </DrawerContent>

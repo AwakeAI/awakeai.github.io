@@ -60,13 +60,10 @@ export const Footer = () => {
                   </Flex>
                   <Flex direction="row" gap="8px">
                     <Mail size={20}/>
-                    <a href="mailto:info@awakeai.ca">info@awakeai.ca</a>
+                    <a href="mailto:info@seysoai.com">info@seysoai.com</a>
                   </Flex>
                   <Flex direction="row" gap="8px">
-                  <Linkedin size={20}/>
-                    <a href="https://ca.linkedin.com/company/awakeai">
-                      AwakeAI Inc.
-                    </a>
+
                   </Flex>
                 </Flex>
               </Flex>
@@ -78,14 +75,24 @@ export const Footer = () => {
               color="#939EA4"
               lineHeight="24px"
               fontWeight={500}
-              fontSize={{ base: "12px", lg: "14px" }}
+              fontSize={{base: "12px", lg: "14px"}}
               pt="12px"
+              textAlign="center"
             >
-              ©2024 AwakeAI Inc., All Rights Reserved.
+              Copyright ©2024 SEYSOAI TECHNOLOGY CO., LTD. All Rights Reserved.
+              <br></br>
+              ©2024 苏州睿首智能科技有限公司 版权所有
+              <br></br>
+              <a href="https://beian.miit.gov.cn" target="_self" style={{color: "inherit"}}>
+                ICP主体备案号：苏ICP备2024064499号</a> {" "}
+              {/*<img className="link-type-"*/}
+              {/*     src="https://wds-service-1258344699.file.myqcloud.com/20/9429/png/1629634670715841e084bb6e64db4.png?imageMogr2/thumbnail/36x&amp;version=0"*/}
+              {/*     title="" alt="公安备案图标" id="imageModeShow" />*/}
+              {/*苏公网安备 32058202010892号*/}
             </Text>
           </Center>
         </Flex>
-      </Center>
+        </Center>
       </Flex>
     </footer>
   );
