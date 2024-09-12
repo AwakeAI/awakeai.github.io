@@ -28,7 +28,7 @@ export const Section3 = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="24px" lineHeight="29px" fontWeight={700} whiteSpace="nowrap">
-                  Jan. 9-1
+                  January 9-11
                 </Text>
                 <Text fontSize="24px" lineHeight="29px" fontWeight={400} whiteSpace="nowrap">
                   San Francisco
@@ -65,7 +65,7 @@ export const Section3 = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="24px" lineHeight="29px" fontWeight={700} whiteSpace="nowrap">
-                  Nov. 15-16
+                  November 15-16
                 </Text>
                 <Text fontSize="24px" lineHeight="29px" fontWeight={400} whiteSpace="nowrap">
                   San Francisco
@@ -102,7 +102,7 @@ export const Section3 = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="24px" lineHeight="29px" fontWeight={700} whiteSpace="nowrap">
-                  Sep. 27
+                  September 27
                 </Text>
                 <Text fontSize="24px" lineHeight="29px" fontWeight={400} whiteSpace="nowrap">
                   Montreal
@@ -139,7 +139,7 @@ export const Section3 = () => {
               </Text>
               <Flex direction="column">
                 <Text fontSize="24px" lineHeight="29px" fontWeight={700} whiteSpace="nowrap">
-                  Sep. 11
+                  September 11
                 </Text>
                 <Text fontSize="24px" lineHeight="29px" fontWeight={400} whiteSpace="nowrap">
                   Montreal

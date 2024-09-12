@@ -109,7 +109,7 @@ export const Section3 = () => {
                 Broadly Applicable
               </Text>
               <Text fontSize={{ base: "16px", lg: "24px" }} lineHeight={{ base: "19px", lg: "29px" }} fontWeight={400}>
-                The application can be extended to hospitals long-term care facilities and homecare facilities.
+                The application can be extended to hospitals, homecare and long-term care facilities.
               </Text>
             </Flex>
           </Flex>

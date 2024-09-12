@@ -59,7 +59,7 @@ export const Section2 = () => {
             setting a new standard in elder care.
             <br/> <br/>
             To ensure privacy, our large model algorithm goes beyond skeleton technology by anonymizing the identity
-            information of older people, maximizing their privacy protection. Additionally, our system requires no
+            information of older adults, maximizing their privacy protection. Additionally, our system requires no
             wearable devices, buttons, or charging.
             <br/> <br/>
             Join us in revolutionizing elder care. Discover how AwakeAI can make a difference in the lives of your loved

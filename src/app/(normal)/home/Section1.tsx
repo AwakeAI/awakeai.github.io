@@ -26,7 +26,7 @@ export const Section1 = () => {
               lg: "block",
             },
           },
-          "&.mobile": {
+          "&.mobile": { 
             display: {
               base: "block",
               lg: "none",
@@ -85,7 +85,7 @@ export const Section1 = () => {
           textAlign={{ base: "center", md: "left" }}
           lineHeight={{ base: "18px", lg: "21px" }}
         >
-          {`Stay informd with concise updates on your loved ones' well-being`}
+          {`Stay informed with concise updates on your loved ones' well-being`}
         </Text>
         <Link
           href="/about"
