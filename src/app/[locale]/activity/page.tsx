@@ -1,7 +1,7 @@
 "use client";
 
 import { Flex } from "@chakra-ui/react";
-import { Section1 } from "../../(normal)/activity/Section1";
+import { Section1 } from "@/app/(normal)/activity/Section1";
 import { Section2 } from "@/app/(normal)/activity/Section2";
 import { Section3 } from "@/app/(normal)/activity/Section3";
 import { useMemo, useState, Suspense } from "react";

@@ -9,7 +9,7 @@ import { Section3 } from "@/app/(normal)/careers/Section3";
 import { Subscribe } from "@/app/(normal)/home/Subscribe";
 import { List } from "@/app/(normal)/careers/List";
 import { useState } from "react";
-import { CurrentPosition } from "../../(normal)/careers/CurrentPosition";
+import { CurrentPosition } from "@/app/(normal)/careers/CurrentPosition";
 import { PostList } from "@/app/(normal)/careers/PostList";
 import { CurrentPositions } from "@/app/(normal)/careers/CurrentPositions";
 

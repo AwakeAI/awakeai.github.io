@@ -24,10 +24,10 @@ import {useLocale, useTranslations} from "next-intl";
 
 const list = [
 
-  {label: "About Us", href: "/about"},
-  {label: "Partners", href: "/partners"},
-  {label: "Activity", href: "/activity"},
-  {label: "Careers", href: "/careers"},
+  {label: "About Us", href: "/cn/about"},
+  {label: "Partners", href: "/cn/partners"},
+  {label: "Activity", href: "/cn/activity"},
+  {label: "Careers", href: "/cn/careers"},
 ];
 
 

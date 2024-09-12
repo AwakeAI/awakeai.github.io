@@ -3,9 +3,12 @@
 import {Box, Center, Flex, Text, useColorModeValue} from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import {useTranslations} from "next-intl";
 
 export const Section3 = () => {
   const color = useColorModeValue("Black", "gray.200");
+  const t = useTranslations("About");
+  const c = useTranslations("Common");
   return (
     <Center w="100%" pos="relative" flexDirection="column">
       <Flex
@@ -27,7 +30,7 @@ export const Section3 = () => {
           textTransform="uppercase"
           letterSpacing="0.5em"
         >
-          Competitive Advantages
+          {t("Competitive Advantages")}
         </Text>
 
         <Text
@@ -37,7 +40,7 @@ export const Section3 = () => {
           lineHeight={{ base: "31px", lg: "54px" }}
           fontWeight={400}
         >
-          Seamless Care, Zero Hassle
+          {t("Seamless Care, Zero Hassle")}
         </Text>
         <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
         <Flex
@@ -60,10 +63,12 @@ export const Section3 = () => {
                 fontWeight={500}
                 color="#FF9900"
               >
-                Fully Autonomous
+                {t("Fully Autonomous")}
               </Text>
               <Text fontSize={{ base: "16px", lg: "24px" }} lineHeight={{ base: "19px", lg: "29px" }} fontWeight={400}>
-                No wearable and manual operations are needed, no extra burden on any user.
+                {c(
+                  "No wearable and manual operations are needed, no extra burden on any user",
+                )}
               </Text>
             </Flex>
           </Flex>
@@ -83,10 +88,12 @@ export const Section3 = () => {
                 fontWeight={500}
                 color="#FF9900"
               >
-                Privacy Preserving
+                {t("Privacy Preserving")}
               </Text>
               <Text fontSize={{ base: "16px", lg: "24px" }} lineHeight={{ base: "19px", lg: "29px" }} fontWeight={400}>
-                Video will be processed locally, without video transmission, leaving no concern of leak.
+                {t(
+                  "Video will be processed locally, without video transmission, leaving no concern of leak",
+                )}
               </Text>
             </Flex>
           </Flex>
@@ -106,10 +113,12 @@ export const Section3 = () => {
                 fontWeight={500}
                 color="#FF9900"
               >
-                Broadly Applicable
+                {c("Broadly Applicable")}
               </Text>
               <Text fontSize={{ base: "16px", lg: "24px" }} lineHeight={{ base: "19px", lg: "29px" }} fontWeight={400}>
-                The application can be extended to hospitals long-term care facilities and homecare facilities.
+                {c(
+                  "The application can be extended to hospitals long-term care facilities and homecare facilities",
+                )}
               </Text>
             </Flex>
           </Flex>

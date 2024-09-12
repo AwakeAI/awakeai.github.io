@@ -21,13 +21,13 @@ import {
   useColorMode
 } from "@chakra-ui/react";
 import Image from "next/image";
-import centechPng from "../../../../public/images/partners/centech.png";
-import eeconomiePng from "../../../../public/images/partners/eeconomie.png";
-import mcgillPng from "../../../../public/images/partners/mcgill.png";
-import medteqPng from "../../../../public/images/partners/medteq.png";
-import milaPng from "../../../../public/images/partners/mila.png";
-import ms2Png from "../../../../public/images/partners/m3.png";
-import nextPng from "../../../../public/images/partners/next_3.png";
+import centechPng from "@/images//partners/centech.png";
+import eeconomiePng from "@/images//partners/eeconomie.png";
+import mcgillPng from "@/images//partners/mcgill.png";
+import medteqPng from "@/images//partners/medteq.png";
+import milaPng from "@/images//partners/mila.png";
+import ms2Png from "@/images//partners/m3.png";
+import nextPng from "@/images//partners/next_3.png";
 import {accordionAnatomy} from "@chakra-ui/anatomy";
 
 const partners = [

@@ -8,6 +8,7 @@ export const Section2 = () => {
   const router = useRouter();
   const color = useColorModeValue("Black", "gray.200");
 
+
   return (
     <>
       <Center w="100%" pos="relative">
