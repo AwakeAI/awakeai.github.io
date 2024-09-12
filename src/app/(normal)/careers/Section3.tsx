@@ -67,14 +67,21 @@ export const Section3 = () => {
           target="hidden_iframe"
           onSubmit={(e) => {
             setSubmitted(true);
+
             const sendPromise = new Promise((resolve, reject) => {
-              setTimeout(() => resolve(200), 200)
+              setTimeout(() => {
+                resolve(200); // Resolve the promise after 200 ms
+              }, 200);
+            });
+
+            sendPromise.then(() => {
+              // Reset the form fields and submission status only after the promise resolves successfully
               setSubmitted(false);
               setName("");
               setEmail("");
               setMessage("");
               setFile("");
-            })
+            });
 
             toast.promise(sendPromise, {
               success: { title: 'Form submitted!', description: 'Looks great' },
@@ -107,7 +114,7 @@ export const Section3 = () => {
                 <FormLabel color={fnColor}>
                   <Field>Subject</Field>
                 </FormLabel>
-                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!" marginTop="5" disabled/>
+                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!" marginTop="5"/>
               </FormControl>
             </Flex>
             <FormControl>

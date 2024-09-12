@@ -82,17 +82,24 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
             target="hidden_iframe"
             onSubmit={(e) => {
               setSubmitted(true);
-              const sendPromise = new Promise((resolve) => {
-                setTimeout(() => resolve(200), 200)
+
+              const sendPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  resolve(200); // Resolve the promise after 200 ms
+                }, 200);
+              });
+
+              sendPromise.then(() => {
+                // Reset the form fields and submission status only after the promise resolves successfully
                 setSubmitted(false);
                 setName("");
                 setEmail("");
-              })
+              });
 
               toast.promise(sendPromise, {
-                success: {title: 'Form submitted!', description: 'Looks great'},
-                error: {title: 'Form submission failed', description: 'Something wrong'},
-                loading: {title: 'Submitting!', description: 'Please wait'},
+                success: { title: 'Form submitted!', description: 'Looks great' },
+                error: { title: 'Form submission failed', description: 'Something wrong' },
+                loading: { title: 'Submitting!', description: 'Please wait' },
               })
             }}
           >
@@ -114,7 +121,7 @@ export const Section3: FC<{ onChangeActivity: (key: string) => void; activities:
                        focusBorderColor='white'/>
               </FormControl>
               <Input id="subject" type="text" name="entry.537245108" required value="News Letter Subscribe"
-                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" disabled
+                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0"
                      style={{display: "none"}}/>
               {/*<FormControl style={{margin: "25px 0 30px"}}>*/}
               {/*  <Checkbox borderColor="#000">*/}
