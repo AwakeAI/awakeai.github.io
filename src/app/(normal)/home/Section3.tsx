@@ -165,7 +165,7 @@ export const Section3 = () => {
               padding={{ base: "0.6rem 1.5rem 0 1.5rem", md: "1.5rem 1.5rem 0 1.5rem" }}
               lineHeight="1.6rem"
               color={fnColor}>
-              The application can be extended to hospitals long-term care facilities and homecare facilities.
+              The application can be extended to hospitals, homecare and long-term care facilities.
             </Text>
           </Box>
 
