@@ -15,6 +15,7 @@ import {
   useToast, Select, Textarea
 } from "@chakra-ui/react";
 import Reaptcha from "reaptcha";
+import {useTranslations} from "next-intl";
 
 const Field: FC<PropsWithChildren> = ({children}) => {
   return (
@@ -33,6 +34,7 @@ export const ContactUs: FC = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [file, setFile] = useState("");
+  const c = useTranslations("Contact");
   const toast = useToast()
 
   const handleVerify = () => {
@@ -57,7 +59,7 @@ export const ContactUs: FC = () => {
           mb={{ base: "94px", lg: "34px" }}
           textAlign={{ base: "center", lg: "left" }}
         >
-          Contact Us
+          {c("Contact Us")}
         </Text>
         <Heading
           fontSize={{base: "28px", lg: "45px"}}
@@ -65,7 +67,7 @@ export const ContactUs: FC = () => {
           letterSpacing="-0.05em"
           fontWeight={700}
         >
-          Get in touch with us
+          {c("Get in touch with us")}
         </Heading>
         <form
           name="gform"
@@ -75,15 +77,21 @@ export const ContactUs: FC = () => {
           target="hidden_iframe"
           onSubmit={(e) => {
             setSubmitted(true);
+
             const sendPromise = new Promise((resolve, reject) => {
-              setTimeout(() => resolve(200), 200)
+              setTimeout(() => {
+                resolve(200); // Resolve the promise after 200 ms
+              }, 200);
+            });
+
+            sendPromise.then(() => {
+              // Reset the form fields and submission status only after the promise resolves successfully
               setSubmitted(false);
               setName("");
               setEmail("");
               setMessage("");
-              setSubject("");
               setFile("");
-            })
+            });
 
             toast.promise(sendPromise, {
               success: {title: 'Form submitted!', description: 'Looks great'},
@@ -101,51 +109,52 @@ export const ContactUs: FC = () => {
             >
               <FormControl>
                 <FormLabel color={fnColor} fontSize="20px">
-                  <Field>Your Name</Field>
+                  <Field>{c("Your Name")}</Field>
                 </FormLabel>
-                <Input id="name" type="text" name="entry.1208597498" required placeholder="Name" value={name}
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="姓名" value={name}
                        onChange={(e) => setName(e.target.value)} marginTop="5"/>
               </FormControl>
               <FormControl>
                 <FormLabel color={fnColor}>
-                  <Field>Your Email</Field>
+                  <Field>{c("Your Email")}</Field>
                 </FormLabel>
-                <Input id="email" type="email" name="entry.1569009990" required placeholder="Email Address"
+                <Input id="email" type="email" name="entry.1569009990" required placeholder="邮箱"
                        value={email} marginTop="5"
                        onChange={(e) => setEmail(e.target.value)}/>
               </FormControl>
 
               <FormControl style={{ bottom: "-7px" }}>
                 <FormLabel color={fnColor}>
-                  <Field>Subject</Field>
+                  <Field>{c("Subject")}</Field>
                 </FormLabel>
                 <Input id="subject" type="text" name="entry.537245108" required value={subject}
                        variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" disabled
                        style={{display: "none"}}/>
                 <Select onChange={(e) => setSubject(e.target.value)} marginTop="5"
-                        placeholder="Select a Subject">
-                  <option value="demo">Request a Demo!</option>
-                  <option value="adapter">Become an early adapter!</option>
-                  <option value="job">Ask for a job opportunity!</option>
+                        placeholder="主题">
+                  <option value="demo">需要一个演示!</option>
+                  <option value="adapter">成为早期用户!</option>
+                  <option value="job">加入睿首!</option>
                 </Select>
               </FormControl>
             </Flex>
             <FormControl style={{display: `${subject === 'job' ? "block" : "none"}`}}>
               <FormLabel color={fnColor}>
-                <Field>Provide a link to your Resume or CV</Field>
+                <Field>提供一个可下载的简历地址</Field>
               </FormLabel>
-              <Input id="file" type="text" name="entry.1679365074" placeholder="link" value={file}
+              <Input id="file" type="text" name="entry.1679365074" placeholder="链接" value={file}
                      onChange={(e) => setFile(e.target.value)}
                      marginTop="5"/>
-              <Text fontSize="10px" fontWeight={400} textAlign="justify">
-                You can create a shared PDF file using Google Drive, Dropbox, or OneDrive. Once the file is uploaded, generate a shareable link and post that link here.
+              <Text fontSize="11px" fontWeight={400} textAlign="justify">
+                您可以使用百度云盘或微云创建一个共享PDF文件。上传文件后，生成一个可共享的链接并将该链接贴在这里
               </Text>
             </FormControl>
+
             <FormControl>
               <FormLabel color={fnColor}>
-                <Field>Your Message</Field>
+                <Field>{c("Your Message")}</Field>
               </FormLabel>
-              <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
+              <Textarea placeholder="留言" id="message" name="entry.1889589232"
                         value={message} onChange={(e) => setMessage(e.target.value)}/>
             </FormControl>
             <Box
@@ -165,7 +174,7 @@ export const ContactUs: FC = () => {
               }}
               disabled={!verified}
             >
-              Submit
+              {c("Send it")}
             </Box>
             <Reaptcha
               sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"

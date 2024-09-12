@@ -26,7 +26,7 @@ const list = [
 
   {label: "About Us", href: "/cn/about"},
   {label: "Partners", href: "/cn/partners"},
-  {label: "Activity", href: "/cn/activity"},
+  // {label: "Activity", href: "/cn/activity"},
   {label: "Careers", href: "/cn/careers"},
 ];
 

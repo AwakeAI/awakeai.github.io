@@ -11,24 +11,25 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import eeconomie from "@/images/partners/eeconomie.png";
+import aai from "@/images/partners/aai.png";
 import mcgillPng from "@/images/partners/mcgill.png";
 import milaPng from "@/images/partners/mila.png";
 import ms2Png from "@/images/partners/m3.png";
-import medteq from "@/images/partners/medteq.png";
+import dongwu from "@/images/partners/dongwu.png";
 import agewell from "@/images/partners/agewell.png";
 import next from "@/images/partners/next_3.png";
-import mitacs from "@/images/partners/mitacs.png";
+import mp from "@/images/partners/mp.png";
+import {useTranslations} from "next-intl";
 
 const partners = [
   milaPng,
+  aai,
+  mp,
+  dongwu,
   mcgillPng,
   next,
-  eeconomie,
   ms2Png,
-  medteq,
   agewell,
-  mitacs,
 ];
 
 export const Partners: FC = () => {
@@ -36,6 +37,7 @@ export const Partners: FC = () => {
   const fnColor = useColorModeValue("Black", "White");
   const borderColor = useColorModeValue("gray.300", "White");
   const { colorMode, toggleColorMode } = useColorMode()
+  const t = useTranslations("Index");
 
   return (
     <Center w="100%" bg={color} color={fnColor} flexDirection="column">
@@ -55,7 +57,7 @@ export const Partners: FC = () => {
           mb={{ base: "94px", lg: "34px" }}
           textAlign={{ base: "center", lg: "left" }}
         >
-          Partners
+          {t("Partners")}
         </Text>
         <Heading
           w={{ base: "100%", lg: "800px" }}
@@ -65,11 +67,7 @@ export const Partners: FC = () => {
           letterSpacing="-5%"
           textAlign="left"
         >
-          Proudly{" "}
-          <Box as="span" color="#FF9900">
-            Collaborate
-          </Box>{" "}
-          with
+          合作伙伴
         </Heading>
       </Flex>
       <Flex
@@ -79,7 +77,6 @@ export const Partners: FC = () => {
         align="left"
         flexWrap="wrap"
         justify="center"
-        //justify="space-between"
         gap="20px"
         pb="60px"
       >

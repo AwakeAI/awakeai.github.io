@@ -21,8 +21,8 @@ import {
   useColorMode
 } from "@chakra-ui/react";
 import Image from "next/image";
-import centechPng from "@/images//partners/centech.png";
-import eeconomiePng from "@/images//partners/eeconomie.png";
+import dongwu from "@/images//partners/dongwu.png";
+import mp from "@/images//partners/mp.png";
 import mcgillPng from "@/images//partners/mcgill.png";
 import medteqPng from "@/images//partners/medteq.png";
 import milaPng from "@/images//partners/mila.png";
@@ -45,8 +45,8 @@ const partners = [
   },
   {
     id: 3,
-    src: nextPng,
-    title: "@Next36",
+    src: dongwu,
+    title: "@AwakeAI",
     description:
       "Lulan Shen, the founder and CEO of AwakeAI Inc, has graduated in the 2023 NEXT36 program and awarded CA$50k by the YFF Fund.",
     date: "Participated in Summer 2023",
@@ -73,42 +73,12 @@ const partners = [
     date: "Last update 2023",
   },
   {
-    id: 5,
-    src: centechPng,
-    title: "@Mila",
-    description:
-      'AwakeAI Inc. has been awarded the "Startup Mila" status by the Mila Startup Committee.',
-    date: "Admitted in Sep. 2023",
-  },
-  {
-    id: 22,
-    type: 'line'
-  },
-  {
     id: 6,
-    src: eeconomiePng,
+    src: mp,
     title: "@BI",
     description:
       "The committee has approved our application. A CA$46k grant has been awarded to us in 2023.",
     date: "Last Update in 2023",
-  },
-  {
-    id: 23,
-    type: 'line'
-  },
-  {
-    id: 7,
-    src: medteqPng,
-    title: "@MEDTEQ+",
-    description: "AwakeAI Inc. is a member of MEDTEQ+ community.",
-    date: "Joined in 2023",
-  },
-  {
-    id: 8,
-    src: ms2Png,
-    title: "@Microsoft Founder Program",
-    description: "AwakeAI Inc. has participated in Microsoft Founders program.",
-    date: "Participated in Nov. 2022",
   },
 ];
 
@@ -208,17 +178,17 @@ export const Section3: FC = () => {
           fontWeight={500}
           letterSpacing="0.5em"
         >
-          of AwakeAI Inc.
+          睿首智能 | SeysoAI
         </Text>
         <Text
           fontSize={{base: "24px", lg: "45px"}}
           lineHeight={{base: "29px", lg: "55px"}}
           fontWeight={700}
         >
-          Collaborators & Affiliations
+          合作伙伴
         </Text>
       </Flex>
-      <Grid w="100%" maxW="1440px" columnGap='28px' templateColumns={{
+      <Grid w="100%" maxW="1440px" columnGap='28px' mb="40px" templateColumns={{
         base: '1fr',
         md: '1fr 1px 1fr 1px 1fr'
       }}>

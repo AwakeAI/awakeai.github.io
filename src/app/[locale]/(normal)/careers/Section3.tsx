@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 import Reaptcha from "reaptcha";
+import {useTranslations} from "next-intl";
 const Field: FC<PropsWithChildren> = ({ children }) => {
   return (
     <FormLabel fontSize="20px" lineHeight="16.5px" letterSpacing="-0.05em" fontWeight={400}>
@@ -33,6 +34,8 @@ export const Section3 = () => {
   const [message, setMessage] = useState("");
   const [file, setFile] = useState("");
   const toast = useToast()
+  const t = useTranslations("Careers");
+  const c = useTranslations("Contact");
 
   const handleVerify = () => {
     setVerified(true);
@@ -55,7 +58,7 @@ export const Section3 = () => {
       >
         <Flex direction="column">
         <Heading fontSize={{base: "24px", lg: "45px"}} lineHeight={{base: "29px", lg: "54px"}} fontWeight={400}>
-          Impress Us
+          {t("Apply now")}
         </Heading>
         <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
 
@@ -67,19 +70,26 @@ export const Section3 = () => {
           target="hidden_iframe"
           onSubmit={(e) => {
             setSubmitted(true);
+
             const sendPromise = new Promise((resolve, reject) => {
-              setTimeout(() => resolve(200), 200)
+              setTimeout(() => {
+                resolve(200); // Resolve the promise after 200 ms
+              }, 200);
+            });
+
+            sendPromise.then(() => {
+              // Reset the form fields and submission status only after the promise resolves successfully
               setSubmitted(false);
               setName("");
               setEmail("");
               setMessage("");
               setFile("");
-            })
+            });
 
             toast.promise(sendPromise, {
-              success: { title: 'Form submitted!', description: 'Looks great' },
-              error: { title: 'Form submission failed', description: 'Something wrong' },
-              loading: { title: 'Submitting!', description: 'Please wait' },
+              success: {title: 'Form submitted!', description: 'Looks great'},
+              error: {title: 'Form submission failed', description: 'Something wrong'},
+              loading: {title: 'Submitting!', description: 'Please wait'},
             })
           }}
         >
@@ -91,42 +101,42 @@ export const Section3 = () => {
             >
               <FormControl>
                 <FormLabel color={fnColor} fontSize="20px">
-                  <Field>Your Name</Field>
+                  <Field>{c("Your Name")}</Field>
                 </FormLabel>
-                <Input id="name" type="text" name="entry.1208597498" required placeholder="Type your name here" value={name}
+                <Input id="name" type="text" name="entry.1208597498" required placeholder="姓名" value={name}
                        onChange={(e) => setName(e.target.value)} marginTop="5"/>
               </FormControl>
               <FormControl>
                 <FormLabel color={fnColor}>
-                  <Field>Your Email</Field>
+                  <Field>{c("Your Email")}</Field>
                 </FormLabel>
-                <Input id="email" type="email" name="entry.1569009990" required  placeholder="Email Address" value={email} marginTop="5"
+                <Input id="email" type="email" name="entry.1569009990" required  placeholder="邮箱" value={email} marginTop="5"
                        onChange={(e) => setEmail(e.target.value)}/>
               </FormControl>
               <FormControl style={{display: "none"}}>
                 <FormLabel color={fnColor}>
-                  <Field>Subject</Field>
+                  <Field>{c("Subject")}</Field>
                 </FormLabel>
-                <Input id="subject" type="text" name="entry.537245108" required value="Ask for a job opportunity!" marginTop="5" disabled/>
+                <Input id="subject" type="text" name="entry.537245108" required value="我想加入睿首！" marginTop="5" disabled/>
               </FormControl>
             </Flex>
             <FormControl>
               <FormLabel color={fnColor}>
-                <Field>Provide a link to your Resume or CV</Field>
+                <Field>提供一个可下载的简历地址</Field>
               </FormLabel>
-              <Input id="file" type="text" name="entry.1679365074" placeholder="link" value={file}
+              <Input id="file" type="text" name="entry.1679365074" placeholder="链接" value={file}
                      onChange={(e) => setFile(e.target.value)}
                      marginTop="5"/>
-              <Text fontSize="10px" fontWeight={400} textAlign="justify">
-                You can create a shared PDF file using Google Drive, Dropbox, or OneDrive. Once the file is uploaded, generate a shareable link and post that link here.
+              <Text fontSize="11px" fontWeight={400} textAlign="justify">
+                您可以使用百度云盘或微云创建一个共享PDF文件。上传文件后，生成一个可共享的链接并将该链接贴在这里
               </Text>
             </FormControl>
 
             <FormControl>
               <FormLabel color={fnColor}>
-                <Field>Your Message</Field>
+                <Field>{t("Your Message")}</Field>
               </FormLabel>
-              <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
+              <Textarea placeholder="留言" id="message" name="entry.1889589232"
                         value={message} onChange={(e) => setMessage(e.target.value)}/>
             </FormControl>
             <Box
@@ -146,7 +156,7 @@ export const Section3 = () => {
               }}
               disabled={!verified}
             >
-              Submit
+              {c("Send it")}
             </Box>
             <Reaptcha
               sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"

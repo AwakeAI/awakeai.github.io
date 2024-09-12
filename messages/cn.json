@@ -52,7 +52,7 @@
     "Our Advanced AI Technology": "我们<label>先进的人工智能</label>技术",
     "Our STORY": "我们的故事",
     "Our Team": "我们的团队",
-    "Partners": "合作伙伴",
+    "Partners": "合作共赢",
     "Privacy Preserving": "隐私保护",
     "Product": "产品",
     "Project": "项目",
@@ -124,9 +124,9 @@
   },
   "Careers": {
     "Of SeysoAI Inc": "睿首智能",
-    "Join us": "加入我们",
-    "Introduction1": "在SeysoAI，我们建立了一种文化，支持团队成员，使他们能够发挥其全部潜力，与我们一同成长，并为客户提供更好的服务。我们提供灵活的工作时间和具有竞争力的薪酬。",
-    "Introduction2": "加入我们的尖端团队，利用先进的AI系统监控和增强老年人生活质量，为他们提供更安全、更独立的生活环境。",
+    "Why us": "加入我们",
+    "Introduction1": "在睿首智能，我们建立了一种文化，支持团队成员，使他们能够发挥其全部潜力，与我们一同成长，并为客户提供更好的服务。我们提供灵活的工作时间和具有竞争力的薪酬。",
+    "Introduction2": "加入我们的顶尖团队，利用先进的AI系统监控和增强老年人生活质量，为他们提供更安全、更独立的生活环境。",
     "View all open roles": "查看所有开放职位",
     "Brilliant Minds": "卓越的思想",
     "Work with some of the most brilliant minds in the industry We’recreative, and we have the ingredients to be innovative": "与行业内一些最杰出的思想一起工作。我们充满创造力，并拥有创新的要素。",
@@ -141,7 +141,7 @@
     "Responsibilities:": "职责：",
     "Develop firmware for our state-of-the-art smart visual sensor and future hardware products": "开发我们的最新智能视觉传感器和未来硬件产品的固件。",
     "Maintain and support the current firmware code base": "维护和支持当前的固件代码库。",
-    "Careers at SeysoAI": "SeysoAI的职业生涯",
+    "Careers at SeysoAI": "加入睿首智能",
     "Apply now": "立即申请",
     "Collaborate with cloud and mobile application team on system integration": "与云和移动应用团队合作进行系统集成。",
     "Collaborate with research team on developing embedded deep learning, machine learning, and image/video processing algorithms": "与研究团队合作开发嵌入式深度学习、机器学习和图像/视频处理算法。",
@@ -167,14 +167,14 @@
     "Please submit CV and cover letter to career@SeysoAIca": "请将简历和求职信发送至<label>career@SeysoAI.ca</label>",
     "Platform-specific camera and audio driver integration with our firmware system": "平台特定的摄像头和音频驱动程序集成到我们的固件系统中"
   },
-  "Contract": {
+  "Contact": {
     "Contact Us": "联系我们",
     "Get in touch with us": "与我们联系",
     "Your Email": "您的邮箱",
     "Your Message": "您的信息",
     "Your Name": "您的姓名",
     "Subject": "主题",
-    "Send it": "发送"
+    "Send it": "提交并发送"
   },
   "Subscribe": {
     "Subscribe to stay tuned for news and latest updates Let’s start it!": "订阅以获取最新消息和更新。让我们开始吧！",

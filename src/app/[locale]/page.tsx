@@ -19,11 +19,8 @@ export default function Home() {
       <Section2 />
       <Section3 />
       <Partners />
-      <Section4 />
-      {/*<Section5 />*/}
-      {/*<Section6 />*/}
+      {/*<Section4 />*/}
       <ContactUs />
-      {/*<Subscribe />*/}
     </Flex>
   );
 }

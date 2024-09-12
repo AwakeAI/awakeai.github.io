@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-import { Subscribe } from "@/app/(normal)/home/Subscribe";
 import { Section1 } from "@/app/(normal)/partners/Section1";
 import { Section2 } from "@/app/(normal)/partners/Section2";
 import { Section3 } from "@/app/(normal)/partners/Section3";
@@ -10,7 +9,6 @@ export default function Page() {
       <Section1 />
       <Section2 />
       <Section3 />
-      {/*<Subscribe />*/}
     </Flex>
   );
 }

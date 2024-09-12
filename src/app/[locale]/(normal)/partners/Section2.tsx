@@ -14,7 +14,7 @@ export const Section2 = () => {
           fontWeight={700}
           alignSelf={{base: "flex-start", lg: "center"}}
         >
-          Our Partners
+          合作伙伴
         </Heading>
       </Center>
     </Center>
