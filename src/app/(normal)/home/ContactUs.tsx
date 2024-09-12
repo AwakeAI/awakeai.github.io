@@ -66,7 +66,6 @@ export const ContactUs: FC = () => {
           fontWeight={700}
         >
           Get in touch with us
-          {subject}{message}
         </Heading>
         <form
           name="gform"
