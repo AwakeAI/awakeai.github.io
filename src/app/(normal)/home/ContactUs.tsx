@@ -66,6 +66,7 @@ export const ContactUs: FC = () => {
           fontWeight={700}
         >
           Get in touch with us
+          {subject}{message}
         </Heading>
         <form
           name="gform"
@@ -75,15 +76,22 @@ export const ContactUs: FC = () => {
           target="hidden_iframe"
           onSubmit={(e) => {
             setSubmitted(true);
+
             const sendPromise = new Promise((resolve, reject) => {
-              setTimeout(() => resolve(200), 200)
+              setTimeout(() => {
+                resolve(200); // Resolve the promise after 200 ms
+              }, 200);
+            });
+
+            sendPromise.then(() => {
+              // Reset the form fields and submission status only after the promise resolves successfully
               setSubmitted(false);
               setName("");
               setEmail("");
               setMessage("");
               setSubject("");
               setFile("");
-            })
+            });
 
             toast.promise(sendPromise, {
               success: {title: 'Form submitted!', description: 'Looks great'},
@@ -120,7 +128,7 @@ export const ContactUs: FC = () => {
                   <Field>Subject</Field>
                 </FormLabel>
                 <Input id="subject" type="text" name="entry.537245108" required value={subject}
-                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0" disabled
+                       variant="unstyled" borderBottom="1px solid #fff" borderRadius="0"
                        style={{display: "none"}}/>
                 <Select onChange={(e) => setSubject(e.target.value)} marginTop="5"
                         placeholder="Select a Subject">
@@ -148,6 +156,7 @@ export const ContactUs: FC = () => {
               <Textarea placeholder="Type your message here." id="message" name="entry.1889589232"
                         value={message} onChange={(e) => setMessage(e.target.value)}/>
             </FormControl>
+
             <Box
               as="button"
               bg="#121212"
@@ -167,6 +176,7 @@ export const ContactUs: FC = () => {
             >
               Submit
             </Box>
+
             <Reaptcha
               sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"
               onVerify={handleVerify}
