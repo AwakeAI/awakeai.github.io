@@ -1,14 +1,12 @@
 "use client";
-import {Box, Button, Center, Container, Flex, Grid, GridItem, Heading, Text} from "@chakra-ui/react";
+import {Box, Center, Flex, Heading, Text} from "@chakra-ui/react";
 
-import { useColorMode } from "@chakra-ui/react";
 import {Linkedin, Mail, MapPin} from "react-feather";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <footer>
@@ -81,7 +79,11 @@ export const Footer = () => {
               fontSize={{ base: "12px", lg: "14px" }}
               pt="12px"
             >
-              ©2024 AwakeAI Inc., All Rights Reserved.
+              ©2024 AwakeAI Inc., All Rights Reserved. {" "}
+
+              <Link href="/privacy">
+                View our Privacy Policy and Terms of Service.
+              </Link>
             </Text>
           </Center>
         </Flex>
