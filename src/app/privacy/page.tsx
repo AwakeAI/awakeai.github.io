@@ -412,7 +412,7 @@ export default function Page() {
             <Divider my="4" />
 
             <Text mt="8" fontSize="sm" color="gray.500">
-              For any questions, comments, or complaints about this policy, or to manage your consent you can contact us at  privacy@awakeai.ca.
+              For any questions, comments, or complaints about this policy, or to manage your consent you can contact us at  privacy@awakeai.org.
             </Text>
           </Box>
         </Flex>

@@ -39,7 +39,7 @@ export const CurrentPosition = ({ position }: { position: { title: string; locat
               To Apply:
             </Text>
             <Text fontSize={{ base: "15px", lg: "24px" }} lineHeight="40px" fontWeight={400}>
-              * Please submit CV and cover letter to <a href="mailto: career@awakeai.ca">career@awakeai.ca</a>
+              * Please submit CV and cover letter to <a href="mailto: career@awakeai.org">career@awakeai.org</a>
             </Text>
           </Flex>
         </Flex>

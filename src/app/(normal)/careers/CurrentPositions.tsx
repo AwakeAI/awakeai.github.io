@@ -33,7 +33,7 @@ export const CurrentPositions = ({
           To Apply: <br /> <br />
           <UnorderedList>
             <ListItem>
-              Please submit CV and cover letter to <Link textDecoration="underline">career@awakeai.ca</Link>
+              Please submit CV and cover letter to <Link textDecoration="underline">career@awakeai.org</Link>
             </ListItem>
           </UnorderedList>
         </Text>
