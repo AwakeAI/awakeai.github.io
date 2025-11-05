@@ -177,7 +177,7 @@ export const ContactUs: FC = () => {
             </Box>
 
             <Reaptcha
-              sitekey="6LcIAC0lAAAAACWBqpIMyHTRUti8cQeLLxx1mVK7"
+              sitekey="6LfGZQMsAAAAALULQiSICMthSf4ot2PqPb2-yTxf"
               onVerify={handleVerify}
             />
           </VStack>
