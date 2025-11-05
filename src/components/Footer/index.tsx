@@ -58,7 +58,7 @@ export const Footer = () => {
                   </Flex>
                   <Flex direction="row" gap="8px">
                     <Mail size={20}/>
-                    <a href="mailto:info@awakeai.ca">info@awakeai.ca</a>
+                    <a href="mailto:info@awakeai.org">info@awakeai.org</a>
                   </Flex>
                   <Flex direction="row" gap="8px">
                   <Linkedin size={20}/>
