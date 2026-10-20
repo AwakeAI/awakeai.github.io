@@ -1,27 +1,17 @@
-"use client";
-
-import {Box, Center, Divider, Flex, Heading, Text, List, ListItem, useColorModeValue} from "@chakra-ui/react";
+import {Box, Center, Divider, Flex, Heading, Link, Text, List, ListItem} from "@chakra-ui/react";
 import { Subscribe } from "@/app/(normal)/home/Subscribe";
-import Image from "next/image";
+import { PageBanner } from "@/components/PageBanner";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy and Terms & Conditions",
+};
 
 export default function Page() {
-  const color = useColorModeValue("Black", "gray.200");
   return (
     <Flex w="100%" direction="column">
-      <Center
-        w="100%"
-        pos="relative"
-        sx={{
-          ".img": {
-            width: "100%",
-            height: ["400px", "800px"],
-            objectFit: "cover",
-          },
-        }}
-      >
-        <Image className="img" src="/images/cover.png" alt="about_1_bg" draggable={false} width={1440} height={601} />
-      </Center>
+      <PageBanner src="/images/cover.webp" alt="" />
       <Center w="100%" pos="relative">
         <Flex
           pos="relative"
@@ -37,25 +27,30 @@ export default function Page() {
           alignItems={{base: "flex-start", lg: "center"}}
         >
           <Text
-            fontSize={{ base: "12px", lg: "14px" }}
+            fontSize={{ base: "12px", lg: "13px" }}
             lineHeight={{ base: "18px", lg: "21px" }}
-            fontWeight={500}
+            fontWeight={600}
+            letterSpacing="0.15em"
             textTransform="uppercase"
+            color="fg.muted"
           >
             Version 1.0: 24.07.17
           </Text>
-          <Text
-            fontSize={{base: "26px", lg: "64px"}}
-            lineHeight={{base: "31px", lg: "77px"}}
-            mb={{base: "24px", lg: "34px"}}
-            fontWeight={700}
-            textAlign="center"
+          <Heading
+            as="h1"
+            fontSize={{base: "30px", lg: "52px"}}
+            lineHeight={{base: "38px", lg: "62px"}}
+            mt="8px"
+            mb={{base: "24px", lg: "40px"}}
+            fontWeight={800}
+            letterSpacing="-0.03em"
+            textAlign={{base: "left", lg: "center"}}
           >
             Privacy Policy and Terms & Conditions
-          </Text>
+          </Heading>
 
           <Box>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               Thank you for visiting the AwakeAI website and reviewing our Privacy Policy and Terms & Conditions
               (hereinafter the {'"'}Policy{'"'}).
               <br/><br/>
@@ -117,11 +112,11 @@ export default function Page() {
                 gap={{base: "30px", lg: "40px"}}
                 direction={{base: "column", lg: "row"}}
               >
-                <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="10px" width={{base: "100%", lg:"33%"}}>
+                <Flex direction="column" alignItems="flex-start" gap="10px" width={{base: "100%", lg:"33%"}}>
                   <Heading as="h2" size="lg" mb="4">
                     Objectives
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Respect for privacy and protection of personal data in accordance with the law.<br/><br/>
                     Privacy respect and the protection of personal information are essential to us. Through this Policy, we
                     aim to protect them in accordance with applicable laws.
@@ -143,7 +138,7 @@ export default function Page() {
                   <Heading as="h2" size="lg" mb="4">
                     Personal Information Collected
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text as="div" fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Varies depending on the interaction context, with special attention to sensitive data.
                     <br/><br/>
                     AwakeAI may collect personal information in various forms but will do so only through lawful means
@@ -156,7 +151,7 @@ export default function Page() {
                     <br/><br/>
                     We protect all collected personal information. Among the personal information that may be collected
                     and used, we pay particular attention to:
-                    <List spacing={3} textAlign="justify">
+                    <List spacing={3} textAlign="left">
                       <ListItem>
                         • Name and Contact Information: First and last name, email address, postal address, phone
                         number, and other similar data used for communication with you.
@@ -180,7 +175,7 @@ export default function Page() {
                       </ListItem>
                     </List>
                     Other examples of interaction data we collect include:
-                    <List spacing={3} textAlign="justify">
+                    <List spacing={3} textAlign="left">
                       <ListItem>
                         • Site Visits and Usage Data
                       </ListItem>
@@ -208,13 +203,13 @@ export default function Page() {
                   <Divider my="4" />
                 </Flex>
 
-                <Box w="100%" h="1px" bg={color} display={{base: "block", lg: "none"}}></Box>
+                <Box w="100%" h="1px" bg="border.subtle" display={{base: "block", lg: "none"}}></Box>
 
-                <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="10px" width={{base: "100%", lg:"33%"}}>
+                <Flex direction="column" alignItems="flex-start" gap="10px" width={{base: "100%", lg:"33%"}}>
                   <Heading as="h2" size="lg" mb="4">
                     Consent
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Need for explicit or implicit consent for the collection of personal data. Methods of obtaining consent.
                     <br/><br/>
                     We commit to obtaining consent before collecting an individual{"'"}s personal information. Consent can be
@@ -233,7 +228,7 @@ export default function Page() {
                     person{"'"}s consent to collect, use, or disclose their personal information. We commit to never disclose this
                     type of information except in accordance with this Policy, unless required or permitted by law.
                   </Text>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Customer Responsibility:
                     Our Customers are responsible for complying with any regulations or laws that require providing notice, disclosure, and/or obtaining consent prior to transferring the Personal Data to AwakeAI and its software platform.
                   </Text>
@@ -241,7 +236,7 @@ export default function Page() {
                   <Heading as="h2" size="lg" mb="4">
                     Access and Control
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Rights to verify and correct personal data, with security measures for data protection.<br/><br/>
                     AwakeAI ensures that all personal information in its possession is as accurate, current, and
                     complete as necessary for the purposes for which it is used.<br/><br/>
@@ -262,13 +257,13 @@ export default function Page() {
                   <Divider my="4" />
                 </Flex>
 
-                <Box w="100%" h="1px" bg={color} display={{base: "block", lg: "none"}}></Box>
+                <Box w="100%" h="1px" bg="border.subtle" display={{base: "block", lg: "none"}}></Box>
 
-                <Flex direction="column" alignItems={{base: "flex-start", lg: "center"}} gap="10px" width={{base: "100%", lg:"33%"}}>
+                <Flex direction="column" alignItems="flex-start" gap="10px" width={{base: "100%", lg:"33%"}}>
                   <Heading as="h2" size="lg" mb="4">
                     Collection Purposes
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Provision of services, improvement and development of new products, personalized offers, performance
                     evaluation, legal obligations, and security.
                     <br/><br/>
@@ -277,7 +272,7 @@ export default function Page() {
                     <br/><br/>
                     Here are some reasons why we collect your personal information:
                   </Text>
-                  <List spacing={3} textAlign="justify">
+                  <List spacing={3} textAlign="left">
                     <ListItem>
                       •	To Provide Products and Services: We will collect and process the data and information necessary to fulfill our mission and contractual obligations.
                     </ListItem>
@@ -304,7 +299,7 @@ export default function Page() {
                   <Heading as="h2" size="lg" mb="4">
                     Cookies and Similar Technologies
                   </Heading>
-                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+                  <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
                     Used for website functionality and improved user experience. <br/><br/>
                     AwakeAI may use cookies, internet tags, invisible pixels, log files, or other technologies to
                     collect certain personal information about visitors to our websites, as well as recipients of our
@@ -330,9 +325,9 @@ export default function Page() {
             <Heading as="h2" size="lg" mb="4">
               Use of Data
             </Heading>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text as="div" fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               Operation and Improvement of Services, Customer Support, Security, and Legal Compliance.
-              <List spacing={3} textAlign="justify">
+              <List spacing={3} textAlign="left">
                 <ListItem>
                   •	Providing Products and Services: Data is used to operate products and services and provide users with rich and interactive experiences.
                 </ListItem>
@@ -371,7 +366,7 @@ export default function Page() {
             <Heading as="h2" size="lg" mb="4">
               Sharing with Third Parties
             </Heading>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               Under specific conditions and with consent, including for cloud storage and processing.
               We do not share your personal information with companies, organizations, or individuals outside of AwakeAI, except for our authorized suppliers and partners who need access to the information for the purposes listed in this policy and within its limits, and in the following cases:
               •	With Your Consent.
@@ -387,7 +382,7 @@ export default function Page() {
             <Heading as="h2" size="lg" mb="4">
               Data Retention
             </Heading>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               The period varies based on the nature and utility of the data, with security measures during retention.
               AwakeAI retains the collected data for different periods, depending on their nature and utility in offering our products and services. During the retention period, AwakeAI takes physical and technical measures to ensure the security of data containing personal information.
               Once the retention period has expired, personal information is destroyed. Only statistics or reports containing depersonalized and anonymized data may be kept for extended periods.
@@ -397,22 +392,23 @@ export default function Page() {
             <Heading as="h2" size="lg" mb="4">
               Data Residency
             </Heading>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               Unless otherwise specified, AwakeAI hosts each Customer’s production database in the Customer’s country of residence. AwakeAI may provide certain support Services from its headquarters in Canada, and in such cases, AwakeAI may access a Customer’s data from Canada for purposes of, for example: responding to support requests; fixing software issues; or, providing services to a Customer that can only be performed on the “back end” of our software platform (e.g., correcting errors in specified Customer Data, adding/removing a Customer’s data in the event of a purchase/sale/change in management, or performing simulation testing of our disaster recovery plans).             </Text>
             <Divider my="4" />
 
             <Heading as="h2" size="lg" mb="4">
               Policy Changes
             </Heading>
-            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="justify">
+            <Text fontSize="16px" lineHeight="24px" fontWeight={300} textAlign="left">
               Updates communicated, with archived versions accessible.
               Changes to these rules:
               We make changes to this Privacy Policy from time to time. Any reduction of your rights under this Privacy Policy cannot be applied without your explicit consent. We always indicate the date of the last modifications and allow you to access archived versions for consultation. If the changes are significant, we publish a highlighted notice on our website (including, for some services, through email notification).
             </Text>
             <Divider my="4" />
 
-            <Text mt="8" fontSize="sm" color="gray.500">
-              For any questions, comments, or complaints about this policy, or to manage your consent you can contact us at  privacy@awakeai.org.
+            <Text mt="8" fontSize="sm" color="fg.muted">
+              For any questions, comments, or complaints about this policy, or to manage your consent you can contact us at{" "}
+              <Link href="mailto:privacy@awakeai.org" color="accent.link">privacy@awakeai.org</Link>.
             </Text>
           </Box>
         </Flex>

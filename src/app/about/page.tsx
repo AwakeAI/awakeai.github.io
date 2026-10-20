@@ -3,6 +3,11 @@ import { Section1 } from "@/app/(normal)/about/Section1";
 import { Section2 } from "@/app/(normal)/about/Section2";
 import { Section3 } from "@/app/(normal)/about/Section3";
 import { Subscribe } from "@/app/(normal)/home/Subscribe";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 export default function Page() {
   return (

@@ -1,67 +1,45 @@
 "use client";
-import { Box, Center, Flex, Grid, GridItem, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Grid, Image, Text } from '@chakra-ui/react';
 import React from "react";
 
-const TechnologySection = () =>{
-  const color = useColorModeValue("gray.100", "Black");
-  const color2 = useColorModeValue("gray.100", "Black");
-  const fnColor = useColorModeValue("Black", "White");
+const demos = [
+  { label: "Raw video", src: "/images/raw.gif" },
+  { label: "Human Activities", src: "/images/video.gif" },
+  { label: "Segmentation", src: "/images/segment29062.gif" },
+];
+
+const TechnologySection = () => {
   return (
-
-  <Box className="main-wrapper techn"  backdropFilter='auto' color="black" py={12}>
-      <Grid 
-        templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-         w="100%" gap="3" mb={4}>
-        <GridItem>
-        <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
-          <Text color={fnColor} mb={2}>Raw video</Text>
-          <Box bg={color2} p={2} borderRadius="md">
-            <Flex sx={{
-                transition: 'transform 0.5s', // 动画效果持续0.5秒
-                _hover: {
-                  transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
-                }
-              }} justify="space-between">
-              <Image src="/images/raw.gif" alt="video"/>
-            </Flex>
+    <Grid
+      templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+      w="100%" gap="16px" my={{ base: "8px", lg: "16px" }}>
+      {demos.map((d) => (
+        <Box
+          key={d.src}
+          role="group"
+          bg="bg.surface"
+          border="1px solid"
+          borderColor="border.subtle"
+          rounded="xl"
+          p="10px"
+          boxShadow="card"
+        >
+          <Box rounded="lg" overflow="hidden">
+            <Image
+              src={d.src}
+              alt={`${d.label} demo`}
+              w="100%"
+              transition="transform 0.5s"
+              _groupHover={{ transform: "scale(1.06)" }}
+            />
           </Box>
-        </Flex>
-        </GridItem>
-        <GridItem>
-
-        <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
-          <Text color={fnColor} mb={2} noOfLines={1}>Human Activities</Text>
-          <Box bg={color2} p={2} borderRadius="md">
-            <Flex sx={{
-                transition: 'transform 0.5s', // 动画效果持续0.5秒
-                _hover: {
-                  transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
-                }
-              }} justify="space-between">
-              <Image src="/images/video.gif" alt="video"/>
-            </Flex>
-          </Box>
-        </Flex>
-        </GridItem>
-
-        <GridItem>
-        <Flex direction="column" align="center" bg={color} p={4} borderRadius="md">
-          <Text color={fnColor} mb={2} noOfLines={1}>Segmentation</Text>
-          <Box bg={color2} p={2} borderRadius="md">
-            <Flex sx={{
-                transition: 'transform 0.5s', // 动画效果持续0.5秒
-                _hover: {
-                  transform: 'scale(1.1)', // 鼠标悬停时放大1.3倍
-                }
-              }} justify="space-between">
-              <Image src="/images/segment29062.gif" alt="video"/>
-            </Flex>
-          </Box>
-        </Flex>
-        </GridItem>
-
-      </Grid>
-  </Box>
-)}
+          <Text mt="10px" mb="2px" textAlign="center" fontSize="14px" fontWeight={600} noOfLines={1}>
+            {d.label}
+          </Text>
+        </Box>
+      ))}
+    </Grid>
+  );
+};
 
 export default TechnologySection;

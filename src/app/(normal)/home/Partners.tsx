@@ -1,15 +1,6 @@
 "use client";
 import { FC } from "react";
-import {
-  Center,
-  Flex,
-  Heading,
-  AspectRatio,
-  Box,
-  Text,
-  useColorModeValue,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
 import eeconomie from "../../../../public/images/partners/eeconomie.png";
 import mcgillPng from "../../../../public/images/partners/mcgill.png";
@@ -19,95 +10,50 @@ import medteq from "../../../../public/images/partners/medteq.png";
 import agewell from "../../../../public/images/partners/agewell.png";
 import next from "../../../../public/images/partners/next_3.png";
 import mitacs from "../../../../public/images/partners/mitacs.png";
+import { Accent, SectionHeader } from "@/components/SectionHeader";
 
 const partners = [
-  milaPng,
-  mcgillPng,
-  next,
-  eeconomie,
-  ms2Png,
-  medteq,
-  agewell,
-  mitacs,
+  { name: "Mila", img: milaPng },
+  { name: "McGill University", img: mcgillPng },
+  { name: "Next 36", img: next },
+  { name: "Économie et Innovation Québec", img: eeconomie },
+  { name: "Microsoft for Startups Founders Hub", img: ms2Png },
+  { name: "MEDTEQ+", img: medteq },
+  { name: "AGE-WELL", img: agewell },
+  { name: "Mitacs", img: mitacs },
 ];
 
 export const Partners: FC = () => {
-  const color = useColorModeValue("White", "Black");
-  const fnColor = useColorModeValue("Black", "White");
-  const borderColor = useColorModeValue("gray.300", "White");
-  const { colorMode, toggleColorMode } = useColorMode()
-
   return (
-    <Center w="100%" bg={color} color={fnColor} flexDirection="column">
-      <Flex
-        direction="column"
-        w="100%"
-        maxW="1440px"
-        pt={{ base: "60px", lg: "90px" }}
-        pb={{ base: "60px", lg: "70px" }}
-        px="30px"
-      >
-        <Text
-          fontSize="14px"
-          lineHeight="21px"
-          letterSpacing="0.5em"
-          textTransform="uppercase"
-          mb={{ base: "94px", lg: "34px" }}
-          textAlign={{ base: "center", lg: "left" }}
-        >
-          Partners
-        </Text>
-        <Heading
-          w={{ base: "100%", lg: "800px" }}
-          fontSize={{ base: "28px", lg: "45px" }}
-          fontWeight={700}
-          lineHeight={{ base: "30px", lg: "50px" }}
-          letterSpacing="-5%"
-          textAlign="left"
-        >
-          Proudly{" "}
-          <Box as="span" color="#FF9900">
-            Collaborate
-          </Box>{" "}
-          with
-        </Heading>
-      </Flex>
-      <Flex
-        w="100%"
-        maxW="1440px"
-        px="30px"
-        align="left"
-        flexWrap="wrap"
-        justify="center"
-        //justify="space-between"
-        gap="20px"
-        pb="60px"
-      >
-        {partners.map((p) => {
-          const width = p.width / 1.5;
-          const height = p.height / 1.5;
-          return (
-            <Box
+    <Center w="100%" bg="bg.subtle" flexDirection="column" py={{ base: "64px", lg: "96px" }}>
+      <Flex direction="column" w="100%" maxW="1440px" px={{ base: "20px", lg: "30px" }}>
+        <SectionHeader eyebrow="Partners" title={<>Proudly <Accent>Collaborate</Accent> with</>} />
+        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={{ base: "12px", lg: "20px" }} mt={{ base: "32px", lg: "48px" }}>
+          {partners.map((p) => (
+            <Center
+              key={p.name}
+              h={{ base: "88px", lg: "120px" }}
+              px={{ base: "12px", lg: "24px" }}
+              bg="bg.surface"
               border="1px solid"
-              borderColor={borderColor}
-              borderRadius="4px"
-              borderBottomRightRadius={{base: "32px", md: "64px"}}
-              borderTopLeftRadius={{base: "32px", md: "64px"}}
-              display="flex"
-              flexDirection="column"
-              key={p.src}
-              justifyContent="center"
-              padding={{base: "10px", md: "20px"}}
+              borderColor="border.subtle"
+              rounded="2xl"
+              transition="box-shadow 200ms"
+              _hover={{ boxShadow: "card" }}
             >
-              <Box position="relative" w={{base: width/2,md:width}} h={{base: height/2,md:height}}>
-                <Image src={p.src} alt={p.src} fill={true} style={{
-                  filter: `${colorMode === 'light' ? 'none' : 'grayscale(1) invert(1)'}`
-                }} />
+              <Box
+                pos="relative"
+                w="100%"
+                h="100%"
+                // Logos are drawn for light backgrounds; flatten them to white in dark mode.
+                _dark={{ filter: "grayscale(1) invert(1) brightness(1.1)" }}
+              >
+                <Image src={p.img} alt={p.name} fill sizes="(max-width: 768px) 45vw, 300px" style={{ objectFit: "contain" }} />
               </Box>
-            </Box>
-          );
-        })}
-       </Flex>
+            </Center>
+          ))}
+        </SimpleGrid>
+      </Flex>
     </Center>
   );
 };

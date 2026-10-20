@@ -1,94 +1,80 @@
 "use client";
-import {Box, Center, Flex, Heading, Text} from "@chakra-ui/react";
+import {Box, Flex, Link, SimpleGrid, Stack, Text} from "@chakra-ui/react";
 
 import {Linkedin, Mail, MapPin} from "react-feather";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import NextLink from "next/link";
+import React, {FC, ReactNode} from "react";
+
+const pages = [
+  {label: "About Us", href: "/about"},
+  {label: "Partners", href: "/partners"},
+  {label: "Activity", href: "/activity"},
+  {label: "Careers", href: "/careers"},
+];
+
+const ColumnTitle: FC<{ children: ReactNode }> = ({children}) => (
+  <Text fontSize="13px" fontWeight={600} letterSpacing="0.15em" textTransform="uppercase" color="whiteAlpha.600">
+    {children}
+  </Text>
+);
+
+const linkStyle = {
+  color: "whiteAlpha.800",
+  _hover: {color: "brand.400", textDecoration: "none"},
+};
 
 export const Footer = () => {
-
   return (
-    <footer>
-      <Flex w="100%" bg="#121212" direction="column">
-        <Center w="100%" maxW="100%" overflow="hidden" zIndex={99} transition="200ms">
-        <Flex w="100%" maxW="1440px" px="33px" pt={{ base: "43px", lg: "64px" }} pb="19px" direction="column" gap="40px">
-          <Flex justify="left" alignItems="center" direction={{ base: "column", lg: "row" }} gap={{ base: "58px", lg: "26px" }}>
-            <Flex direction="column" gap="60px">
-              <Box
-                as={Link}
-                href="/"
-                w="auto"
-                h="64px"
-                sx={{
-                  ".img": {
-                    width: "auto",
-                    height: "100%",
-                    "&.d": {
-                      display: {
-                        base: "block",
-                        lg: "block",
-                      },
-                    },
-                  },
-                }}
-              >
-                <Image className="img d" src="/images/logo.png" alt="logo" width={420} height={88} />
-                <Heading
-                  mt="2" mb="8" px="3"
-                  fontSize="10px"
-                  lineHeight="21px"
-                  fontWeight={500}
-                  textTransform="uppercase"
-                  letterSpacing="0.3em"
-                  color="#fff"
-                >
-                  A MILA Startup
-                </Heading>
-              </Box>
-            </Flex>
-            <Flex direction="column" gap={{ base: "68px", lg: "68px" }} color="#ffffff" mt="10px" px="60px">
-              <Flex gap={{ base: "none", lg: "83px" }} justifyContent="space-between">
-                <Flex direction={{ base: "column", lg: "row" }} gap={{ base: "7px", lg: "83px" }}>
-                  <Flex direction="row" gap="8px">
-                    <MapPin size={20}/>
-                    <a href="https://mila.quebec/en/industry/entrepreneurship-lab/">
-                      Montreal, Canada
-                    </a>
-                  </Flex>
-                  <Flex direction="row" gap="8px">
-                    <Mail size={20}/>
-                    <a href="mailto:info@awakeai.org">info@awakeai.org</a>
-                  </Flex>
-                  <Flex direction="row" gap="8px">
-                  <Linkedin size={20}/>
-                    <a href="https://ca.linkedin.com/company/awakeai">
-                      AwakeAI Inc.
-                    </a>
-                  </Flex>
-                </Flex>
-              </Flex>
-            </Flex>
-          </Flex>
-
-          <Center borderTop="1px solid #939EA4">
-            <Text
-              color="#939EA4"
-              lineHeight="24px"
-              fontWeight={500}
-              fontSize={{ base: "12px", lg: "14px" }}
-              pt="12px"
-            >
-              ©2024 AwakeAI Inc., All Rights Reserved. {" "}
-
-              <Link href="/privacy">
-                View our Privacy Policy and Terms of Service.
-              </Link>
+    <Box as="footer" w="100%" bg="#0B0B0D" color="white" borderTop="1px solid" borderColor="whiteAlpha.100">
+      <Flex w="100%" maxW="1440px" mx="auto" px={{base: "20px", lg: "30px"}} pt={{base: "48px", lg: "64px"}} pb="24px"
+            direction="column" gap={{base: "40px", lg: "56px"}}>
+        <Flex direction={{base: "column", lg: "row"}} justify="space-between" gap="40px">
+          <Stack spacing="12px">
+            <Box as={NextLink} href="/" aria-label="AwakeAI home" display="block" h="44px"
+                 sx={{".img": {width: "auto", height: "100%"}}}>
+              <Image className="img" src="/images/logo.png" alt="AwakeAI" width={420} height={88}/>
+            </Box>
+            <Text fontSize="12px" fontWeight={600} textTransform="uppercase" letterSpacing="0.3em" color="whiteAlpha.700">
+              A MILA Startup
             </Text>
-          </Center>
+            <Text fontSize="15px" color="whiteAlpha.700" maxW="320px">
+              Care anytime, anywhere.
+            </Text>
+          </Stack>
+
+          <SimpleGrid columns={{base: 1, sm: 2}} spacingX="80px" spacingY="32px">
+            <Stack spacing="14px">
+              <ColumnTitle>Company</ColumnTitle>
+              {pages.map((p) => (
+                <Link as={NextLink} key={p.href} href={p.href} {...linkStyle}>
+                  {p.label}
+                </Link>
+              ))}
+            </Stack>
+            <Stack spacing="14px">
+              <ColumnTitle>Contact</ColumnTitle>
+              <Link href="https://mila.quebec/en/industry/entrepreneurship-lab/" isExternal display="flex" alignItems="center" gap="10px" {...linkStyle}>
+                <MapPin size={18}/> Montreal, Canada
+              </Link>
+              <Link href="mailto:info@awakeai.org" display="flex" alignItems="center" gap="10px" {...linkStyle}>
+                <Mail size={18}/> info@awakeai.org
+              </Link>
+              <Link href="https://ca.linkedin.com/company/awakeai" isExternal display="flex" alignItems="center" gap="10px" {...linkStyle}>
+                <Linkedin size={18}/> AwakeAI Inc.
+              </Link>
+            </Stack>
+          </SimpleGrid>
         </Flex>
-      </Center>
+
+        <Flex borderTop="1px solid" borderColor="whiteAlpha.200" pt="20px" direction={{base: "column", md: "row"}}
+              justify="space-between" gap="8px" fontSize={{base: "12px", lg: "14px"}} color="whiteAlpha.600">
+          <Text>©{new Date().getFullYear()} AwakeAI Inc., All Rights Reserved.</Text>
+          <Link as={NextLink} href="/privacy" _hover={{color: "brand.400"}}>
+            Privacy Policy and Terms of Service
+          </Link>
+        </Flex>
       </Flex>
-    </footer>
+    </Box>
   );
 };

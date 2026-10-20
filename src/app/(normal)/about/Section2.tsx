@@ -1,53 +1,45 @@
-"use client";
-
-import {Box, Center, Flex, Text, useColorModeValue} from "@chakra-ui/react";
+import {Box, Center, Flex, Heading, Text} from "@chakra-ui/react";
 import React from "react";
+import {Accent, Eyebrow} from "@/components/SectionHeader";
 
 export const Section2 = () => {
-  const color = useColorModeValue("Black", "gray.200");
   return (
     <Center w="100%" pos="relative">
       <Flex
-        pos="relative"
         direction="column"
-        zIndex={2}
         w="100%"
-        h="100%"
-        maxW="1440px"
-        px={{base: "20px", lg: "130px"}}
-        pt={{base: "56px", lg: "24px"}}
-        pb={{base: "54px", lg: "76px"}}
-        justifyContent="center"
-        alignItems={{base: "flex-start", lg: "center"}}
+        maxW="960px"
+        px={{base: "20px", lg: "30px"}}
+        pt={{base: "16px", lg: "8px"}}
+        pb={{base: "48px", lg: "72px"}}
       >
-        <Text
-          fontSize={{base: "26px", lg: "64px"}}
-          lineHeight={{base: "31px", lg: "77px"}}
-          mb={{base: "24px", lg: "34px"}}
-          fontWeight={700}
+        <Heading
+          as="h1"
+          fontSize={{base: "36px", lg: "60px"}}
+          lineHeight={{base: "44px", lg: "68px"}}
+          mb={{base: "32px", lg: "48px"}}
+          fontWeight={800}
+          letterSpacing="-0.035em"
           textAlign="center"
         >
-          About <span style={{color: "#FF9900"}}>AwakeAI</span>
-        </Text>
+          About <Accent>AwakeAI</Accent>
+        </Heading>
         <Box>
-          <Text fontSize="14px" lineHeight="21px" fontWeight={500} textTransform="uppercase" letterSpacing="0.5em">
-            Mission
-          </Text>
+          <Eyebrow>Mission</Eyebrow>
           <Text
-            pt={{base: "20px", lg: "32px"}}
-            pb={{base: "20px", lg: "30px"}}
-            fontSize={{base: "24px", lg: "45px"}}
-            lineHeight={{base: "29px", lg: "54px"}}
-            fontWeight={400}
+            pt={{base: "12px", lg: "16px"}}
+            fontSize={{base: "24px", lg: "40px"}}
+            lineHeight={{base: "32px", lg: "50px"}}
+            fontWeight={600}
+            letterSpacing="-0.02em"
           >
             Forging the ultimate Companionship for Seniors.
           </Text>
-          <Box w="100%" h="1px" bg={color} my={{base: "20px", lg: "30px"}}></Box>
-          <Text fontSize="20px" lineHeight="30px" fontWeight={400} textAlign="justify">
+          <Box w="100%" h="1px" bg="border.subtle" my={{base: "24px", lg: "32px"}}></Box>
+          <Text fontSize={{base: "17px", lg: "19px"}} lineHeight={{base: "28px", lg: "32px"}} color="fg.muted">
             Founded in Montreal, Canada, and in partnership with Mila. At AwakeAI, we are inspired by the potential of
-            technology
-            to provide not just care but also comfort and peace of mind to both the elderly and their loved ones.
-            We are committed to integrating cutting-edge technology into the daily lives of the elderly, providing
+            technology to provide not just care but also comfort and peace of mind to both the elderly and their loved
+            ones. We are committed to integrating cutting-edge technology into the daily lives of the elderly, providing
             seamless protection for their health and well-being.
             <br/> <br/>
             AwakeAI{"'"}s intelligent caregiving system not only eases the burden on caregivers but also enhances the

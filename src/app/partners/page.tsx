@@ -3,6 +3,12 @@ import { Subscribe } from "@/app/(normal)/home/Subscribe";
 import { Section1 } from "@/app/(normal)/partners/Section1";
 import { Section2 } from "@/app/(normal)/partners/Section2";
 import { Section3 } from "@/app/(normal)/partners/Section3";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Partners",
+};
+
 export default function Page() {
   return (
     <Flex w="100%" direction="column">

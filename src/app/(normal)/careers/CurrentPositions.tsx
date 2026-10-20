@@ -6,11 +6,11 @@ export const CurrentPositions = ({
   position: { title: string; location: string; content: string | any };
 }) => {
   return (
-    <Center w="100%" borderBottom="5px solid #E1E1E1">
+    <Center w="100%" borderBottom="1px solid" borderColor="border.subtle">
       <Flex
         pos="relative"
         zIndex={2}
-        color="#000"
+
         w="100%"
         h="100%"
         maxW="1440px"
@@ -23,7 +23,7 @@ export const CurrentPositions = ({
           Current Positions
         </Heading>
 
-        <Box w="100%" h="1px" bg="#000" mt={{ base: "24px", lg: "30px" }} mb={{ base: "24px", lg: "69px" }}></Box>
+        <Box w="100%" h="1px" bg="border.subtle" mt={{ base: "24px", lg: "30px" }} mb={{ base: "24px", lg: "69px" }}></Box>
 
         <Text fontSize="24px" lineHeight="36px" fontWeight={400}>
           <Text fontWeight={700}>Job Title: {position.title}</Text>
@@ -33,7 +33,7 @@ export const CurrentPositions = ({
           To Apply: <br /> <br />
           <UnorderedList>
             <ListItem>
-              Please submit CV and cover letter to <Link textDecoration="underline">career@awakeai.org</Link>
+              Please submit CV and cover letter to <Link href="mailto:career@awakeai.org" textDecoration="underline">career@awakeai.org</Link>
             </ListItem>
           </UnorderedList>
         </Text>

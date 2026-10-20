@@ -8,24 +8,24 @@ export const PostList = ({
   onChoosePosition: (index: number) => void;
 }) => {
   return (
-    <Center w="100%" borderBottom="5px solid #E1E1E1">
+    <Center w="100%" borderBottom="1px solid" borderColor="border.subtle">
       <Flex
         pos="relative"
         zIndex={2}
-        color="#000"
+
         w="100%"
         h="100%"
         maxW="1440px"
         px={{ base: "20px", lg: "130px" }}
         pt={{ base: "54px", lg: "116px" }}
-        pb={{ base: "32px", lg: "717px" }}
+        pb={{ base: "32px", lg: "96px" }}
         direction="column"
       >
         <Heading fontSize={{ base: "24px", lg: "45px" }} lineHeight={{ base: "29px", lg: "54px" }} fontWeight={400}>
           Careers at AwakeAI
         </Heading>
 
-        <Box w="100%" h="1px" bg="#000" mt={{ base: "24px", lg: "30px" }} mb={{ base: "24px", lg: "33px" }}></Box>
+        <Box w="100%" h="1px" bg="border.subtle" mt={{ base: "24px", lg: "30px" }} mb={{ base: "24px", lg: "33px" }}></Box>
 
         {jobPositions.map((item, index) => (
           <Box key={index}>
@@ -49,7 +49,7 @@ export const PostList = ({
                 Apply now
               </Link>
             </Flex>
-            <Box w="100%" h="1px" bg="#000" mt={{ base: "16px", lg: "35px" }} mb={{ base: "24px", lg: "35px" }}></Box>
+            <Box w="100%" h="1px" bg="border.subtle" mt={{ base: "16px", lg: "35px" }} mb={{ base: "24px", lg: "35px" }}></Box>
           </Box>
         ))}
       </Flex>

@@ -4,207 +4,118 @@ import {
   Center,
   Flex,
   FormControl,
+  FormLabel,
+  Heading,
   Input,
+  Stack,
   Text,
-  useColorModeValue, useToast,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Reaptcha from "reaptcha";
+import {FIELD, GoogleForm} from "@/components/GoogleForm";
+import {Eyebrow} from "@/components/SectionHeader";
+
+const Block: FC<{ label: string; title: string; text: string }> = ({label, title, text}) => (
+  <Flex direction="column" gap="16px">
+    <Eyebrow>{label}</Eyebrow>
+    <Heading as="h2" fontSize={{base: "26px", lg: "36px"}} lineHeight={{base: "32px", lg: "44px"}} fontWeight={700}>
+      {title}
+    </Heading>
+    <Box w="100%" h="1px" bg="border.subtle"></Box>
+    <Text fontSize={{base: "17px", lg: "19px"}} lineHeight={{base: "28px", lg: "32px"}} color="fg.muted" whiteSpace="pre-wrap">
+      {text}
+    </Text>
+  </Flex>
+);
 
 export const Section3: FC<{ onChangeActivity: (key: string) => void; activities: any[]; currentActivity: any }> = ({
   onChangeActivity,
   activities,
   currentActivity,
 }) => {
-  const color = useColorModeValue("#ff9900", "gray.200");
-  const [submitted, setSubmitted] = useState(false);
-  const [verified, setVerified] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const toast = useToast()
-
-  const handleVerify = () => {
-    setVerified(true);
-  };
 
   return (
     <Center w="100%" pos="relative">
       <Flex
-        pos="relative"
-        direction={{ base: "column", lg: "row" }}
-        zIndex={2}
+        direction={{base: "column", lg: "row"}}
         w="100%"
-        h="100%"
-        maxW="1440px"
-        gap="95px"
-        px={{ base: "20px", lg: "146px" }}
-        pt={{ base: "56px", lg: "0" }}
-        pb={{ base: "28px", lg: "76px" }}
-        justifyContent="center"
-        alignItems="center"
+        maxW="1200px"
+        gap={{base: "56px", lg: "72px"}}
+        px={{base: "20px", lg: "30px"}}
+        pb={{base: "64px", lg: "96px"}}
+        alignItems={{base: "stretch", lg: "flex-start"}}
       >
-        <Flex direction="column" gap="108px">
+        <Flex direction="column" gap={{base: "48px", lg: "64px"}} flex="1" minW={0}>
           {currentActivity.content ? (
-            <Flex direction="column" gap="32px">
-              <Text fontSize="14px" lineHeight="21px" fontWeight={500} letterSpacing="0.5em" textAlign="left">
-                Content
-              </Text>
-              <Text fontSize={{ base: "24px", lg: "45px" }} lineHeight={{ base: "29px", lg: "54px" }} fontWeight={400}>
-                {currentActivity.content.title}
-              </Text>
-              <Box w={{ base: "350px", lg: "703px" }} minH="1px" bg={color}></Box>
-              <Text fontSize={{ base: "20px", lg: "24px" }} lineHeight="40px" fontWeight={400} whiteSpace="pre-wrap">
-                {currentActivity.content.text}
-              </Text>
-            </Flex>
+            <Block label="Content" title={currentActivity.content.title} text={currentActivity.content.text}/>
           ) : null}
           {currentActivity.details ? (
-            <Flex direction="column" gap="32px">
-              <Text fontSize="14px" lineHeight="21px" fontWeight={500} letterSpacing="0.5em" textAlign="left">
-                Details
-              </Text>
-              <Text fontSize={{ base: "24px", lg: "45px" }} fontWeight={400}>
-                {currentActivity.details.title}
-              </Text>
-              <Box w={{ base: "350px", lg: "703px" }} minH="1px" bg={color}></Box>
-              <Text fontSize={{ base: "20px", lg: "24px" }} fontWeight={400} whiteSpace="pre-wrap">
-                {currentActivity.details.text}
-              </Text>
-            </Flex>
+            <Block label="Details" title={currentActivity.details.title} text={currentActivity.details.text}/>
           ) : null}
         </Flex>
-        <Flex direction="column" gap="48px">
-          <form
-            name="gform"
-            id="gform"
-            encType="text/plain"
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdZtdBB7319mpu2QSSUQRzk0-KdIO4lbYPQvgw7w4veoGfMpw/formResponse?"
-            target="hidden_iframe"
-            onSubmit={(e) => {
-              setSubmitted(true);
 
-              const sendPromise = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  resolve(200); // Resolve the promise after 200 ms
-                }, 200);
-              });
-
-              sendPromise.then(() => {
-                // Reset the form fields and submission status only after the promise resolves successfully
-                setSubmitted(false);
+        <Flex direction="column" gap="40px" w={{base: "100%", lg: "360px"}} flexShrink={0}>
+          <Box bg="brand.500" color="#111114" rounded="2xl" p="22px" boxShadow="card">
+            <Heading as="h2" fontSize="26px" lineHeight="32px" fontWeight={800} letterSpacing="-0.02em">
+              Subscribe for latest updates
+            </Heading>
+            <Box mt="20px">
+              <GoogleForm submitVariant="dark" onSent={() => {
                 setName("");
                 setEmail("");
-              });
+              }}>
+                <Stack spacing="12px">
+                  <FormControl isRequired>
+                    <FormLabel srOnly>Your Contact Name</FormLabel>
+                    <Input type="text" name={FIELD.name} placeholder="Your Contact Name" value={name}
+                           onChange={(e) => setName(e.target.value)}
+                           bg="white" color="#111114" borderColor="transparent" _placeholder={{color: "gray.500"}}
+                           focusBorderColor="#111114"/>
+                  </FormControl>
+                  <FormControl isRequired>
+                    <FormLabel srOnly>Email Address</FormLabel>
+                    <Input type="email" name={FIELD.email} placeholder="Email Address" value={email}
+                           onChange={(e) => setEmail(e.target.value)}
+                           bg="white" color="#111114" borderColor="transparent" _placeholder={{color: "gray.500"}}
+                           focusBorderColor="#111114"/>
+                  </FormControl>
+                  <input type="hidden" name={FIELD.subject} value="News Letter Subscribe"/>
+                </Stack>
+              </GoogleForm>
+            </Box>
+          </Box>
 
-              toast.promise(sendPromise, {
-                success: { title: 'Form submitted!', description: 'Looks great' },
-                error: { title: 'Form submission failed', description: 'Something wrong' },
-                loading: { title: 'Submitting!', description: 'Please wait' },
-              })
-            }}
-          >
-            <Flex style={{width: "340px", height: "453px"}} direction="column" bg="#ff9900" borderRadius="8px" p="24px">
-              <Text fontSize="30px" lineHeight="31px" fontWeight={700} letterSpacing="-0.02em" textAlign="left" color="#121212">
-                Subscribe for latest updates
-              </Text>
-              <FormControl style={{marginTop: 15, borderColor: "#fff"}}>
-                <Input id="name" type="text" name="entry.1208597498" required placeholder="Your Contact Name" value={name}
-                       onChange={(e) => setName(e.target.value)} marginTop="5"
-                       _placeholder={{ opacity: 1, color: '#fff' }}
-                       focusBorderColor='white'/>
-
-              </FormControl>
-              <FormControl style={{marginTop: 15, borderColor: "#fff"}}>
-                <Input id="email" type="email" name="entry.1569009990" required placeholder="Email Address"
-                       value={email} marginTop="5" onChange={(e) => setEmail(e.target.value)}
-                       _placeholder={{ opacity: 1, color: '#fff' }}
-                       focusBorderColor='white'/>
-              </FormControl>
-              <Input id="subject" type="text" name="entry.537245108" required value="News Letter Subscribe"
-                     variant="unstyled" borderBottom="1px solid #fff" borderRadius="0"
-                     style={{display: "none"}}/>
-              {/*<FormControl style={{margin: "25px 0 30px"}}>*/}
-              {/*  <Checkbox borderColor="#000">*/}
-              {/*    <Text lineHeight="1.05" fontSize="15px" letterSpacing="-0.03em" color="#000000" fontWeight={400}>*/}
-              {/*      I agree with the Terms, Conditions and the Privacy Policy.*/}
-              {/*    </Text>*/}
-              {/*  </Checkbox>*/}
-              {/*</FormControl>*/}
-              <Box
-                as="button"
-                bg="#121212"
-                height="50px"
-                lineHeight="50px"
-                rounded="30px"
-                w="164px"
-                textAlign="center"
-                color="#fff"
-                fontSize="20px"
-                cursor="pointer"
-                mr="auto"
-                style={{margin: "25px 0 30px"}}
-                _hover={{
-                  textDecoration: "none",
-                }}
-                disabled={!verified}
-              >
-                Submit
-              </Box>
-              <Reaptcha
-                sitekey="6LfGZQMsAAAAALULQiSICMthSf4ot2PqPb2-yTxf"
-                onVerify={handleVerify}
-              />
+          {activities.length ? (
+            <Flex direction="column" gap="20px">
+              <Heading as="h2" fontSize="20px" fontWeight={700}>
+                Other Stories
+              </Heading>
+              {activities.map((item) => (
+                <Box
+                  as="button"
+                  type="button"
+                  data-group
+                  key={item.key}
+                  onClick={() => onChangeActivity(item.key)}
+                  textAlign="left"
+                  w="100%"
+                >
+                  <Box pos="relative" w="100%" aspectRatio={340 / 190} bg="white" rounded="xl" overflow="hidden"
+                       border="1px solid" borderColor="border.subtle">
+                    <Image src={item.imgSrc} alt="" fill sizes="360px" draggable={false}
+                           style={{objectFit: "cover"}}/>
+                  </Box>
+                  <Text mt="10px" fontSize="16px" lineHeight="24px" fontWeight={600} noOfLines={2}
+                        _groupHover={{color: "accent.fg"}} transition="color 150ms">
+                    {item.title}
+                  </Text>
+                </Box>
+              ))}
             </Flex>
-            <iframe
-              name="hidden_iframe"
-              id="hidden_iframe"
-              style={{display: "none"}}
-              onLoad={() => !submitted}
-            ></iframe>
-          </form>
-          <Flex direction="column" gap="22px">
-            <Center h="55px">
-              <Text fontSize="22px" lineHeight="23px" fontWeight={700} letterSpacing="-0.02em">
-                  Other Stories
-                </Text>
-              </Center>
-              <Flex direction="column" gap="32px">
-                {activities.map((item) => (
-                  <div
-                    onClick={() => onChangeActivity(item.key)}
-                    key={item.key}
-                    style={{
-                      width: "340px",
-                      height: "226px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <Image
-                      className="img"
-                      src={item.imgSrc}
-                      width={340}
-                      height={190}
-                      alt="activity_bg"
-                      draggable={false}
-                    />
-                    <Text
-                      fontSize="20px"
-                      width="340px"
-                      maxWidth="100%"
-                      style={{
-                        overflow: "hidden",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                      }}
-                    >
-                      {item.title}
-                    </Text>
-                  </div>
-                ))}
-              </Flex>
-            </Flex>
+          ) : null}
         </Flex>
       </Flex>
     </Center>
-);
+  );
 };

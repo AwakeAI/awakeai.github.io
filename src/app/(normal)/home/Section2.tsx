@@ -1,127 +1,63 @@
 import { FC } from "react";
-import {Box, Center, Flex, Grid, Heading, Link, Text} from "@chakra-ui/react";
+import {Box, Button, Center, Flex, Heading} from "@chakra-ui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 import Product from "@/app/(normal)/home/Product";
+import {Accent, Eyebrow} from "@/components/SectionHeader";
 
 export const Section2: FC = () => {
   return (
     <Center
       w="100%"
-      minH="calc(100svh - 122px)"
+      minH="calc(100svh - 72px)"
       pos="relative"
-      sx={{
-        ".img-bg": {
-          pos: "absolute",
-          top: 0,
-          left: 0,
-          userSelect: "none",
-          "&.pc": {
-            display: {
-              base: "none",
-              lg: "block",
-            },
-          },
-          "&.mobile": {
-            display: {
-              base: "block",
-              lg: "none",
-            },
-          },
-        },
-      }}
+      px={{ base: "16px", lg: "30px" }}
+      py={{ base: "64px", lg: "96px" }}
+      overflow="hidden"
     >
       <Image
-        className="img-bg mobile"
-        src="/images/0_0.jpeg"
-        alt="section_2_bg"
+        src="/images/0_0.webp"
+        alt=""
         fill
+        sizes="100vw"
         draggable={false}
-      />
-      <Image
-        className="img-bg pc"
-        src="/images/0_0.jpeg"
-        alt="section_2_bg"
-        fill
-        draggable={false}
+        style={{ objectFit: "cover", userSelect: "none" }}
       />
       <Box
-        w={{ base: "80%", lg: "60%" }}
-        mt="62px"
-        sx={{
-          ".img": {
-            // h: "423px",
-            w: "10%",
-            objectFit: "cover",
-          },
-        }}
-
-        backdropFilter='auto' backdropBlur='8px'
+        pos="relative"
+        w="100%"
+        maxW="1040px"
+        bg="bg.glass"
+        backdropFilter="blur(16px) saturate(140%)"
+        border="1px solid"
+        borderColor="whiteAlpha.500"
+        _dark={{ borderColor: "whiteAlpha.200" }}
+        rounded={{ base: "2xl", lg: "3xl" }}
+        boxShadow="cardHover"
+        px={{ base: "20px", lg: "56px" }}
+        py={{ base: "32px", lg: "56px" }}
       >
-        <Flex
-          direction="column"
-          zIndex={2}
-          color="#000"
-          w="100%"
-          h="100%"
-          px="30px"
-          pb="70px"
-          mt="10px"
-          justify="center"
-        >
-          <Text
-            fontSize="14px"
-            lineHeight="21px"
-            letterSpacing="0.5em"
-            textTransform="uppercase"
-            mb={{ base: "94px", lg: "34px" }}
-            textAlign={{ base: "center", lg: "left" }}
-          >
-            ABOUT US
-          </Text>
+        <Flex direction="column" align={{ base: "center", lg: "flex-start" }} gap={{ base: "16px", lg: "20px" }}>
+          <Eyebrow>About us</Eyebrow>
           <Heading
             w="100%"
-            fontSize={{ base: "28px", lg: "45px" }}
+            fontSize={{ base: "24px", lg: "38px" }}
             fontWeight={700}
-            lineHeight={{ base: "30px", lg: "50px" }}
-            letterSpacing="-5%"
+            lineHeight={{ base: "32px", lg: "48px" }}
             textAlign="left"
-            style={{}}
           >
             Based on cutting-edge AI computer vision technology, which enables more{" "}
-            <Box as="span" color="#FFF">
-              in-depth
-            </Box>{" "}
-            and{" "}
-            <Box as="span" color="#FFF">
-              detailed
-            </Box>{" "}
-            analysis of senior activities in real-time, yielding more comprehensive and accurate results.
+            <Accent>in-depth</Accent> and <Accent>detailed</Accent> analysis of senior activities in real-time,
+            yielding more comprehensive and accurate results.
           </Heading>
 
-
           <Product/>
-          <Link
-            href="/about"
-            bg="#FF9900"
-            height="50px"
-            lineHeight="50px"
-            rounded="30px"
-            mx={{ base: 'auto', md: 0 }}
-            w="164px"
-            textAlign="center"
-            color="#FFF"
-            fontSize="20px"
-            cursor="pointer"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
+
+          <Button as={NextLink} href="/about" variant="brand" size="lg" px="32px">
             Read More
-          </Link>
+          </Button>
         </Flex>
-
       </Box>
-
     </Center>
   );
 };

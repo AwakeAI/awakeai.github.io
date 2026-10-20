@@ -3,28 +3,28 @@ import Image from "next/image";
 
 export const teamList = [
   {
-    avatar: "/images/lulan 1.jpg",
+    avatar: "/assets/images/portrait/lulan.png",
     name: "Lulan Shen",
     post: "Founder and CEO",
     intro:
       "Lulan possesses an M.Sc. degree in Mathematical Modelling and Scientific Computing at the University of Oxford. Three-year work experience as a system engineer in Bosch Automotive for designing vehicle software platforms and vehicle functions.",
   },
   {
-    avatar: "/images/hugh 1.jpg",
+    avatar: "/assets/images/portrait/hugh.png",
     name: "Dr. Hugh Cameron",
     post: "Director and CFO",
     intro:
       "Hugh Cameron is a systems engineer, entrepreneur, startup advisor and investor. After a career as R&D director at Bell-Northern Research and Nortel Networks where he delivered pioneering telephone network management and interactive customer service applications, he became co-founder and CTO of a Canadian company providing outsourced medical transcription and web applications for medical departments, faculties and hospitals. At the time of its sale, Accentus had grown to become Canada’s largest supplier of outsourced transcription services. Hugh received his BSc in mathematics and engineering from Queen’s University and his PhD in applied mathematics from the University of Cambridge.",
   },
   {
-    avatar: "/images/image 2.jpg",
+    avatar: "/assets/images/portrait/ben.png",
     name: "Benjamin Akera",
     post: "Co-Founder and CTO",
     intro:
       "Benjamin is a CoFounder at AwakeAI and a recent Master's graduate in Computer Science at McGill University and Mila - Quebec AI Institute. His research focuses on applying machine learning to benefit society, with applications in climate, healthcare, language, and more.",
   },
   {
-    avatar: "/images/image 3.jpg",
+    avatar: "/assets/images/portrait/egor.png",
     name: "Egor Luhauskikh",
     post: "Business Director",
     intro:
@@ -115,9 +115,6 @@ export const Section3 = () => {
                 >
                   {item.intro}
                 </Text>
-                <Flex alignSelf="flex-end" justifySelf="flex-end" display={{ base: "none", lg: "block" }}>
-                  <Image src="/images/team_2.svg" alt="team_2.svg" width={30} height={30} draggable={false} />
-                </Flex>
               </Flex>
             </Flex>
           ))}

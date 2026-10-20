@@ -3,6 +3,11 @@ import { Section2 } from "@/app/(normal)/careers/Section2";
 import { Section3 } from "@/app/(normal)/careers/Section3";
 import { Banner } from "@/app/(normal)/careers/Banner";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers",
+};
 
 export default function Page() {
   return (

@@ -1,10 +1,10 @@
 "use client";
 
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { Section1 } from "@/app/(normal)/activity/Section1";
 import { Section2 } from "@/app/(normal)/activity/Section2";
 import { Section3 } from "@/app/(normal)/activity/Section3";
-import { useMemo, useState, Suspense } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from 'next/navigation'
 
@@ -24,6 +24,7 @@ function ActivityPage() {
       <Section3
         onChangeActivity={(key) => {
           router.push(`?id=${key}`);
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }}
         activities={activities.filter((item) => activity?.linkKeys && activity?.linkKeys.indexOf(item.key) > -1)}
         currentActivity={activity}
@@ -33,7 +34,7 @@ function ActivityPage() {
 }
 export default function Activity() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Box minH="100vh" />}>
       <ActivityPage />
     </Suspense>
   );

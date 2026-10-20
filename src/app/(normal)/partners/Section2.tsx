@@ -1,18 +1,17 @@
-"use client";
-
 import {Center, Heading} from "@chakra-ui/react";
 import React from "react";
 
 export const Section2 = () => {
 
   return (
-    <Center w="100%">
-      <Center width="100%" maxW="1440px" pt={{ base: "14px", lg: "24px" }} pb={{ base: "13px", lg: "29px" }}>
+    <Center w="100%" px={{ base: "20px", lg: "30px" }}>
+      <Center width="100%" maxW="1440px" pt={{ base: "8px", lg: "8px" }} pb={{ base: "8px", lg: "16px" }}>
         <Heading
-          fontSize={{base: "24px", lg: "64px"}}
-          lineHeight={{base: "29px", lg: "77px"}}
-          fontWeight={700}
-          alignSelf={{base: "flex-start", lg: "center"}}
+          as="h1"
+          fontSize={{base: "36px", lg: "60px"}}
+          lineHeight={{base: "44px", lg: "68px"}}
+          fontWeight={800}
+          letterSpacing="-0.035em"
         >
           Our Partners
         </Heading>

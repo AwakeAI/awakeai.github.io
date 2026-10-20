@@ -1,13 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom styles that extend the template */
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --dark-color: #343a40;
-  --light-color: #f8f9fa;
+html {
+  scroll-behavior: smooth;
+  /* Keep in-page anchors (e.g. /#contact) clear of the fixed header. */
+  scroll-padding-top: 88px;
 }
 
-/* Add any custom styles that extend or override the template here */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

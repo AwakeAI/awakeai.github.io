@@ -1,26 +1,9 @@
 "use client";
 
-import {FC, useEffect, useState} from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Text,
-  createMultiStyleConfigHelpers,
-  GridItem,
-  Grid,
-  useDisclosure,
-  Collapse,
-  useColorModeValue,
-  useColorMode
-} from "@chakra-ui/react";
-import Image from "next/image";
+import {FC, ReactNode} from "react";
+import {Box, Center, Flex, Heading, SimpleGrid, Text} from "@chakra-ui/react";
+import {CalendarIcon} from "@chakra-ui/icons";
+import Image, {StaticImageData} from "next/image";
 import centechPng from "../../../../public/images/partners/centech.png";
 import eeconomiePng from "../../../../public/images/partners/eeconomie.png";
 import mcgillPng from "../../../../public/images/partners/mcgill.png";
@@ -28,9 +11,9 @@ import medteqPng from "../../../../public/images/partners/medteq.png";
 import milaPng from "../../../../public/images/partners/mila.png";
 import ms2Png from "../../../../public/images/partners/m3.png";
 import nextPng from "../../../../public/images/partners/next_3.png";
-import {accordionAnatomy} from "@chakra-ui/anatomy";
+import {SectionHeader} from "@/components/SectionHeader";
 
-const partners = [
+const partners: { id: number; src: StaticImageData; title: string; description: ReactNode; date: string }[] = [
   {
     id: 1,
     src: milaPng,
@@ -40,20 +23,12 @@ const partners = [
     date: "Admitted in Sep. 2023",
   },
   {
-    id: 20,
-    type: 'line'
-  },
-  {
     id: 3,
     src: nextPng,
     title: "@Next36",
     description:
       "Lulan Shen, the founder and CEO of AwakeAI Inc, has graduated in the 2023 NEXT36 program and awarded CA$50k by the YFF Fund.",
     date: "Participated in Summer 2023",
-  },
-  {
-    id: 21,
-    type: 'line'
   },
   {
     id: 4,
@@ -75,14 +50,9 @@ const partners = [
   {
     id: 5,
     src: centechPng,
-    title: "@Mila",
-    description:
-      'AwakeAI Inc. has been awarded the "Startup Mila" status by the Mila Startup Committee.',
-    date: "Admitted in Sep. 2023",
-  },
-  {
-    id: 22,
-    type: 'line'
+    title: "@Centech",
+    description: "AwakeAI Inc. has participated in winter 2023 Centech Accelerator Cohort.",
+    date: "Participated in Winter 2023",
   },
   {
     id: 6,
@@ -91,10 +61,6 @@ const partners = [
     description:
       "The committee has approved our application. A CA$46k grant has been awarded to us in 2023.",
     date: "Last Update in 2023",
-  },
-  {
-    id: 23,
-    type: 'line'
   },
   {
     id: 7,
@@ -112,128 +78,43 @@ const partners = [
   },
 ];
 
-const {defineMultiStyleConfig} = createMultiStyleConfigHelpers(
-  accordionAnatomy.keys
-);
-
-export const accordionTheme = defineMultiStyleConfig({
-  defaultProps: {
-    size: "xl",
-    variant: "custom",
-  },
-});
-const SectionItem: FC<any> = ({p}) => {
-  const {isOpen, onToggle} = useDisclosure()
-  const width = p.type === 'line' ? 1 : p.src.width / 1.3;
-  const color = useColorModeValue('gray.200', 'gray.600')
-  const {colorMode, toggleColorMode} = useColorMode()
-
-  return (
-    <Box px={{base: '30px'}}>
-      <Box w={`${width}px`} display="flex" alignItems="center">
-        <Image
-          {...p.src}
-          alt={p.src.src}
-          objectFit="contain"
-          style={{
-            width: `${width}px`,
-            minWidth: `${width}px`,
-            height: `auto`,
-            filter: `${colorMode === 'light' ? 'none' : 'grayscale(1) invert(1)'}`
-          }}
-        />
-      </Box>
-      <Box py="20px" px="20px" w={{base: "256px", md: "384px"}}>
-        <Image
-          src={isOpen ? "/images/close.svg" : "/images/open.svg"}
-          alt={isOpen ? "close" : "open"}
-          width={14}
-          height={8}
-          onClick={() => onToggle()}
-          style={{cursor: "pointer"}}
-        />
-      </Box>
-      <Collapse in={isOpen} animateOpacity>
-        <Box w={{base: "256px", md: "384px"}} zIndex={1}>
-          <Flex direction="column" gap="20px" mt="10px" mx="20px">
-            <Heading fontSize="20px" lineHeight="24px" fontWeight={400}>
-              {p.title}
-            </Heading>
-            <Text fontSize="16px" lineHeight="20px" fontWeight={300}>
-              {p.description}
-            </Text>
-            <Flex gap="7px">
-              <Image
-                src="/images/date.svg"
-                alt="date"
-                width={17}
-                height={18}
-              ></Image>
-              <Text
-                fontSize="14px"
-                py="10px"
-                fontWeight={400}
-                color="#717171"
-              >
-                {p.date}
-              </Text>
-            </Flex>
-          </Flex>
-        </Box>
-      </Collapse>
-
-      <Box w="100%" h="1px" bg={color} mb={{base: "30px", md: "40px"}}></Box>
-    </Box>
-  )
-}
-
 export const Section3: FC = () => {
-  const color = useColorModeValue('gray.200', 'gray.600')
-
   return (
-    <Center w="100%" flexDirection="column">
-      <Flex
-        w="100%"
-        maxW="1440px"
-        pl={{base: "21px", lg: "30px"}}
-        pt="56px"
-        pb={{base: "45px", lg: "80px"}}
-        direction="column"
-        gap="32px"
-      >
-        <Text
-          textTransform="uppercase"
-          fontSize="14px"
-          lineHeight="21px"
-          fontWeight={500}
-          letterSpacing="0.5em"
-        >
-          of AwakeAI Inc.
-        </Text>
-        <Text
-          fontSize={{base: "24px", lg: "45px"}}
-          lineHeight={{base: "29px", lg: "55px"}}
-          fontWeight={700}
-        >
-          Collaborators & Affiliations
-        </Text>
+    <Center w="100%" flexDirection="column" px={{base: "20px", lg: "30px"}}>
+      <Flex w="100%" maxW="1440px" direction="column" pt={{base: "40px", lg: "56px"}} pb={{base: "64px", lg: "96px"}}>
+        <SectionHeader eyebrow="of AwakeAI Inc." title="Collaborators & Affiliations"/>
+        <SimpleGrid columns={{base: 1, md: 2, lg: 3}} spacing={{base: "16px", lg: "24px"}} mt={{base: "32px", lg: "48px"}}>
+          {partners.map((p) => (
+            <Flex
+              key={p.id}
+              direction="column"
+              bg="bg.surface"
+              border="1px solid"
+              borderColor="border.subtle"
+              rounded="2xl"
+              overflow="hidden"
+              boxShadow="card"
+            >
+              <Box pos="relative" h="140px" bg="white" borderBottom="1px solid" borderColor="border.subtle">
+                <Image src={p.src} alt={p.title.replace("@", "")} fill sizes="(max-width: 768px) 90vw, 400px"
+                       style={{objectFit: "contain", padding: "12px"}}/>
+              </Box>
+              <Flex direction="column" gap="12px" p="24px" flex="1">
+                <Heading as="h3" fontSize="20px" lineHeight="28px" fontWeight={700}>
+                  {p.title}
+                </Heading>
+                <Text fontSize="16px" lineHeight="26px" color="fg.muted">
+                  {p.description}
+                </Text>
+                <Flex mt="auto" pt="8px" gap="8px" alignItems="center" fontSize="14px" color="fg.muted">
+                  <CalendarIcon boxSize="14px"/>
+                  <Text>{p.date}</Text>
+                </Flex>
+              </Flex>
+            </Flex>
+          ))}
+        </SimpleGrid>
       </Flex>
-      <Grid w="100%" maxW="1440px" columnGap='28px' templateColumns={{
-        base: '1fr',
-        md: '1fr 1px 1fr 1px 1fr'
-      }}>
-        {partners.map((p, index) => {
-          return (
-            p.type === 'line' ? <GridItem>
-                <Box height="full" width="1px" bg={color}/>
-              </GridItem> :
-              <GridItem key={p.id}>
-                <SectionItem p={p}/>
-              </GridItem>
-
-          );
-        })}
-      </Grid>
     </Center>
   );
 };

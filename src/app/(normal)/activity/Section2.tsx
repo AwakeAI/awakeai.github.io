@@ -1,36 +1,29 @@
-import { FC, PropsWithChildren } from "react";
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { FC } from "react";
+import { Center, Flex, Heading, Text } from "@chakra-ui/react";
 
 export const Section2: FC<{ activity: any }> = ({ activity }) => {
   return (
     <Center w="100%" pos="relative">
       <Flex
-        pos="relative"
         direction="column"
-        zIndex={2}
         w="100%"
-        h="100%"
-        maxW="1440px"
-        gap="30px"
-        px={{ base: "20px", lg: "149px" }}
-        pt={{ base: "0", lg: "0" }}
-        pb={{ base: "209px", lg: "90px" }}
+        maxW="1100px"
+        gap={{ base: "12px", lg: "16px" }}
+        px={{ base: "20px", lg: "30px" }}
+        pb={{ base: "40px", lg: "64px" }}
         alignItems="center"
       >
-        <Text
-          fontSize={{ base: "24px", lg: "64px" }}
-          lineHeight={{ base: "28px", ls: "77px" }}
-          fontWeight={500}
+        <Heading
+          as="h1"
+          fontSize={{ base: "28px", lg: "48px" }}
+          lineHeight={{ base: "36px", lg: "58px" }}
+          fontWeight={800}
+          letterSpacing="-0.03em"
           textAlign="center"
         >
           {activity.title}
-        </Text>
-        <Text
-          fontSize={{ base: "16px", lg: "24px" }}
-          lineHeight={{ base: "19px", ls: "29px" }}
-          fontWeight={{ base: 400, lg: 400 }}
-          textAlign="center"
-        >
+        </Heading>
+        <Text fontSize={{ base: "15px", lg: "17px" }} color="fg.muted" textAlign="center">
           {activity.date}
         </Text>
       </Flex>
